@@ -1,0 +1,101 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+   
+  background-image:url("../../assets/images/23964.jpg");
+  font-family: 'Poppins', sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-size: 2600px;
+  overflow-y: hidden;
+  background-repeat:no-repeat;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.signupp{
+    height:790px;
+    width:1000px;
+    /* border: 2px solid black; */
+    display: flex;
+    margin-top: 100px;
+    margin-left: 250px;
+    border-radius: 30px;
+   
+   
+}
+
+.left{
+   width:550px;
+   height: 700px;
+   /* border: 2px solid black; */
+   /* background-image:url("website image/Mobile-login.jpg"); */
+   background-size: cover;
+   background-position: center;
+   /* border-radius: 30px 0px 0px 30px; */
+   box-shadow: 0px 0px 6px 6px grey;
+
+}
+.left img{
+    width:550px;
+    height: 700px;
+}
+.right{
+    width:450px;
+    height: 700px;
+    /* border: 2px solid black; */
+    /* border-radius:  0px 30px 30px 0px; */
+    background-color: white;
+    box-shadow: 0px 0px 7px  7px grey;
+
+}
+
+label{
+    display: flex;
+    align-items: center;
+    height:50px;
+}
+
+label input{
+    width:350px;
+    border-width: 0px 0px 1.5px 0px;
+    height:30px;
+    margin-left: 40px;
+    
+}
+.fl{
+    display: flex;
+    margin-left: 40px;
+}
+.btn{
+    display:flex;
+    justify-content: space-around;
+ margin-left: 13px;
+}
+button{
+    height: 35px;
+    width:170px;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    background-image: radial-gradient(
+    farthest-corner at 30px 40px,
+    #f35 40%,
+    black 60%
+  );
+    font-size: 20px;
+}
+button a{
+    color:white; 
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
