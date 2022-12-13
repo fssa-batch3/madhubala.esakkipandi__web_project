@@ -322,4 +322,10 @@ font-size: 30px;
   width:80%;
   margin-left: 160px;
 }
+.starting-price a{
+  color:#D70F64;
 
+}
+.starting-price a:hover{
+  color:white;
+}
