@@ -1,128 +1,145 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-body{
+body {
     /* background-color: #F2F4F1; */
-    background-image:url("../../assets/images/23964.jpg");
+    background-image: url("../../assets/images/23964.jpg");
     background-size: 2600px;
     background-position: center;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     font-family: 'Poppins', sans-serif;
     overflow-y: hidden;
 }
 
-.login{
-    height: 600px ;
-    width:800px;
+.login {
+    height: 600px;
+    width: 800px;
     /* border: 2px solid black; */
     margin-left: 350px;
     margin-top: 150px;
     background-color: #d6547d;
     border-radius: 20px;
 }
-.log2{
-    height: 1000px ;
-    width:800px;
+
+.log2 {
+    height: 1000px;
+    width: 800px;
     /* border: 2px solid black; */
     display: flex;
 }
-.left{
-    width:400px;
+
+.left {
+    width: 400px;
     height: 600px;
     /* border: 2px solid black; */
     background-size: cover;
-   background-color: white;
+    background-color: white;
     background-size: cover;
-    background-position:center;
+    background-position: center;
     background-blend-mode: screen;
     text-align: center;
     border-radius: 20px 0px 0px 20px;
 }
 
-.right{
-    width:450px;
+.right {
+    width: 450px;
     /* border: 2px solid black; */
     height: 600px;
 
 
 }
-.log{
-    height:150px;
-    width:150px;
-    
+
+.log {
+    height: 150px;
+    width: 150px;
+
 }
- h3{
+
+h3 {
     height: 50px;
-    width:160px;
-   color:white;
+    width: 160px;
+    color: white;
     text-align: center;
-    font-size:30px;
+    font-size: 30px;
     border-radius: 10px;
-    color:white;
+    color: white;
 }
-.vio{
+
+.vio {
     margin-left: 130px;
-    height:40px;
+    height: 40px;
 }
-form{
-    height:450px ;
-    width:350px;
+
+form {
+    height: 450px;
+    width: 350px;
     /* border: 2px solid black; */
-   margin-left: 30px;
-   margin-top: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
 }
-#user{
+
+#user {
     /* border: 2px solid black; */
     height: 40px;
-    width:290px;
+    width: 290px;
     border-radius: 50px;
     margin-left: 30px;
     text-align: center;
 }
-label p{
+
+label p {
     margin-left: 35px;
 }
-#pass{
+
+#pass {
     /* border: 2px solid black; */
     height: 40px;
-    width:290px;
+    width: 290px;
     border-radius: 50px;
     margin-left: 30px;
     text-align: center;
 }
-.foot{
-    margin-top: 26px;display: flex;
+
+.foot {
+    margin-top: 26px;
+    display: flex;
     justify-content: space-evenly;
 }
-button{
+
+button {
     margin-top: 20px;
     margin-left: 110px;
-    height:40px;
-    width:150px;
+    height: 40px;
+    width: 150px;
 }
- .sing{
+
+.sing {
     text-align: center;
 }
-.logos{
+
+.logos {
     text-align: center;
     margin-top: 7px;
 }
-#insta{
+
+#insta {
     margin-left: 10px;
     font-size: 27px;
     margin-top: 7px;
 
 }
-.do{
+
+.do {
     text-align: center;
 }
-p{
-    color:white;
+
+p {
+    color: white;
 }
-a{
+
+a {
     margin-left: 5px;
 }
-.keep{
-    color:black;
+
+.keep {
+    color: black;
 }
