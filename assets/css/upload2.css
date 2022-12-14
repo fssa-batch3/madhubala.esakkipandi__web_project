@@ -5,24 +5,19 @@
     border: 2px solid black;
     margin-top: 100px;
 }
-
 body {
     background-color: #F2F4F1;
     font-family: 'Poppins', sans-serif;
 }
-
 h1 {
     text-align: center;
-
 }
-
 .border {
     border: 1px solid #9e9d9d;
     width: 70%;
     height: 1700px;
     margin-left: 15%;
 }
-
 .drag {
     height: 300px;
     width: 500px;
@@ -34,19 +29,16 @@ h1 {
     background-color: black;
     color: white;
 }
-
 #drag {
     font-size: 100px;
     color: white;
     background-color: black;
 }
-
 a {
     color: #d9235c;
 
     text-decoration: none;
 }
-
 button {
     height: 40px;
     width: 140px;
@@ -58,12 +50,10 @@ button {
     margin-left: 480px;
     font-weight: bolder;
 }
-
 #arrow {
     color: black;
     font-size: 50px;
 }
-
 #title {
     height: 50px;
     width: 320px;
@@ -72,9 +62,7 @@ button {
     margin-top: 10px;
     text-align: center;
     margin-left: 50px;
-
 }
-
 #textarea {
     height: 180px;
     width: 320px;
@@ -83,49 +71,39 @@ button {
     margin-top: 10px;
     margin-left: 50px;
     text-align: center;
-
-
 }
-
 .description {
     border: #9e9d9d 1px solid;
     margin-top: 60px;
     height: 500px;
 }
-
 h3 {
     text-align: center;
     color: black;
     font-size: 30px;
 }
-
 #tit {
     margin-left: 50px;
     color: #d9235c;
     font-weight: bolder;
 }
-
 select {
     height: 40px;
     width: 230px;
     margin-left: 55px;
 }
-
 label {
     margin-left: 55px;
 }
-
 .location {
     height: 200px;
     width: 100%;
 }
-
 .profile {
     display: flex;
     margin-left: 55px;
 
 }
-
 .profile-1 {
     height: 80px;
     width: 80px;
@@ -135,31 +113,26 @@ label {
     background-image: linear-gradient(#d9235c, rgb(211, 209, 209));
 
 }
-
 #name {
     margin-left: 20px;
     margin-top: 10px;
     height: 25px;
     width: 200px;
 }
-
 #camera {
     font-size: 30px;
     margin-top: 25px;
     opacity: 2;
 }
-
 #num {
     width: 20px;
     margin-left: 10px;
 }
-
 p {
     margin-left: 55px;
     font-weight: bolder;
     font-size: 20px;
 }
-
 h3 {
     font-weight: bolder;
     color: #d9235c;
