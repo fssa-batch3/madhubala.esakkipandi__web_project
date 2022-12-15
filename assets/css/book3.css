@@ -96,10 +96,14 @@ span {
   background-color: white;
   display: flex;
 }
-.cont-1 {
-  height: 600px;
-  width: 50%;
-  margin-top: 70px;
+.cont-1{
+ 
+  height:600px;
+  width:50%;
+ margin-top: 70px;
+  background-image: url("../../assets/images/3189767.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .cont-2 {
   height: 600px;
