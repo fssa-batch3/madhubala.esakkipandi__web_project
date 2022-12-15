@@ -4,12 +4,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-#review {
-  height: 3000px;
-  width: 100%;
-  /* border:2px solid black; */
-  background-color: lightyellow;
-}
+
 
 .menu-bar {
   height: 120px;
@@ -65,7 +60,10 @@ body {
 #review {
   margin-top: 160px;
   background-color: black;
-}
+    height: 3000px;
+    width: 100%;
+  }
+
 .wat {
   color: #d9235c;
   font-weight: bolder;

@@ -40,9 +40,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
-.menu-bar ul li a:hover {
-  color: #d9235c;
-}
+
 .menu-bar ul li::after {
   content: '';
   display: block;
@@ -77,16 +75,7 @@ span {
 .menu-bar ul li:hover::after {
   width: 100%;
 }
-.wat {
-  color: #d9235c;
-  font-weight: bolder;
-  text-shadow: aliceblue;
-  font-size: 40px;
-}
-span {
-  color: white;
-  font-size: 40px;
-}
+
 .loaction {
   height: 185px;
   width: 100%;
@@ -225,6 +214,7 @@ p {
 }
 .local {
   height: 23px;
+  display: flex;
 }
 .map {
   height: 20px;
@@ -233,9 +223,7 @@ p {
   margin-right: 5px;
   margin-left: 10px;
 }
-.local {
-  display: flex;
-}
+
 .chennai {
   margin-top: 10px;
   color: grey;
