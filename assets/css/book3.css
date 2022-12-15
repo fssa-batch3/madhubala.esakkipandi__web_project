@@ -105,6 +105,9 @@ span {
   background-size: cover;
   background-position: center;
 }
+.confirm{
+  margin-top: -5px;
+}
 .cont-2 {
   height: 600px;
   width: 50%;
