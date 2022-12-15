@@ -9,14 +9,14 @@ body {
   font-family: 'Poppins', sans-serif;
   font-size: 16px;
 }
-.backround {
+.title {
   background-image: linear-gradient(rgba(11, 11, 11, 0.7), rgba(225, 81, 160, 0.7)), url("../images/1191102.jpg");
   height: 900px;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
-.back-content {
+.title-information {
   position: absolute;
   bottom: 180px;
   background: rgb(0, 0, 0);
@@ -29,7 +29,7 @@ body {
   text-align: center;
   left: 340px;
 }
-.back-content button {
+.title-information button {
   height: 40px;
   width: 140px;
   margin-top: 30px;
@@ -38,16 +38,16 @@ body {
   background-color: white;
   font-weight: bolder;
 }
-.back-content button:hover {
+.title-information button:hover {
   color: white;
   background-color: #D70F64;
   font-weight: bolder;
 }
-.back-content h1 {
+.title-information h1 {
   margin-top: 40px;
   font-size: 40px;
 }
-.back-content p {
+.title-information p {
   margin-top: 40px;
   font-size: 20px;
 }
@@ -131,11 +131,14 @@ span {
 .menu-bar ul li:hover::after {
   width: 90%;
 }
+/* nav bar ends */
+
+/* feature starts */
 #feature {
   height: 4300px;
   width: 100%;
 }
-.favoo {
+.features-title {
   height: 650px;
   width: 100%;
   display: flex;
@@ -162,21 +165,21 @@ span {
 .feturebtn a:hover {
   color: white;
 }
-.lightblue {
+.right-side-title {
   height: 100%;
   width: 50%;
   margin-left: 30px;
   text-align: center;
   text-transform: capitalize;
 }
-.lightblue h1 {
+.right-side-title h1 {
   padding-top: 50px;
   color: #D70F64;
   font-size: 50px;
   margin-right: 70px;
   line-height: 50px;
 }
-.lightbl {
+.title-image {
   width: 40%;
   margin-left: 30px;
   height: 100%;
@@ -188,7 +191,7 @@ span {
   margin-left: 80px;
   line-height: 26px;
 }
-.lightbl img {
+.title-image img {
   height: 400px;
   width: 450px;
   margin-top: 80px;
@@ -196,7 +199,7 @@ span {
   box-shadow: 0px 0px 15px 15px rgb(198, 197, 198);
   margin-left: 115px;
 }
-.box-content {
+.spl-features {
   height: 760px;
   width: 100%;
   background-color: #F2F4F1;
@@ -221,27 +224,27 @@ span {
   display: flex;
   justify-content: space-between;
 }
-.icon-content {
+.icon-and-feature {
   width: 23%;
   height: 420px;
   border-radius: 10px;
 }
-.icon-content h1 {
+.icon-and-feature h1 {
   margin-top: 40px;
   margin-left: 20px;
 }
-.icon-content p {
+.icon-and-feature p {
   margin-top: 40px;
   margin-left: 20px;
   font-size: 20px;
 }
-#inner-icon {
+#icon {
   font-size: 50px;
   color: #d9235c;
   margin-top: 40px;
   margin-left: 20px;
 }
-.icon-content:hover {
+.icon-and-feature:hover {
   width: 23%;
   height: 420px;
   border-radius: 10px;
@@ -265,14 +268,8 @@ span {
   color: white;
   font-size: 20px;
 }
-.book {
-  height: 500px;
-  width: 100%;
-  color: rgb(23, 22, 22);
-  background-color: white;
-  display: flex;
-}
-.back {
+
+.background {
   height: 700px;
   width: 100%;
   background-image: linear-gradient(rgba(11, 11, 11, 0.7), rgba(46, 47, 52, 0.7)), url("../images/1190462 (1).jpg");
@@ -281,29 +278,35 @@ span {
   background-position: center;
   background-blend-mode: color-burn;
 }
-.appont-para {
+.appointment-para {
   margin-left: 100px;
 }
-.REmainder {
+
+
+.book {
   height: 500px;
   width: 100%;
-  color: black;
+  color: rgb(23, 22, 22);
+  background-color: white;
+  display: flex;
 }
-.un {
+
+
+.book-para {
   width: 30%;
   transition: 1s;
   margin-left: 150px;
   margin-top: 70px;
 }
-.un:hover {
+.book-para:hover {
   transform: scale(0.9);
 }
-.un h1 {
+.book-para h1 {
   margin-top: 50px;
   font-size: 30px;
   font-weight: bolder;
 }
-.un p {
+.book-para p {
   font-size: 20px;
   margin-top: 30px;
 }
@@ -312,20 +315,25 @@ span {
   height: 390px;
   margin-top: 90px;
 }
-.save {
+.REmainder {
+  height: 500px;
+  width: 100%;
+  color: black;
+}
+.time-managing {
   width: 100%;
   height: 600px;
   display: flex;
   background-color: rgba(45, 59, 88, 255);
 }
-.save img {
+.time-managing img {
   height: 500px;
   width: 50%;
   border-radius: 30px;
   margin-top: 50px;
   margin-left: 50px;
 }
-.dis {
+.time-managing-para {
   width: 50%;
   height: 60%;
   margin-top: 100px;
@@ -333,15 +341,15 @@ span {
   box-shadow: 2px 40px 80px;
   transition: 1s;
 }
-.dis:hover {
+.time-managing-para:hover {
   transform: scale(0.9);
 }
-.save p {
+.time-managing p {
   margin-top: 20px;
   text-transform: uppercase;
   color: whitesmoke;
 }
-.save h1 {
+.time-managing h1 {
   margin-top: 30px;
   text-transform: uppercase;
   color: rgba(216, 89, 61, 255);
@@ -353,7 +361,7 @@ span {
   display: flex;
 }
 
-.Mobile {
+.Mobile-Responisive-content {
   width: 100%;
   height: 650px;
   display: flex;
@@ -362,7 +370,7 @@ span {
   height: 400px;
   width: 500px;
 }
-.pay {
+.payment-content-para {
   width: 40%;
   height: 60%;
   background-color: white;
@@ -375,29 +383,29 @@ span {
   margin-top: 140px;
   margin-left: 10%;
 }
-.pay h1 {
+.payment-content-para h1 {
   margin-top: 90px;
   margin-left: 90px;
   font-size: 40px;
   color: black;
   text-shadow: 2px 0px 3px rgb(74, 128, 143);
 }
-.pay p {
+.payment-content-para p {
   margin-top: 50px;
   margin-left: 90px;
   font-size: 25px;
   color: #D70F64;
 }
-.Mobile img {
+.Mobile-Responisive-content img {
   height: 500px;
   width: 50%;
   margin-top: 60px;
   transition: 1s;
 }
-.Mobile img:hover {
+.Mobile-Responisive-content img:hover {
   transform: scaleX(0.9);
 }
-.mb {
+.Mobile-Responisive-para {
   height: 80%;
   width: 40%;
   margin-top: 70px;
@@ -405,18 +413,18 @@ span {
   border-radius: 30px;
   margin-left: 50px;
 }
-.mb:hover {
+.Mobile-Responisive-para:hover {
   box-shadow: 10px 10px 10px 10px rgba(75, 75, 75, 255);
   transform: translateY(-20px);
 }
-.mb h1 {
+.Mobile-Responisive-para h1 {
   font-size: 30px;
   margin-top: 60px;
   text-align: center;
   color: #d9235c;
 
 }
-.mb p {
+.Mobile-Responisive-para p {
   margin-top: 30px;
   font-size: 20px;
 }
@@ -429,27 +437,27 @@ span {
   background-size: cover;
   margin-top: 160px;
 }
-.one:nth-child(1) {
+.footer-content:nth-child(1) {
   height: 400px;
   width: 25%;
   color: white
 }
-.one:nth-child(2) {
+.footer-content:nth-child(2) {
   height: 400px;
   width: 22%;
   color: white;
 }
-.one:nth-child(3) {
+.footer-content:nth-child(3) {
   height: 400px;
   width: 22%;
   color: white;
 }
-.one:nth-child(4) {
+.footer-content:nth-child(4) {
   height: 400px;
   width: 22%;
   color: white;
 }
-.align {
+.footer-box {
   width: 90%;
   height: 350px;
   margin-top: 50px;
@@ -457,53 +465,53 @@ span {
   display: flex;
   justify-content: space-between;
 }
-.icco {
+.footer-icons {
   display: flex;
   width: 200px;
   justify-content: space-between;
   margin-top: 70px;
   height: 100px;
 }
-.b {
+.footer-head {
   margin-top: 50px;
 }
-.ba {
+.footer-subhead {
   margin-top: 30px;
 }
-#insta {
+#insta-icon {
   font-size: 30px;
 
 }
-#face {
+#facebook-icon {
   font-size: 30px;
 }
-#twit {
+#twiter-icon {
   font-size: 30px;
 }
-#git {
+#github-icon {
   font-size: 30px;
 }
-.boto {
+.links {
   margin-top: 60px;
 }
-.boto a {
+.links a {
   color: white;
   text-decoration: none;
 }
-.one:nth-child(4) h3 {
+.footer-content:nth-child(4) h3 {
   margin-top: 50px;
 }
-.one:nth-child(4) img {
+.footer-content:nth-child(4) img {
   height: 60px;
   width: 240px;
   border-radius: 9px;
   margin-top: 50px;
 }
-.one:nth-child(3) p {
+.footer-content:nth-child(3) p {
   margin-top: 40px;
   margin-left: 20px;
 }
-.one:nth-child(3) a {
+.footer-content:nth-child(3) a {
   text-decoration: none;
   color: white;
 }
