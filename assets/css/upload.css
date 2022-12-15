@@ -93,7 +93,7 @@ button a {
   height: 700px;
   border-color: #F2F4F1;
   width: 28%;
-  height: 500px;
+  /* height: 500px; */
   border-radius: 20px;
   text-align: center;
   background-color: white;

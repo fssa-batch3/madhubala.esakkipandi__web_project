@@ -110,7 +110,6 @@ body {
   display: flex;
   height: 40px;
   width: 60%;
-  /* border: 2px solid black; */
   justify-content: space-between;
   margin-top: 20px;
   background-color: white;
@@ -192,7 +191,7 @@ hr {
   width: 27%;
   height: 320px;
   transition: 1s;
-  box-shadow: rgb(255 255 255 / 10%) 0px 1px 1px 0px inset, rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30p
+  box-shadow: rgb(255 255 255 / 10%) 0px 1px 1px 0px inset, rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
 }
 .pic-one:hover {
   box-shadow: rgb(255 255 255 / 10%) 0px 1px 1px 0px inset, rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
