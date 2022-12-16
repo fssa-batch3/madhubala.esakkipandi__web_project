@@ -499,7 +499,7 @@ span {
   color: white;
   text-decoration: none;
 }
-.footer-content:nth-child(4) h3 {
+.footer-content:nth-child(4) p {
   margin-top: 50px;
 }
 .footer-content:nth-child(4) img {
