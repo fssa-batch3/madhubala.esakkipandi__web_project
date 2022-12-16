@@ -4,7 +4,16 @@
 }
 
 .contant{
-     height: 100px;
-     width:200px;
-     border:2px solid black;
+    height:400px;
+    width:700px;
+    border:2px solid black;
+margin-top: 250px;
+margin-left: 400px;
+}
+h2,h3{
+    color: rgb(239, 24, 171);
+    text-align: center;
+}
+.gif{
+    margin-left: 230px;
 }
