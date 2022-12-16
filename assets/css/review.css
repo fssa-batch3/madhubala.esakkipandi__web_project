@@ -89,13 +89,13 @@ body {
   height: 300px;
   margin-top: 50px;
 }
-.glo h1 {
+.head h1 {
   text-align: center;
 }
-.glo span {
+.head span {
   color: #d9235c;
 }
-#imgandrev {
+#review-content {
   height: 1800px;
   width: 70%;
   margin-left: 200px;
@@ -105,7 +105,7 @@ body {
   width: 400px;
   margin-left: 300px;
 }
-.ex {
+.sub-box {
   display: flex;
   height: 30px;
   width: 200px;
@@ -114,10 +114,10 @@ body {
   margin-left: 80px;
   margin-top: 30px;
 }
-.ex li {
+.sub-box li {
   margin-top: 10px;
 }
-.ic {
+.icon-star {
   margin-left: 100px;
   height: 40px;
   width: 170px;
@@ -207,7 +207,7 @@ body {
   height: 45px;
   display: flex;
 }
-.ri {
+.name {
   width: 120px;
   height: 45px;
 }
