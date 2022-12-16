@@ -90,7 +90,7 @@ button a {
   text-decoration: none;
 }
 .content {
-  height: 700px;
+  height: 500px;
   border-color: #F2F4F1;
   width: 28%;
   /* height: 500px; */
@@ -198,6 +198,12 @@ h1 {
   margin-left: 15px;
 }
 #mail {
+  padding: 10px;
+  width: 190px;
+  margin-top: 10px;
+  margin-left: 70px;
+}
+#pass {
   padding: 10px;
   width: 190px;
   margin-top: 10px;
