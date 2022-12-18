@@ -8,7 +8,6 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
-
 .contant{
     height:400px;
     width:700px;
@@ -20,7 +19,6 @@ border-radius: 20px;
 h1,h2{
     color: rgb(228, 13, 114);
     text-align: center;
-   
 }
 .gif{
     margin-left: 230px;
