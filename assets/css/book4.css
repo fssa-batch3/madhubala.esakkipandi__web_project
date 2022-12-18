@@ -4,7 +4,8 @@
     width:0px;
 }
 body{
-  background: #F2F4F1;
+  background:white;
+
   font-family: 'Poppins', sans-serif;
 }
 .content{
@@ -14,9 +15,11 @@ body{
   margin-left: 350px;    
   margin-top: 35px;
   text-align: center;
+  background-color:  #F2F4F1;
 }
 .content h1{
   width:800px;
+  
 }
 .inner-cont{
  height: 650px;
@@ -32,10 +35,7 @@ margin-left: 20px;
   height:80px;
   width:80px;
 }
-/* .card{
-  width:50%;
-  margin-left: -10px;
-} */
+
 .div1{
   height:100px;
   width:800px;
@@ -128,6 +128,7 @@ button{
  border-radius: 5px;
  color:#d9235c;
  font-weight: bolder;
+ margin-top: -10px;
 }
 button:hover{
   background-color: #d9235c;

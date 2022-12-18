@@ -175,16 +175,16 @@ button {
   margin-top: 10px;
   border-radius: 20px;
   border-color: #f10b6b;
-  color:#D70F64;
+  color: #D70F64;
 }
 
 button:hover {
   background-color: #f7056a;
-  color:white;
+  color: white;
 }
 
 button #icoen:hover {
-  color:#D70F64;
+  color: #D70F64;
 }
 
 .vaccinated {
@@ -198,7 +198,7 @@ hr {
 
 #icoen {
   margin-right: 10px;
-  color:#D70F64;
+  color: #D70F64;
   font-size: 20px;
 
 }
@@ -209,23 +209,26 @@ hr {
   margin-left: 150px;
   background-color: white;
 }
-.heading{
+
+.heading {
   display: flex;
   justify-content: space-around;
 }
+
 .album {
   color: #D70F64;
   margin-top: px;
 }
 
-.vedio{
-  height:320px;
-  width:340px;
+.vedio {
+  height: 320px;
+  width: 320px;
 }
 
-a{
+a {
   text-decoration: none;
 }
+
 .pic-content {
   width: 100%;
   height: 320px;
@@ -233,21 +236,26 @@ a{
   justify-content: space-evenly;
   margin-top: 50px;
 }
-#envelope{
+
+#envelope {
   background-color: white;
-  
+
 }
-#envelope:hover{
+
+#envelope:hover {
   background-color: #D70F64;
-  color:white;
+  color: white;
 }
-#phone-icon{
+
+#phone-icon {
   background-color: white;
 }
-#phone-icon:hover{
+
+#phone-icon:hover {
   background-color: #D70F64;
-  color:white;
+  color: white;
 }
+
 .aligning {
   margin-top: 10px;
 }
