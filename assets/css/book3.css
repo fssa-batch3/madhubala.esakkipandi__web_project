@@ -123,6 +123,8 @@ form {
 }
 label {
   margin-left: 20px;
+  padding:25px;
+ 
 }
 #checkbox {
   margin-left: 22px;
