@@ -1,0 +1,22 @@
+{
+  "name": "glossyblends",
+  "version": "1.0.0",
+  "description": "Problem statement : https://docs.google.com/document/d/1yxqjkMS9gUHvd9L6-6ipdex956_6-vus/",
+  "main": "main.js",
+  "scripts": {
+    "dev": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/madhubala.esakkipandi__web_project.git"
+  },
+  "author": "Madhubala-06",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/madhubala.esakkipandi__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/madhubala.esakkipandi__web_project#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
