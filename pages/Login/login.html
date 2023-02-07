@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -31,7 +31,9 @@
             <div class="right">
                 <div class="lay">
                     <h3 class="vio">LOG-IN</h3>
-                    <form>
+                    <!-- <form action="../../index.html"> -->
+                        <!-- <form> -->
+
                         <label for="user">
                             <p>Email:</p>
                         </label>
@@ -51,7 +53,7 @@
                             <a href="#">Forget password?</a>
 
                         </div>
-                        <button>Log-In</button>
+                        <button onclick="login()">Log-In</button>
                         <br><br>
                         <p class="sing">OR SIGN-UN WITH</p>
 
@@ -61,13 +63,90 @@
                             <i id="insta" class="fa-brands fa-square-twitter"></i>
                         </div>
                         <p class="do">Don't have an account?<a href="../signup/signup.html">sign-up</a></p>
-                    </form>
+                    <!-- </form> -->
                 </div>
             </div>
             <!-- rightside content ends -->
         </div>
     </div>
     <!-- whole section ends -->
+
+    <script>
+
+        function login(){
+            
+  const usermail =document.getElementById("user").value
+  const userpass =document.getElementById("pass").value
+
+//   const usermail=localStorage.getItem("user_email").value
+//   const userpass=localStorage.getItem("user_password").value
+
+
+
+    let data = JSON.parse(localStorage.getItem("data"));
+
+
+    let res;
+    
+      data.find(
+        element =>
+        {
+          if(element["user_email"]==usermail && element["user_password"]==userpass){
+            return res=1;
+          }
+          else{
+            return res=0;
+          }
+      }
+      
+      );
+
+
+      if (res==1){
+        // alert("login")
+        window.location.href="../../index.html"
+      }
+      else{
+        alert("none")
+      }
+
+        }
+        
+
+//     if (!user_data) {
+//         alert("Login Failure");
+//         return;
+//     }
+
+//     let Success;
+//     for (let i = 0; i < user_data.length; i++) {
+//         if (user_data[i].useremail === usermail && user_data[i].userpass === user_pass) {
+//             Success = true;
+//             break;
+//         }
+//     }
+
+
+//     if (Success) {
+//         alert("Login Success");
+//     } else {
+//         alert("Login Failure");
+//     }
+
+//     window.location.href="../index.html"
+
+//         }
+
+
+//   if(user_data===usermail){
+//     window.location.href="../../index.html"
+
+//   }
+//   else{
+//     alert("password wrong")
+//   }
+
+    </script>
 </body>
 
 </html>

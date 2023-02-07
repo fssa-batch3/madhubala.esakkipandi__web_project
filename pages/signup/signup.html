@@ -22,22 +22,25 @@
             <!-- Right side of main content starts -->
             <div class="right">
                 <h1>signup</h1>
+                <form action="../../index.html" id="registration">
                 <br><br><br>
-                <label><input type="text" placeholder="Full Name..."></label><br>
-                <label><input type="text" placeholder="Email..."></label><br>
-                <label><input type="text" placeholder="Username..."></label><br>
-                <label><input type="password" placeholder="Password..."></label><br>
-                <label><input type="password" placeholder=" Repeat Password..."></label>
+                <label><input type="text" placeholder="Full Name..." id="name"></label><br>
+                <label><input type="email" placeholder="Email..." id="email"></label><br>
+                <label><input type="text" placeholder="Username..." id="username"></label><br>
+                <label><input type="password" placeholder="Password..." id="password"></label><br>
+                <label><input type="password" placeholder=" Repeat Password..." id="repeat"></label>
                 <br>
                 <br>
                 <div class="fl">
-                    <input type="checkbox"><label for="box">I am agree with <strong>Terms of user</strong></label>
+                    <input type="checkbox" value="checkbox" id="box" ><label for="box">I am agree with <strong>Terms of user</strong></label>
                 </div>
                 <br><br>
                 <div class="btn">
-                    <button><a href="../../index.html">sign-up</a></button>
+                    <!-- <button><a href="../../index.html">sign-up</a></button> -->
+                    <button type="button" onclick="signup()">sign-up</button>
                     <p><a href="../Login/login.html">signin →</a></p>
                 </div>
+            </form>
 
             </div>
             <!-- rightside of main content ends -->
@@ -47,8 +50,50 @@
     </div>
     <!-- whole content ends -->
 
+    <script>
+    function signup() {
+        const name = document.getElementById("name").value
+        const email = document.getElementById("email").value
+        const username = document.getElementById("username").value
+        const password = document.getElementById("password").value
+        const repeat = document.getElementById("repeat").value
+        
 
 
+
+        // if(name!="" &&email!="" &&username!="" &&password!="" &&repeat!=""){
+
+        let user_data={
+            "user_name":name,
+            "user_email":email,
+            "name_user":username,
+            "user_password":password,
+            "repeat_pass":repeat
+        }
+
+        let data=localStorage.getItem("data")
+        ?JSON.parse(localStorage.getItem("data")):[];
+        data.push(user_data)
+        localStorage.setItem("data",JSON.stringify(data))
+
+
+        if(password===repeat){
+            window.location.href="../../index.html"
+
+        }
+    
+    else{
+        alert("password mismatch")
+        }
+    }
+    // else{
+    //     alert("fill the data")
+    // }
+
+    // }
+
+
+</script>
 
 
 </body>

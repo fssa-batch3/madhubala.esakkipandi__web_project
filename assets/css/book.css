@@ -11,17 +11,19 @@ body {
 }
 .hole-content {
   position: absolute;
-  height: 4585px;
+  /* height: 4585px; */
+  height: auto; 
   border: 2px solid black;
 }
 .menu-bar {
   height: 100px;
   width: 100%;
+
   display: flex;
   align-content: center;
   justify-content: space-between;
   background-color: white;
-  box-shadow: 10px 10px 30px 1px rgb(205, 26, 98);
+  /* box-shadow: 10px 10px 30px 1px rgb(205, 26, 98); */
 }
 .main {
   margin-top: 20px;
@@ -128,10 +130,10 @@ label {
   margin-left: 15px;
 }
 #content-2 {
-  height: 4400px;
+  height: 5000px;
   width: 100%;
   background-color: #F2F4F1;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 .main-content {
   height: 4300px;
@@ -156,7 +158,7 @@ label {
 }
 p {
   color: #d9235c;
-  margin-top: 7px;
+  margin-top: 10px;
   margin-left: 10px;
   font-size: 16px;
   font-weight: 500;
@@ -181,15 +183,20 @@ p {
 }
 .box {
   width: 100%;
-  height: 520px;
+  height: 4750px;
+   /* display: flex; */
+   /* justify-content: space-around; */
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   border-radius: 20px;
   background-color: white;
+  
 }
 .one {
+  margin-top: 30px;
   width: 26%;
-  height: 500px;
+  height: 520px;
   border-radius: 20px;
   background-color: #F2F4F1;
   transition: 1s;
@@ -203,12 +210,13 @@ p {
   height: 300px;
   width: 100%;
 }
+
 .name {
   height: 50px;
   width: 100%;
 }
 .profile {
-  height: 300px;
+  height: 310px;
   width: 100%;
   border-radius: 20px;
 }
@@ -222,17 +230,21 @@ p {
   margin-top: 10px;
   margin-right: 5px;
   margin-left: 10px;
-}
 
+  
+}
+.Price{
+  font-weight: bold;
+}
 .chennai {
   margin-top: 10px;
-  color: grey;
+  color: rgb(87, 86, 86);
 }
 .one button {
   height: 30px;
   width: 80px;
   margin-left: 120px;
-  margin-top: 10px;
+  margin-top: 17px;
   border-radius: 10px;
   color: #D70F64;
   border-color: #D70F64;
