@@ -1,0 +1,151 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+
+
+
+body{
+    background-image: url("../images/1fdghjkl;\'.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.hole{
+    height:700px;
+    width:900px;
+    /* border: 2px solid black; */
+    margin:  85px auto;
+    background-color: white;
+    border-radius: 20px;
+}
+.top{
+    height:130px;
+    width:900px;
+   border-radius: 20px 20px 0px 0px;
+   background-color: rgb(254, 172, 203);
+}
+
+.profile{
+    height:130px;
+    width:130px;
+    /* border: 2px solid black; */
+    position: absolute;
+    border-radius: 50%;
+    top:18%;
+    left:25%;
+}
+#cam{
+    position: absolute;
+    top:82px;
+    left:80px;
+    font-size: 29px;
+    color:white;
+    background-color: black;
+}
+.prof-img{
+    
+        height:130px;
+        width:130px;
+        border-radius: 50%;
+}
+.h1class{
+    margin-left:350px;
+    padding-top: 95px;
+}
+.whole{
+    
+    /* border: 2px solid black; */
+    height:  570px;
+   width: 900px;
+    display: flex;
+ justify-content: space-evenly;
+}
+.right{
+    height:470px;
+    /* border: 2px solid black; */
+    width:400px;
+   
+    margin-top: 60px;
+}
+.left{
+    height:500px;
+    /* border: 2px solid black; */
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.type{
+    height: 50px;
+    width:390px;
+    margin-top: 38px;
+    background-color: rgb(253, 211, 228);
+   border: 0px;
+    text-align: center;
+    border-radius: 10px;
+}
+.type1{
+    border: none;
+    height: 40px;
+    width:250px;
+    /* margin-top: 50px; */
+   margin-left: 70px;
+    
+}
+#edit{
+  position: absolute;
+ top:315px;
+ left:1100px
+}
+#edit1{
+    position: absolute;
+    top:405px;
+    left:1100px;
+  }
+  #edit2{
+    position: absolute;
+    top:495px;
+    left:1100px;
+  }
+  #edit3{
+    position: absolute;
+    top:585px;
+    left:1100px;
+  }
+  #edit4{
+    position: absolute;
+    top:675px;
+    left:1100px;
+  }
+  
+  .holediv{
+display: flex;
+/* border: 2px solid black; */
+display: flex;
+height:50px;
+ margin-top: 35px; 
+  }
+  .div-1{
+    height: 50px;
+   border-radius: 50%;
+    width:55px;
+    background-color:  rgb(253, 211, 228);
+    /* border: 2px solid black; */
+  }
+  .div-2{
+    width:300px;
+    /* border: 2px solid black; */
+   height: 50px;
+   
+  
+  }
+ .fa-solid{
+    font-size: 22px;
+    margin-left: 17px;
+    margin-top: 13px;
+    color:#D70F64;
+   
+ }

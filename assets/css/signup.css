@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
+    /* background-color: rgb(219, 122, 234);
 
-    background-image: url("../../assets/images/23964.jpg");
+    height: 600px;
+    width:1000px;
+    border-radius: 60%; */
+
+    /* background-image: url("../../assets/images/23964.jpg"); */
     font-family: 'Poppins', sans-serif;
     background-size: cover;
     background-position: center;
@@ -15,32 +20,34 @@ body {
     padding: 0px;
 }
 .signupp {
-    height: 790px;
+    height: 650px;
     width: 1000px;
     display: flex;
-    margin-top: 100px;
+    margin-top: 140px;
     margin-left: 250px;
     border-radius: 30px;
-}
+    box-shadow:  rgb(255 255 255 / 10%) 0px 1px 1px 0px inset, rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
 
+}
 .left {
-    width: 550px;
-    height: 700px;
+    width: 500px;
+    height: 600px;
     background-size: cover;
     background-position: center;
-    box-shadow: 0px 0px 6px 6px grey;
+    border-radius: 30px;
+   
+    
 }
 .left img {
-    width: 550px;
-    height: 700px;
+    width: 500px;
+    height: 600px;
 }
 .right {
-    width: 450px;
-    height: 700px;
+    width: 500px;
+    height: 600px;
     background-color: white;
-    box-shadow: 0px 0px 7px 7px grey;
+    border-radius: 30px;
 }
-
 label {
     display: flex;
     align-items: center;
@@ -51,6 +58,7 @@ label input {
     border-width: 0px 0px 1.5px 0px;
     height: 30px;
     margin-left: 40px;
+    margin-top: 10px;
 }
 .fl {
     display: flex;
@@ -62,13 +70,13 @@ label input {
     margin-left: 13px;
 }
 button {
-    height: 35px;
+    height: 40px;
     width: 170px;
     padding: 5px;
     border-radius: 20px;
     border: none;
     background-image: radial-gradient(farthest-corner at 30px 40px,
-            #f35 40%,
+    #D70F64 40%,
             black 60%);
     font-size: 20px;
 }
@@ -82,4 +90,8 @@ a {
 h1 {
     text-align: center;
     margin-top: 10px;
+}
+form{
+    height: 550px;
+
 }

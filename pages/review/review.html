@@ -220,6 +220,45 @@
         <!-- reviweing para content ends -->
     </div>
     <!-- reviewing content ends -->
+
+    <script>
+      
+
+    
+      const register_form = document.getElementById("submit");
+        register_form.addEventListener('submit', e => {
+            e.preventDefault();
+
+             const user_review= document.getElementById("scroll").value
+            
+            let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")) : [];
+
+
+     
+            let user_reviewing={
+         
+                "display_review":user_review,
+
+            }
+
+//             let username = JSON.parse(localStorage.getItem("data"));
+// console.log(username);
+// for (let i = 0; i < username.length; i++) {
+//     document.getElementById("newname").innerText = username[i]["user_name"];
+//     document.getElementById("newemail").innerText = username[i]["user_email"];
+// }
+
+for(let i=0;i<user_name.length;i++){
+document.getElementById("username").innerText = username[i]["user_name"];
+docudocument.getElementById("scroll").innerText = username[i]["display_review"];}
+
+        })
+
+    </script
+
+
+        
 </body>
+
 
 </html>

@@ -10,11 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
-
 <body>
-
     <!-- nav bar starts -->
     <div class="menu-bar">
         <img src="../../assets/images/Screenshot__63_-removebg-preview.png" alt="logo">
@@ -83,7 +80,7 @@
                     <i id="icoen" class="fa-solid fa-phone"></i>view contact
                 </button>
             </div>
-            <p class="vaccinated">Vaccinated</p>
+            <!-- <p class="vaccinated">Vaccinated</p> -->
             <a href="../../pages/booking/book3.html"><button>BOOK NOW</button></a>
 
         </div>
@@ -112,15 +109,10 @@
             <div class="pic-one">
                 <img src="../../assets/images/cont-3img.webp" alt="pic-img-2"> -->
             </div>
-
         </div>
-
          <div class="pic-content">
             <div class="pic-one">
-
                 <img src="../../assets/images/cont-4-img.webp" alt="pic-img-3">
-
-
             </div>
             <div class="pic-one">
                 <img src="../../assets/images/cont-6-img.webp" alt="pic-img-4">
@@ -133,8 +125,6 @@
             <div class="pic-one">
 
                 <img src="../../assets/images/cont-8-img.webp" alt="pic-img-6">
-
-
             </div>
             <div class="pic-one">
                 <img src="../../assets/images/cont-img-9.webp" alt="pic-img-7">
@@ -143,14 +133,9 @@
                 <img src="../../assets/images/cont-img-10.webp" alt="pic-img-8">
             </div>
         </div> -->
-
-
         <div class="pic-content">
             <div class="pic-one">
-
                 <img src="../../assets/images/cont-11-img.webp" alt="pic-img-9">
-
-
             </div>
             <div class="pic-one">
                 <img src="../../assets/images/cont-14-img.webp" alt="pic-img-10">
@@ -159,16 +144,10 @@
                 <img src="../../assets/images/kanya_makeup_artist_240945598_459782571672874_2586271533536522839_n.jpg" alt="pic-img-11">
             </div>
         </div> 
-
-
-
-
     </div>
     <!-- Album content  ends -->
     <!-- Informaiton starts -->
     <div class="center">
-
-
         <h1 class="aligning">GlossyBlends - Your Personal Wedding Planner</h1>
         <h2>Plan your functions with Us</h2>
 
@@ -209,7 +188,6 @@
                     <a href="#feature">
                         <p>PAYMENT</p>
                     </a><br>
-
                 </div>
             </div>
             <div class="one">
@@ -310,25 +288,21 @@
                 "image": {
                     source: "../../assets/images/images (4).png"}
             },
-
             {
                 "name": "Janaki Makeup",
                 "image": {
                     source: "../../assets/images/480x480_15_d0bb7374-fda9-450d-bd37-f389265f4230_480x480.webp"}
             },
-
             {
                 "name": "Powery Glow Makeup",
                 "image": {
                     source: "../../assets/images/pexels-skg-photography-2150622.jpg"}
             },
-
             {
                 "name": "Easy Makeup",
                 "image": {
                     source: "../../assets/images/bella-pon-fruitsia-y9HsMX3-mUY-unsplash.jpg"}
             },
-
             {
                 "name": "Glowsome Makeup",
                 "image": {
@@ -340,50 +314,41 @@
                 "image": {
                     source: "../../assets/images/imagee.webp"}
             },
-
             {
                 "name": "On glow makeup",
                 "image": {
                     source: "../../assets/images/pexels-𝖆𝖒𝖆𝖓-𝖆𝖏𝖎𝖒𝖆𝖑-𝕱𝖆𝖘𝖍𝖎𝖔𝖓-𝕾𝖙𝖞𝖑𝖎𝖘𝖙-7286998.jpg"}
             },
-
             {
                 "name": "queency Makeup",
                 "image": {
                     source: "../../assets/images/cont-13-img.webp"}
             },
-
             {
                 "name": "Priya Makeup",
                 "image": {
                     source: "../../assets/images/bridal-makeup-makeup-by-namrata-satwani-bridal-makeup-12_15_273387-158193732586136.webp"}
             },
-
             {
                 "name": "Marriage Makeup",
                 "image": {
                     source: "../../assets/images/new-2.jpg"}
             },
-
             {
                 "name": "Malar MAkeup",
                 "image": {
                     source: "../../assets/images/South-Indian-brides-who-rocked-the-South-Indian-bridal-look37.jpg"}
             },
-
             {
                 "name": "Madura Makeup",
                 "image": {
                     source: "../../assets/images/DwYU5PJUwAAP2f1.jpg"}
             },
-
             {
                 "name": "wedme God makeup",
                 "image": {
                     source: "../../assets/images/Makeup2.jpg"}
             },
-
-
             {
                 "name": "Magitough Makeup ",
                 "image": {
@@ -392,7 +357,6 @@
             },
 
         ]
-
                 const url = window.location.search;                // ?name=Arun
                 const urlParams = new URLSearchParams(url);        // converting string into key value pair
                 const username = urlParams.get("name")             // return value of the "name" key
@@ -419,20 +383,16 @@
                 console.log(user["name"])
                 console.log(user["image"])
                 console.log(user["text"])
-
                 const user_description = document.getElementById("description");
                 user_description.innerText = user["text"]
-
                 const username_h4 = document.getElementById("username");
                 username_h4.innerText = user["name"]
-
-
                 const user_avatar = document.getElementById("avatar");
                 user_avatar.setAttribute("src", user["image"]["source"])
                 user_avatar.setAttribute("alt", user["image"]["alt"])
 
 
-    
+
 </script>
 
 </body>

@@ -1,39 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
 body {
-    background-image: url("../../assets/images/23964.jpg");
-    background-size: 2600px;
-    background-position: center;
-    background-repeat: no-repeat;
-    font-family: 'Poppins', sans-serif;
-    overflow-y: hidden;
+    font-family: 'Poppins', sans-serif;    
 }
 .login {
-    height: 600px;
-    width: 800px;
-    margin-left: 350px;
-    margin-top: 150px;
-    background-color: #d6547d;
+    height: 650px;
+    width: 900px;
+   margin: 120px auto;
+    background-color: #ce3767;
     border-radius: 20px;
+    box-shadow:  rgb(255 255 255 / 10%) 0px 1px 1px 0px inset, rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
 }
 .log2 {
-    height: 1000px;
-    width: 800px;
+    height: 650px;
+    width: 900px;
     display: flex;
 }
 .left {
-    width: 400px;
-    height: 600px;
+    width: 450px;
+    height: 650px;
     background-color: white;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: screen;
     text-align: center;
     border-radius: 20px 0px 0px 20px;
-}
+ } 
 .right {
     width: 450px;
-    height: 600px;
+    height: 650px;
+}
+.pic{
+    margin-top: 30px;
+}
+.left h2{
+    margin-top: 40px;
 }
 
 .log {
@@ -52,30 +56,32 @@ h3 {
 .vio {
     margin-left: 130px;
     height: 40px;
+    margin-top: 40px;
 }
 form {
     height: 450px;
     width: 350px;
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top: 50px;
 }
-#user {
-    height: 40px;
-    width: 290px;
-    border-radius: 50px;
+#user,#pass {
+    height: 50px;
+    width: 320px;
+    border-radius: 10px;
     margin-left: 30px;
     text-align: center;
+    border: none;
 }
 label p {
     margin-left: 35px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-#pass {
-    height: 40px;
-    width: 290px;
-    border-radius: 50px;
-    margin-left: 30px;
-    text-align: center;
+.loginn{
+    height: 300px;
+    width: 300px;
 }
+
 .foot {
     margin-top: 26px;
     display: flex;
@@ -87,27 +93,30 @@ button {
     height: 40px;
     width: 150px;
 }
-.sing {
+.sing,.do {
     text-align: center;
+    margin-top: 10px;
 }
 .logos {
     text-align: center;
-    margin-top: 7px;
+    margin-top: 15px;
 }
 #insta {
     margin-left: 10px;
     font-size: 27px;
     margin-top: 7px;
 }
-.do {
-    text-align: center;
-}
+
 p {
     color: white;
 }
 a {
     margin-left: 5px;
 }
+.boo{
+    margin-left: 20px;
+}
 .keep {
     color: black;
+    margin-top: 30px;
 }
