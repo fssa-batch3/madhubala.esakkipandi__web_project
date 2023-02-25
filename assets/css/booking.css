@@ -1,14 +1,15 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Poppins&display=swap');
 *{
     margin: 0px;
     padding: 0px;
 }
+body{
+  font-family: 'Poppins', sans-serif;
+
+}
 .menu-bar {
-    height: 100px;
+    height: 90px;
     width: 100%;
     display: flex;
     align-content: center;
@@ -98,7 +99,7 @@
     border: 2px solid #D70F64;
     /* po */
    background-size: cover;
-    background-image: url("Madhu_banner\ \(2\).png");
+    background-image: url("../images/Madhu_banner\ \(2\).png");
     background-repeat: no-repeat;
     background-position: cover;
    
@@ -148,7 +149,7 @@
   h2{
     text-align: center;
     color:#D70F64;
-    font-size: 32px;
+    font-size: 25px;
     margin-top: 20px;
     padding-top: 20px;
   }
@@ -172,7 +173,7 @@
     margin-top: 30px;
   }
   .boxex p{
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 10px;
     text-align: center;
 color:black;}
@@ -223,7 +224,7 @@ color:black;}
   }
   .div-3 p{
     margin-top: 30px;
-font-size: 19px;
+font-size: 16px;
   }
   .div-4{
     /* border: 2px solid black; */
@@ -265,7 +266,7 @@ width:48%;
 
 .inner-1 p{
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .inner-1 h3{
   color:#D70F64;
@@ -306,12 +307,25 @@ width:48%;
 
  }
  .para{
-  font-size: 22px;
+  font-size: 16px;
   text-align: center;
   color:black;
 
-
  }
+ .my-profile-img{
+  height: 30px;
+  width:30px;
+  border-radius: 50%;
+ 
+}
+
+
+.booking_now{
+  color:white;
+  text-decoration: none;
+}
+
+
  .vector{
   height: 550px;
   width:600px;
@@ -365,13 +379,13 @@ width:48%;
 .footer-head {
   margin-top: 50px;
  padding-right: 20px;
- font-size: 25px;
+ font-size: 20px;
 }
 .footer-subhead {
   margin-top: 40px;
 }
 #insta-icon,#facebook-icon,#twiter-icon,#github-icon {
-  font-size: 30px;
+  font-size: 19px;
 }
 .links {
   margin-top: 60px;

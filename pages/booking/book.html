@@ -22,9 +22,9 @@
 
                 <li><a href="../upload/upload.html">For artist</a>
                 </li>
-                <li><a href="../booking/book.html">Book here</a></li>
+                <li><a href="../booking/start_booking.html">Book here</a></li>
                 <li><a href="../Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
-                <li><a href="./pages/profile.html"> <img src="./assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li>
+                <li><a href="../profile.html"> <img src="../../assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li>
 
             </ul>
         </div>
@@ -849,17 +849,13 @@
             document.querySelector(".one").append(p_5)
             p_5.innerHTML = name_list[j]["Price"]
             p_5.setAttribute("class", "Price")
-
-
             const a_1 = document.createElement("anchor")
             a_1.setAttribute("href", "../booking/book2.html")
             a_1.setAttribute("class", "anker")
             document.querySelector(".one").append(a_1)
-
             const button_1 = document.createElement("button")
             button_1.innerHTML = "See more"
             document.querySelector(".anker").append(button_1)
-       
             }   
         
     

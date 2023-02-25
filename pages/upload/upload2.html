@@ -26,7 +26,7 @@
                 <p>or</p>
                 <!-- <p> <a href="#">Browse files</a></p> -->
                 
-                <input type="file">
+                <input type="file" id="input_image" accept="image/png,image/jpg">
                 <i id="drag" class="fa-solid fa-cloud-arrow-up"></i>
             </div>
             <!-- decription content starts -->
@@ -93,6 +93,24 @@
             <button>Upload</button>
         </div>
     </div>
+    <script>
+        const input_image=document.getElementById("input_image");
+        var upload_image="";
+        input_image.addEventListener("change",function(){
+            
+            const reader= new FileReader();
+            removeEventListener("load",()=>{
+                uploaded_image=reader.result;
+                document.getElementById(".details").style.backgroundImage= url(uploaded_image);
+            });
+
+            reader.readAsDataURL(this.files[0]);
+        }
+           
+
+    
+        )
+    </script>
 </body>
 
 </html>

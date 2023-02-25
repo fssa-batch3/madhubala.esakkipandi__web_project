@@ -15,6 +15,8 @@ body {
   top: 0px;
   background-color: white;
   position: fixed;
+  box-shadow: rgba(248, 85, 180, 0.2) 0px 7px 29px 0px;
+
 
 }
 .main {
@@ -131,8 +133,14 @@ h1 {
   text-align: center;
   border-radius: 50%;
   background-color:white;
-}
 
+}
+.my-profile-img{
+  height: 30px;
+  width:30px;
+  border-radius: 50%;
+ 
+}
 
 /* .footer {
   height: 300px;

@@ -15,13 +15,13 @@
     <title>Document</title>
 </head>
 
-<!-- <body>
-        <div class="row">
+ <body>
+        <!-- <div class="row">
             <div class="col-md-3 border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
                         width="150px"
                         src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span
-                        class="font-weight-bold"></span><br> -->
+                        class="font-weight-bold"></span><br> --> 
                         <!-- <span
                         id="newemail">edogaru@mail.com.my</span><span> </span></div> -->
             <!-- </div>
@@ -70,12 +70,18 @@
 <div class="hole">
 
 
-    <div class="top">
+    <!-- <div class="top">
   <h1 class="h1class"> Hii <span id="newname"></span></h1>
 
-    </div>
+    </div> -->
     <div class="profile">
-        <img src="../assets/images/IMG20200903161128.jpg" class="prof-img">
+    
+        <img src="../assets/images/IMG20200903161128.jpg" id="prof-img">
+       <input type="file" id="file">
+       
+       <label for="file" ><img src="../assets/images/photo-camera-interface-symbol-for-button.png" id="change_pic"></label>
+
+
         <!-- <i class="fa-solid fa-camera" id="cam"></i> -->
     </div>
     <div class="whole">
@@ -105,23 +111,33 @@
        <div class="div-1"> <i class="fa-solid fa-city" ></i> </div>
        <div class="div-2"> <p class="type1">CITY:</p></div>
     </div>
+
+     
+    <div class="holediv">
+        <div class="div-1"> <i class="fa-solid fa-city" ></i> </div>
+        <div class="div-2"> <p class="type1">ADDRESS:</p></div>
+     </div>
+ 
+
     </div>
     <div class="left">
-   <!-- <input type="text" class="type"  id="newname" > -->
-   <p  class="type"id="newname" ></p>
+   <input type="text" class="type"  id="newname" >
+   <!-- <p  class="type"id="newname" ></p>
+    -->
+   <!-- <i class="fa-solid fa-pen-to-square" id="edit"></i> -->
    
-   <i class="fa-solid fa-pen-to-square" id="edit"></i>
+   <!-- <p  class="type"id="newemail" ></p> -->
+   <input type="text" class="type"id="newemail"  >
    
-   <p  class="type"id="newemail" ></p>
-   <!-- <input type="text" class="type"id="newemail"  > -->
-   
-   <i class="fa-solid fa-pen-to-square" id="edit1"></i>
+   <!-- <i class="fa-solid fa-pen-to-square" id="edit1"></i> -->
    <input type="text" class="type"  >
-   <i class="fa-solid fa-pen-to-square" id="edit2"></i>
+   <!-- <i class="fa-solid fa-pen-to-square" id="edit2"></i> -->
    <input type="text" class="type"  >
-   <i class="fa-solid fa-pen-to-square" id="edit3"></i>
+   <!-- <i class="fa-solid fa-pen-to-square" id="edit3"></i> -->
    <input type="text" class="type" >
-   <i class="fa-solid fa-pen-to-square" id="edit4"></i>
+   <!-- <i class="fa-solid fa-pen-to-square" id="edit4"></i> -->
+   <input type="text" class="type" >
+   <!-- <i class="fa-solid fa-pen-to-square" id="edit4"></i> -->
    
     </div>
     
@@ -133,13 +149,46 @@
     <script>
         
 
-        let username = JSON.parse(localStorage.getItem("data"));
-        console.log(username);
-        for (let i = 0; i < username.length; i++) {
-            document.getElementById("newname").innerText = username[i]["user_name"];
-            document.getElementById("newemail").innerText = username[i]["user_email"];
-        }
+        // let username = JSON.parse(localStorage.getItem("data"));
+        // console.log(username);
+        // for (let i = 0; i < username.length; i++) {
+        //     document.getElementById("newname").innerText = username[i]["user_name"];
+        //     document.getElementById("newemail").innerText = username[i]["user_email"];
+        // }
         
+
+        const img_div =document.querySelector(".profile")
+        const profile_real =document.querySelector("#prof-img")
+        const file=document.querySelector("#file")
+        const uploadbtn=document.querySelector("#button")
+
+
+
+        // when we choose file
+
+
+        file.addEventListener('change',function(){
+            // this refers to file
+            const choosed_file = this.files[0]
+            if(choosed_file) {
+                const reader= new FileReader()
+       // filereader is prdefiden function of js
+                reader.addEventListener('load',function(){
+                 
+                 profile_real.setAttribute("src",reader.result)
+             })
+             reader.readAsDataURL(choosed_file)
+
+
+            }
+
+
+
+
+     
+
+           
+        })
 
     </script>
 

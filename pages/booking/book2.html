@@ -37,8 +37,10 @@
                         </li>
                 </div>
             </li>
-            <li><a href="../booking/book.html">Book here</a></li>
+            <li><a href="../booking/start_booking.html">Book here</a></li>
             <li><a href="../Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
+            <li><a href="./pages/profile.html"> <img src="../../assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li>
+
         </ul>
     </div>
     <!-- nav bar ends -->
@@ -360,9 +362,7 @@
                 const url = window.location.search;                // ?name=Arun
                 const urlParams = new URLSearchParams(url);        // converting string into key value pair
                 const username = urlParams.get("name")             // return value of the "name" key
-                console.log(username);
-
-
+                console.log(name);
                 // Array.find(  function(variableName){} )
                 const user = name_list.find(
                         function (userObj) {  //   userObj = {name : "Bala", "image": {}, "text": ""}
@@ -376,7 +376,6 @@
                                 } else {
                                         return false;
                                 }
-
                         }
                 )
                 console.log(user)
@@ -391,8 +390,7 @@
                 user_avatar.setAttribute("src", user["image"]["source"])
                 user_avatar.setAttribute("alt", user["image"]["alt"])
 
-
-
+                button.setAttribute("anchor",user[url])
 </script>
 
 </body>

@@ -23,7 +23,7 @@
             <li><a href="../upload/upload.html">For artist</a>
                
             </li>
-            <li><a href="../booking/book.html">Book here</a></li>
+            <li><a href="../booking/start_booking.html">Book here</a></li>
             <li><a href="../Login/login.html"> <i class="fa-solid fa-user"  id="menubar-user"></i>login</a></li>
         </ul>
     </div>
@@ -59,10 +59,12 @@
                     <img src="../../assets/images/73x73.png" alt="review ">
                     <a href="#scroll">Write a review</a>
                 </div>
+                <form onsubmit=listing_reviews(event)>
                 <div class="blank-box">
                     <input type="textarea" id="scroll" placeholder="write your review">
                     <br>
                     <input type="submit" id="btn" placeholder="submit">
+                </form>
                 </div>
             </div>
         </div>
@@ -150,7 +152,6 @@
                     <p>2 mont ago</p>
                 </div>
                 <div class="text">
-
                     <P> Fantastic website to book an artist easily </p>
                     <p> <strong>
                             Date of experience:</strong> 04 December 2022</p>
@@ -164,7 +165,6 @@
                     </div>
                     <div class="name">
                         <h3>Robert Levis</h3>
-
                     </div>
                 </div>
                 <hr>
@@ -221,40 +221,14 @@
     </div>
     <!-- reviewing content ends -->
 
-    <script>
-      
-
-    
-      const register_form = document.getElementById("submit");
-        register_form.addEventListener('submit', e => {
-            e.preventDefault();
-
-             const user_review= document.getElementById("scroll").value
-            
-            let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")) : [];
+  </body>
+</html>
 
 
-     
-            let user_reviewing={
-         
-                "display_review":user_review,
 
-            }
 
-//             let username = JSON.parse(localStorage.getItem("data"));
-// console.log(username);
-// for (let i = 0; i < username.length; i++) {
-//     document.getElementById("newname").innerText = username[i]["user_name"];
-//     document.getElementById("newemail").innerText = username[i]["user_email"];
-// }
 
-for(let i=0;i<user_name.length;i++){
-document.getElementById("username").innerText = username[i]["user_name"];
-docudocument.getElementById("scroll").innerText = username[i]["display_review"];}
-
-        })
-
-    </script
+    </script>
 
 
         
