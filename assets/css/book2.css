@@ -12,7 +12,7 @@ body {
 }
 
 .menu-bar {
-  height: 100px;
+  height: 90px;
   width: 100%;
   display: flex;
   align-content: center;
@@ -20,9 +20,9 @@ body {
   padding: 0;
   background-color: white;
   position: fixed;
+  z-index: 10;
   /* box-shadow: 0px 10px 30px 0px rgb(205, 26, 98); */
 }
-
 .main {
   margin-top: 20px;
   margin-right: 60px;
@@ -198,10 +198,15 @@ hr {
   margin-top: 10px;
 }
 
+.str_prc{
+  font-weight: bolder;
+}
+
 #icoen {
-  margin-right: 10px;
+  margin-left: 10px;
   color: #D70F64;
   font-size: 20px;
+  margin-top: 2px;
 
 }
 
@@ -407,4 +412,42 @@ a {
   width:30px;
   border-radius: 50%;
  
+}
+/* ------------------------ */
+
+.revwie{
+  height:1500px;
+  width:80%;
+  margin:10%;
+  border: 2px solid black;
+}
+#sumbit_btn{
+  height:30px;
+  width:160px;
+  
+}
+#vendors_review{
+  text-align: center;
+  height:50px;
+  width:630px;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+#experience{
+  text-align: center;
+  height:300px;
+  width:630px;
+  margin-left: 10%;
+  margin-top: 30px;
+}
+.review_box{
+  border: 2px solid black;
+  height:800px;
+  width:100%;
+}
+#rev{
+margin-top: 30px;
+  height: 20px;
+  width:20px;
+  margin-left: 20px;
 }

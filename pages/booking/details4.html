@@ -361,18 +361,15 @@
             },
 
         ]
-                const url = window.location.search;                // ?name=Arun
-                const urlParams = new URLSearchParams(url);        // converting string into key value pair
-                const username = urlParams.get("name")             // return value of the "name" key
+                const url = window.location.search;                
+                const urlParams = new URLSearchParams(url);        
+                const username = urlParams.get("name")            
                 console.log(name);
-                // Array.find(  function(variableName){} )
+                
                 const user = name_list.find(
-                        function (userObj) {  //   userObj = {name : "Bala", "image": {}, "text": ""}
+                        function (userObj) { 
 
                                 const name = userObj["name"];
-
-                                // username = "Bala"
-                                // name =     "Bala"
                                 if (username === name) {
                                         return true;
                                 } else {

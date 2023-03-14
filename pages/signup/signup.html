@@ -37,7 +37,7 @@
                 <br><br>
                 <div class="btn">
                     <!-- <button><a href="../../index.html">sign-up</a></button> -->
-                    <button type="submit" onclick="signup()">sign-up</button>
+                    <button type="submit" >sign-up</button>
                     <p><a href="../Login/login.html">signin →</a></p>
                 </div>
             </form>
@@ -53,9 +53,12 @@
             e.preventDefault();
             const name = document.getElementById("name").value
             const email = document.getElementById("email").value
+
             // const username = document.getElementById("username").value
             const password = document.getElementById("password").value
             const repeat = document.getElementById("repeat").value
+
+            
             const user_records = JSON.parse(localStorage.getItem("data"));
             if ((name != "") && (email != "") && (password != "") && (repeat != "")) {
                 let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")) : [];
@@ -70,12 +73,11 @@
                 let success = true;
                 if (user_records != null) {
                     for (let i = 0; i < user_records.length; i++) {
-                        if (user_records[i].user_email == email) {
+                        if (user_records[i]["user_email"]==email) {
                             success = false;
                             break;
                         }
                     }
-
                 }
                 if (success) {
                     if (password == repeat) {

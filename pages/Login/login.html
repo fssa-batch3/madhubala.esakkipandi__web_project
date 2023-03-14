@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,26 +17,26 @@
     <div class="login">
         <!--  left side content starts-->
         <div class="log2">
-          
+
             <div class="left">
                 <!-- <img src="../../assets/images/Screenshot__63_-removebg-preview.png" class="log" alt="logo"> -->
-               
+
                 <h2>
                     WELCOME BACK
-                    
+
                 </h2>
                 <p class="keep">keep connected with us</p>
                 <!-- <img src="../../assets/images/3099609.jpg" class="loginn"> -->
                 <img src="../../assets/images/Mobile login-rafiki.svg" class="pic">
             </div>
             <!-- left side content ends -->
-            
+
             <!-- right side content starts -->
             <div class="right">
                 <div class="lay">
                     <h3 class="vio">LOG-IN</h3>
                     <!-- <form action="../../index.html"> -->
-                        <form>
+                    <form>
 
                         <label for="user">
                             <p>Email:</p>
@@ -50,13 +50,9 @@
 
                         <input id="pass" type="password" placeholder="enter your name" required>
 
-                        <input
-          type="checkbox"
-          name="checkpassword"
-          onclick="showPasswordWhenChecked()"
-          id="showPassword"
-        />
-        <p class="Show_Password_Text">Show Password</p>
+                        <input type="checkbox" name="checkpassword" onclick="showPasswordWhenChecked()"
+                            id="showPassword" />
+                        <p class="Show_Password_Text">Show Password</p>
                         <div class="foot">
                             <div class="boo">
                                 <input type="checkbox" required><label for="check">Remember me</label>
@@ -77,7 +73,7 @@
                         </div>
                         <p class="do">Don't have an account?<a href="../signup/signup.html">sign-up</a></p>
                     </form>
-                    
+
                 </div>
             </div>
             <!-- rightside content ends -->
@@ -87,46 +83,56 @@
 
     <script>
 
-        function login(){
-            
-       const usermail =document.getElementById("user").value
-       const userpass =document.getElementById("pass").value
-       let data = JSON.parse(localStorage.getItem("data"));
-       let res;
-          data.find(  // parameterized function 'a'
-            element =>
-           {
-              if(element["user_email"]==usermail && element["user_password"]==userpass){ //data=[{0},{1}] //a=data[0],a=data[1]
-            
-              return res=1;
-            
-           }
-        else{
-          
-               return res=0;
-             }
+        function login(e) {
+
+            const usermail = document.getElementById("user").value
+            const userpass = document.getElementById("pass").value
+
+            let login = {
+
+                "email": usermail,
+                "userofpassword": userpass
+
             }
 
-      );
+            let data = JSON.parse(localStorage.getItem("data"));
+            let res;
+            data.find(  // parameterized function 'a'
+                element => {
+                    if (element["user_email"] == usermail && element["user_password"] == userpass) { //data=[{0},{1}] //a=data[0],a=data[1]
 
-      if(res==1){
-        alert("logged in")
-   window.location.href="../profile.html"
-      }
-      else{
-        alert("none")
+                        return res = 1;
+
+                    }
+                    else {
+
+                        return res = 0;
+                    }
+                }
+
+            );
+
+            if (res == 1) {
+                alert("logged in")
+                localStorage.setItem("profile", JSON.stringify(login))
+                window.location.href = "../profile.html"
+            }
+            else {
+                alert("none")
+            }
         }
-    }
 
-    function showPasswordWhenChecked() {
-  let showPassword = document.getElementById("pass");
+        function showPasswordWhenChecked() {
+            let showPassword = document.getElementById("pass");
 
-  if (showPassword.type === "pass") {
-    showPassword.type = "text";
-  } else {
-    showPassword.type = "pass";
-  }
-}
+            if (showPassword.type === "pass") {
+                showPassword.type = "text";
+            } else {
+                showPassword.type = "pass";
+            }
+            
+        }
+        
     </script>
 </body>
 

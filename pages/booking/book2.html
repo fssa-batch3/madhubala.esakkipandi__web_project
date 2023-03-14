@@ -46,12 +46,13 @@
     <!-- nav bar ends -->
     <!-- sigle profile content starts -->
     <div class="profile-content">
-        <div class="content-1-profile">
-            <img class="profile" src="../../assets/images/Makeup.jpg" alt="profile">
+         <!-- <div class="content-1-profile">
+           <img class="profile" src="../../assets/images/Makeup.jpg" alt="profile"> 
         </div>
+
         <div class="content-2-profile">
             <div class="review">
-                <h1>Bridal makeup by sharmila</h1>
+                <h1 id="name">Bridal makeup by sharmila</h1>
                 <p><i id="icoen" class="fa-solid fa-star"></i>4.7
                 </p>
 
@@ -76,16 +77,18 @@
                 <hr>
                 <p>7000per function</p>
             </div>
+
+            
             <div class="message">
                 <button id="envelope"><i id="icoen" class="fa-solid fa-envelope"></i>Send message</button>
                 <button id="phone-icon">
                     <i id="icoen" class="fa-solid fa-phone"></i>view contact
                 </button>
             </div>
-            <!-- <p class="vaccinated">Vaccinated</p> -->
-            <a href="../../pages/booking/book3.html"><button>BOOK NOW</button></a>
+             <p class="vaccinated">Vaccinated</p>
+           <a href="../../pages/booking/book3.html"><button>BOOK NOW</button></a> -->
 
-        </div>
+         <!-- </div> -->
 
     </div>
     <!--  single profile content ends -->
@@ -134,7 +137,7 @@
             <div class="pic-one">
                 <img src="../../assets/images/cont-img-10.webp" alt="pic-img-8">
             </div>
-        </div> -->
+        </div> 
         <div class="pic-content">
             <div class="pic-one">
                 <img src="../../assets/images/cont-11-img.webp" alt="pic-img-9">
@@ -157,7 +160,69 @@
             for your functionik. Explore wedding inspiration & ideas and our very popular wedding blog to prepare for
             your wedding following latest trends. Contact us for more details.</p>
     </div>
+
+
+    
     <!-- Information ends  -->
+
+
+    <div class="about">
+        <p>
+         Kantih Makeover Artistry is an upscale bridal makeup professional. Kantih Makeover Artistry love what they do and every client is sure to feel her passion when she works on them. The portfolio is sure to give you a good impression of what they're capable of! The expert team of artists and hair stylists ensure that all the services that they provide live up to the highest standard possible. They are widely reputed for their professional on time performance and delivery of their exquisite wedding services.
+        </p>
+        <br>
+        <br>
+        <p>Location
+         Kantih Makeover Artistry is based out of Chennai, in the state of Tamil Nadu.
+         </p>
+
+
+
+         </div>
+
+
+         <div class="revwie">
+            <div class="review_box">
+     <p>
+        Review Sharmila Makeover Artistry
+     </p>
+<br>
+<br>
+
+
+     <p>
+        Rate vendors
+     </p>
+     <form>
+        <input type="checkbox"  id="rev">
+        <input type="checkbox"  id="rev">
+        <input type="checkbox"  id="rev">
+        <input type="checkbox"  id="rev">
+        <input type="checkbox"  id="rev">
+<br>
+        <input type="text" id="experience" placeholder="Tell us about your experience">
+
+        <br><br>
+        <input type="text" id="vendors_review" placeholder="How much did you on this vendor">
+
+        <br><br>
+<button>submit review</button>
+
+
+     </form>
+    </div>
+
+
+    <div class="box">
+
+
+        
+    </div>
+
+
+    
+
+         </div>
     <!-- Footer content starts -->
     <div class="footer">
         <div class="align">
@@ -205,7 +270,7 @@
                 <a href="../Login/login.html">
                     <p>LOGIN</p>
                 </a>
-                <a href="../signup/signup.html">
+                <a href="../signup/signup.html"> 
                     <p>SIGN-UP</p>
                 </a>
             </div>
@@ -220,177 +285,254 @@
     </div>
     <!-- footer ends -->
 <script>
- const name_list = [
+ const list_artist = [
+
             {
-                "name": "Janani Makeup",
+                "artist_name": "Madhu",
                 "image": {
-                    source: "../../assets/images/pexels-unique-click-by-sonam-singh-8429511.jpg",
-                    alt: "Makeup artist"
+                    source: "../../assets/images/Makeup2.jpg"
+                  
                 },
-                "Price":" Rs,14500"
+                "locality":"Choolai ,chennai(view on map)",
+                "Price":" 10000 per function "
             },
 
+
             {
-                "name":"subha makeup",
+                "artist_name":"Nadrftuio",
                 "image": {
-                    source: "../../assets/images/imagee.webp",
+                    source:"../../assets/images/Makeup.jpg"
+                    
                 },
-                "Price":"13500"
-            },
-            {
-                "name": "Malikam makeup",
-                "image": {
-                    source: "../../assets/images/new-1.jpg"},
-                    "Price":"14500"
-            },
-            {
-                "name": "wedding makeup",
-                "image": {
-                    source: "../../assets/images/new-2.jpg"},
-
-                    "Price":"15500"
-            },
-            {
-                "name": "Thulasi Makeup",
-                "image": {
-                    source: "../../assets/images/sana-s-bridal-boutique-and-makeup-studio-madurai-beauty-parlours-09uwlnor6l.webp"}
-            },
-
-            {
-                "name": "Ontime Makeup",
-                "image": {
-                    source: "../../assets/images/Shiya-Professional-Bridal-Makeup-Artist (1).jpg"}
-            },
-
-            {
-                "name": "Instant makeup",
-                "image": {
-                    source: "../../assets/images/new-3.jpg"}
-            },
-            {
-                "name": "Magi makeup",
-                "image": {
-                    source: "../../assets/images/images.jfif"}
-            },
-
-            {
-                "name": "Saranya Makeup",
-                "image": {
-                    source:"../../assets/images/vivek-baghel-inlZbiU4apA-unsplash.jpg" }
-            },
-
-            {
-                "name": "Magitough makeup",
-                "image": {
-                    source: "../../assets/images/new-4.jpg"
-                    }
-            },
-            {
-                "name": "tough makeup",
-                "image": {
-                    source: "../../assets/images/images (4).png"}
-            },
-            {
-                "name": "Janaki Makeup",
-                "image": {
-                    source: "../../assets/images/480x480_15_d0bb7374-fda9-450d-bd37-f389265f4230_480x480.webp"}
-            },
-            {
-                "name": "Powery Glow Makeup",
-                "image": {
-                    source: "../../assets/images/pexels-skg-photography-2150622.jpg"}
-            },
-            {
-                "name": "Easy Makeup",
-                "image": {
-                    source: "../../assets/images/bella-pon-fruitsia-y9HsMX3-mUY-unsplash.jpg"}
-            },
-            {
-                "name": "Glowsome Makeup",
-                "image": {
-                    source: "../../assets/images/download (1).jfif"}
-            },
-
-            {
-                "name": "Seleine Makeup",
-                "image": {
-                    source: "../../assets/images/imagee.webp"}
-            },
-            {
-                "name": "On glow makeup",
-                "image": {
-                    source: "../../assets/images/pexels-𝖆𝖒𝖆𝖓-𝖆𝖏𝖎𝖒𝖆𝖑-𝕱𝖆𝖘𝖍𝖎𝖔𝖓-𝕾𝖙𝖞𝖑𝖎𝖘𝖙-7286998.jpg"}
-            },
-            {
-                "name": "queency Makeup",
-                "image": {
-                    source: "../../assets/images/cont-13-img.webp"}
-            },
-            {
-                "name": "Priya Makeup",
-                "image": {
-                    source: "../../assets/images/bridal-makeup-makeup-by-namrata-satwani-bridal-makeup-12_15_273387-158193732586136.webp"}
-            },
-            {
-                "name": "Marriage Makeup",
-                "image": {
-                    source: "../../assets/images/new-2.jpg"}
-            },
-            {
-                "name": "Malar MAkeup",
-                "image": {
-                    source: "../../assets/images/South-Indian-brides-who-rocked-the-South-Indian-bridal-look37.jpg"}
-            },
-            {
-                "name": "Madura Makeup",
-                "image": {
-                    source: "../../assets/images/DwYU5PJUwAAP2f1.jpg"}
-            },
-            {
-                "name": "wedme God makeup",
-                "image": {
-                    source: "../../assets/images/Makeup2.jpg"}
-            },
-            {
-                "name": "Magitough Makeup ",
-                "image": {
-                    source: "../../assets/images/Makeup.jpg"},
-                    "Price":"10500"
-            },
-
+                "Price":"13000 per function",
+                "locality":"Vannarpettai ,Tirunelveli(view on map)",
+            }
+         
         ]
-                const url = window.location.search;                // ?name=Arun
-                const urlParams = new URLSearchParams(url);        // converting string into key value pair
-                const username = urlParams.get("name")             // return value of the "name" key
-                console.log(name);
-                // Array.find(  function(variableName){} )
-                const user = name_list.find(
-                        function (userObj) {  //   userObj = {name : "Bala", "image": {}, "text": ""}
 
-                                const name = userObj["name"];
 
-                                // username = "Bala"
-                                // name =     "Bala"
-                                if (username === name) {
-                                        return true;
-                                } else {
-                                        return false;
-                                }
-                        }
-                )
-                console.log(user)
-                console.log(user["name"])
-                console.log(user["image"])
-                console.log(user["text"])
-                const user_description = document.getElementById("description");
-                user_description.innerText = user["text"]
-                const username_h4 = document.getElementById("username");
-                username_h4.innerText = user["name"]
-                const user_avatar = document.getElementById("avatar");
-                user_avatar.setAttribute("src", user["image"]["source"])
-                user_avatar.setAttribute("alt", user["image"]["alt"])
+        let url = window.location.search;  //?name=Bridal MAkeup by sharmila
+    // console.log(url)
+    let urls = new URLSearchParams(url)
+    // console.log(urls)//"name":"sharmila"
 
-                button.setAttribute("anchor",user[url])
+    let name = urls.get("name")
+    
+    // console.log(name)//"sharmila"
+
+
+
+            // const name_1 = document.getElementById("name")
+            
+            // name_1.innerText = "sasi"
+
+
+    let result;
+    list_artist.find(function (e) { //arr=[{0},{1},{2}] ; e={0};e={1}
+      if (e["artist_name"] == name) {
+        return result=e;
+        
+      }
+    })
+    console.log(result)
+
+
+    
+
+        
+        const div_1 = document.createElement("div")
+            div_1.setAttribute("class", "content-1-profile")
+            document.querySelector(".profile-content").prepend(div_1)
+            
+
+            const img_1 = document.createElement("img")
+            // img_1.setAttribute("src",result["image"]["source"])
+            img_1.setAttribute("class", "profile")
+            // img_1.setAttribute("alt", "Makeup")
+            document.querySelector(".content-1-profile").append(img_1)
+
+
+            
+            
+            const div_2 = document.createElement("div")
+            div_2.setAttribute("class", "content-2-profile")
+            document.querySelector(".profile-content").append(div_2) 
+    
+// //             //   head
+            const div_3 = document.createElement("div")
+            div_3.setAttribute("class", "review")
+            document.querySelector(".content-2-profile").append(div_3) 
+
+            const h_1 = document.createElement("h1")
+            // h_1.innerHTML = "Bridal Makeup By"+" " +result["artist_name"]
+            document.querySelector(".review").append(h_1)
+
+            const p_1 = document.createElement("p")
+            p_1.innerHTML ="4.7"
+           p_1.setAttribute("class", "icon_p")
+            document.querySelector(".review").append(p_1)
+            
+            const i = document.createElement("i")
+            i.setAttribute("class", "fa-solid fa-pen-nib")
+            i.setAttribute("id", "icoen")
+            document.querySelector(".icon_p").append(i)
+
+
+            const p_2 = document.createElement("p")
+            p_2.innerHTML ="36review"
+            document.querySelector(".review").append(p_2)
+
+       
+            const div_4 = document.createElement("div")
+            div_4.setAttribute("class", "  contact")
+            document.querySelector(".content-2-profile").append(div_4) 
+
+            const img_2 = document.createElement("img")
+            img_2.setAttribute("src","../../assets/images/map.png")
+            img_2.setAttribute("class", "map")
+            img_2.setAttribute("alt", "map")
+            document.querySelector(".contact").append(img_2)
+
+            const p_3 = document.createElement("p")
+            // p_3.innerHTML = result.locality
+            document.querySelector(".contact").append(p_3)
+
+            const p_4 = document.createElement("p")
+            p_4.innerHTML ="contact"
+            document.querySelector(".contact").append(p_4)
+
+
+   const div_5 = document.createElement("div")
+            div_5.setAttribute("class", "  line")
+            document.querySelector(".content-2-profile").append(div_5) 
+
+
+            const p_5 = document.createElement("p")
+            p_5.setAttribute("class", "icon_p1")
+            p_5.innerHTML ="photos"
+            document.querySelector(".line").append(p_5)
+
+
+            const i_2 = document.createElement("i")
+            i_2.setAttribute("class", "fa-regular fa-image")
+            i_2.setAttribute("id", "icoen")
+            document.querySelector(".icon_p1").append(i_2)
+
+
+            const p_6 = document.createElement("p")
+            p_6.setAttribute("class", "icon_p2")
+            p_6.innerHTML ="Shortlist"
+            document.querySelector(".line").append(p_6)
+
+            const i_3 = document.createElement("i")
+            i_3.setAttribute("class", "fa-solid fa-pen-nib")
+            i_3.setAttribute("id", "icoen")
+            document.querySelector(".icon_p2").append(i_3)
+
+
+            const p_7 = document.createElement("p")
+            p_7.setAttribute("class", "icon_p3")
+            p_7.innerHTML ="Write a review"
+            document.querySelector(".line").append(p_7)
+
+            const i_4 = document.createElement("i")
+            i_4.setAttribute("class", " fa-regular fa-heart")
+            i_4.setAttribute("id", "icoen")
+            document.querySelector(".icon_p3").append(i_4)
+
+            const p_8 = document.createElement("p")
+            p_8.setAttribute("class", "icon_p4")
+            p_8.innerHTML ="share"
+            document.querySelector(".line").append(p_8)
+
+            const i_5 = document.createElement("i")
+            i_5.setAttribute("class", "  fa-solid fa-share-nodes")
+            i_5.setAttribute("id", "icoen")
+            document.querySelector(".icon_p4").append(i_5)
+
+
+//             const div_6 = document.createElement("div")
+//             div_6.setAttribute("class", "starting-price ")
+//             document.querySelector(".content-2-profile").append(div_6) 
+
+
+      
+
+//             const p_9 = document.createElement("p")
+//             p_9.setAttribute("class", "str_prc")
+//             p_9.innerHTML ="starting price"
+//             document.querySelector(".starting-price").append(p_9)
+
+//             // const hr =document.createElement("hr")
+//             // document.querySelector(".starting-price").append(hr)
+
+            
+
+            
+//             const p_10 = document.createElement("p")
+//             p_10.setAttribute("class", "prc")
+//             p_10.innerHTML = result[ "Price"]
+//             // --------
+//             document.querySelector(".starting-price").append(p_10)
+
+//         const div_7 = document.createElement("div")
+//             div_7.setAttribute("class", "message")
+//             document.querySelector(".content-2-profile").append(div_7) 
+
+//             const btn=document.createElement("button")
+//             btn.setAttribute("id", "envelope")
+//             btn.setAttribute("class", "envel")
+//             btn.innerHTML = "Send message"
+//             document.querySelector(".message").append(btn)
+
+
+//             const i_6 = document.createElement("i")
+//             i_6.setAttribute("class", " fa-solid fa-envelope")
+//             i_6.setAttribute("id", "icoen")
+//             document.querySelector(".envel").append(i_6)
+
+//             const btn_2=document.createElement("button")
+//             btn_2.setAttribute("id", "phone-icon")
+//             btn_2.setAttribute("class", "ph_iccon")
+//             btn_2.innerHTML = "view contact"
+//             document.querySelector(".message").append(btn_2)
+
+
+//             const i_7 = document.createElement("i")
+//             i_7.setAttribute("class", " fa-solid fa-phone")
+//             i_7.setAttribute("id", "icoen")
+//             document.querySelector(".ph_iccon").append(i_7)
+
+//             const p_11 = document.createElement("p")
+//             p_11.setAttribute("class", "vaccinated")
+//             p_11.innerHTML ="Vaccinated"
+//             document.querySelector(".content-2-profile").append(p_11)
+
+
+            
+//             const a_1 = document.createElement("a")
+//             a_1.setAttribute("href", "../../pages/booking/book3.html")
+//             a_1.setAttribute("class", "ankerlik")
+//             document.querySelector(".content-2-profile").append(a_1)
+
+//             const button_1 = document.createElement("button")
+//             button_1.innerHTML = "BOOK NOW"
+//             document.querySelector(".ankerlik").append(button_1)
+            
+
+
+
+
+
+
+        
+
+
+
+        
+
+
+                
 </script>
 
 </body>

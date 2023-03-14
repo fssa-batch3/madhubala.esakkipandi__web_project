@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: black;
 }
 *{
   margin: 0px;
@@ -18,6 +19,7 @@ body {
   top: 0px;
   background-color: white;
   position:fixed;
+  z-index: 10;
 
 }
 
@@ -59,7 +61,7 @@ body {
 #review-cont {
   margin-top: 160px;
   background-color: black;
-    height: 3000px;
+    height:auto;
     width: 100%;
   }
 

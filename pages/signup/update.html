@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+<form id="cardform">
+
+
+<input type="url" placeholder=" image link" id="link_url"><br><br>
+
+<input type="text" placeholder="name" id="artistname"><br><br>
+
+<input type="text" placeholder="locatio" id="locality"><br><br>
+
+<input type="text" placeholder="makeup name"id="makename"><br><br>
+
+<input type="text" placeholder="ruppes" id="rs"><br><br>
+
+<button type="submit" >create</button>
+
+</form>
+
+<script>
+
+
+document.getElementById("cardform").addEventListener('submit', e => {
+
+    e.preventDefault();
+
+    const url=document.getElementById("link_url").value
+    const name=document.getElementById("artistname").value
+     const local=document.getElementById("locality").value
+     const ruppee=document.getElementById("rs").value
+     const makename=document.getElementById("makename").value
+
+     const data_records=JSON.parse(localStorage.getItem("card_data"))
+
+        let card_data= JSON.parse(localStorage.getItem("card_data")) ? JSON.parse(localStorage.getItem("card_data")) : [];
+
+        let data_card = {}
+        
+        data_card ["image_url"]= url;
+        data_card  ["name"]= name;
+        data_card  ["ruppi"]=ruppee;
+        data_card  ["localty"]= local;
+        data_card  ["makeupname"]= makename
+
+                card_data.push(data_card);
+                localStorage.setItem("card_data", JSON.stringify(card_data));
+})
+
+
+
+
+</script>
+
+</body>
+</html>
+
+<!-- const register_form = document.getElementById("form");
+register_form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById("name").value
+    const email = document.getElementById("email").value
+
+    // const username = document.getElementById("username").value
+    const password = document.getElementById("password").value
+    const repeat = document.getElementById("repeat").value
+
+    
+    const user_records = JSON.parse(localStorage.getItem("data"));
+    if ((name != "") && (email != "") && (password != "") && (repeat != "")) {
+        let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")) : [];
+
+        let user_data = {
+            "user_name": name,
+            "user_email": email,
+            // "name_user": username,
+            "user_password": password,
+            "repeat_pass": repeat
+        }
+        let success = true;
+        if (user_records != null) {
+            for (let i = 0; i < user_records.length; i++) {
+                if (user_records[i]["user_email"]==email) {
+                    success = false;
+                    break;
+                }
+            }
+        }
+        if (success) {
+            if (password == repeat) {
+                data.push(user_data);
+                localStorage.setItem("data", JSON.stringify(data));
+                alert("Account create successfully");
+                window.location.href = "../Login/login.html"
+            }
+            else {
+                alert("password mismatch")
+            }
+        }
+        else {
+            alert("Already Have a account");
+        }
+    }
+    else {
+        alert("fill this data")
+    }
+}); -->

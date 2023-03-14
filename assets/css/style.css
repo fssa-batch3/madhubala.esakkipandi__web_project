@@ -10,7 +10,7 @@ body {
   font-size: 16px;
 }
 .title {
-  background-image: linear-gradient(rgba(11, 11, 11, 0.7), rgba(225, 81, 160, 0.7)), url("../images/1191102.jpg");
+  background-image: linear-gradient(rgba(11, 11, 11, 0.7), rgba(241, 105, 180, 0.7)), url("../images/1191102.jpg");
   
   height: 900px;
   width: 100%;
@@ -79,7 +79,10 @@ body {
   justify-content: space-between;
   background-color: white;
   position: fixed;
-  box-shadow: rgba(248, 85, 180, 0.2) 0px 7px 29px 0px;}
+  box-shadow: rgba(248, 85, 180, 0.2) 0px 7px 29px 0px;
+z-index: 10;
+}
+  
 .main {
   margin-top: 20px;
   margin-right: 60px;
@@ -154,9 +157,9 @@ span {
 
 /* feature starts */
 #feature {
-  height: 4800px;
+  height: 5000px;
   width: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 .features-title {
   height: 650px;
@@ -392,16 +395,18 @@ span {
 }
 
 .Mobile-Responisive-content {
-  width: 100%;
+  width: 90%;
   height: 650px;
   display: flex;
+  margin-left: 5%;
 }
 .sch {
   height: 500px;
   width: 500px;
+  margin-left: 50px;
 }
 .payment-content-para {
-  width: 40%;
+  width: 50%;
   height: 60%;
   background-color: white;
   margin-top: 130px;
@@ -412,32 +417,30 @@ span {
   height: 70%;
   width: 30%;
   margin-top: 140px;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 .payment-content-para h1 {
   margin-top: 90px;
-  margin-left: 90px;
-  font-size: 40px;
-  color: black;
-  text-shadow: 2px 0px 3px rgb(74, 128, 143);
-  margin-left: 20px;
+  margin-left: 100px;
+  font-size: 30px;
+ 
+  color: #D70F64;
+  margin-left: 120px;
 }
 .payment-content-para p {
   margin-top: 50px;
   margin-left: 90px;
-  font-size: 25px;
-  color: #D70F64;
-  margin-left: 20px;
+  font-size: 18px;
+  color: black;
+  margin-left: 120px;
 }
 .Mobile-Responisive-content img {
   height: 500px;
-  width: 50%;
+  width: 40%;
   margin-top: 60px;
-  transition: 1s;
+ margin-left: 100px;
 }
-.Mobile-Responisive-content img:hover {
-  transform: scaleX(0.9);
-}
+
 .Mobile-Responisive-para {
   height: 80%;
   width: 40%;
@@ -446,10 +449,7 @@ span {
   border-radius: 30px;
   margin-left: 50px;
 }
-.Mobile-Responisive-para:hover {
-  box-shadow: 10px 10px 10px 10px rgba(75, 75, 75, 255);
-  transform: translateY(-20px);
-}
+
 .Mobile-Responisive-para h1 {
   font-size: 30px;
   margin-top: 60px;
@@ -459,7 +459,7 @@ span {
 }
 .Mobile-Responisive-para p {
   margin-top: 30px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .email-feture{

@@ -99,7 +99,6 @@
                     <i id="icon" class="fa-solid fa-hand-holding-heart"></i>
                     <h1>
                         Reviews
-
                     </h1>
                     <p>
                         Display shoutouts from happy customers to encourage new bookings.
@@ -163,7 +162,6 @@
             </div>
         </div>
         <div class="Mobile-Responisive-content">
-            <img src="./assets/images/66a78457521463.59d90e93bbf581.png" alt="mobile">
             <div class="Mobile-Responisive-para">
                 <h1>Mobile responsive</h1>
                 <p>Multiple locations & cosmetologists</p>
@@ -177,26 +175,30 @@
                     Make your clients feel extraordinary with smart client management tools to <br>store client details,
                     preferences, upcoming events, and anything else you’d like.</p>
             </div>
+            
+            <img src="./assets/images/Devices-amico.svg" alt="mobile">
+            
         </div>
 
 
 
- <!-- <div class="email-feture">
+          <div class="email-feture">
 
             <h1>
                 FOR  MORE QURIES CONTACT US 
             </h1>
-            <form>
-
-                <label>  username</label>
-                <input type="text"><br>
-                <label>Emailid</label>
-                <input type="email"><br>
-                <label> write something</label>
-                <textarea placeholder="write something">
-            </form>
-        </div> 
-    </div> -->
+            <form method="post" onsubmit="sendemail()">
+                <input type="text" placeholder="enter ur name" class="name" id="na"><br><br>
+                <input type="email" placeholder="enter ur email" class="mail" id="email"><br><br>
+                <input type="text" placeholder="enter ur subject" class="sub" id="subb"><br><br>
+                <textarea id="meaa"></textarea><br><br>
+                <button id="btn" type="submit">send</button>
+                </form>
+               
+           
+             
+            </div> 
+</div>
 
     <!-- feature section ends -->
     <!-- footer section starts -->
@@ -261,6 +263,37 @@
 
     </div>
     <!-- footer section ends -->
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+    
+    function sendemail(){
+    
+        
+    event.preventDefault();
+    
+    
+     Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "emadhubala1@gmail.com",
+        Password : "5888FAB177209DF44C3A157057CF48050EE3",
+        // To : document.getElementById("email").value,
+        To:"blendsglossy@gmail.com",
+        From :  "emadhubala1@gmail.com",
+        Subject : "This is the subject",
+        Body : "And this is the body",
+        }).then(
+        message => alert(message)
+        );
+    
+     }
+    
+    
+    
+    
+    </script>
+    
 </body>
 
 </html>
