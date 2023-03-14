@@ -312,9 +312,9 @@
 
 
         let url = window.location.search;  //?name=Bridal MAkeup by sharmila
-    // console.log(url)
+    console.log(url)
     let urls = new URLSearchParams(url)
-    // console.log(urls)//"name":"sharmila"
+    console.log(urls)//"name":"sharmila"
 
     let name = urls.get("name")
     
@@ -346,7 +346,7 @@
             
 
             const img_1 = document.createElement("img")
-            // img_1.setAttribute("src",result["image"]["source"])
+            img_1.setAttribute("src",result["image"]["source"])
             img_1.setAttribute("class", "profile")
             // img_1.setAttribute("alt", "Makeup")
             document.querySelector(".content-1-profile").append(img_1)
@@ -364,7 +364,7 @@
             document.querySelector(".content-2-profile").append(div_3) 
 
             const h_1 = document.createElement("h1")
-            // h_1.innerHTML = "Bridal Makeup By"+" " +result["artist_name"]
+            h_1.innerHTML = "Bridal Makeup By"+" " +result["artist_name"]
             document.querySelector(".review").append(h_1)
 
             const p_1 = document.createElement("p")
@@ -394,7 +394,7 @@
             document.querySelector(".contact").append(img_2)
 
             const p_3 = document.createElement("p")
-            // p_3.innerHTML = result.locality
+            p_3.innerHTML = result.locality
             document.querySelector(".contact").append(p_3)
 
             const p_4 = document.createElement("p")
@@ -452,73 +452,73 @@
             document.querySelector(".icon_p4").append(i_5)
 
 
-//             const div_6 = document.createElement("div")
-//             div_6.setAttribute("class", "starting-price ")
-//             document.querySelector(".content-2-profile").append(div_6) 
+            const div_6 = document.createElement("div")
+            div_6.setAttribute("class", "starting-price ")
+            document.querySelector(".content-2-profile").append(div_6) 
 
 
       
 
-//             const p_9 = document.createElement("p")
-//             p_9.setAttribute("class", "str_prc")
-//             p_9.innerHTML ="starting price"
-//             document.querySelector(".starting-price").append(p_9)
+            const p_9 = document.createElement("p")
+            p_9.setAttribute("class", "str_prc")
+            p_9.innerHTML ="starting price"
+            document.querySelector(".starting-price").append(p_9)
 
-//             // const hr =document.createElement("hr")
-//             // document.querySelector(".starting-price").append(hr)
-
-            
+            const hr =document.createElement("hr")
+            document.querySelector(".starting-price").append(hr)
 
             
-//             const p_10 = document.createElement("p")
-//             p_10.setAttribute("class", "prc")
-//             p_10.innerHTML = result[ "Price"]
+
+            
+            const p_10 = document.createElement("p")
+            p_10.setAttribute("class", "prc")
+            p_10.innerHTML = result[ "Price"]
 //             // --------
-//             document.querySelector(".starting-price").append(p_10)
+            document.querySelector(".starting-price").append(p_10)
 
-//         const div_7 = document.createElement("div")
-//             div_7.setAttribute("class", "message")
-//             document.querySelector(".content-2-profile").append(div_7) 
+        const div_7 = document.createElement("div")
+            div_7.setAttribute("class", "message")
+            document.querySelector(".content-2-profile").append(div_7) 
 
-//             const btn=document.createElement("button")
-//             btn.setAttribute("id", "envelope")
-//             btn.setAttribute("class", "envel")
-//             btn.innerHTML = "Send message"
-//             document.querySelector(".message").append(btn)
-
-
-//             const i_6 = document.createElement("i")
-//             i_6.setAttribute("class", " fa-solid fa-envelope")
-//             i_6.setAttribute("id", "icoen")
-//             document.querySelector(".envel").append(i_6)
-
-//             const btn_2=document.createElement("button")
-//             btn_2.setAttribute("id", "phone-icon")
-//             btn_2.setAttribute("class", "ph_iccon")
-//             btn_2.innerHTML = "view contact"
-//             document.querySelector(".message").append(btn_2)
+            const btn=document.createElement("button")
+            btn.setAttribute("id", "envelope")
+            btn.setAttribute("class", "envel")
+            btn.innerHTML = "Send message"
+            document.querySelector(".message").append(btn)
 
 
-//             const i_7 = document.createElement("i")
-//             i_7.setAttribute("class", " fa-solid fa-phone")
-//             i_7.setAttribute("id", "icoen")
-//             document.querySelector(".ph_iccon").append(i_7)
+            const i_6 = document.createElement("i")
+            i_6.setAttribute("class", " fa-solid fa-envelope")
+            i_6.setAttribute("id", "icoen")
+            document.querySelector(".envel").append(i_6)
 
-//             const p_11 = document.createElement("p")
-//             p_11.setAttribute("class", "vaccinated")
-//             p_11.innerHTML ="Vaccinated"
-//             document.querySelector(".content-2-profile").append(p_11)
+            const btn_2=document.createElement("button")
+            btn_2.setAttribute("id", "phone-icon")
+            btn_2.setAttribute("class", "ph_iccon")
+            btn_2.innerHTML = "view contact"
+            document.querySelector(".message").append(btn_2)
+
+
+            const i_7 = document.createElement("i")
+            i_7.setAttribute("class", " fa-solid fa-phone")
+            i_7.setAttribute("id", "icoen")
+            document.querySelector(".ph_iccon").append(i_7)
+
+            const p_11 = document.createElement("p")
+            p_11.setAttribute("class", "vaccinated")
+            p_11.innerHTML ="Vaccinated"
+            document.querySelector(".content-2-profile").append(p_11)
 
 
             
-//             const a_1 = document.createElement("a")
-//             a_1.setAttribute("href", "../../pages/booking/book3.html")
-//             a_1.setAttribute("class", "ankerlik")
-//             document.querySelector(".content-2-profile").append(a_1)
+            const a_1 = document.createElement("a")
+            a_1.setAttribute("href", "../../pages/booking/book3.html")
+            a_1.setAttribute("class", "ankerlik")
+            document.querySelector(".content-2-profile").append(a_1)
 
-//             const button_1 = document.createElement("button")
-//             button_1.innerHTML = "BOOK NOW"
-//             document.querySelector(".ankerlik").append(button_1)
+            const button_1 = document.createElement("button")
+            button_1.innerHTML = "BOOK NOW"
+            document.querySelector(".ankerlik").append(button_1)
             
 
 
