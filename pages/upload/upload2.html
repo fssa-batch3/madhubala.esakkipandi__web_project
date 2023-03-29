@@ -11,6 +11,7 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../../assets/css/upload2.css">
+    
     <title>Document</title>
 
 </head>
@@ -27,11 +28,11 @@
             <div class="drag">
                 <h2>Drag and Drop files</h2>
 
-                <p>or</p>
-                <!-- <p> <a href="#">Browse files</a></p> -->
+                <p class="or">or</p>
+                <p> <a href="#">Browse files</a></p>
                 
-                <input type="file" id="input_image" accept="image/png,image/jpg">
-                <i id="drag" class="fa-solid fa-cloud-arrow-up"></i>
+              
+                <i id="drag" class="fa-solid fa-cloud-arrow-up"></i> 
             </div>
             <!-- decription content starts -->
             <div class="description">
@@ -99,14 +100,16 @@
                 <p>We will send you confirmation code by sms on the next step</p>
                 <label for="mobilenumber">Mobile number:</label>
                 <input type="tel" id="num" placeholder="91">
-                <input type="tel"  required>
+                <input type="tel" id="tel-num" required>
+                <br><br><br>
+                <label for="img-url">Image URL</label>
                 <input type="url" id="imgurl">
             </div>
             <!-- uploading section ends -->
             <button type="submit">Upload</button>
         </form>
 
-        
+
                 <!-- --------------- -->
         </div>
     </div>
@@ -135,8 +138,11 @@ e.preventDefault();
     upload_detail["mobilenumber"]= tel
 
     upload_details.push(upload_detail);
-            localStorage.setItem("uploading_data", JSON.stringify(upload_details));
+            localStorage.setItem("upload_details", JSON.stringify(upload_details));
+
+
 })
+
 
 
 

@@ -1,22 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
   margin: 0px;
   padding: 0px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
   font-family: 'Poppins', sans-serif;
 }
 .menu-bar {
-  height: 100px;
+  height: 90px;
   width: 100%;
   display: flex;
   align-content: center;
   justify-content: space-between;
   background-color: white;
   position: static;
-  box-shadow: 10px 10px 30px 1px rgb(205, 26, 98);
+  /* box-shadow: 5px 4px 1px -1px rgb(205, 26, 98); */
+
+  box-shadow: rgba(248, 85, 180, 0.2) 0px 7px 29px 0px;
 }
 .main {
   margin-top: 20px;
@@ -87,8 +91,13 @@ span {
 .menu-bar ul li:hover::after {
   width: 90%;
 }
+.my-profile-img{
+  height: 30px;
+  width:30px;
+  border-radius: 50%
+}
 .main-content {
-  height: 771px;
+  height: 691px;
   width: 90%;
   position: relative;
   top: 5px;
@@ -122,12 +131,14 @@ form {
 
 }
 label {
-  margin-left: 20px;
-  padding:25px;
+  margin-left: 15px;
+  padding:15px;
  
 }
 #checkbox {
-  margin-left: 22px;
+ 
+  height: 15px;
+  width: 80px;
 }
 button {
   margin-left: 20px;
@@ -158,4 +169,15 @@ a {
 }
 a:hover {
   color: white;
+}
+
+input{
+  border: 1px solid #DCE2E6;
+  height: 30px;
+ border-radius: 5px;
+ width: 200px;
+ text-align: center;
+}
+#function{
+  margin-left: 0px;
 }

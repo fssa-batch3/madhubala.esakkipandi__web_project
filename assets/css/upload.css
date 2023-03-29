@@ -72,7 +72,7 @@ body {
   display: flex;
   margin-left: 70px;
   justify-content: space-between;
-  height: 500px;
+  height: 470px;
   
 }
 .color {
@@ -92,6 +92,7 @@ button {
   color: white;
   border-color: #F2F4F1;
   cursor: pointer;
+  border: none;
 }
 button a {
   color: white;
@@ -99,13 +100,12 @@ button a {
 }
 .content {
   height: 300px;
-  /* border-color: #F2F4F1; */
+
   width: 24%;
   border-radius: 50%;
-  /* height: 500px; */
-  /* box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px; */
+ 
   text-align: center;
-  /* background-color: white; */
+
   transition: 1s;
 }
 
@@ -142,111 +142,15 @@ h1 {
  
 }
 
-/* .footer {
-  height: 300px;
-  width: 100%;
-  background-color: black;
-  display: flex;
-  background-size: cover;
-  background-position: center;
-}
-.one:nth-child(1) {
-  height: 300px;
-  width: 30%;
-  color: white
-}
-.one:nth-child(2) {
-  height: 300px;
-  width: 30%;
-  color: white;
-}
-.one:nth-child(3) {
-  height: 300px;
-  width: 30%;
-  color: white;
-}
-.align {
-  width: 90%;
-  height: 300px;
-  margin-left: 75px;
-  display: flex;
-  justify-content: space-between;
-}
-.icco {
-  display: flex;
-  width: 200px;
-  justify-content: space-between;
-  margin-top: 40px;
-  height: 100px;
-}
-.bottom-head {
-  margin-top: 20px;
-  margin-left: -10px;
-}
-.contact {
-  margin-top: 20px;
-}
-#insta {
-  font-size: 40px;
-}
-#face {
-  font-size: 40px;
-}
-#twit {
-  font-size: 40px;
-}
-#git {
-  font-size: 40px;
-}
-.boto {
-  height: 300px;
-}
-.boto p {
-  margin-top: 0px;
-}
-.boto h4 {
-  margin-top: 1px;
-}
-.dooo {
-  height: 50px;
-  width: 140px;
-  border-radius: 5px;
-  margin-left: 50px;
-}
-.downn {
-  height: 50px;
-  width: 140px;
-  border-radius: 5px;
-  margin-left: 15px;
-}
-#mail {
-  padding: 10px;
-  width: 190px;
-  margin-top: 10px;
-  margin-left: 70px;
-}
-#pass {
-  padding: 10px;
-  width: 190px;
-  margin-top: 10px;
-  margin-left: 70px;
-}
-#but {
-  height: 35px;
-  width: 100px;
-  margin-top: 10px;
-  margin-left: 130px;
-} */
-
 
 .footer {
   height: 450px;
   width: 100%;
-  background-color: black;
+
   display: flex;
-  background-image: linear-gradient(rgba(6, 5, 5, 0.7), rgba(46, 47, 52, 0.7)), url("foot,jpg");
+  background-image: linear-gradient(rgba(11, 11, 11, 7), rgba(12, 12, 12, 0.7)),url("foot,jpg");
   background-size: cover;
-  margin-top: 50px;
+
 }
 .footer-content:nth-child(1) {
   height: 400px;
@@ -284,7 +188,10 @@ h1 {
   height: 100px;
 }
 .footer-head {
-  margin-top: 50px;
+  margin-top: 40px;
+  color:#F2F4F1;
+  margin-right: 85px;
+
 }
 .footer-subhead {
   margin-top: 30px;
@@ -303,12 +210,15 @@ h1 {
   font-size: 30px;
 }
 .links {
-  margin-top: 60px;
-}
-.links a {
+  margin-top: 40px;
+} a {
   color: white;
   text-decoration: none;
 }
+p{
+  margin-top: 15px;
+}
+
 .footer-content:nth-child(4) p {
   margin-top: 50px;
 }

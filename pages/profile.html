@@ -12,9 +12,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <title>Document</title>
 </head>
-
+<!-- <div class="container">
+    <form>
+      <div class="row">
+        <div class="col">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+      </div>
+    </form>
+  </div> -->
  <body>
 <div class="hole">
     <div class="profile">
@@ -53,37 +63,39 @@
         <div class="div-2"> <p class="type1">ADDRESS:</p></div>
      </div>
     </div>
-    <div class="left">
-   <input type="text" class="type"  id="newname" >
+    <div class="left col-md-6">
+   <input type="text" class="form-control"  id="newname" >
+   <br><br>
    <!-- <p  class="type"id="newname" ></p>
     -->
    <!-- <i class="fa-solid fa-pen-to-square" id="edit"></i> -->
    
    <!-- <p  class="type"id="newemail" ></p> -->
-   <input type="email" class="type"id="newemail"  >
+   <input type="email" class="form-control"id="newemail"><br><br><br>
    
    <!-- <i class="fa-solid fa-pen-to-square" id="edit1"></i> -->
-   <input type="text" class="type" id="bio" >
+   <input type="text" class="form-control" id="bio" ><br><br><br>
    <!-- <i class="fa-solid fa-pen-to-square" id="edit2"></i> -->
-   <input type="number" class="type" id="number" >
+   <input type="number" class="form-control" id="number" ><br><br>
    <!-- <i class="fa-solid fa-pen-to-square" id="edit3"></i> -->
-   <input type="text" class="type" id="city">
+   <input type="text" class="form-control" id="city"><br><br>
    <!-- <i class="fa-solid fa-pen-to-square" id="edit4"></i> -->
-   <input type="text" class="type" id="address" >
+   <input type="text" class="form-control" id="address" >
    <!-- <i class="fa-solid fa-pen-to-square" id="edit4"></i> -->
 
 
+<div class="buttons" >
+   <button  id="btnn" class="form-control custom-input">
+    Edit
+   </button>
+   <button  id="update" class="form-control custom-input">
+    Update
+   </button>
 
-   <button  id="btnn">
-    edit
+   <button  id="delete" class="form-control custom-input">
+    Delete
    </button>
-   <button  id="update">
-    update
-   </button>
-
-   <button  id="delete">
-    delete
-   </button>
+</div>
     </div>
 
 </div>
@@ -109,57 +121,47 @@
 
         
            let user_profile_data = JSON.parse(localStorage.getItem("data"));
-           let  user_pp=JSON.parse(localStorage.getItem("profile"));
+           let  user_pp= localStorage.getItem("profile")
+;
 
            let res;
-
+           console.log(user_pp["email"])
 
            user_profile_data.find(  // parameterized function 'a'
             e =>{
                     
-                if(e["user_email"]==user_pp["email"]){
+                if(e["user_email"]==user_pp){
                      return res=e
                 }
             }
             )
-
+console.log(res)
+            
 
         document.getElementById("newname").value =res["user_name"];
     document.getElementById("newemail").value = res["user_email"];
+    
 
-
+// -------------------------
             document.getElementById("update").addEventListener("click",e=>{
                 e.preventDefault();
-
             res["user_name"]= document.getElementById("newname").value
             res["bio"]= document.getElementById("bio").value
             res["number"]= document.getElementById("number").value
             res["city"]= document.getElementById("city").value
             res["address"]= document.getElementById("address").value
 
-
  localStorage.setItem("data",JSON.stringify(user_profile_data))
             })
 
+    // -----------------------------------
 
             document.getElementById("delete").addEventListener("click",event=>{
-                event.preventDefault();
-                console.log(res)
-                let del=user_profile_data.indexOf(res)
-                delete user_profile_data[del]  
-             console.log(user_profile_data)
-             localStorage.setItem("data",JSON.stringify(user_profile_data))
-            
+             event.preventDefault();   
+            localStorage.removeItem("profile");
+          
             })
-
-console.log(user_profile_data)
-
-
-
-
-
-
-
+            
     </script>
 </body>
 

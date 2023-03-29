@@ -53,6 +53,11 @@ h3 {
     border-radius: 10px;
    
 }
+#showPassword{
+    margin-left: 35px;
+    margin-top: 20px;
+    
+}
 .vio {
     margin-left: 130px;
     height: 40px;
@@ -71,6 +76,9 @@ form {
     margin-left: 30px;
     text-align: center;
     border: none;
+}
+.Show_Password_Text{
+    color:white;
 }
 label p {
     margin-left: 35px;
@@ -113,8 +121,10 @@ p {
 a {
     margin-left: 5px;
 }
-.boo{
+.checkbox-remember{
     margin-left: 20px;
+    color:white;
+    
 }
 .keep {
     color: black;

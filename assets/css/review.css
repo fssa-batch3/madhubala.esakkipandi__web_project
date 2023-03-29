@@ -191,12 +191,15 @@ body {
   color: white;
   border-color: white;
 }
+
 .reviewed-box {
   height: 330px;
   width: 100%;
   margin-top: 20px;
-  background-color: white;
+  background-color: hsl(0, 0%, 100%);
+  /* background-color: white; */
   border-radius: 20px;
+  font: inherit;
 }
 .top-review-text {
   width: 50px;
@@ -255,4 +258,15 @@ hr{
 .fa-solid{
   font-size: 30px;
   margin-top: 5px;
+}
+#user_name{
+  height: 40px;
+  width:600px;
+  text-align: center;
+}
+
+#user_revi{
+  height: 200px;
+  width:600px;
+  text-align: center;
 }

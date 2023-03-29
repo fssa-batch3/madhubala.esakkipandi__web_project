@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
 </head>
 
 <body>
@@ -47,6 +48,7 @@
                     </div>
                 </li>
                 <li><a href="./pages/booking/start_booking.html">Book here</a></li>
+                </li>
                 <li><a href="./pages/Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
                 <li><a href="./pages/profile.html"> <img src="./assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li>
             </ul>
@@ -184,19 +186,77 @@
 
           <div class="email-feture">
 
-            <h1>
-                FOR  MORE QURIES CONTACT US 
-            </h1>
-            <form method="post" onsubmit="sendemail()">
-                <input type="text" placeholder="enter ur name" class="name" id="na"><br><br>
-                <input type="email" placeholder="enter ur email" class="mail" id="email"><br><br>
-                <input type="text" placeholder="enter ur subject" class="sub" id="subb"><br><br>
-                <textarea id="meaa"></textarea><br><br>
-                <button id="btn" type="submit">send</button>
-                </form>
-               
-           
-             
+
+
+
+
+            <div class="right-email-feature">
+
+                <h1>
+                    Let's Talk
+                </h1>
+                <p>If have any queries contact us or fill out this form <br>we will get back to you promptly</p>
+                <br>
+                <br>
+                <form method="post" onsubmit="sendemail()">
+
+                    <label>Your Name</label>
+                    <br>
+                    <input type="text"  class="name" id="na"><br><br>
+                    <label>Your Email</label><br>
+                  
+                    <input type="email"  class="mail" id="email"><br><br>
+                    <label>Your subject of the query</label>
+                    <br>
+                    <input type="text"  class="sub" id="subb"><br><br>
+                    <label>Your mesaage</label><br>
+                    <textarea id="meaa" ></textarea><br><br>
+                    <button id="btn" type="submit">Send Message</button>
+                    </form>
+                   
+
+            </div>
+            <div class="left-emial-ffeature">
+            
+            <div class="round-background">
+
+                <img src="./assets/images/pink.png">
+            </div>
+            <i class="fa-solid fa-xmark"></i>
+            <i class="fa-regular fa-circle"></i>
+            <p class="bell"><i class="fa-solid fa-bell "></i></p>
+            <i class="fa-sharp fa-solid fa-check"></i>
+            <i class="fa-solid fa-circle" id="circle"></i>
+            <i class="fa-solid fa-paper-plane"></i>
+            <i class="fa-solid fa-comment-dots"></i>
+            <i class="fa-solid fa-xmark" id="top-mark"></i>
+            <i class="fa-solid fa-xmark" id="bot-mark"></i>
+            <i class="fa-regular fa-circle" id="top-circle"></i>
+            <i class="fa-regular fa-circle"  id="bot-circle"></i>
+            <i class="fa-solid fa-c"id="c-icon"></i>
+
+
+            <div class="locations">
+                <div class="left-icons">
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="detail-locatio-no">
+
+                    <P>152,chepakam,chennai,India</P>
+                    <P>91+6789339000</P>
+                    <P>contact us :Glossybelnds@gmail.com</P>
+                </div>
+                
+            </div>
+            <div class="social-media">
+                <i class="fa-brands fa-instagram"></i>
+                <i  class="fa-brands fa-facebook"></i>
+                <i  class="fa-brands fa-square-twitter"></i>
+            </div>
+            </div>
             </div> 
 </div>
 
@@ -263,7 +323,7 @@
 
     </div>
     <!-- footer section ends -->
-
+<script src="main.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
     <script>

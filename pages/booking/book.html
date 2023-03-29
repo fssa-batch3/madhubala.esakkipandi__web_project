@@ -233,7 +233,9 @@
                         </div> -->
                     </div>
 
-                    <!-- <div class="box"> --> m,klmml
+
+
+                    <!-- <div class="box"> --> 
                     <!-- <div class="one">
                             <div class="pic">
                                 <img class="profile" src="../../assets/images/images (1).jfif" alt="Makeup6">
@@ -288,10 +290,13 @@
                             <p><strong>Rs 20,000</strong></p>
                             <a href="../booking/book2.html"> <button>See more</button></a>
                         </div> -->
-                    <!-- </div> -->nklm,l
+                    <!-- </div> -->
 
 
-                    <!-- <div class="box"> -->nk.,
+
+
+
+                    <!-- <div class="box"> -->
                     <!-- <div class="one">
                             <div class="pic">
                                 <img class="profile" src="../../assets/images/images (4).png" alt="profile">
@@ -344,7 +349,9 @@
                             <p><strong>Rs 15,000</strong></p>
                             <a href="../booking/book2.html"> <button>See more</button></a>
                         </div> -->
-                    <!-- </div> -->mklml
+                    <!-- </div> -->
+
+
 
 
                     <!-- <div class="box"> -->
@@ -396,10 +403,12 @@
                             <p><strong>Rs 15,000</strong></p>
                             <a href="../booking/book2.html"> <button>See more</button></a>
                         </div> -->
-                    <!-- </div> -->jk
+                    <!-- </div> -->
 
 
-                    <!-- <div class="box"> -->cvbnm,nm,
+
+
+                    <!-- <div class="box"> -->
                     <!-- <div class="one">
                             <div class="pic">
                                 <img class="profile"
@@ -505,9 +514,13 @@
                             <p><strong>Rs 15,000</strong></p>
                             <a href="../booking/book2.html"> <button>See more</button></a>
                         </div> -->
-                    <!-- </div> -->xcvbnm,.
+                    <!-- </div> -->
 
-                    <!-- <div class="box"> -->cvbnm,.
+
+
+
+
+                    <!-- <div class="box"> -->
                     <!-- <div class="one">
                             <div class="pic">
                                 <img class="profile"
@@ -561,10 +574,13 @@
                             <p><strong>Rs 18,000</strong></p>
                             <a href="../booking/book2.html"> <button>See more</button></a>
                         </div> -->
-                    <!-- </div> -->sdfghjkl
+                    <!-- </div> -->
 
 
-                    <!-- <div class="box"> -->xcvbnm,.
+
+
+
+                    <!-- <div class="box"> -->
                     <!-- <div class="one">
                             <div class="pic">
                                 <img class="profile" src="../../assets/images/pexels-harshal-palvi-2802786.jpg"
@@ -617,7 +633,12 @@
                             <p><strong>Rs 15,000</strong></p>
                             <a href="../booking/book2.html"><button>See more</button></a>
                         </div> -->
-                    <!-- </div>  //jhgfh/bv -->xcfvbnm,.
+                    <!-- </div>  //jhgfh/bv -->
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -626,22 +647,7 @@
     </div>
 
     <script>
-        //  <div class="one">
-        //                     <div class="pic">
-        //                         <img class="profile" src="../../assets/images/Makeup.jpg"  alt="Makeup">
-        //                     </div>
-
-        //                     <p>Magitough makeup</p>
-
-        //                     <p> <i id="star" class="fa-solid fa-star"></i> 5.0(51reviews)</p>
-        //                     <div class="local">
-        //                         <img src="../../assets/images/map.png" class="map"  alt="Map">
-        //                         <p class="chennai">chennai</p>
-        //                     </div>
-        //                     <p>Bridal makeup prize</p>
-        //                     <p><strong>Rs 15,000</strong></p>
-        //                     <a href="../booking/book2.html"> <button>See more</button></a>
-        //                 </div>
+   
         // const name_list = [
         //     {
         //         "name": "Janani Makeup",
@@ -798,15 +804,6 @@
 
         var records = JSON.parse(localStorage.getItem("card_data"))
 
-        //    records.forEach(element => {
-        //        card(element)
-
-        //      });
-
-
-
-        //    function card(item){
-
             
         for (let record of records) {
 
@@ -833,6 +830,7 @@
             p_2.setAttribute("class", "para")
             document.querySelector(".one").append(p_2)
 
+            
             const i = document.createElement("i")
             i.setAttribute("class", "fa-solid fa-star")
             i.setAttribute("id", "star")
@@ -877,7 +875,7 @@
 
 
 
-
+        
 
     </script>
 </body>
@@ -886,47 +884,3 @@
 
 </html>
 
-<!-- 
-let products = JSON.parse(localStorage.getItem('create_product'))
-let i;
-for (let i = 0; i < products.length; i++) {
-    // productCard();
-// }
-// function productCard() {
-    product_card_div = document.createElement("div");
-    product_card_div.setAttribute("class", "product-card");
-    document.querySelector(".product-list-container").append(product_card_div);
-    prdouct_link = document.createElement("a");
-    prdouct_link.setAttribute("href", "order1.html?name=" + products[i]["titlename"]);
-    product_card_div.append(prdouct_link);
-    product_image = document.createElement("img");
-    product_image.setAttribute("src", products[i]["image"]);
-    // product_image.setAttribute("alt", products[i]["product_image"]["alt"]);
-    prdouct_link.append(product_image);
-    product_name = document.createElement("p");
-    product_name.innerText = products[i]["titlename"];
-    prdouct_link.append(product_name);
-    product_quantity = document.createElement("p");
-    product_quantity.innerText = "₹ " + products[i]["price"] + " Per kg";
-    product_card_div.append(product_quantity);
-    ratings_div = document.createElement("div");
-    ratings_div.setAttribute("class", "product-ratings");
-    product_card_div.append(ratings_div);
-    let products_star = products[i];
-    let rating_round = Math.round(products_star.ratings);
-    let stars = "";
-    for (let j = 0; j < rating_round; j++) {
-        stars += ":star:";
-    }
-    ratings_div.append(stars);
-    buy_now_link = document.createElement("a");
-    buy_now_link.setAttribute("href", "#");
-    buy_now_link.setAttribute("class", "buy-now")
-    buy_now_link.innerText = "Buy Now";
-    product_card_div.append(buy_now_link);
-    add_to_cart_link = document.createElement("a");
-    add_to_cart_link.setAttribute("href", "#");
-    add_to_cart_link.setAttribute("class", "add-to-cart")
-    add_to_cart_link.innerText = "Add to Cart";
-    product_card_div.append(add_to_cart_link);
-} -->

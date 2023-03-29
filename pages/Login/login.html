@@ -52,9 +52,9 @@
 
                         <input type="checkbox" name="checkpassword" onclick="showPasswordWhenChecked()"
                             id="showPassword" />
-                        <p class="Show_Password_Text">Show Password</p>
+                        <label class="Show_Password_Text">Show Password</label>
                         <div class="foot">
-                            <div class="boo">
+                            <div class="checkbox-remember">
                                 <input type="checkbox" required><label for="check">Remember me</label>
                             </div>
 
@@ -87,15 +87,15 @@
 
             const usermail = document.getElementById("user").value
             const userpass = document.getElementById("pass").value
-
-            let login = {
-
-                "email": usermail,
-                "userofpassword": userpass
-
-            }
-
             let data = JSON.parse(localStorage.getItem("data"));
+
+            // let login = {
+
+            //     "email": usermail,
+            //     "userofpassword": userpass
+
+            // }
+
             let res;
             data.find(  // parameterized function 'a'
                 element => {
@@ -114,7 +114,8 @@
 
             if (res == 1) {
                 alert("logged in")
-                localStorage.setItem("profile", JSON.stringify(login))
+                let mail_of_user=usermail
+                localStorage.setItem("profile",mail_of_user )
                 window.location.href = "../profile.html"
             }
             else {
@@ -132,6 +133,9 @@
             }
             
         }
+
+
+
         
     </script>
 </body>
