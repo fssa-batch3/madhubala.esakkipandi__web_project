@@ -10,7 +10,7 @@ body {
     font-family: 'Poppins', sans-serif;    
 }
 .login {
-    height: 650px;
+    height: 700px;
     width: 900px;
    margin: 120px auto;
     background-color: #ce3767;
@@ -18,20 +18,20 @@ body {
     box-shadow:  rgb(255 255 255 / 10%) 0px 1px 1px 0px inset, rgb(50 50 93 / 25%) 0px 50px 100px -20px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
 }
 .log2 {
-    height: 650px;
+    height: 700px;
     width: 900px;
     display: flex;
 }
 .left {
     width: 450px;
-    height: 650px;
+    height: 700px;
     background-color: white;
     text-align: center;
     border-radius: 20px 0px 0px 20px;
  } 
 .right {
     width: 450px;
-    height: 650px;
+    height: 700px;
 }
 .pic{
     margin-top: 30px;
@@ -64,10 +64,10 @@ h3 {
     margin-top: 40px;
 }
 form {
-    height: 450px;
+    height: 500px;
     width: 350px;
     margin-left: 30px;
-    margin-top: 50px;
+    /* margin-top: px; */
 }
 #user,#pass {
     height: 50px;
@@ -129,4 +129,30 @@ a {
 .keep {
     color: black;
     margin-top: 30px;
+}
+input:focus
+{
+    border: 1px solid #d4295f;
+    box-shadow: 0px 1px 0px 2px #d0204f;
+    outline-offset: 0px;
+    outline: none;
+}
+.options_of_user{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+#button_user,#button_artist{
+    
+   width: 100px;
+  height: 30px;
+ 
+  background-color:white;
+  border-radius: 5px;
+  margin-top: 40px;
+  color: grey;
+  cursor: pointer;
 }

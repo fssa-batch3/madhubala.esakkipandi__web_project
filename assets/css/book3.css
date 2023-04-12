@@ -135,7 +135,7 @@ label {
   padding:15px;
  
 }
-#checkbox {
+.checkbox {
  
   height: 15px;
   width: 80px;
@@ -178,6 +178,6 @@ input{
  width: 200px;
  text-align: center;
 }
-#function{
+.function{
   margin-left: 0px;
 }

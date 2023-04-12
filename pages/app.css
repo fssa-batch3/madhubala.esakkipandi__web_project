@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+   
+    font-family: 'Poppins', sans-serif;
+   
+  }
+
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    padding-top: 100px;
+    background: #dd315c;
+    border-radius:  10%  10% 80% 80%;
+}
+
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.whole{
+    height: 800px;
+    width:100%;
+    /* border: 2px solid black; */
+}
+.makeupitems{
+    height: 350px;
+    width:400px;
+    margin-left: 150px;
+    border-radius: 40px;
+        -webkit-box-shadow: 12px 29px 81px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 12px 29px 81px 0px rgba(0,0,0,0.75);
+box-shadow: 12px 29px 81px 0px rgba(0,0,0,0.75);
+margin-top: 20px;
+}
+.content-info{
+    width:100%;
+    height:400px;
+    /* border: 2px solid black; */
+    display: flex;
+}
+.information{
+    height: 350px;
+    width:50%;
+    /* border: 2px solid black; */
+    margin-left: 80px;
+    margin-top: 20px;
+    color:#86039d
+}
+.italic{
+    font-size: 95px;
+}
+.upper-font{
+   position: relative;
+   bottom:40px;
+   margin-left: 75px;
+}
+.ideas{
+    height:600px;
+    width:100%;
+    margin-top: 100px;
+    /* border: 2px solid black; */
+    
+}
+.heading{
+    font-size: 30px;
+    color:aliceblue
+}
+.points-of-ideas{
+    margin: 30px;
+    width:1000px;
+    height:70%;
+    /* border:1px solid black ; */
+    margin-left: 230px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Popular,.works,.post,.upload,.Favotite,.Portfolio,.Happyclients{
+    box-shadow: 0 0 10px rgba(34, 10, 19, 0.1);
+  display: flex;
+    height: 90px;
+    
+    width:440px;
+    border-radius: 10px;
+}
+.fa-solid{
+    color:#dd315c;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 25px;
+ 
+   text-shadow: 0px 0px 2px rgb(176, 26, 91);
+}
+.points-of-ideas p{
+    font-size: 14px;
+    margin-left: 25px;
+    margin-top: 20px;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+ 
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-left: 600px;
+}
+.glow-on-hover a{
+    color:white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+  #register{
+    height: 700px;
+    width:100%;
+    /* border: 2px solid black; */
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat ;
+    background-image: linear-gradient(rgba(11, 11, 11, 0.9), rgba(23, 19, 22, 0.7)), url("../assets/images/pexels-los-muertos-crew-8031803.jpg");
+
+  }
+
+  .register-text{
+    font-size: 35px;
+     height: 300px;
+     width: 700px;
+     margin-left: 70px;
+
+     color:#f6f6f6;
+     margin-top: 160px;
+  }
+  .variatn-color{
+    color:#dd315c;
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  #top-quoat{
+    position: relative;
+    font-size: 45px;
+    top:100px;
+  }
+  #bot-quoat{
+    position: relative;
+    font-size: 45px;
+    bottom: 100px;
+    left:700px
+  }
+  
+.art-register{
+   
+        height:50px;
+         width:170px;
+     font-family: 'Poppins', sans-serif;
+     border-radius: 30px;
+     color:#dd315c;
+    font-weight: bolder;
+    text-transform: uppercase;
+    border:1px solid  #dd315c;
+    background-color: whitesmoke;
+    margin-left: 20px;
+   
+}
+.art-register:hover{
+ background-color: #dd315c;
+ color:white;
+}
+
+.div{
+    height:600px;
+    width:100%;
+    
+}
+.art-register a{
+  text-decoration: none;
+  color:#dd315c;
+}
+
+
+
+.footer {
+    height: 350px;
+    width: 100%;
+  
+    display: flex;
+    background-image: linear-gradient(rgba(11, 11, 11, 7), rgba(12, 12, 12, 0.7)),url("foot,jpg");
+    background-size: cover;
+  
+  }
+  .footer-content:nth-child(1) {
+    height: 350px;
+    width: 25%;
+    color: white
+  }
+  .footer-content:nth-child(2) {
+    height: 300px;
+    width: 22%;
+    color: white;
+  }
+  .footer-content:nth-child(3) {
+    height: 350px;
+    width: 22%;
+    color: white;
+  }
+  .footer-content:nth-child(4) {
+    height: 350px;
+    width: 22%;
+    color: white;
+  }
+  .footer-box {
+    width: 90%;
+    height: 350px;
+    /* margin-top: 50px; */
+    margin-left: 75px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-icons {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    /* margin-top: 70px; */
+    height: 100px;
+  }
+  .footer-head {
+    margin-top: 50px;
+  }
+  .footer-subhead {
+    margin-top: 10px;
+  }
+  #insta-icon {
+    font-size: 30px;
+  
+  }
+  #facebook-icon {
+    font-size: 30px;
+  }
+  #twiter-icon {
+    font-size: 30px;
+  }
+  #github-icon {
+    font-size: 30px;
+  }
+  
+  .links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-content:nth-child(4) img {
+    height: 60px;
+    width: 240px;
+    border-radius: 9px;
+    /* margin-top: 50px; */
+  }
+  .footer-content:nth-child(3) p {
+    /* margin-top: 20px; */
+    margin-left: 20px;
+  }
+  .footer-content:nth-child(3) a {
+    text-decoration: none;
+    color: white;
+  }
+  

@@ -573,11 +573,11 @@ margin: 5px;
   display: flex;
   /* border:2px solid black; */
   height: 35px;
-  width:190px;
+  width:300px;
 }
 .reference{
   /* border:2px solid black; */
-  width:100px;
+  width:auto;
   margin: 4px;
 }
 .ratings{

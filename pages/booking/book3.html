@@ -37,7 +37,8 @@
       </li>
       <li><a href="./pages/booking/start_booking.html">Book here</a></li>
       <li><a href="./pages/Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
-      <li><a href="../profile.html"> <img src="../../assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li>
+      <li><a href="../profile.html"> <img src="../../assets/images/IMG20200903161128.jpg" class="my-profile-img"></a>
+      </li>
 
     </ul>
   </div>
@@ -51,51 +52,115 @@
       </h1>
     </div>
     <div class="cont-2">
-      <form>
+      <form id="booking-form">
 
         <label for="name">Name:</label>
-        <input type=" text" placeholder="Enter your name">
+        <input type=" text" id="Name-of-coustomer" placeholder="Enter your name">
         <br><br>
         <label for="mail">Enter your email:</label>
-        <input type="text" placeholder="Enter your email">
+        <input type="text" id="email-of-coustomer" placeholder="Enter your email">
         <br><br>
         <label for="number">Enter your phone-number:</label>
-        <input type="number" placeholder="91..">
+        <input type="number" id="contact-of-coustomer" placeholder="91..">
         <br><br>
         <label for="addres">Enter your address</label>
-        <input type="text">
+        <input type="text" id="address-coustomer">
         <br><br>
         <label for="date">Choose your date:</label>
-        <input type="date">
+        <input type="date" id="date-choosen-coustomer">
         <br><br>
         <label for="function"> Choose your function:</label>
         <br><br>
-        <input type="checkbox" id="checkbox">
-        <label for="function" id="function">
+        <input type="checkbox" class="checkbox" id="bridal">
+        <label for="function" class="function">
           Bridal
         </label>
         <br><br>
-        <input type="checkbox" id="checkbox">
-        <label for="function" id="function">
+        <input type="checkbox" class="checkbox" id="Birthday">
+        <label for="function" class="function">
           Birthday
         </label>
         <br>
         <br>
-        <input type="checkbox" id="checkbox">
-        <label for="function" id="function">
+        <input type="checkbox" class="checkbox" id="Marriage">
+        <label for="function" class="function">
           Marriage
         </label>
         <br><br>
-        <input type="checkbox" id="checkbox">
-        <label for="function" id="function">
+        <input type="checkbox" class="checkbox" id="others">
+        <label for="function" class="function">
           others
         </label>
         <br>
         <br>
-        <button><a href="../../pages/booking/book4.html">Confirm booking</a></button>
+        <button type="submit">confirm_booking</button>
       </form>
     </div>
   </div>
+
+
+
+  <script>
+
+    let url = window.location.search;  //?name=Bridal MAkeup by sharmila
+
+    let urls = new URLSearchParams(url)
+    
+    let name = urls.get("book_name");
+   
+
+    let form_filled = document.getElementById("booking-form")
+
+
+    form_filled.addEventListener('submit', e => {
+      e.preventDefault();
+
+
+      let artistgetting_inforamtion = JSON.parse(localStorage.getItem("selected_artist"))
+      let active_user = localStorage.getItem("profile").value
+
+      const name_client = document.getElementById("Name-of-coustomer").value
+      const email_client = document.getElementById("email-of-coustomer").value
+      const contact_client = document.getElementById("contact-of-coustomer").value
+      const addres_client = document.getElementById("address-coustomer").value
+      const date_event_client = document.getElementById("date-choosen-coustomer").value
+
+      const booking_info = JSON.parse(localStorage.getItem("records_booking_clients"))
+
+      if ((name_client.trim() != "") && (email_client.trim() != "") && (contact_client.trim() != "") && (addres_client.trim() != "") && (date_event_client.trim() != "")) {
+        let records_booking_clients = JSON.parse(localStorage.getItem("records_booking_clients")) ? JSON.parse(localStorage.getItem("records_booking_clients")) : []
+
+        let object_booking_records = {
+
+          "customer_name": name_client,
+          "customer_email": email_client,
+          "customer_contact": contact_client,
+          "customer_address": addres_client,
+          "event_date": date_event_client,
+          "user_mail_id": active_user,
+          "selected_artist_for_booking": name
+        }
+
+
+        records_booking_clients.push(object_booking_records);
+
+        console.log(records_booking_clients)
+
+
+        localStorage.setItem("records_booking_clients", JSON.stringify(records_booking_clients));
+
+      }
+      else {
+
+        alert("Fill the required data")
+
+      }
+    })
+
+
+
+
+  </script>
   <!-- confirm booking content ends -->
 </body>
 

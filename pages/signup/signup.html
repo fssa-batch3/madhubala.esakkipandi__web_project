@@ -25,15 +25,14 @@
             <h1>signup</h1>
             <form id="form">
                 <br><br><br>
-                <label><input type="text" placeholder="Full Name..." id="name" required></label><br>
-                <label><input type="email" placeholder="Email..." id="email" required></label><br>
-                <label><input type="password" placeholder="Password..." id="password" required></label><br>
-                <label><input type="password" placeholder=" Repeat Password..." id="repeat" required></label>
+                <label><input type="text" placeholder="Full Name..." id="name"  required></label><br>
+                <label><input type="email" placeholder="Email..." id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></label><br>
+                <label><input type="password" placeholder="Password..." id="password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></label><br>
+                <label><input type="password" placeholder=" Repeat Password..." id="repeat" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></label>
                 <br>
                 <br>
                 <div class="terms_and_conditions">
-                    <input type="checkbox" value="checkbox" id="box"><label for="box">I am agree with <strong>Terms
-                            of user</strong></label>
+                    <input type="checkbox" value="checkbox" id="box"><label for="box">I am agree with <strong>Termsof user</strong></label>
                 </div>
                 <br><br>
                 <div class="btn">
@@ -54,14 +53,13 @@
             e.preventDefault();
             const name = document.getElementById("name").value
             const email = document.getElementById("email").value
-
             // const username = document.getElementById("username").value
             const password = document.getElementById("password").value
             const repeat = document.getElementById("repeat").value
 
             
             const user_records = JSON.parse(localStorage.getItem("data"));
-            if ((name != "") && (email != "") && (password != "") && (repeat != "")) {
+            if ((name.trim() != "") && (email.trim() != "") && (password.trim() != "") && (repeat.trim() != "")) {
                 let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")) : [];
 
                 let user_data = {
@@ -99,6 +97,8 @@
                 alert("fill this data")
             }
         });
+
+
     </script>
 </body>
 

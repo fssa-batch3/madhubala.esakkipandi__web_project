@@ -35,6 +35,10 @@
             <div class="right">
                 <div class="lay">
                     <h3 class="vio">LOG-IN</h3>
+<!-- <div class="options_of_user">
+               <submit  id="button_user"type="button">User</submit>
+               <submit  id="button_artist"type="button">Artist</submit> -->
+                <!-- </div> -->
                     <!-- <form action="../../index.html"> -->
                     <form>
 
@@ -42,17 +46,17 @@
                             <p>Email:</p>
                         </label>
 
-                        <input id="user" type="email" placeholder="enter your email" required>
+                        <input id="user" type="email" placeholder="Enter your email" required>
 
                         <label for="pass">
                             <p> Password:</p>
                         </label>
 
-                        <input id="pass" type="password" placeholder="enter your name" required>
+                        <input id="pass" type="password" placeholder="Enter your name" required>
 
-                        <input type="checkbox" name="checkpassword" onclick="showPasswordWhenChecked()"
+                        <!-- <input type="checkbox" name="checkpassword" onclick="showPasswordWhenChecked()"
                             id="showPassword" />
-                        <label class="Show_Password_Text">Show Password</label>
+                        <label class="Show_Password_Text">Show Password</label> -->
                         <div class="foot">
                             <div class="checkbox-remember">
                                 <input type="checkbox" required><label for="check">Remember me</label>
@@ -61,7 +65,14 @@
                             <a href="#">Forget password?</a>
 
                         </div>
-                        <button onclick="login()">Log-In</button>
+                        <!-- <button onclick="login()">Log-In</button> -->
+                        <div class="options_of_user">
+                            <!-- <submit  id="button_user"type="button">User</submit>
+                            <submit  id="button_artist"type="button">Artist</submit> -->
+                             
+                        <submit  id="button_user"type="button"  onclick="login()">User-Login</submit>
+                        <submit  id="button_artist"type="button" onclick="artistlogin()">Artist-Login</submit>
+</div>
                         <br><br>
 
                         <p class="sing">OR SIGN-UN WITH</p>
@@ -133,6 +144,61 @@
             }
             
         }
+
+
+
+
+
+        // --------------------------------------------------------------------artist login 
+       
+        function artistlogin(e) {
+
+ let artist_data=JSON.parse(localStorage.getItem("card_data"))
+const usermail = document.getElementById("user").value
+const userpass = document.getElementById("pass").value
+
+
+let result;
+let artist_email;
+artist_data.find(  // parameterized function 'a'
+    e => {
+        if(e["user_email"] == usermail && e["artist_password"] == userpass) { //data=[{0},{1}] //a=data[0],a=data[1]
+
+            artist_email = e["user_email"];
+            
+            return result = 1;
+
+        }
+        else {
+
+            return result = 0;
+        }
+    }
+
+);
+
+if (result == 1) {
+    alert("logged in")
+
+    localStorage.setItem("artist_profile",artist_email)
+    window.location.href = "../profileartist.html"
+}
+else {
+    alert("none")
+}
+}
+
+function showPasswordWhenChecked() {
+let showPassword = document.getElementById("pass");
+
+if (showPassword.type === "pass") {
+    showPassword.type = "text";
+} else {
+    showPassword.type = "pass";
+    
+}
+
+}
 
 
 

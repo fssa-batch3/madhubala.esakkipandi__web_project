@@ -14,9 +14,6 @@
 
 <body>
     <!-- nav bar starts -->
-
-
-
     <div class="menu-bar">
         <img src="../../assets/images/Screenshot__63_-removebg-preview.png" alt="logo">
         <ul class="main">
@@ -198,7 +195,7 @@
                 <input type="text" id="experience" placeholder="Tell us about your experience">
 
                 <br><br>
-                <input type="text" id="vendors_review" placeholder="How much did you on this vendor">
+                <input type="text" id="vendors_review" placeholder="Write your">
 
                 <br><br>
                 <button id="btn" type="submit">submit review</button>
@@ -209,6 +206,7 @@
      </div>
 
 
+     
         <!-- review structure -->
         <div class="boxer">
 
@@ -476,18 +474,31 @@
                     "Price": "22,000 per function",
                 "locality": "Banglore",
             },
+            {"artist_name": "steffy Makeup",
+                "image": {
+                    source: "../../assets/images/bridal-makeup-makeup-by-namrata-satwani-bridal-makeup-12_15_273387-158193732586136.webp"},
+
+
+                    "Price": "22,000 per function",
+                "locality": "Banglore",
+            },
+            {"artist_name": "Prathiusha Makeup",
+                "image": {
+                    source: "../../assets/images/7357084cd7e989a7ea629c20a0ad9c2a.jpg"},
+
+
+                    "Price": "12,000 per function",
+                "locality": "chennai",
+            }
             
 
         ]
-
-
-
-
 
         localStorage.setItem("listdetails", JSON.stringify(list_artist))
 
         let url = window.location.search;  //?name=Bridal MAkeup by sharmila
         console.log(url);
+
         let urls = new URLSearchParams(url)
         console.log(urls)//"name":"sharmila"
 
@@ -499,25 +510,17 @@
         // const name_1 = document.getElementById("name")
 
         // name_1.innerText = "sasi"
+
         let result;
-        list_artist.find(function (e) { //arr=[{0},{1},{2}] ; e={0};e={1}
+        list_artist.find(function (e) { 
             if (e["artist_name"] == name) {
                 return result = e;
-
+    
             }
         })
         console.log(result)
 
 
-
-
-        // <div class="heading">
-        //     <h1 class="album photos">Photos</h1>
-        //     <a href="../../pages/booking/book6.html">
-        //         <h1 class="album vedios">Videos</h1>
-        //     </a>
-
-        // </div>
 
 
         const div_1 = document.createElement("div")
@@ -666,15 +669,14 @@
 
 
         const a_1 = document.createElement("a")
-        a_1.setAttribute("href", "../../pages/booking/book3.html")
+        a_1.setAttribute("href", "../../pages/booking/book3.html?book_name=" + name)
         a_1.setAttribute("class", "ankerlik")
         document.querySelector(".content-2-profile").append(a_1)
 
         const button_1 = document.createElement("button")
         button_1.innerHTML = "BOOK NOW"
         document.querySelector(".ankerlik").append(button_1)
-
-        // ----------------------------------
+// -------------------------------------------------------------------------------------
         const uploading_img = JSON.parse(localStorage.getItem("upload_details"))
 
         let res;
@@ -698,25 +700,39 @@
             document.querySelector(".box").append(up_img)
 
         }
-
         // ----------------------------------------------------
-
 
         let artist_reviews = JSON.parse(localStorage.getItem("artistreviews")) ? JSON.parse(localStorage.getItem("artistreviews")) : [];
         let output = "";
+
+// Active artist name------------------
+
+let reviewer_name = localStorage.getItem("profile")
+let reviewer_name_matching = JSON.parse(localStorage.getItem("data"))
+let re;
+reviewer_name_matching.find(  function (e) 
+    {
+        if(e["user_email"]==reviewer_name){
+             return re=e
+           
+        }
+       
+    }
+    )
         let review_output = document.querySelector(".boxer");
         document.getElementById("sub-form").addEventListener("submit", e => {
             e.preventDefault();
             const input = document.getElementById("experience").value;
             const commentes = document.getElementById("vendors_review").value;
+           const name_of_reviewer=re["user_name"]
             if ((input !== "") && (commentes !== "")) {
-
 
                 let user_rev = {
                     "input": input,
                     "comments": commentes,
-                    "artists_name": name
-
+                    "artists_name": name,
+                    "reviewer_name":name_of_reviewer
+                
                 }
                 artist_reviews.push(user_rev);
                 localStorage.setItem("artistreviews", JSON.stringify(artist_reviews));
@@ -732,19 +748,6 @@
 
        
 // -----------------
-
-// Active user's data
-let reviewer_name = localStorage.getItem("profile")
-let reviewer_name_matching = JSON.parse(localStorage.getItem("data"))
-let re
-reviewer_name_matching.find(  function (e) 
-    {
-        if(e["user_email"]==reviewer_name){
-             return re=e
-        }
-
-    }
-    )
 
 // ---------------------------------------
 
@@ -765,6 +768,7 @@ reviewer_name_matching.find(  function (e)
 //  -------------------------------
 
 // user's review
+
         function review_list() {
             for (let i = 0; i < artist_reviews.length; i++) {
                 if (artist_reviews[i]["artists_name"] == name) {
@@ -777,7 +781,7 @@ reviewer_name_matching.find(  function (e)
                         <div class="name_month">
                         <div class="name">
                         <div class="reference">
-                        <p id="reviewrname">  </p>
+                        <p id="reviewrname">${artist_reviews[i].reviewer_name} </p>
                         </div>
                         <div class="ratings">
                         <p> <i id="star" class="fa-solid fa-star"></i><span>5.0</span></p>
@@ -797,7 +801,6 @@ reviewer_name_matching.find(  function (e)
             }
         }
         review_list();
-// -------------------------------
 
 // ------------------------------
 
@@ -821,6 +824,12 @@ reviewer_name_matching.find(  function (e)
     `
 
 // -----------------------
+
+
+
+
+
+
 
     </script>
 
