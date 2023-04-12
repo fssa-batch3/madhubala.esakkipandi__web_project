@@ -677,6 +677,9 @@
         button_1.innerHTML = "BOOK NOW"
         document.querySelector(".ankerlik").append(button_1)
 // -------------------------------------------------------------------------------------
+
+
+// uploading images of artist
         const uploading_img = JSON.parse(localStorage.getItem("upload_details"))
 
         let res;
@@ -690,6 +693,7 @@
         div_upl_2.setAttribute("class", "box")
         document.querySelector(".pic-content").prepend(div_upl_2)
 
+        
         for (let post of uploading_img.filter(user => user.uploadname == name)) {
 
             const up_img = document.createElement("img")
@@ -719,6 +723,11 @@ reviewer_name_matching.find(  function (e)
        
     }
     )
+
+
+    // -----------------------------------
+
+
         let review_output = document.querySelector(".boxer");
         document.getElementById("sub-form").addEventListener("submit", e => {
             e.preventDefault();

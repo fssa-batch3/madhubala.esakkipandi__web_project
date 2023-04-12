@@ -103,7 +103,7 @@
               </h3>
                <hr>
             </div>
-           <!-- <div class="information-appoinment">
+          <!-- <div class="information-appoinment">
 
              <div class="date">
 
@@ -124,107 +124,12 @@
                  <p>Rs.12,000</p>
             </div>
 
-        </div> -->
-
+        </div>  -->
+ 
 
 
 
         <!-- -------------- -->
-<hr>
-<!-- 
-        <div class="information-appoinment">
-
-            <div class="date">
-
-                <h4>Feb 21</h4>
-            </div>
-            <div class="name-of-make">
-
-                <p>Wedding makeup</p>
-            </div>
-            <div class="update-appoinment">
-                <button>Accept</button>
-            </div>
-            <div class="cost">
-                <p>Rs.12,000</p> 
-            </div>
-
-        </div> -->
-<!-- ------------------- -->
-
-<!-- <hr> -->
-<!-- <div class="information-appoinment">
-
-    <div class="date">
-
-
-        <h4>Feb 21</h4>
-    </div>
-    <div class="name-of-make">
-
-        <p>Wedding makeup</p>
-    </div>
-    <div class="update-appoinment">
-        <button>Accept</button>
-    </div>
-    <div class="cost">
-        <p>Rs.12,000</p>
-    </div>
-
-</div> -->
-
-<!-- --------------------------- -->
-
-<!-- <hr> -->
-<!-- <div class="information-appoinment">
-
-    <div class="date">
-
-
-        
-        <h4>Feb 21</h4>
-    </div>
-    <div class="name-of-make">
-
-        <p>Wedding makeup</p>
-    </div>
-    <div class="update-appoinment">
-        <button>Accept</button>
-    </div>
-    <div class="cost">
-        <p>Rs.12,000</p>
-    </div>
-
-</div> -->
-<!-- <hr> -->
-<!-- -------------------- -->
-<!-- <div class="information-appoinment">
-
-    <div class="date">
-
-
-       
-     
-        <h4>Feb 21</h4>
-    </div>
-    <div class="name-of-make">
-       
-
-        <p>Wedding makeup</p>
-    </div>
-    <div class="update-appoinment">
-
-        <button>Accept</button>
-
-    </div>
-    <div class="cost">
-         <p>Rs.12,000</p>
-    </div>
-
-</div> -->
-
-
-
 
        </div>
 
@@ -522,7 +427,7 @@ function option3() {
         
         const option3content = document.getElementById('optiont3');
           const selectedOption =option3content;
-        console.log(selectedOption)
+       
           event.preventDefault()
           if (selectedOption) {
             
@@ -558,14 +463,11 @@ function option3() {
 
 
 
-
-
             const artist_profile = JSON.parse(localStorage.getItem("card_data"));
             const  user_pp=localStorage.getItem("artist_profile")
 
             console.log(artist_profile);
 
-            console.log(user_pp)
            let result;
            artist_profile.find(  // parameterized function 'a'
             e =>{
@@ -627,6 +529,7 @@ function option3() {
 
 
 
+
 let details = JSON.parse(localStorage.getItem("records_booking_clients"));
 
 let card_data = JSON.parse(localStorage.getItem("card_data"));
@@ -670,6 +573,7 @@ if(request_check){
 
             list_request(obj);
             
+
         }
     })
 }
@@ -700,53 +604,16 @@ function list_request(item){
     <p>Rs.12,000</p>
 </div>
 
-</div>`
+</div>
+<hr>
+`
+
+
 
 }
 
 
-
-// function checkIfArtistIsBooked() {
-//   const bookedArtists = details;
-// //   console.log(bookedArtists)
-// bookedArtists.forEach(element => {
     
- 
-//   const artistName = element["selected_artist_for_booking"]["artist_name"];
-//   console.log(artistName)
-//   return artistName;
-  
-// });
-
-// }
-//     const isbooked=checkIfArtistIsBooked();
-//     if(isbooked==result.name){
-
-       const container =document.getElementById("appoinments")    
-       container.innerHTML+=    
-
-    `<div class="information-appoinment">
-
-<div class="date">
-
-
-   <h4>Feb 21</h4>
-</div>
-<div class="name-of-make">
-  
-
-   <p>Wedding makeup</p>
-</div>
-<div class="update-appoinment">
-
-   <button>Accept</button>
-
-</div>
-<div class="cost">
-    <p>Rs.12,000</p>
-</div>
-
-</div>`
 
 
 //         }
