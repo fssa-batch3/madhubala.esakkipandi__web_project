@@ -179,14 +179,12 @@
             </p>
             <form id="sub-form">
                 <div class="check">
-                    <submit  id="countofrev" type="button"><i  class="fa-solid fa-star" id="rev"></i></submit>
-                    <submit id="countofrev" type="button"><i  class="fa-solid fa-star" id="rev"></i></submit>
+              <i  class="fa-solid fa-star" id="rev"></i>
+                <i  class="fa-solid fa-star" id="rev"></i>
+<i  class="fa-solid fa-star" id="rev"></i></submit>
+<i  class="fa-solid fa-star" id="rev"></i></submit>
 
-                    <submit id="countofrev" type="button"><i  class="fa-solid fa-star" id="rev"></i></submit>
-
-                    <submit id="countofrev" type="button"><i  class="fa-solid fa-star" id="rev"></i></submit>
-
-                    <submit id="countofrev" type="button"><i  class="fa-solid fa-star" id="rev"></i></submit>
+               <i  class="fa-solid fa-star" id="rev"></i>
 
                             
                     <br>
@@ -447,7 +445,7 @@
 
                 },
                 "Price": "13,000 per function",
-                "locality": "Chennai",
+                "locality": "trichy",
 
             }, 
              {"artist_name": "Madura Makeup",
@@ -521,16 +519,14 @@
         console.log(result)
 
 
-
-
         const div_1 = document.createElement("div")
         div_1.setAttribute("class", "content-1-profile")
         document.querySelector(".profile-content").append(div_1)
 
         const img_1 = document.createElement("img")
-        img_1.setAttribute("src", result["image"]["source"])
-        img_1.setAttribute("class", "profile")
-        // img_1.setAttribute("alt", "Makeup")
+        img_1.setAttribute("src", result["image"]["source"]);
+        img_1.setAttribute("class", "profile");
+        img_1.setAttribute("alt", "Makeup")
         document.querySelector(".content-1-profile").append(img_1)
 
         const div_2 = document.createElement("div")
@@ -591,24 +587,31 @@
         i_2.setAttribute("id", "icoen")
         document.querySelector(".icon_p1").append(i_2)
 
+        const a_0 = document.createElement("a")
+        a_0.setAttribute("href", "../../pages/booking/book.html")
+        a_0.setAttribute("class", "ankerlnik")
+        a_0.setAttribute("id", "wishlist")
+        document.querySelector(".line").append(a_0)
+
         const p_6 = document.createElement("p")
         p_6.setAttribute("class", "icon_p2")
-        p_6.innerHTML = "Shortlist"
-        document.querySelector(".line").append(p_6)
+        p_6.innerHTML = "Add to wishlist"
+        
+        document.querySelector(".ankerlnik").append(p_6)
 
         const i_3 = document.createElement("i")
-        i_3.setAttribute("class", "fa-solid fa-pen-nib")
+        i_3.setAttribute("class", "fa-regular fa-heart")
         i_3.setAttribute("id", "icoen")
         document.querySelector(".icon_p2").append(i_3)
-
 
         const p_7 = document.createElement("p")
         p_7.setAttribute("class", "icon_p3")
         p_7.innerHTML = "Write a review"
+        
         document.querySelector(".line").append(p_7)
 
         const i_4 = document.createElement("i")
-        i_4.setAttribute("class", " fa-regular fa-heart")
+        i_4.setAttribute("class", "   fa-solid fa-pen-nib")
         i_4.setAttribute("id", "icoen")
         document.querySelector(".icon_p3").append(i_4)
 
@@ -693,6 +696,9 @@
         div_upl_2.setAttribute("class", "box")
         document.querySelector(".pic-content").prepend(div_upl_2)
 
+
+
+
         
         for (let post of uploading_img.filter(user => user.uploadname == name)) {
 
@@ -731,6 +737,10 @@ reviewer_name_matching.find(  function (e)
         let review_output = document.querySelector(".boxer");
         document.getElementById("sub-form").addEventListener("submit", e => {
             e.preventDefault();
+
+            star_count=0
+  let star_icon=document.querySelectorAll(".active")
+star_count = star_icon.length
             const input = document.getElementById("experience").value;
             const commentes = document.getElementById("vendors_review").value;
            const name_of_reviewer=re["user_name"]
@@ -740,7 +750,8 @@ reviewer_name_matching.find(  function (e)
                     "input": input,
                     "comments": commentes,
                     "artists_name": name,
-                    "reviewer_name":name_of_reviewer
+                    "reviewer_name":name_of_reviewer,
+                    "count":star_count
                 
                 }
                 artist_reviews.push(user_rev);
@@ -755,6 +766,22 @@ reviewer_name_matching.find(  function (e)
         }
         )
 
+
+
+        const check = document.querySelectorAll(".check i");
+// Loop through the "stars" NodeList
+check.forEach((star, index1) => {
+  star.addEventListener("click", () => {
+    // Loop through the "stars" NodeList Again
+    check.forEach((star, index2) => {
+      // Add the "active" class to the clicked star and any stars with a lower index
+      // and remove the "active" class from any stars with a higher index
+      index1 >= index2 //4>=0
+      ? star.classList.add("active") //true
+      : star.classList.remove("active"); //false
+    });
+  });
+});
        
 // -----------------
 
@@ -793,7 +820,7 @@ reviewer_name_matching.find(  function (e)
                         <p id="reviewrname">${artist_reviews[i].reviewer_name} </p>
                         </div>
                         <div class="ratings">
-                        <p> <i id="star" class="fa-solid fa-star"></i><span>5.0</span></p>
+                        <p> <i id="star" class="fa-solid fa-star"></i><span>${artist_reviews[i].count}</span></p>
                         </div>  
                         </div>
                         <p >reviwed 2 weeks ago</p>
@@ -836,6 +863,34 @@ reviewer_name_matching.find(  function (e)
 
 
 
+
+
+let active_user = localStorage.getItem("profile");
+let dataofartist = JSON.parse(localStorage.getItem("data"));
+let artist_obj = dataofartist.find(obj => obj.user_email === active_user);
+let productTitle = name
+console.log(result["artist_name"])
+
+let productImage = result["image"]["source"];
+let productPrice = result["Price"];
+let object_name = artist_obj["user_name"];
+let wishlist_data = document.getElementById("wishlist");
+
+wishlist_data.addEventListener('click', () => { 
+  let wish_data = JSON.parse(localStorage.getItem("wishlist_dta")) || [];
+  const wishlistItem = {
+    "email_user_wishlist": active_user,
+    "user_name": object_name,
+    "id_wishlist": wish_data.length,
+    "title": productTitle,
+    "image": productImage,
+    "price": productPrice,
+    "status":false
+  };
+  wish_data.push(wishlistItem);
+  localStorage.setItem("wishlist_dta", JSON.stringify(wish_data));
+  
+});
 
 
 

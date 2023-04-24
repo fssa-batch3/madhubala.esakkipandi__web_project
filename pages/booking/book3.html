@@ -101,65 +101,89 @@
 
 
   <script>
-
     let url = window.location.search;  //?name=Bridal MAkeup by sharmila
-
     let urls = new URLSearchParams(url)
-    
     let name = urls.get("book_name");
-   
-
     let form_filled = document.getElementById("booking-form")
-
-
     form_filled.addEventListener('submit', e => {
       e.preventDefault();
 
+      let dataofartist = JSON.parse(localStorage.getItem("card_data"));/*registered information of artist with thier nama an so on*/
+      // let artistgetting_inforamtion = JSON.parse(localStorage.getItem("selected_artist"))
+      let active_user = localStorage.getItem("profile").value /* active login of artist email*/
 
-      let artistgetting_inforamtion = JSON.parse(localStorage.getItem("selected_artist"))
-      let active_user = localStorage.getItem("profile").value
 
+
+      // getting the information form the user*/
       const name_client = document.getElementById("Name-of-coustomer").value
       const email_client = document.getElementById("email-of-coustomer").value
+
       const contact_client = document.getElementById("contact-of-coustomer").value
       const addres_client = document.getElementById("address-coustomer").value
       const date_event_client = document.getElementById("date-choosen-coustomer").value
 
+      const emailofcus= localStorage.getItem("profile") 
+           console.log(emailofcus)
       const booking_info = JSON.parse(localStorage.getItem("records_booking_clients"))
-
       if ((name_client.trim() != "") && (email_client.trim() != "") && (contact_client.trim() != "") && (addres_client.trim() != "") && (date_event_client.trim() != "")) {
         let records_booking_clients = JSON.parse(localStorage.getItem("records_booking_clients")) ? JSON.parse(localStorage.getItem("records_booking_clients")) : []
-
         let object_booking_records = {
-
           "customer_name": name_client,
-          "customer_email": email_client,
+          "customer_email": emailofcus,
           "customer_contact": contact_client,
           "customer_address": addres_client,
           "event_date": date_event_client,
-          "user_mail_id": active_user,
-          "selected_artist_for_booking": name
+          "status":false,
+          "id":records_booking_clients.length,
+          "selected_artist_for_booking": name /*store the object of form filled by user with selected artist name*/
         }
-
-
         records_booking_clients.push(object_booking_records);
+        // console.log(records_booking_clients)
 
-        console.log(records_booking_clients)
-
-
+    alert("confirm request sended")
         localStorage.setItem("records_booking_clients", JSON.stringify(records_booking_clients));
-
+        
+       
       }
       else {
-
         alert("Fill the required data")
 
       }
     })
+       
+
+  //   let active_user = localStorage.getItem("profile")
+
+  //   let dataofartist = JSON.parse(localStorage.getItem("card_data"));
+
+  // let artist_index = dataofartist.findIndex(obj => obj.user_email === active_user);
+
+  //   let artist_data = dataofartist[artist_index];
+
+  //   if (artist_data) {
+
+  //     artist_data.records_booking_clients = [];
+
+  //   }
+
+  //   artist_data.records_booking_clients.push(object_booking_records);
+
+  //   dataofartist[artist_index] = artist_data;
+
+  //   localStorage.setItem("card_data", JSON.stringify(card_data));
 
 
 
 
+
+
+
+
+
+
+
+
+ 
   </script>
   <!-- confirm booking content ends -->
 </body>

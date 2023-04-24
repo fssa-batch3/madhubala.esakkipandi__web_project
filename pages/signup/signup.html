@@ -60,7 +60,7 @@
             
             const user_records = JSON.parse(localStorage.getItem("data"));
             if ((name.trim() != "") && (email.trim() != "") && (password.trim() != "") && (repeat.trim() != "")) {
-                let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")) : [];
+                let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")):[];
 
                 let user_data = {
                     "user_name": name,
@@ -80,6 +80,7 @@
                 }
                 if (success) {
                     if (password == repeat) {
+
                         data.push(user_data);
                         localStorage.setItem("data", JSON.stringify(data));
                         alert("Account create successfully");

@@ -1,109 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="profileartist.css">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
 </head>
+
 <body>
- 
-  <div class="full-content">
-     <div class="sidebar" id="side-bar">
+
+    <div class="full-content">
+        <div class="sidebar" id="side-bar">
 
 
-        <div class="Appoinment-records" id="option1" onclick="option1()" >
-          
-            <div class="border">
-                <img src="../assets/images/writing.png" class="icon-appoinmnet">
+            <div class="Appoinment-records" id="option1" onclick="option1()">
+
+                <div class="border">
+                    <img src="../assets/images/writing.png" class="icon-appoinmnet">
+                </div>
+                <h6>Appoinment Records</h6>
             </div>
-            <h6>Appoinment Records</h6>
-        </div>
 
-        <div class="Schedules-record" id="option2" >
-             
+            <div class="Schedules-record" id="option2" onclick="option2()">
 
-            
-            <div class="border">
-                <img src="../assets/images/schedule.png" class="icon-appoinmnet">
+
+
+                <div class="border">
+                    <img src="../assets/images/schedule.png" class="icon-appoinmnet" >
+                </div>
+                <h6>Schedules</h6>
             </div>
-            <h6>Schedules</h6>
-        </div>
-        <div class="Personal-details" id="option3" onclick="option3()" >
-             
-            <div class="border">
-                <img src="../assets/images/user.png" class="icon-appoinmnet">
+            <div class="Personal-details" id="option3" onclick="option3()">
+
+                <div class="border">
+                    <img src="../assets/images/user.png" class="icon-appoinmnet">
+                </div>
+                <h6>Personal Details</h6>
             </div>
-            <h6>Personal Details</h6>
-        </div>
-        <div class="Notification-record" id="option4"onclick="option4()"  >
-             
-            <div class="border">
-                <img src="../assets/images/bell.png" class="icon-appoinmnet">
+            <div class="Notification-record" id="option4" onclick="option4()">
+
+                <div class="border">
+                    <img src="../assets/images/bell.png" class="icon-appoinmnet">
+                </div>
+                <h6>Notifications</h6>
+
+
             </div>
-            <h6>Notifications</h6>
-
-
-        </div>
-        <div class="Remainder" id="option5"  >
-            <div class="border">
-                <img src="../assets/images/contract.png" class="icon-appoinmnet">
+            <div class="Remainder" id="option5" onclick="option5()">
+                <div class="border">
+                    <img src="../assets/images/contract.png" class="icon-appoinmnet">
+                </div>
+                <h6>Remainder</h6>
             </div>
-            <h6>Remainder</h6>
-        </div>
-      
-     </div>
-
-     <div class="main-content">
-       <div class="header">
-       <h3>Profile of the artist</h3>
-       <hr>
-    </div>
-  <div class="details">
-       <div class="profile-of-artist">
-    
-        <div class="pic-profile">
-
-           <img src="../assets/images/IMG20200903161128.jpg" class="profile">
-        </div>
-        <h3 id="name">
-            E.Madhubala
-        </h3>
-        <input class="permenant-details" type="email" id="emailofartist" placeholder="Email">
-        <input class="permenant-details" type="number" placeholder="Contact">
-        <input  class="permenant-details" type="text" placeholder="Details">
-       <button class="permenant-details" id="update">update</button>
-       
-        </div>
-
-<!-- <div class="content" id="content"> -->
-        <!-- ------------------------------ -->
-    <div class="list-of-details" id="option1Content">
-        <div class="info">
-          <div class="cancel">
-            <canvas id="myChart"></canvas>
-          </div>
-
-          <div class="accepted">
-             <canvas id="myChart2"></canvas>
-           </div>
-          <div class="packages">
-               <canvas id="myChart3"></canvas>
-           </div>
-       </div>
-
-       <div class=" list-of-appoinments" id="appoinments">
-           <div class="head-appoinment">
-              <h3 class="head">
-                 Appoinments List
-              </h3>
-               <hr>
+            <div class="Remainder" id="option6" onclick="option6()">
+                <div class="border">
+                    <img src="../assets/images/makeup (1).png" class="icon-appoinmnet">
+                </div>
+                <h6>Your works</h6>
             </div>
-          <!-- <div class="information-appoinment">
+
+        </div>
+
+        <div class="main-content">
+            <div class="header">
+                <h3>Profile of the artist</h3>
+                <hr>
+            </div>
+            <div class="details">
+                <div class="profile-of-artist">
+
+                    <div class="pic-profile">
+
+                        <img src="../assets/images/IMG20200903161128.jpg" class="profile">
+                    </div>
+                    <h3 id="name">
+                        E.Madhubala
+                    </h3>
+                    <input class="permenant-details" type="email" id="emailofartist" placeholder="Email">
+                    <input class="permenant-details" type="number" placeholder="Contact">
+                    <input class="permenant-details" type="text" placeholder="Details">
+                    <button class="permenant-details" id="update">update</button>
+                    <button class="permenant-details" id="update"><a href="../index.html">Home</a></button>
+
+                </div>
+
+                <!-- <div class="content" id="content"> -->
+                <!-- ------------------------------ -->
+                <div class="list-of-details" id="option1Content">
+                    <div class="info">
+                        <div class="cancel">
+                            <canvas id="myChart"></canvas>
+                        </div>
+
+                        <div class="accepted">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                        <div class="packages">
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                    </div>
+
+                    <div class=" list-of-appoinments" id="appoinments">
+                        <div class="head-appoinment">
+                            <h3 class="head">
+                                Appoinments List
+                            </h3>
+                            <hr>
+                        </div>
+                        <div class="information-appoinment">
 
              <div class="date">
 
@@ -124,529 +139,1045 @@
                  <p>Rs.12,000</p>
             </div>
 
-        </div>  -->
- 
+        </div> 
+        <hr>
+        <div class="information-appoinment">
+
+            <div class="date">
 
 
+               <h4>Feb 21</h4>
+           </div>
+           <div class="name-of-make">
+              
 
-        <!-- -------------- -->
+               <p>Wedding makeup</p>
+           </div>
+           <div class="update-appoinment">
+
+               <button>Accept</button>
+
+           </div>
+           <div class="cost">
+                <p>Rs.12,000</p>
+           </div>
+
+       </div> 
+       <hr>
+       <div class="information-appoinment">
+
+        <div class="date">
+
+
+           <h4>Feb 21</h4>
+       </div>
+       <div class="name-of-make">
+          
+
+           <p>Wedding makeup</p>
+       </div>
+       <div class="update-appoinment">
+
+           <button>Accept</button>
 
        </div>
+       <div class="cost">
+            <p>Rs.12,000</p>
+       </div>
 
-    
-</div>
-
-
-
-
-
-
-<div class="list-of-details2" id="option2Content">
-
-   <h3>Notifications</h3>
+   </div> 
    <hr>
-   <div class="notifiactionbox">
+   <div class="information-appoinment">
 
-    <div class="notifibox">
+    <div class="date">
 
 
+       <h4>Feb 21</h4>
+   </div>
+   <div class="name-of-make">
+      
 
-        <div class="decoration-line">
+       <p>Wedding makeup</p>
+   </div>
+   <div class="update-appoinment">
 
-        </div>
-        <div class="img">
-            <i class="fa-solid fa-exclamation"></i>
-        </div>
-        <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
-      <button>Approve</button>
-      <button>Skip</button>
-    </div>
+       <button>Accept</button>
 
-    <div class="notifibox">
-        
-        <div class="decoration-line">
-            
-        </div>
-        <div class="img">
-            <i class="fa-solid fa-exclamation"></i>
-        </div>
-        
-        <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
-        <button>Approve</button>
-        <button>Skip</button>
-    </div>
-    <div class="notifibox">
-        
-        <div class="decoration-line">
-            
-        </div>
-        <div class="img">
-            <i class="fa-solid fa-exclamation"></i>
-        </div>
-        <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
-        <button>Approve</button>
-        <button>Skip</button>
-    </div>
-    <div class="notifibox">
-        
-        <div class="decoration-line">
-            
-        </div>
-        <div class="img">
-            <i class="fa-solid fa-exclamation"></i>
-        </div>
-        <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
-        <button>Approve</button>
-        <button>Skip</button>
-    </div>
+   </div>
+   <div class="cost">
+        <p>Rs.12,000</p>
    </div>
 
-</div>
-<div class="list-of-details3" id="option3Content">
+</div> 
+<hr>
 
-   <h3>Personal Details</h3>
-   <hr>
- <div class="gathering_informations">
-    <input type="text" placeholder="Name" id="nameofartist" class="information-input">
-    <input type="Address" placeholder="Address" class="information-input" id="artist_address">
-    <input type="password" placeholder="Password" id="passwordofartist" class="information-input" id="artist_password">
-    <input type="tel" placeholder="Phone-Number" class="information-input" id="artist_number">
-    <input type="Number" placeholder="Experince_year" class="information-input" id="artist_experince">
-    <input type="text" placeholder="Languages Known" class="information-input" id="artist_language">
-    <input type="text" placeholder="Socilamedia-Account" class="information-input" id="artist_social_media">
-    
-    <input type="text" placeholder="locality" class="information-input" id="artist_location">
-   <input type="Number" placeholder="Minimum price expected"class="information-input" id="artist_price">
-    <div class="Gender">
-        <label>Gender:</label>
-        <label>Male</label>
-        <input type="radio">
-        <label>Female</label>
-        <input type="radio">
-    </div>
-    
-    
-    <textarea placeholder="Bio" id="artits_bio">
+                        <!-- -------------- -->
+
+                    </div>
+                </div>
+                <div class="list-of-details2" id="option2Content">
+
+                    <h2>Schedules</h2>
+                    <hr>
+                    <div class="wrapper">
+                        
+                        <header>
+                          <p class="current-date"></p>
+                          <div class="icons">
+                            <span id="prev" class="material-symbols-rounded">chevron_left</span>
+                            <span id="next" class="material-symbols-rounded">chevron_right</span>
+                          </div>
+                        </header>
+                        <div class="calendar">
+                          <ul class="weeks">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                          </ul>
+                          <ul class="days"></ul>
+                        </div>
+                      </div>
+
+
+                </div>
+
+
+
+
+
+                <div class="list-of-details4" id="option4Content">
+
+                    <h3>Notifications</h3>
+                    <hr>
+                    <div class="notifiactionbox" id="notification">
+
+                        <!-- <div class="notifibox">
+
+
+
+                            <div class="decoration-line">
+
+                            </div>
+                            <div class="img">
+                                <i class="fa-solid fa-exclamation"></i>
+                            </div>
+                            <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
+                            <button>Approve</button>
+                            <button>Skip</button>
+                        </div> -->
+
+                        <div class="notifibox">
+
+                            <div class="decoration-line">
+
+                            </div>
+                            <div class="img">
+                                <i class="fa-solid fa-exclamation"></i>
+                            </div>
+
+                            <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
+                            <button id="approve-btn">Approve</button>
+                            <button>Skip</button>
+                        </div>
+                        <div class="notifibox">
+
+                            <div class="decoration-line">
+
+                            </div>
+                            <div class="img">
+                                <i class="fa-solid fa-exclamation"></i>
+                            </div>
+                            <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
+                            <button id="approve-btn">Approve</button>
+                            <button>Skip</button>
+                        </div>
+                        <div class="notifibox">
+
+                            <div class="decoration-line">
+
+                            </div>
+                            <div class="img">
+                                <i class="fa-solid fa-exclamation"></i>
+                            </div>
+                            <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
+                            <button id="approve-btn">Approve</button>
+                            <button>Skip</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="list-of-details3" id="option3Content">
+
+                    <h3>Personal Details</h3>
+                    <hr>
+                    <div class="gathering_informations">
+                        <input type="text" placeholder="Name" id="nameofartist" class="information-input">
+                        <input type="Address" placeholder="Address" class="information-input" id="artist_address">
+                        <input type="password" placeholder="Password" id="passwordofartist" class="information-input"
+                            id="artist_password">
+                        <input type="tel" placeholder="Phone-Number" class="information-input" id="artist_number">
+                        <input type="Number" placeholder="Experince_year" class="information-input"
+                            id="artist_experince">
+                        <input type="text" placeholder="Languages Known" class="information-input" id="artist_language">
+                        <input type="text" placeholder="Socilamedia-Account" class="information-input"
+                            id="artist_social_media">
+
+                        <input type="text" placeholder="locality" class="information-input" id="artist_location">
+                        <input type="Number" placeholder="Minimum price expected" class="information-input"
+                            id="artist_price">
+                        <div class="Gender">
+                            <label>Gender:</label>
+                            <label>Male</label>
+                            <input type="radio">
+                            <label>Female</label>
+                            <input type="radio">
+                        </div>
+
+
+                        <textarea placeholder="Bio" id="artits_bio">
 
     </textarea>
- </div>
+                    </div>
 
+
+
+                </div>
+                <div class="list-of-details5" id="option5Content">
+
+
+<div class="content-details5">
+
+<div class="remiander-bar">
+     <div class="info-remainder">
+    <p>You have appointment on 1.30pm in Tirunelveli</p>
+</div>
+    <div class="remainder-text">
+    <h4>Today</h4>
+           
+<button class="icon">
+    <img src="../assets/images/alarm-clock.png" class="alarm-clock">
+    
+    <p>Remainder</p>
+</button>
+  
+</div>
+</div>
+
+
+
+
+<div class="remiander-bar">
+    <div class="info-remainder">
+   <p>You have appointment on 1.30pm in Tirunelveli</p>
+</div>
+   <div class="remainder-text">
+   <h4>Today</h4>
+          
+<button class="icon">
+   <img src="../assets/images/alarm-clock.png" class="alarm-clock">
+   
+   <p>Remainder</p>
+</button>
+ 
+</div>
+</div>
+
+
+<div class="remiander-bar">
+    <div class="info-remainder">
+   <p>You have appointment on 1.30pm in Tirunelveli</p>
+</div>
+   <div class="remainder-text">
+   <h4>Today</h4>
+          
+<button class="icon">
+   <img src="../assets/images/alarm-clock.png" class="alarm-clock">
+   
+   <p>Remainder</p>
+</button>
+ 
+</div>
+</div>
+
+<div class="remiander-bar">
+    <div class="info-remainder">
+   <p>You have appointment on 1.30pm in Tirunelveli</p>
+</div>
+   <div class="remainder-text">
+   <h4>Today</h4>
+          
+<button class="icon">
+   <img src="../assets/images/alarm-clock.png" class="alarm-clock">
+   
+   <p>Remainder</p>
+</button>
+ 
+</div>
+</div>
+
+<div class="remiander-bar">
+    <div class="info-remainder">
+   <p>You have appointment on 1.30pm in Tirunelveli</p>
+</div>
+   <div class="remainder-text">
+   <h4>Today</h4>
+          
+<button class="icon">
+   <img src="../assets/images/alarm-clock.png" class="alarm-clock">
+   
+   <p>Remainder</p>
+</button>
+ 
+</div>
+</div>
 
 
 </div>
 
 
-<!-- </div> -->
+
+
+                </div>
+
+                <div class="list-of-details6" id="option6Content">
+
+                    <h3>Your posts</h3>
+                    <hr>
+                   <div class="photo_vedios">
+                    <h3 id="optionpic"  class="pho">Photos</h3>
+                    <h3 id="optiontvedio"  class="ve">vedios</h3>
+
+                   </div>
+                   <div class="photos"  id="post1Content" >
+                   <div class="content" id="content">
+                    <!-- <div class="pic">
+                        <img src="../assets/images/ellipsis.png" class="elispse">
+
+                        <img src="../assets/images/2c6d92956320f7e479f9833ca579ffd2.jpg" class="pic_post">
+                    </div>
+
+                    <div class="pic">
+
+                        <img src="../assets/images/ellipsis.png" class="elispse">
+
+                        <img src="../assets/images/2c6d92956320f7e479f9833ca579ffd2.jpg" class="pic_post">
+                    </div>
+                    <div class="pic">
+                        <img src="../assets/images/ellipsis.png" class="elispse">
+                        <img src="../assets/images/2c6d92956320f7e479f9833ca579ffd2.jpg" class="pic_post">
+                    </div>
+                    <div class="pic">
+                        <img src="../assets/images/ellipsis.png" class="elispse">
+                        <img src="../assets/images/2c6d92956320f7e479f9833ca579ffd2.jpg" class="pic_post">
+                    </div> -->
+
+
+                </div>
+                   </div>
+
+                    <div class="vedios"  id="post2Content">
+                        <div class="content-vedo">
+                            <div class="vedio">
+                                <img src="../assets/images/ellipsis.png" class="elispse">
+                                <img src="../assets/images/2c6d92956320f7e479f9833ca579ffd2.jpg" class="pic_post">
+                            </div>
+        
+                            <div class="vedio">
+                                <img src="../assets/images/ellipsis.png" class="elispse">
+                                <img src="../assets/images/2c6d92956320f7e479f9833ca579ffd2.jpg" class="pic_post">
+                            </div>
+                            <div class="vedio">
+                                <img src="../assets/images/ellipsis.png" class="elispse">
+                                <img src="../assets/images/2c6d92956320f7e479f9833ca579ffd2.jpg" class="pic_post">
+                            </div>
+                        
+        
+                        </div>
+                     </div>
+
+                </div>
+                <!-- </div> -->
 
 
 
 
 
 
+            </div>
+
+        </div>
     </div>
 
-     </div>
-    </div>
 
-  
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
-<script>
-   var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Completed', 'Rejected', 'Total bookings'],
-        datasets: [{
-            label: '12 of Votes',
-            data: [12, 19, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-               
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-               
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true,
-                     // Hide the y-axis count
-                     display:false
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Completed', 'Rejected', 'Total bookings'],
+                datasets: [{
+                    label: '12 of Votes',
+                    data: [12, 19, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            // Hide the y-axis count
+                            display: false
+                        },
+                        gridLines: {
+                            display: false  // Hide the y-axis grid lines as well
+                        }
+                    }],
+                    xAxes: [{
+                        ticks: {
+                            autoSkip: false  // Prevent the x-axis labels from being truncated
+                        },
+
+                        display: false
+
+                    }]
+                }
+            },
+        });
+
+
+        var ctx = document.getElementById('myChart2').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow'],
+                datasets: [{
+                    label: '12 of Votes',
+                    data: [12, 19, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+
+                    ],
+                    borderWidth: 1
+                }]
+
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            display: false  // Hide the y-axis count
+                        },
+                        gridLines: {
+                            display: false  // Hide the y-axis grid lines as well
+                        }
+                    }],
+                    xAxes: [{
+                        display: false,
+                        ticks: {
+                            autoSkip: false  // Prevent the x-axis labels from being truncated
+                        }
+                    }]
+                }
+            },
+        });
+
+
+
+        var ctx = document.getElementById('myChart3').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow'],
+                datasets: [{
+                    label: '12 of Votes',
+                    data: [12, 19, 3],
+                    backgroundColor: [
+                        'rgba(289, 99, 132, 0.8)',
+                        'rgba(54, 162, 235, 0.8)',
+                        'rgba(255, 206, 86, 0.8)',
+
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            display: false  // Hide the y-axis count
+                        },
+                        gridLines: {
+                            display: false  // Hide the y-axis grid lines as well
+                        }
+                    }],
+                    xAxes: [{
+                        display: false,
+                        ticks: {
+                            autoSkip: false  // Prevent the x-axis labels from being truncated
+                        }
+                    }]
                 },
-                gridLines: {
-                    display: false  // Hide the y-axis grid lines as well
-                }
-            }],
-            xAxes: [{
-                ticks: {
-                    autoSkip: false  // Prevent the x-axis labels from being truncated
-                },
-                
-                    display:false
-                
-            }]
-        }
-    },
-});
 
+            }
 
-var ctx = document.getElementById('myChart2').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow'],
-        datasets: [{
-            label: '12 of Votes',
-            data: [12, 19, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-               
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-
-            ],
-            borderWidth: 1
-        }]
-
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true,
-                    display: false  // Hide the y-axis count
-                },
-                gridLines: {
-                    display: false  // Hide the y-axis grid lines as well
-                }
-            }],
-            xAxes: [{
-                display:false,
-                ticks: {
-                    autoSkip: false  // Prevent the x-axis labels from being truncated
-                }
-            }]
-        }
-    },
-});
-
-
-
-var ctx = document.getElementById('myChart3').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ['Red', 'Blue', 'Yellow'],
-        datasets: [{
-            label: '12 of Votes',
-            data: [12, 19, 3],
-            backgroundColor: [
-                'rgba(289, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-               
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-               
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true,
-                    display: false  // Hide the y-axis count
-                },
-                gridLines: {
-                    display: false  // Hide the y-axis grid lines as well
-                }
-            }],
-            xAxes: [{
-                display:false,
-                ticks: {
-                    autoSkip: false  // Prevent the x-axis labels from being truncated
-                }
-            }]
-        },
-       
-    }
-    
-});
+        });
 
 
 
 
 
 
-const detils1= document.getElementById("option1Content")
+        const detils1 = document.getElementById("option1Content")
 
-const detils2= document.getElementById("option2Content")
-const detils3= document.getElementById("option3Content")
+        const detils2 = document.getElementById("option2Content")
+        const detils3 = document.getElementById("option3Content")
+        const detils4 = document.getElementById("option4Content")
+        const detils5 = document.getElementById("option5Content")
+        const detils6 = document.getElementById("option6Content")
+        function option1() {
 
-    function option1() {
-        
-const option1content = document.getElementById('optiont1');
-  const selectedOption =option1content;
-console.log(selectedOption)
-  event.preventDefault()
-  if (selectedOption) {
-    
-  }
-  else{
-    detils1.style.display = 'block';
+            const option1content = document.getElementById('optiont1');
+            const selectedOption = option1content;
+            console.log(selectedOption)
+            event.preventDefault()
+            if (selectedOption) {
 
- detils2.style.display='none'
- detils3.style.display='none'
-  }
-  
-};
+            }
+            else {
+                detils1.style.display = 'block';
+                detils2.style.display = 'none'
+                detils3.style.display = 'none'
+                detils4.style.display = 'none'
+                detils5.style.display = 'none'
+                detils6.style.display = 'none'
+            }
 
-function option3() {
-        
-        const option3content = document.getElementById('optiont3');
-          const selectedOption =option3content;
-       
-          event.preventDefault()
-          if (selectedOption) {
-            
-          }
-          else{
-            detils1.style.display = 'none';
-        
-         detils2.style.display='none'
-         detils3.style.display='block'
-          }
-          
+        };
+
+
+        function option2() {
+
+            const option2content = document.getElementById('optiont2');
+            const selectedOption = option2content;
+            console.log(selectedOption)
+            event.preventDefault()
+            if (selectedOption) {
+
+            }
+            else {
+                detils1.style.display = 'none';
+                detils2.style.display = 'block';
+
+                detils3.style.display = 'none'
+                detils4.style.display = 'none'
+                detils3.style.display = 'none'
+                detils6.style.display = 'none'
+            }
+
+        };
+
+
+        function option3() {
+
+            const option3content = document.getElementById('optiont3');
+            const selectedOption = option3content;
+
+            event.preventDefault()
+            if (selectedOption) {
+
+            }
+            else {
+                detils1.style.display = 'none';
+
+                detils2.style.display = 'none'
+                detils3.style.display = 'block'
+                detils4.style.display = 'none'
+                detils5.style.display = 'none'
+                detils6.style.display = 'none'
+            }
+
         };
 
 
         function option4() {
-        
-        const option4content = document.getElementById('optiont4');
-          const selectedOption =option4content;
-        console.log(selectedOption)
-          event.preventDefault()
-          if (selectedOption) {
-            
-          }
-          else{
-            detils1.style.display = 'none';
-        
-         detils2.style.display='block'
-         detils3.style.display='none'
-          }
-          
+
+            const option4content = document.getElementById('optiont4');
+            const selectedOption = option4content;
+            console.log(selectedOption)
+            event.preventDefault()
+            if (selectedOption) {
+
+            }
+            else {
+                detils1.style.display = 'none';
+
+                detils2.style.display = 'none'
+                detils3.style.display = 'none'
+                detils4.style.display = 'block';
+                detils5.style.display = 'none'
+                detils6.style.display = 'none'
+            }
+
         };
 
+        function option5() {
+            const option5content = document.getElementById('optiont5');
+            const selectedOption = option5content;
+            console.log(selectedOption)
+            event.preventDefault()
+            if (selectedOption) {
 
+            }
+            else {
+                detils1.style.display = 'none';
+                detils3.style.display = 'none';
+                detils2.style.display = 'none'
+                detils4.style.display = 'none'
+                detils5.style.display = 'block'
+                detils6.style.display = 'none'
+            }
 
+        };
+        function option6() {
+            const option6content = document.getElementById('optiont6');
+            const selectedOption = option6content;
+            console.log(selectedOption)
+            event.preventDefault()
+            if (selectedOption) {
 
-            const artist_profile = JSON.parse(localStorage.getItem("card_data"));
-            const  user_pp=localStorage.getItem("artist_profile")
+            }
+            else {
+                detils1.style.display = 'none';
+                detils3.style.display = 'none';
+                detils2.style.display = 'none'
+                detils4.style.display = 'none'
+                detils5.style.display = 'none'
+                detils6.style.display = 'block'
+            }
 
-            console.log(artist_profile);
+        };
+        const artist_profile = JSON.parse(localStorage.getItem("card_data"));
+        const user_pp = localStorage.getItem("artist_profile")
 
-           let result;
-           artist_profile.find(  // parameterized function 'a'
-            e =>{
-                    
-                if(e["user_email"]==user_pp){
-                     return result=e
+        console.log(artist_profile);
+
+        let result;
+        artist_profile.find(  // parameterized function 'a'
+            e => {
+
+                if (e["user_email"] == user_pp) {
+                    return result = e
                 }
             }
-            
-            )
-   
-            
 
-        document.getElementById("nameofartist").value =result["name"];
+        )
+        document.getElementById("nameofartist").value = result["name"];
         document.getElementById("passwordofartist").value = result["artist_password"];
-        document.getElementById("emailofartist").value= result["user_email"]
-        
-        document.getElementById("artist_address").value =result["address"];
+        document.getElementById("emailofartist").value = result["user_email"]
+        document.getElementById("artist_address").value = result["address"];
         document.getElementById("artist_number").value = result["contact"];
-        document.getElementById("artist_price").value= result["ruppi"]
-
-        document.getElementById("artist_experince").value =result["experince_of_artist"];
+        document.getElementById("artist_price").value = result["ruppi"]
+        document.getElementById("artist_experince").value = result["experince_of_artist"];
         document.getElementById("artist_location").value = result["localty"];
-       
-      
         document.getElementById("artist_language").value = " ";
-        document.getElementById("artist_social_media").value =" ";
-       
-   
-// -------------------------
+        document.getElementById("artist_social_media").value = " ";
 
+        // -------------------------
 
-            document.getElementById("update").addEventListener("click",e=>{
-                e.preventDefault();
-                result["user_name"]= document.getElementById("nameofartist").value
-                result["artits_bio"]= document.getElementById("artits_bio").value
-                result["number"]= document.getElementById("artist_number").value
-                result["Language"]= document.getElementById("artist_language").value
-                result["address"]= document.getElementById("artist_address").value
-                result["location"]=document.getElementById("artist_location")
-                result["experince"]= document.getElementById("artist_experince").value
-                result["price"]= document.getElementById("artist_price").value
-                result["social_media_account"]= document.getElementById("artist_social_media").value
+        document.getElementById("update").addEventListener("click", e => {
+            e.preventDefault();
+            result["user_name"] = document.getElementById("nameofartist").value
+            result["artits_bio"] = document.getElementById("artits_bio").value
+            result["number"] = document.getElementById("artist_number").value
+            result["Language"] = document.getElementById("artist_language").value
+            result["address"] = document.getElementById("artist_address").value
+            result["location"] = document.getElementById("artist_location")
+            result["experince"] = document.getElementById("artist_experince").value
+            result["price"] = document.getElementById("artist_price").value
+            result["social_media_account"] = document.getElementById("artist_social_media").value
 
             console.log(result)
-        localStorage.setItem("card_data",JSON.stringify(artist_profile))
-            })
-
-            
-     // -----------------------------------
-
-            // document.getElementById("delete").addEventListener("click",event=>{
-            //  event.preventDefault();   
-            // localStorage.removeItem("profile");
-          
-            // })
-
-     // -----------------------------------
+            localStorage.setItem("card_data", JSON.stringify(artist_profile))
+        })
 
 
+        // -----------------------------------
+
+        // document.getElementById("delete").addEventListener("click",event=>{
+        //  event.preventDefault();   
+        // localStorage.removeItem("profile");
+
+        // })
+
+        // -----------------------------------
 
 
-let details = JSON.parse(localStorage.getItem("records_booking_clients"));
 
-let card_data = JSON.parse(localStorage.getItem("card_data"));
 
-let artist_email = localStorage.getItem("artist_profile");
 
-let get_artist_name;
+        let details = JSON.parse(localStorage.getItem("records_booking_clients"));
+        let card_data = JSON.parse(localStorage.getItem("card_data"));
+        let artist_email = localStorage.getItem("artist_profile");
+        let get_artist_name;
+        card_data.find(function (obj) {
+            if (artist_email === obj.user_email) {
+                get_artist_name = obj.name;
+                return get_artist_name;
+            }
+        });
+        console.log(get_artist_name);
+        let request_check = false;
+        details.find(obj => {
+            if (get_artist_name === obj.selected_artist_for_booking) {
 
-card_data.find(function(obj){
+                
+                request_check = true;
+                
+            }
+        });
+        console.log(request_check);
+        if (request_check) {
+            details.filter(function (obj) {
+                if (obj.selected_artist_for_booking === get_artist_name) 
+                { 
+               
+                    let index = details.findIndex(obj => obj.selected_artist_for_booking ===get_artist_name );
 
-    if(artist_email === obj.user_email){
+                    console.log(obj)
+                    // localStorage.setItem("card_data",stringify(obj))
+                    list_request(obj)
 
-        get_artist_name = obj.name;
+                    // approve_booking(obj)
+
+
+                }
+            });
+        }
+
 
        
-    }
-    return get_artist_name;
 
-});
+        //   let details_index = JSON.parse(localStorage.getItem("records_booking_clients"));
+        function list_request(item) {
 
-console.log(get_artist_name);
 
-let request_check = false;
-
-details.find(function(obj){
-
-    if(get_artist_name === obj.selected_artist_for_booking){
-
-        request_check = true;
-
-        return request_check;
-
-    }
-});
-
-if(request_check){
-
-    details.filter(function(obj){
-
-        if(obj.name === get_artist_name){
-
-            list_request(obj);
             
+              
+            const container = document.getElementById("notification")
+            if(item.status!=true){
+            container.innerHTML +=
+            
+                ` <div class="notifibox">
+
+<div class="decoration-line">
+
+</div>
+<div class="img">
+    <i class="fa-solid fa-exclamation"></i>
+</div>
+
+<h4 class="Booking-alert">${item.customer_email}  book you on ${item.event_date}</h4>
+
+<button onclick="approve_btn(${item.id})">Approve</button>
+
+<button onclick="not_approved_btn(${item.id})">Skip</button>
+</div>`
+            }
+        }
+
+
+
+        let record_bookign = JSON.parse(localStorage.getItem("records_booking_clients"));
+        function approve_btn(id_match) {
+
+            record_bookign.find(function (obj) {
+    if (obj.id==id_match ) {
+      obj.status = true;
+      localStorage.setItem("records_booking_clients", JSON.stringify(record_bookign));
+    }
+  })
+}
+
+
+
+
+
+
+function not_approved_btn(id_match) {
+
+    record_bookign.find(function (obj) {
+  if (obj.id==id_match) {
+    obj.status = false;
+    localStorage.setItem("records_booking_clients", JSON.stringify(record_bookign));
+  }
+})
+}
+
+
+
+
+
+
+const photoBtn = document.getElementById("optionpic");
+const photoDiv = document.getElementById("post1Content");
+const vedioBtn = document.getElementById("optiontvedio");
+const vedioDiv = document.getElementById("post2Content");
+
+photoBtn.addEventListener("click", function() {
+  photoDiv.style.display = "block";
+  vedioDiv.style.display = "none";
+});
+
+vedioBtn.addEventListener("click", function() {
+  vedioDiv.style.display = "block";
+  photoDiv.style.display = "none";
+});
+            
+
+
+let active_user=localStorage.getItem("artist_profile")
+console.log(active_user)
+    const uploading_img = JSON.parse(localStorage.getItem("upload_details"))
+
+    console.log(uploading_img)
+        for (let post of uploading_img.filter(user => user.uploader_emial
+ == active_user)) {
+
+          
+          let cont=document.getElementById("content")
+
+          cont.innerHTML+=`
+      
+          <div class="pic">
+            <img src="../assets/images/ellipsis.png" class="elispse">
+                                <img src="${post.imgurl}" class="pic_post">
+                    </div>
+              
+          `
+
 
         }
-    })
-}
-
-function list_request(item){
-
-    const container =document.getElementById("appoinments")    
-       container.innerHTML+=    
-
-    `<div class="information-appoinment">
-
-<div class="date">
-
-
-   <h4>Feb 21</h4>
-</div>
-<div class="name-of-make">
-  
-
-   <p>Wedding makeup</p>
-</div>
-<div class="update-appoinment">
-
-   <button>Accept</button>
-
-</div>
-<div class="cost">
-    <p>Rs.12,000</p>
-</div>
-
-</div>
-<hr>
-`
 
 
 
-}
 
 
-    
-
-
-//         }
-
-    
         
-       
-
-
-
-
-
-     
-     
-            
-
-
-
-     
-
-   
-
-
-
-      
-     
-
-
-         
-    
-</script>    
-
-
-
+</script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+//         function approve_booking(confirm) {
+
+
+// let details = JSON.parse(localStorage.getItem("records_booking_clients"));
+
+// let booking_index = details.findIndex(obj => obj.selected_artist_for_booking === selected_artist_for_booking);
+// console.log(booking_index)
+//  if (booking_index) {
+//    details[booking_index].status = "true";
+//    console.log(    details[booking_index].status)
+//    localStorage.setItem("records_booking_clients", JSON.stringify(details));
+//     let booking_email = details[booking_index].client_email;
+//      let booking_date = details[booking_index].booking_date;
+//       let artist_name = details[booking_index].selected_artist_for_booking;
+// // Notify the user who made the booking
+// send_notification(booking_email, `Your booking with ${artist_name} on ${booking_date} has been confirmed.`);
+// }
+// }
+
+
+
+
+
+
+
+
+// let details = JSON.parse(localStorage.getItem("records_booking_clients"));
+// let card_data = JSON.parse(localStorage.getItem("card_data"));
+// let artist_email = localStorage.getItem("artist_profile");
+// let get_artist_name = card_data.find(obj => obj.user_email === artist_email)?.name;
+// console.log(get_artist_name);
+// let request_check = details.some(obj => obj.selected_artist_for_booking === get_artist_name);
+// console.log(request_check);
+// if (request_check) {
+//   details.filter(function (obj) {
+//     if (obj.selected_artist_for_booking === get_artist_name) { 
+//       console.log(obj);
+//       list_request(obj);
+//       approve_booking(obj.selected_artist_for_booking, obj.client_email, obj.booking_date);
+//     }
+//   });
+// }
+
+// function list_request(item) {
+//   const container = document.getElementById("notification");
+//   container.innerHTML += `
+ //     <div class="notifibox">
+//       <div class="decoration-line"></div>
+//       <div class="img">
+//         <i class="fa-solid fa-exclamation"></i>
+//       </div>
+//       <h4 class="Booking-alert">You have booked ${item.selected_artist_for_booking} for ${item.booking_date}</h4>
+//       <button onclick="approve_booking('${item.selected_artist_for_booking}', '${item.client_email}', '${item.booking_date}')">Approve</button>
+//       <button>Skip</button>
+//     </div> -->
+<!-- //   `;
+// } -->
+
+<!-- // function approve_booking(selected_artist_for_booking, booking_email, booking_date) {
+//   let details = JSON.parse(localStorage.getItem("records_booking_clients"));
+//   let booking_index = details.findIndex(obj => obj.selected_artist_for_booking === selected_artist_for_booking);
+//   console.log(booking_index);
+//   if (booking_index !== -1) {
+//     details[booking_index].status = "true";
+//     console.log(details[booking_index].status);
+//     localStorage.setItem("records_booking_clients", JSON.stringify(details));
+//     let artist_name = details[booking_index].selected_artist_for_booking;
+//     // Notify the user who made the booking
+//     send_notification(booking_email, `Your booking with ${artist_name} on ${booking_date} has been confirmed.`);
+//   }
+// }
+
+// function send_notification(email, message) {
+//   // implementation for sending notification to user
+// }
+
+ -->
+
+
+
+
+

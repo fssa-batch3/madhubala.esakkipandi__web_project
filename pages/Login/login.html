@@ -70,8 +70,8 @@
                             <!-- <submit  id="button_user"type="button">User</submit>
                             <submit  id="button_artist"type="button">Artist</submit> -->
                              
-                        <submit  id="button_user"type="button"  onclick="login()">User-Login</submit>
-                        <submit  id="button_artist"type="button" onclick="artistlogin()">Artist-Login</submit>
+                        <submit  id="button_user" type="button"  onclick="login()">User-Login</submit>
+                        <submit  id="button_artist" type="button" onclick="artistlogin()">Artist-Login</submit>
 </div>
                         <br><br>
 
@@ -94,12 +94,13 @@
 
     <script>
 
-        function login(e) {
+        function login() {
 
             const usermail = document.getElementById("user").value
             const userpass = document.getElementById("pass").value
             let data = JSON.parse(localStorage.getItem("data"));
 
+            console.log(data)
             // let login = {
 
             //     "email": usermail,
@@ -127,7 +128,7 @@
                 alert("logged in")
                 let mail_of_user=usermail
                 localStorage.setItem("profile",mail_of_user )
-                window.location.href = "../profile.html"
+                window.location.href = "../profile_of_user.html"
             }
             else {
                 alert("none")
@@ -165,9 +166,7 @@ artist_data.find(  // parameterized function 'a'
         if(e["user_email"] == usermail && e["artist_password"] == userpass) { //data=[{0},{1}] //a=data[0],a=data[1]
 
             artist_email = e["user_email"];
-            
             return result = 1;
-
         }
         else {
 
@@ -182,6 +181,7 @@ if (result == 1) {
 
     localStorage.setItem("artist_profile",artist_email)
     window.location.href = "../profileartist.html"
+    
 }
 else {
     alert("none")
@@ -206,4 +206,4 @@ if (showPassword.type === "pass") {
     </script>
 </body>
 
-</html>
+</html>FFFFFFFF()

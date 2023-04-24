@@ -59,11 +59,11 @@ background-color:white;
     font-weight: 900;
     font-family: 'Poppins', sans-serif;
     background-color: white;
-}
+} 
 .btn-register:hover{
     background-color: #dd315c;
     color:white;
-}
+} 
 .gender{
     height: 40px;
     width:380px;

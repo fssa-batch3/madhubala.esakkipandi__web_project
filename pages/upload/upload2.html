@@ -96,13 +96,13 @@
                         <input type="text" id="name">
                     </div>
                 </div>
-                <h3>Let's verify your account</h3>
+                <!-- <h3>Let's verify your account</h3>
                 <p>We will send you confirmation code by sms on the next step</p>
                 <label for="mobilenumber">Mobile number:</label>
                 <input type="tel" id="num" placeholder="91">
                 <input type="tel" id="tel-num" required>
-                <br><br><br>
-                <label for="img-url">Image URL</label>
+                <br><br><br> -->
+                <label for="img-url" id="url">Image URL</label>
                 <input type="url" id="imgurl">
             </div>
             <!-- uploading section ends -->
@@ -118,15 +118,17 @@
 
 
 document.getElementById("upload_form").addEventListener('submit', e => {
-
+ 
 e.preventDefault();
 
     const title=document.getElementById("title").value
     const textarea=document.getElementById("textarea").value
     const user_upload_name=document.getElementById("name").value
-    const tel=document.getElementById("num").value
+    // const tel=document.getElementById("num").value
     const img_url=document.getElementById("imgurl").value
     const uploaddetail=JSON.parse(localStorage.getItem("upload_details"));
+
+    const active_user=localStorage.getItem("artist_profile")
 
     let upload_details= JSON.parse(localStorage.getItem("upload_details")) ? JSON.parse(localStorage.getItem("upload_details")) : [];
     let upload_detail = {}
@@ -135,10 +137,12 @@ e.preventDefault();
     upload_detail ["textarea"]= textarea;
     upload_detail["uploadname"]=user_upload_name;
     upload_detail["imgurl"]=img_url;
-    upload_detail["mobilenumber"]= tel
-
+    // upload_detail["mobilenumber"]= tel,
+    upload_detail["uploader_emial"]=active_user
+    upload_detail["id"]=length
     upload_details.push(upload_detail);
             localStorage.setItem("upload_details", JSON.stringify(upload_details));
+       
 
 
 })

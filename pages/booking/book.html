@@ -35,7 +35,7 @@
         <div class="loaction">
             <div class="content">
                 <label for="state" id="HEAD">CHOOSE YOUR STATE:</label>
-                <select>
+                <select id="stateoption">
                     <option id="state" required>Tamilnadu</option>
                     <option id="state" required>karnataka</option>
                     <option id="state" required>Maharastra</option>
@@ -52,10 +52,10 @@
                     <option id="state" required>Maharashtra </option>
                 </select>
                 <label for="ciyt" id="HEAD">CHoose your city</label>
-                <select>
+                <select id="place">
+                    <option id="city" required>city</option>
                     <option id="city" required>chennai</option>
-                    <option id="city" required>coimbatore</option>
-                    <option id="city" required>erode</option>
+                    <option id="city" required>trichy</option>
                     <option id="city" required>namakal</option>
                     <option id="city" required>Theni</option>
                     <option id="city" required>Madurai</option>
@@ -70,11 +70,11 @@
                 </select>
                 <label for="ciyt" id="HEAD">CHoose you locality:</label>
                 <select>
-                    <option id="local" required>Adayar</option>
-                    <option id="local" required>Ambatur </option>
-                    <option id="local" required>pallavaram</option>
-                    <option id="local" required>namakal</option>
-                    <option id="local" required>Ecr East coast road</option>
+                    <option id="local" value="adayar" required>Adayar</option>
+                    <option id="local"  value="Ambatur "required>Ambatur </option>
+                    <option id="local"  value="pallavaram"required>pallavaram</option>
+                    <option id="local"  value="namakal"required>namakal</option>
+                    <option id="local"  value="Ecr East coast road"required>Ecr East coast road</option>
                     <option id="local" required>T-nagar</option>
                     <option id="local" required>Adambakkam</option>
                     <option id="local" required>Aalandur </option>
@@ -154,9 +154,9 @@
                 </select>
 
                 <label id="HEAD" for="Price">Price Engagement:</label>
-                <select>
-                    <option id="price" required>0-15k</option>
-                    <option id="price" required>15k-25k</option>
+                <select id="amount">
+                    <option id="price"  required>0-15k</option>
+                    <option id="price"value="75k" required>15k-25k</option>
                     <option id="price" required>25k-40k</option>
                     <option id="price" required>40k-70k</option>
                     <option id="price" required>70k-90k</option>
@@ -176,7 +176,7 @@
 
                 <div class="main-content">
                     <div class="head">
-                        <p>24 Results were shown as per your search critirea</p>
+                        <p class="count">24 Results were shown as per your search critirea</p>
                         <i class="fa-solid fa-magnifying-glass" id="glass"></i><input type="search" id="search"
                             placeholder="search artist...">
                         <img src="../../assets/images/GridColoured.ade2802b.svg" id="grid" alt="grid">
@@ -213,6 +213,7 @@
                             </div>
                             <p>Bridal makeup prize</p>
                             <p><strong>Rs 18,000</strong></p>
+                            
                             <a href="../booking/book2.html"> <button>See more</button></a>
                         </div>
                         <div class="one">
@@ -802,6 +803,14 @@
         // ]
 
 
+
+
+
+
+   
+
+
+
         var records = JSON.parse(localStorage.getItem("card_data"))
 
             
@@ -875,8 +884,86 @@
 
 
 
+
+        result_of_search= document.getElementById("search")
+
+    result_of_search.addEventListener("input", (e) => {
+      let word = e.target.value.toLowerCase();
+      let dic = document.querySelectorAll(".one");
+console.log(word)
+let count_res
+      dic.forEach(ex => {
+        let child = ex.children[1].textContent.toLocaleLowerCase();
+        if (child.startsWith(word)) {
+          ex.style.display = "block"
+     
+        }
+        else {
+          ex.style.display = "none"
+        }
+      })
+    })
+
+
         
 
+        
+
+    </script>
+    <script>
+        let option = document.getElementsByTagName("option");
+        let place=document.getElementById("place")
+    let selectedValue;
+    let selvalue;
+    place.addEventListener("change", (event) => {
+        check = event.target.innerText
+        selectedValue = event.target.value;
+        console.log(selectedValue);
+        selvalue= selectedValue
+    //    return selvalue
+    let dic = document.querySelectorAll(".one");
+    dic.forEach(ex => {
+        let child = ex.children[3].children[1].textContent.toLocaleLowerCase();
+        console.log(child);
+        if (child===selvalue) {
+          ex.style.display = "block"
+        
+        }
+        else {
+          ex.style.display = "none"
+         
+
+        }
+      })
+    });
+
+//     let option1 = document.getElementsByTagName("option");
+//     let state=document.getElementById("stateoption")
+//  let selectstate;
+//     let setstate;
+//     place.addEventListener("change", (event) => {
+//         check = event.target.innerText
+//         selectstate = event.target.value;
+//         console.log(selectstate);
+//         setstate= selectstate
+//     //    return selvalue
+//     let dic = document.querySelectorAll(".one");
+//     dic.forEach(ex => {
+//         let child = ex.children[3].children[1].textContent.toLocaleLowerCase();
+//         console.log(child);
+//         if (child===setstate) {
+//           ex.style.display = "block"
+        
+//         }
+//         else {
+//           ex.style.display = "none"
+         
+
+//         }
+//       })
+//     });
+
+   
     </script>
 </body>
 

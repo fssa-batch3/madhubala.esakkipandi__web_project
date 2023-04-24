@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="profileartist.css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="full-content">
+    <div class="sidebar-user" id="side-bar">
+      <div class="Appoinment-records" id="option1" onclick="option1()">
+        <div class="border">
+          <img src="../assets/images/writing.png" class="icon-appoinmnet" />
+        </div>
+        <h6>Appoinment Records</h6>
+      </div>
+
+      <div class="Schedules-record" id="option2">
+        <div class="border">
+          <img src="../assets/images/schedule.png" class="icon-appoinmnet" onclick="option2()" />
+        </div>
+        <h6>Accepted Records</h6>
+      </div>
+      <div class="Personal-details" id="option3" onclick="option3()">
+        <div class="border">
+          <img src="../assets/images/user.png" class="icon-appoinmnet" />
+        </div>
+        <h6>Personal Details</h6>
+      </div>
+      <div class="Notification-record" id="option4" onclick="option4()">
+        <div class="border">
+          <img src="../assets/images/bell.png" class="icon-appoinmnet" />
+        </div>
+        <h6>Notifications</h6>
+      </div>
+      <div class="Remainder" id="option5" onclick="option5()">
+        <div class="border">
+          <img src="../assets/images/contract.png" class="icon-appoinmnet" />
+        </div>
+        <h6>Wishlist</h6>
+      </div>
+    </div>
+
+    <div class="main-content-user">
+      <div class="header">
+        <h3>Profile of the user</h3>
+        <hr />
+      </div>
+      <div class="details">
+        <div class="profile-of-artist">
+          <div class="pic-profile">
+            <img src="../assets/images/IMG20200903161128.jpg" class="profile" />
+          </div>
+          <h3 id="name">E.Madhubala</h3>
+          <input class="permenant-details_user" type="email" id="emailofartist" placeholder="Email" />
+          <input class="permenant-details_user" type="number" placeholder="Contact" />
+          <input class="permenant-details_user" type="text" placeholder="Details" />
+          <button class="permenant-details_user" id="update">update</button>
+          <button class="permenant-details" id="update"><a href="../index.html">Home</a></button>
+        </div>
+
+        <!-- <div class="content" id="content"> -->
+        <!-- ------------------------------ -->
+        <div class="list-of-details" id="option1Content">
+
+          <!-- <div class="info">
+                        <div class="cancel">
+                            <canvas id="myChart"></canvas>
+                        </div>
+
+                        <div class="accepted">
+                            <canvas id="myChart2"></canvas>
+                        </div>
+                        <div class="packages">
+                            <canvas id="myChart3"></canvas>
+                        </div>
+                    </div> -->
+
+          <div class="list-of-appoinment-user" id="appoinments">
+            <div class="head-appoinment">
+              <h3 class="head">Appoinments List</h3>
+              <hr />
+            </div>
+            <div class="information-appoinment">
+              <div class="name-of-make">
+                <p>
+                  Your booking appoinment with sharmila artist is in pending
+                </p>
+              </div>
+              <div class="update-appoinment">
+                <button>pending</button>
+              </div>
+            </div>
+            <hr />
+
+            <!-- <div class="information-appoinment">
+
+            <div class="date">
+
+
+               <h4>Feb 21</h4>
+           </div>
+           <div class="name-of-make">
+              
+
+               <p>Wedding makeup</p>
+           </div>
+           <div class="update-appoinment">
+
+               <button>Accept</button>
+
+           </div>
+           <div class="cost">
+                <p>Rs.12,000</p>
+           </div>
+
+       </div> 
+       <hr> -->
+            <!-- <div class="information-appoinment">
+
+        <div class="date">
+
+
+           <h4>Feb 21</h4>
+       </div>
+       <div class="name-of-make">
+          
+
+           <p>Wedding makeup</p>
+       </div>
+       <div class="update-appoinment">
+
+           <button>Accept</button>
+
+       </div>
+       <div class="cost">
+            <p>Rs.12,000</p>
+       </div>
+
+   </div> 
+   <hr>
+   <div class="information-appoinment">
+
+    <div class="date">
+
+
+       <h4>Feb 21</h4>
+   </div>
+   <div class="name-of-make">
+      
+
+       <p>Wedding makeup</p>
+   </div>
+   <div class="update-appoinment">
+
+       <button>Accept</button>
+
+   </div>
+   <div class="cost">
+        <p>Rs.12,000</p>
+   </div>
+
+</div> 
+<hr> -->
+
+            <!-- -------------- -->
+          </div>
+        </div>
+        <div class="list-of-details2_user" id="option2Content">
+          
+
+
+          
+        </div>
+
+        <div class="list-of-details4" id="option4Content">
+          <h3>Notifications</h3>
+          <hr />
+          <div class="notifiactionbox" id="notification">
+            <!-- <div class="notifibox">
+
+
+
+                            <div class="decoration-line">
+
+                            </div>
+                            <div class="img">
+                                <i class="fa-solid fa-exclamation"></i>
+                            </div>
+                            <h4 class="Booking-alert">You have booked the Madhubala for Feb14</h4>
+                            <button>Approve</button>
+                            <button>Skip</button>
+                        </div> -->
+
+            <div class="notifibox">
+              <div class="decoration-line"></div>
+              <div class="img">
+                <i class="fa-solid fa-exclamation"></i>
+              </div>
+
+              <h4 class="Booking-alert">
+                You have booked the Madhubala for Feb14
+              </h4>
+              <button id="approve-btn">Approve</button>
+              <button>Skip</button>
+            </div>
+            <div class="notifibox">
+              <div class="decoration-line"></div>
+              <div class="img">
+                <i class="fa-solid fa-exclamation"></i>
+              </div>
+              <h4 class="Booking-alert">
+                You have booked the Madhubala for Feb14
+              </h4>
+              <button id="approve-btn">Approve</button>
+              <button>Skip</button>
+            </div>
+            <div class="notifibox">
+              <div class="decoration-line"></div>
+              <div class="img">
+                <i class="fa-solid fa-exclamation"></i>
+              </div>
+              <h4 class="Booking-alert">
+                You have booked the Madhubala for Feb14
+              </h4>
+              <button id="approve-btn">Approve</button>
+              <button>Skip</button>
+            </div>
+          </div>
+        </div>
+        <div class="list-of-details3_user" id="option3Content">
+          <h3>Personal Details</h3>
+          <hr />
+          <div class="gathering_informations">
+            <input type="text" placeholder="Name" id="nameofartist" class="information-input" />
+            <input type="Address" placeholder="Address" class="information-input" id="artist_address" />
+            <input type="password" placeholder="Password" id="passwordofartist" class="information-input"
+              id="artist_password" />
+            <input type="tel" placeholder="Phone-Number" class="information-input" id="artist_number" />
+            <input type="Number" placeholder="Experince_year" class="information-input" id="artist_experince" />
+            <input type="text" placeholder="Languages Known" class="information-input" id="artist_language" />
+            <input type="text" placeholder="Socilamedia-Account" class="information-input" id="artist_social_media" />
+
+            <input type="text" placeholder="locality" class="information-input" id="artist_location" />
+            <input type="Number" placeholder="Minimum price expected" class="information-input" id="artist_price" />
+            <div class="Gender">
+              <label>Gender:</label>
+              <label>Male</label>
+              <input type="radio" />
+              <label>Female</label>
+              <input type="radio" />
+            </div>
+
+            <textarea placeholder="Bio" id="artits_bio"> </textarea>
+          </div>
+        </div>
+        <div class="list-of-details5_user" id="option5Content">
+          <h3>Wishlist</h3>
+          <hr />
+
+          <div class="content-details5_user" id="cont_push_wishlist">
+            
+            </div>
+          </div>
+        </div>
+
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+
+
+  <script>
+    const detils1 = document.getElementById("option1Content");
+
+    const detils2 = document.getElementById("option2Content");
+    const detils3 = document.getElementById("option3Content");
+    const detils4 = document.getElementById("option4Content");
+    const detils5 = document.getElementById("option5Content");
+    function option1() {
+      const option1content = document.getElementById("optiont1");
+      const selectedOption = option1content;
+      console.log(selectedOption);
+      event.preventDefault();
+      if (selectedOption) {
+      } else {
+        detils1.style.display = "block";
+        detils2.style.display = "none";
+        detils3.style.display = "none";
+        detils4.style.display = "none";
+        detils5.style.display = "none";
+      }
+    }
+
+    function option2() {
+      const option2content = document.getElementById("optiont2");
+      const selectedOption = option2content;
+      console.log(selectedOption);
+      event.preventDefault();
+      if (selectedOption) {
+      } else {
+        detils1.style.display = "none";
+        detils2.style.display = "block";
+
+        detils3.style.display = "none";
+        detils4.style.display = "none";
+        detils3.style.display = "none";
+      }
+    }
+
+    function option3() {
+      const option3content = document.getElementById("optiont3");
+      const selectedOption = option3content;
+
+      event.preventDefault();
+      if (selectedOption) {
+      } else {
+        detils1.style.display = "none";
+
+        detils2.style.display = "none";
+        detils3.style.display = "block";
+        detils4.style.display = "none";
+        detils5.style.display = "none";
+      }
+    }
+
+    function option4() {
+      const option4content = document.getElementById("optiont4");
+      const selectedOption = option4content;
+      console.log(selectedOption);
+      event.preventDefault();
+      if (selectedOption) {
+      } else {
+        detils1.style.display = "none";
+
+        detils2.style.display = "none";
+        detils3.style.display = "none";
+        detils4.style.display = "block";
+        detils5.style.display = "none";
+      }
+    }
+
+    function option5() {
+      const option5content = document.getElementById("optiont5");
+      const selectedOption = option5content;
+      console.log(selectedOption);
+      event.preventDefault();
+      if (selectedOption) {
+      } else {
+        detils1.style.display = "none";
+        detils3.style.display = "none";
+        detils2.style.display = "none";
+        detils4.style.display = "none";
+
+        detils5.style.display = "block";
+      }
+    }
+
+    let dta_of_user = JSON.parse(localStorage.getItem("data"));
+    let booking_data = JSON.parse(
+      localStorage.getItem("records_booking_clients")
+    );
+    let active_user = localStorage.getItem("profile");
+
+    console.log(booking_data);
+
+    booking_data.filter((element) => {
+      if (element.customer_email == active_user) {
+        if (element.status == false) {
+          show_div(element);
+        }
+      }
+    });
+
+    function show_div(item) {
+      let id = document.getElementById("appoinments");
+      id.innerHTML += `
+    <div class="information-appoinment" >         
+<div class="name-of-make">
+    <p>Your booking appoinment with ${item.selected_artist_for_booking} artist is in pending</p>
+</div>
+<div class="update-appoinment">
+    <button>pending</button>
+</div>
+</div> 
+<hr>
+    `;
+    }
+
+    let user = localStorage.getItem("profile");
+
+    // find the ID of the confirmed booking with status=true
+
+    const data_record = JSON.parse(
+      localStorage.getItem("records_booking_clients")
+    );
+
+    let confirmed_booking_id;
+    data_record.filter((booking) => {
+      if (booking.status === true) {
+        confirmed_booking_id = booking.id;
+
+        console.log(booking);
+      }
+
+      let find;
+      data_record.find((booking) => {
+        if (booking.id === confirmed_booking_id) {
+          const customer_email = booking.customer_email;
+
+          if (customer_email === user) {
+            list_request(booking);
+          }
+        }
+      });
+    });
+
+    function list_request(booking) {
+      const container = document.getElementById("notification");
+      container.innerHTML += ` <div class="notifibox">
+
+<div class="decoration-line">
+
+</div>
+<div class="img">
+<i class="fa-solid fa-exclamation"></i>
+</div>
+
+<h4 class="Booking-alert">${booking.selected_artist_for_booking} accepted your boooking ${booking.event_date}and id${booking.id}</h4>
+
+</div>`;
+    }
+    let wishlisting_data_of_user = JSON.parse( localStorage.getItem("wishlist_dta") );
+
+    console.log(wishlisting_data_of_user);
+
+    let user_log = localStorage.getItem("profile");
+  
+
+
+
+    
+
+    wishlisting_data_of_user.find(e=> {
+
+      if (user_log == e.email_user_wishlist) {
+
+
+list_fav(e)
+
+
+      }
+    });
+  
+
+
+
+  function list_fav(obj){
+    let appending_div = document.getElementById("cont_push_wishlist");
+      appending_div.innerHTML += `
+      <div class="div-of-whish" id="obj_artist">
+ <div class="pic-wishlist">
+   <img src="${obj["image"]}" class="pic-img-wish">
+ </div>
+ <div class="left-content-wishlist">
+ <div class="details-artist-wish">
+ <h3>${obj["title"]}</h3>
+ <p>${obj["price"]}</p>
+
+ <button>Book now</button>
+ </div>
+ <i class="fa-solid fa-circle-xmark"  "id="trash"></i>
+
+ </div>
+
+ </div>
+           
+ `
+
+  }
+
+
+  let data_of_wishlist = JSON.parse(localStorage.getItem("wishlist_dta")); 
+  let removewish = document.querySelectorAll(".fa-circle-xmark");
+
+removewish.forEach((element, index) => {
+  element.addEventListener("click", () => {
+    data_of_wishlist.splice(index, 1); 
+    localStorage.setItem("wishlist_dta", JSON.stringify(data_of_wishlist)); 
+    location.reload();
+  });
+});
+
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

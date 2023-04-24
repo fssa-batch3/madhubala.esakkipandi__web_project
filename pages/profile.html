@@ -15,16 +15,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <title>Document</title>
 </head>
-<!-- <div class="container">
-    <form>
-      <div class="row">
-        <div class="col">
-          <label for="exampleFormControlInput1" class="form-label">Email address</label>
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-      </div>
-    </form>
-  </div> -->
  <body>
 <div class="hole">
     <div class="profile">
@@ -116,6 +106,8 @@
                  profile_real.setAttribute("src",reader.result)
              })
              reader.readAsDataURL(choosed_file)
+
+
             }
         })
 
@@ -141,18 +133,28 @@ console.log(res)
         document.getElementById("newname").value =res["user_name"];
     document.getElementById("newemail").value = res["user_email"];
     
+    document.getElementById("bio").value=res["user_bio"]
+    
+    document.getElementById("number").value=res["user_number"]
+    document.getElementById("city").value=res["user_city"]
+    document.getElementById("address").value=res["user_address"]
 
+   
 // -------------------------
+
+
             document.getElementById("update").addEventListener("click",e=>{
                 e.preventDefault();
             res["user_name"]= document.getElementById("newname").value
-            res["bio"]= document.getElementById("bio").value
-            res["number"]= document.getElementById("number").value
-            res["city"]= document.getElementById("city").value
-            res["address"]= document.getElementById("address").value
+            res["user_bio"]= document.getElementById("bio").value
+            res["user_number"]= document.getElementById("number").value
+            res["user_city"]= document.getElementById("city").value
+            res["user_address"]= document.getElementById("address").value
 
- localStorage.setItem("data",JSON.stringify(user_profile_data))
+ localStorage.setItem("data",JSON.stringify(user_profile_data));
+ console.log(res);
             })
+
 
     // -----------------------------------
 
@@ -161,6 +163,25 @@ console.log(res)
             localStorage.removeItem("profile");
           
             })
+
+
+
+            // let showing_approved_details = JSON.parse(localStorage.getItem("records_booking_clients"));
+
+
+
+            // console.log(showing_approved_details)
+
+            
+            
+          
+
+
+
+
+
+
+
             
     </script>
 </body>

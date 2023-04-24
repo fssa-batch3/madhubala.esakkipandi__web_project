@@ -130,11 +130,14 @@ body {
   height: 18px;
   width: 18px;
 }
-
+.head_poast{
+  text-align: center;
+  color:#D70F64;
+}
 .line {
   display: flex;
-  height: 40px;
-  width: 60%;
+  height: 50px;
+  width: 80%;
   justify-content: space-between;
   margin-top: 20px;
   background-color: white;
@@ -458,6 +461,13 @@ a {
   width:160px;
   
 }
+
+.heading{
+  height: 60px;
+  width:100%;
+  border: 2px solid black;
+}
+
 form{
   margin-top: 10px;
   /* border: 2px solid black; */
