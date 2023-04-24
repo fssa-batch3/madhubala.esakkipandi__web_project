@@ -1,118 +1,117 @@
+let card_data =  
+  [
+
+    {
+        "artist_name": "Thulasi Makeup",
+        "image": {
+            source: "../../assets/images/sana-s-bridal-boutique-and-makeup-studio-madurai-beauty-parlours-09uwlnor6l.webp"
+//     },"
+
+        },
+        "locality": "Ambatur ,chennai(view on map)",
+        "Price": " 17,000 per function "
+
+    },
+
+
+    {
+        "artist_name": "Wedding makeup",
+        "image": {
+            source:  "../../assets/images/new-2.jpg"
+
+        },
+        "Price": "20,000 per function",
+        "locality": "Samayapuram ,Trichy(view on map)",
+
+    },
+
+
+    {
+        "artist_name": "Malikam makeup",
+
+
+        "image": {
+            source: "../../assets/images/new-1.jpg"
+
+        },
+        "Price": "13000 per function",
+        "locality": "Namakkal",
+
+    },
+
+    {
+        "artist_name": "subha makeup",
+
+        "image": {
+            source: "../../assets/images/imagee.webp"
+
+        },
+        "Price": "15000 per function",
+        "locality": "Kanyakumari",
+
+    },
+    {
+        "artist_name": "Janani Makeup",
+
+
+        "image": {
+            source: "../../assets/images/pexels-unique-click-by-sonam-singh-8429511.jpg"
+
+        },
+        "Price": "13,000 per function",
+        "locality": "trichy",
+
+    }, 
+     {"artist_name": "Madura Makeup",
+        "image": {
+            source: "../../assets/images/South-Indian-brides-who-rocked-the-South-Indian-bridal-look37.jpg"},
+
+            "Price": "13,000 per function",
+        "locality": "Dindugal",
+    },
+    {"artist_name": "Priya Makeup",
+        "image": {
+            source: "../../assets/images/cont-13-img.webp"},
+
+            "Price": "45,000 per function",
+        "locality": "Mumbai,Bhandup",
+    },
+    
+   
+    {"artist_name": "Queency Makeup",
+        "image": {
+            source: "../../assets/images/bridal-makeup-makeup-by-namrata-satwani-bridal-makeup-12_15_273387-158193732586136.webp"},
+
+
+            "Price": "22,000 per function",
+        "locality": "Banglore",
+    },
+    {"artist_name": "steffy Makeup",
+        "image": {
+            source: "../../assets/images/bridal-makeup-makeup-by-namrata-satwani-bridal-makeup-12_15_273387-158193732586136.webp"},
+
+
+            "Price": "22,000 per function",
+        "locality": "Banglore",
+    },
+    {"artist_name": "Prathiusha Makeup",
+        "image": {
+            source: "../../assets/images/7357084cd7e989a7ea629c20a0ad9c2a.jpg"},
+
+
+            "Price": "12,000 per function",
+        "locality": "chennai",
+    }
+    
+
+]
+
 if (localStorage.getItem("card_data")) {
   //   return;
 } else {
   localStorage.setItem(
     "card_data",
-    JSON.stringify([
-      
-      [
-
-        {
-            "artist_name": "Thulasi Makeup",
-            "image": {
-                source: "../../assets/images/sana-s-bridal-boutique-and-makeup-studio-madurai-beauty-parlours-09uwlnor6l.webp"
-    //     },"
-
-            },
-            "locality": "Ambatur ,chennai(view on map)",
-            "Price": " 17,000 per function "
-
-        },
-
-
-        {
-            "artist_name": "Wedding makeup",
-            "image": {
-                source:  "../../assets/images/new-2.jpg"
-
-            },
-            "Price": "20,000 per function",
-            "locality": "Samayapuram ,Trichy(view on map)",
-
-        },
-
-
-        {
-            "artist_name": "Malikam makeup",
-
-
-            "image": {
-                source: "../../assets/images/new-1.jpg"
-
-            },
-            "Price": "13000 per function",
-            "locality": "Namakkal",
-
-        },
-
-        {
-            "artist_name": "subha makeup",
-
-            "image": {
-                source: "../../assets/images/imagee.webp"
-
-            },
-            "Price": "15000 per function",
-            "locality": "Kanyakumari",
-
-        },
-        {
-            "artist_name": "Janani Makeup",
-
-
-            "image": {
-                source: "../../assets/images/pexels-unique-click-by-sonam-singh-8429511.jpg"
-
-            },
-            "Price": "13,000 per function",
-            "locality": "trichy",
-
-        }, 
-         {"artist_name": "Madura Makeup",
-            "image": {
-                source: "../../assets/images/South-Indian-brides-who-rocked-the-South-Indian-bridal-look37.jpg"},
-
-                "Price": "13,000 per function",
-            "locality": "Dindugal",
-        },
-        {"artist_name": "Priya Makeup",
-            "image": {
-                source: "../../assets/images/cont-13-img.webp"},
-
-                "Price": "45,000 per function",
-            "locality": "Mumbai,Bhandup",
-        },
-        
-       
-        {"artist_name": "Queency Makeup",
-            "image": {
-                source: "../../assets/images/bridal-makeup-makeup-by-namrata-satwani-bridal-makeup-12_15_273387-158193732586136.webp"},
-
-
-                "Price": "22,000 per function",
-            "locality": "Banglore",
-        },
-        {"artist_name": "steffy Makeup",
-            "image": {
-                source: "../../assets/images/bridal-makeup-makeup-by-namrata-satwani-bridal-makeup-12_15_273387-158193732586136.webp"},
-
-
-                "Price": "22,000 per function",
-            "locality": "Banglore",
-        },
-        {"artist_name": "Prathiusha Makeup",
-            "image": {
-                source: "../../assets/images/7357084cd7e989a7ea629c20a0ad9c2a.jpg"},
-
-
-                "Price": "12,000 per function",
-            "locality": "chennai",
-        }
-        
-
-    ]
-,
-    ])
+    JSON.stringify(card_data)
   );
 }
 
