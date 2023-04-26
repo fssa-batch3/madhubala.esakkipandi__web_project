@@ -21,36 +21,42 @@
 <body>
   <div class="full-content">
     <div class="sidebar-user" id="side-bar">
-      <div class="Appoinment-records" id="option1" onclick="option1()">
+      <div class="Appoinment-records" id="option1">
         <div class="border">
-          <img src="../assets/images/writing.png" class="icon-appoinmnet" />
+          <img src="../assets/images/writing.png" class="icon-appoinmnet">
         </div>
         <h6>Appoinment Records</h6>
       </div>
 
       <div class="Schedules-record" id="option2">
         <div class="border">
-          <img src="../assets/images/schedule.png" class="icon-appoinmnet" onclick="option2()" />
+          <img src="../assets/images/schedule.png" class="icon-appoinmnet" >
         </div>
         <h6>Accepted Records</h6>
       </div>
-      <div class="Personal-details" id="option3" onclick="option3()">
+      <div class="Personal-details" id="option3" >
         <div class="border">
-          <img src="../assets/images/user.png" class="icon-appoinmnet" />
+          <img src="../assets/images/user.png" class="icon-appoinmnet" >
         </div>
         <h6>Personal Details</h6>
       </div>
-      <div class="Notification-record" id="option4" onclick="option4()">
+      <div class="Notification-record" id="option4" >
         <div class="border">
           <img src="../assets/images/bell.png" class="icon-appoinmnet" />
         </div>
         <h6>Notifications</h6>
       </div>
-      <div class="Remainder" id="option5" onclick="option5()">
+      <div class="Remainder" id="option5" >
         <div class="border">
           <img src="../assets/images/contract.png" class="icon-appoinmnet" />
         </div>
         <h6>Wishlist</h6>
+      </div>
+      <div class="Remainder" id="option6">
+        <div class="border">
+          <img src="../assets/images/contract.png" class="icon-appoinmnet" />
+        </div>
+        <h6>Log-Out</h6>
       </div>
     </div>
 
@@ -62,14 +68,14 @@
       <div class="details">
         <div class="profile-of-artist">
           <div class="pic-profile">
-            <img src="../assets/images/IMG20200903161128.jpg" class="profile" />
+            <img src="../assets/images/IMG20200903161128.jpg" class="profile" >
           </div>
-          <h3 id="name">E.Madhubala</h3>
-          <input class="permenant-details_user" type="email" id="emailofartist" placeholder="Email" />
-          <input class="permenant-details_user" type="number" placeholder="Contact" />
-          <input class="permenant-details_user" type="text" placeholder="Details" />
+          <h3 id="newname">E.Madhubala</h3>
+          <input class="permenant-details_user" type="email" id="newemail" placeholder="Email">
+          <input class="permenant-details_user"id="number" type="number" placeholder="Contact">
+          <input class="permenant-details_user" type="text" placeholder="Details">
           <button class="permenant-details_user" id="update">update</button>
-          <button class="permenant-details" id="update"><a href="../index.html">Home</a></button>
+          <button class="permenant-details" ><a href="../index.html">Home</a></button>
         </div>
 
         <!-- <div class="content" id="content"> -->
@@ -245,17 +251,16 @@
           <h3>Personal Details</h3>
           <hr />
           <div class="gathering_informations">
-            <input type="text" placeholder="Name" id="nameofartist" class="information-input" />
-            <input type="Address" placeholder="Address" class="information-input" id="artist_address" />
-            <input type="password" placeholder="Password" id="passwordofartist" class="information-input"
+            <input type="text" placeholder="Name" id="newname" class="information-inputs_user">
+            <input type="Address" placeholder="Address" class="information-inputs_user" id="address">
+            <input type="password" placeholder="Password" id="password" class="information-inputs_user"
               id="artist_password" />
-            <input type="tel" placeholder="Phone-Number" class="information-input" id="artist_number" />
-            <input type="Number" placeholder="Experince_year" class="information-input" id="artist_experince" />
-            <input type="text" placeholder="Languages Known" class="information-input" id="artist_language" />
-            <input type="text" placeholder="Socilamedia-Account" class="information-input" id="artist_social_media" />
+            <input type="tel" placeholder="Phone-Number" class="information-inputs_user" id="number">
+     
+            <input type="text" placeholder="Socilamedia-Account" class="information-inputs_user" id="social_media" />
 
-            <input type="text" placeholder="locality" class="information-input" id="artist_location" />
-            <input type="Number" placeholder="Minimum price expected" class="information-input" id="artist_price" />
+            <input type="text" placeholder="locality" class="information-inputs_user" id="city">
+            <input type="text" placeholder="age" class="information-inputs_user" id="artist_location">
             <div class="Gender">
               <label>Gender:</label>
               <label>Male</label>
@@ -264,7 +269,7 @@
               <input type="radio" />
             </div>
 
-            <textarea placeholder="Bio" id="artits_bio"> </textarea>
+            <textarea placeholder="Bio" id="bio"> </textarea>
           </div>
         </div>
         <div class="list-of-details5_user" id="option5Content">
@@ -284,90 +289,76 @@
 
 
   <script>
-    const detils1 = document.getElementById("option1Content");
 
-    const detils2 = document.getElementById("option2Content");
-    const detils3 = document.getElementById("option3Content");
-    const detils4 = document.getElementById("option4Content");
-    const detils5 = document.getElementById("option5Content");
-    function option1() {
-      const option1content = document.getElementById("optiont1");
-      const selectedOption = option1content;
-      console.log(selectedOption);
-      event.preventDefault();
-      if (selectedOption) {
-      } else {
-        detils1.style.display = "block";
-        detils2.style.display = "none";
-        detils3.style.display = "none";
-        detils4.style.display = "none";
-        detils5.style.display = "none";
-      }
-    }
 
-    function option2() {
-      const option2content = document.getElementById("optiont2");
-      const selectedOption = option2content;
-      console.log(selectedOption);
-      event.preventDefault();
-      if (selectedOption) {
-      } else {
-        detils1.style.display = "none";
-        detils2.style.display = "block";
+const Option1 = document.getElementById("option1");
+const Option2 = document.getElementById("option2");
+const Option3 = document.getElementById("option3");
+const Option4 = document.getElementById("option4");
+const Option5 = document.getElementById("option5");
+const Option6 = document.getElementById("option6");
 
-        detils3.style.display = "none";
-        detils4.style.display = "none";
-        detils3.style.display = "none";
-      }
-    }
+const details1 = document.getElementById("option1Content");
+const details2 = document.getElementById("option2Content");
+const details3 = document.getElementById("option3Content");
+const details4 = document.getElementById("option4Content");
+const details5 = document.getElementById("option5Content");
+const details6 = document.getElementById("option6Content");
 
-    function option3() {
-      const option3content = document.getElementById("optiont3");
-      const selectedOption = option3content;
+Option1.addEventListener("click", function() {
+    details1.style.display = 'block';
+    details2.style.display = 'none';
+    details3.style.display = 'none';
+    details4.style.display = 'none';
+    details5.style.display = 'none';
+    // details6.style.display = 'none';
+});
 
-      event.preventDefault();
-      if (selectedOption) {
-      } else {
-        detils1.style.display = "none";
+Option2.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'block';
+    details3.style.display = 'none';
+    details4.style.display = 'none';
+    details5.style.display = 'none';
+    // details6.style.display = 'none';
+});
 
-        detils2.style.display = "none";
-        detils3.style.display = "block";
-        detils4.style.display = "none";
-        detils5.style.display = "none";
-      }
-    }
+Option3.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'none';
+    details3.style.display = 'block';
+    details4.style.display = 'none';
+    details5.style.display = 'none';
+    // details6.style.display = 'none';
+});
 
-    function option4() {
-      const option4content = document.getElementById("optiont4");
-      const selectedOption = option4content;
-      console.log(selectedOption);
-      event.preventDefault();
-      if (selectedOption) {
-      } else {
-        detils1.style.display = "none";
+Option4.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'none';
+    details3.style.display = 'none';
+    details4.style.display = 'block';
+    details5.style.display = 'none';
+    // details6.style.display = 'none';
+});
 
-        detils2.style.display = "none";
-        detils3.style.display = "none";
-        detils4.style.display = "block";
-        detils5.style.display = "none";
-      }
-    }
+Option5.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'none';
+    details3.style.display = 'none';
+    details4.style.display = 'none';
+    details5.style.display = 'block';
+    // details6.style.display = 'none';
+});
 
-    function option5() {
-      const option5content = document.getElementById("optiont5");
-      const selectedOption = option5content;
-      console.log(selectedOption);
-      event.preventDefault();
-      if (selectedOption) {
-      } else {
-        detils1.style.display = "none";
-        detils3.style.display = "none";
-        detils2.style.display = "none";
-        detils4.style.display = "none";
+// Option6.addEventListener("click", function() {
+//     details1.style.display = 'none';
+//     details2.style.display = 'none';
+//     details3.style.display = 'none';
+//     details4.style.display = 'none';
+//     details5.style.display = 'none';
+//     details6.style.display = 'block';
+// });
 
-        detils5.style.display = "block";
-      }
-    }
 
     let dta_of_user = JSON.parse(localStorage.getItem("data"));
     let booking_data = JSON.parse(
@@ -412,7 +403,7 @@
     data_record.filter((booking) => {
       if (booking.status === true) {
         confirmed_booking_id = booking.id;
-
+    
         console.log(booking);
       }
 
@@ -440,29 +431,27 @@
 </div>
 
 <h4 class="Booking-alert">${booking.selected_artist_for_booking} accepted your boooking ${booking.event_date}and id${booking.id}</h4>
-
 </div>`;
     }
+
+
+
+
+
     let wishlisting_data_of_user = JSON.parse( localStorage.getItem("wishlist_dta") );
-
     console.log(wishlisting_data_of_user);
-
     let user_log = localStorage.getItem("profile");
+
+
   
-
-
-
-    
-
     wishlisting_data_of_user.find(e=> {
 
       if (user_log == e.email_user_wishlist) {
-
-
-list_fav(e)
-
+        
+          list_fav(e)
 
       }
+
     });
   
 
@@ -482,7 +471,7 @@ list_fav(e)
 
  <button>Book now</button>
  </div>
- <i class="fa-solid fa-circle-xmark"  "id="trash"></i>
+ <i class="fa-solid fa-circle-xmark"  "id="trash"  ></i>
 
  </div>
 
@@ -492,20 +481,61 @@ list_fav(e)
 
   }
 
+  let user_profile_data = JSON.parse(localStorage.getItem("data"));
+           let  user_pp= localStorage.getItem("profile");
+           let res;
+           user_profile_data.find(  // parameterized function 'a'
+            e =>{
+                    
+                if(e["user_email"]==user_pp){
+                     return res=e
+                }
+            }
+            )
+console.log(res)
+            
+     document.getElementById("newname").value =res["user_name"];
 
-  let data_of_wishlist = JSON.parse(localStorage.getItem("wishlist_dta")); 
-  let removewish = document.querySelectorAll(".fa-circle-xmark");
 
-removewish.forEach((element, index) => {
-  element.addEventListener("click", () => {
-    data_of_wishlist.splice(index, 1); 
-    localStorage.setItem("wishlist_dta", JSON.stringify(data_of_wishlist)); 
-    location.reload();
-  });
-});
+    document.getElementById("newemail").value = res["user_email"];
+    document.getElementById("password").value=res["user_password"]
+
+    document.getElementById("bio").value=res["user_bio"]??""
+    document.getElementById("number").value=res["user_number"]??""
+    document.getElementById("city").value=res["user_city"]??""
+    document.getElementById("address").value=res["user_address"]??""
+document.getElementById("social_media").value=res["ac_social"]??""
+   
+// -------------------------
+
+
+            document.getElementById("update").addEventListener("click",e=>{
+                e.preventDefault();
+            res["user_name"]= document.getElementById("newname").value
+            res["user_password"]=document.getElementById("password").value
+            res["user_bio"]= document.getElementById("bio").value
+            res["user_number"]= document.getElementById("number").value
+            res["user_city"]= document.getElementById("city").value
+            res["user_address"]= document.getElementById("address").value
+            res["ac_social"]=document.getElementById("social_media").value
+ localStorage.setItem("data",JSON.stringify(user_profile_data));
+ console.log(res);
+            })
 
 
 
+
+
+  // let data_of_wishlist = JSON.parse(localStorage.getItem("wishlist_dta"))||[]; 
+  // let removewish = document.querySelectorAll(".fa-circle-xmark");
+   
+//   removewish.forEach((e,index)=>{
+//   e.addEventListener("click",element=>{
+//     data_of_wishlist.splice(index,1)
+//     localStorage.setItem("wishlist_dta",JSON.stringify(data_of_wishlist))
+//     location.reload()
+//   })
+// })
 
 
 

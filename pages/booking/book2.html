@@ -40,7 +40,7 @@
             </li>
             <li><a href="../booking/start_booking.html">Book here</a></li>
             <li><a href="../Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
-            <li><a href="./pages/profile.html"> <img src="../../assets/images/IMG20200903161128.jpg"
+            <li><a href="../profile_of_user.html"> <img src="../../assets/images/IMG20200903161128.jpg"
                         class="my-profile-img"></a></li>
 
         </ul>
@@ -317,6 +317,7 @@
 
                 </div>
 
+
             </div>  -->
 
         </div>
@@ -336,6 +337,7 @@
                 </div>
             </div>
             <div class="one">
+             
                 <div class="boto">
                     <a href="index.html">
                         <h3><i class="fa-solid fa-house"></i>HOME</h3>
@@ -830,8 +832,11 @@ check.forEach((star, index1) => {
                         <p class="month" id="commnt"> ${artist_reviews[i].comments}</p>
                         <p class="month">Recommended:</p>
                         <img src="../../assets/images/quality-of-work.webp" class="quality">
+
                   </div>
+
             </div>`
+
                     review_output.innerHTML = output;
                 }
             }
@@ -864,7 +869,6 @@ check.forEach((star, index1) => {
 
 
 
-
 let active_user = localStorage.getItem("profile");
 let dataofartist = JSON.parse(localStorage.getItem("data"));
 let artist_obj = dataofartist.find(obj => obj.user_email === active_user);
@@ -874,11 +878,16 @@ console.log(result["artist_name"])
 let productImage = result["image"]["source"];
 let productPrice = result["Price"];
 let object_name = artist_obj["user_name"];
+
 let wishlist_data = document.getElementById("wishlist");
 
+let user = dataofartist.find(obj => obj.user_email === active_user);
+
 wishlist_data.addEventListener('click', () => { 
-  let wish_data = JSON.parse(localStorage.getItem("wishlist_dta")) || [];
+
+  let wish_data = JSON.parse(localStorage.getItem("wishlist_dta")) || [];  
   const wishlistItem = {
+  
     "email_user_wishlist": active_user,
     "user_name": object_name,
     "id_wishlist": wish_data.length,
@@ -886,11 +895,22 @@ wishlist_data.addEventListener('click', () => {
     "image": productImage,
     "price": productPrice,
     "status":false
+
+
+    
   };
+
+  let user = dataofartist.find(obj => obj.user_email === active_user);
+
   wish_data.push(wishlistItem);
   localStorage.setItem("wishlist_dta", JSON.stringify(wish_data));
   
+
+  user.wishlist = wish_data.filter(element => element.email_user_wishlist === active_user);
+  localStorage.setItem("data", JSON.stringify(dataofartist));
+
 });
+
 
 
 

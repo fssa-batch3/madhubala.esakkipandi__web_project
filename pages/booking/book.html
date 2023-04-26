@@ -24,7 +24,7 @@
                 </li>
                 <li><a href="../booking/start_booking.html">Book here</a></li>
                 <li><a href="../Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
-                <li><a href="../profile.html"> <img src="../../assets/images/IMG20200903161128.jpg"
+                <li><a href="../profile_of_user.html"> <img src="../../assets/images/IMG20200903161128.jpg"
                             class="my-profile-img"></a></li>
 
             </ul>
@@ -883,41 +883,34 @@
 
 
 
-        result_of_search= document.getElementById("search")
-
-    result_of_search.addEventListener("input", (e) => {
+      result_of_search= document.getElementById("search")
+      result_of_search.addEventListener("input", (e) => {
       let word = e.target.value.toLowerCase();
       let dic = document.querySelectorAll(".one");
-console.log(word)
-let count_res
+      console.log(word)
       dic.forEach(ex => {
         let child = ex.children[1].textContent.toLocaleLowerCase();
         if (child.startsWith(word)) {
           ex.style.display = "block"
-     
         }
         else {
           ex.style.display = "none"
-        }
+        }       
       })
     })
-
-
-        
-
-        
-
+         
     </script>
     <script>
+
         let option = document.getElementsByTagName("option");
         let place=document.getElementById("place")
     let selectedValue;
     let selvalue;
     place.addEventListener("change", (event) => {
-        check = event.target.innerText
-        selectedValue = event.target.value;
-        console.log(selectedValue);
-        selvalue= selectedValue
+    check = event.target.innerText
+    selectedValue = event.target.value;
+    console.log(selectedValue);
+    selvalue= selectedValue
     //    return selvalue
     let dic = document.querySelectorAll(".one");
     dic.forEach(ex => {
@@ -925,22 +918,14 @@ let count_res
         console.log(child);
         if (child===selvalue) {
           ex.style.display = "block"
-        
         }
         else {
-          ex.style.display = "none"
-         
-
+          ex.style.display = "none" 
         }
       })
     });
-
-
-   
     </script>
 </body>
-
-
 
 </html>
 

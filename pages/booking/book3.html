@@ -112,7 +112,7 @@
       // let artistgetting_inforamtion = JSON.parse(localStorage.getItem("selected_artist"))
       let active_user = localStorage.getItem("profile").value /* active login of artist email*/
 
-
+ 
 
       // getting the information form the user*/
       const name_client = document.getElementById("Name-of-coustomer").value
@@ -143,6 +143,8 @@
     alert("confirm request sended")
         localStorage.setItem("records_booking_clients", JSON.stringify(records_booking_clients));
         
+        let user = dataofartist.find(obj => obj.user_email === active_user);
+
        
       }
       else {
@@ -150,27 +152,9 @@
 
       }
     })
+
        
 
-  //   let active_user = localStorage.getItem("profile")
-
-  //   let dataofartist = JSON.parse(localStorage.getItem("card_data"));
-
-  // let artist_index = dataofartist.findIndex(obj => obj.user_email === active_user);
-
-  //   let artist_data = dataofartist[artist_index];
-
-  //   if (artist_data) {
-
-  //     artist_data.records_booking_clients = [];
-
-  //   }
-
-  //   artist_data.records_booking_clients.push(object_booking_records);
-
-  //   dataofartist[artist_index] = artist_data;
-
-  //   localStorage.setItem("card_data", JSON.stringify(card_data));
 
 
 

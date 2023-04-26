@@ -117,6 +117,7 @@
 
 
 
+let dataofartist=JSON.parse(localStorage.getItem("card_data")) 
 document.getElementById("upload_form").addEventListener('submit', e => {
  
 e.preventDefault();
@@ -144,6 +145,12 @@ e.preventDefault();
             localStorage.setItem("upload_details", JSON.stringify(upload_details));
        
 
+
+            let user = dataofartist.find(obj => obj.user_email === active_user);
+
+            
+  user.upload = upload_details.filter(element => element.uploader_emial === active_user);
+  localStorage.setItem("card_data", JSON.stringify(dataofartist));
 
 })
 

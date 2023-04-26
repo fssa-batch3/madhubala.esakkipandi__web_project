@@ -24,15 +24,14 @@
         <div class="sidebar" id="side-bar">
 
 
-            <div class="Appoinment-records" id="option1" onclick="option1()">
-
+            <div class="Appoinment-records" id="option1" >
                 <div class="border">
                     <img src="../assets/images/writing.png" class="icon-appoinmnet">
                 </div>
                 <h6>Appoinment Records</h6>
             </div>
 
-            <div class="Schedules-record" id="option2" onclick="option2()">
+            <div class="Schedules-record" id="option2" >
 
 
 
@@ -41,14 +40,14 @@
                 </div>
                 <h6>Schedules</h6>
             </div>
-            <div class="Personal-details" id="option3" onclick="option3()">
+            <div class="Personal-details" id="option3" >
 
                 <div class="border">
                     <img src="../assets/images/user.png" class="icon-appoinmnet">
                 </div>
                 <h6>Personal Details</h6>
             </div>
-            <div class="Notification-record" id="option4" onclick="option4()">
+            <div class="Notification-record" id="option4" >
 
                 <div class="border">
                     <img src="../assets/images/bell.png" class="icon-appoinmnet">
@@ -57,13 +56,13 @@
 
 
             </div>
-            <div class="Remainder" id="option5" onclick="option5()">
+            <div class="Remainder" id="option5" >
                 <div class="border">
                     <img src="../assets/images/contract.png" class="icon-appoinmnet">
                 </div>
                 <h6>Remainder</h6>
             </div>
-            <div class="Remainder" id="option6" onclick="option6()">
+            <div class="Remainder" id="option6" >
                 <div class="border">
                     <img src="../assets/images/makeup (1).png" class="icon-appoinmnet">
                 </div>
@@ -661,138 +660,74 @@
 
 
 
+const Option1 = document.getElementById("option1");
+const Option2 = document.getElementById("option2");
+const Option3 = document.getElementById("option3");
+const Option4 = document.getElementById("option4");
+const Option5 = document.getElementById("option5");
+const Option6 = document.getElementById("option6");
 
+const details1 = document.getElementById("option1Content");
+const details2 = document.getElementById("option2Content");
+const details3 = document.getElementById("option3Content");
+const details4 = document.getElementById("option4Content");
+const details5 = document.getElementById("option5Content");
+const details6 = document.getElementById("option6Content");
 
+Option1.addEventListener("click", function() {
+    details1.style.display = 'block';
+    details2.style.display = 'none';
+    details3.style.display = 'none';
+    details4.style.display = 'none';
+    details5.style.display = 'none';
+    details6.style.display = 'none';
+});
 
-        const detils1 = document.getElementById("option1Content")
+Option2.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'block';
+    details3.style.display = 'none';
+    details4.style.display = 'none';
+    details5.style.display = 'none';
+    details6.style.display = 'none';
+});
 
-        const detils2 = document.getElementById("option2Content")
-        const detils3 = document.getElementById("option3Content")
-        const detils4 = document.getElementById("option4Content")
-        const detils5 = document.getElementById("option5Content")
-        const detils6 = document.getElementById("option6Content")
-        function option1() {
+Option3.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'none';
+    details3.style.display = 'block';
+    details4.style.display = 'none';
+    details5.style.display = 'none';
+    details6.style.display = 'none';
+});
 
-            const option1content = document.getElementById('optiont1');
-            const selectedOption = option1content;
-            console.log(selectedOption)
-            event.preventDefault()
-            if (selectedOption) {
+Option4.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'none';
+    details3.style.display = 'none';
+    details4.style.display = 'block';
+    details5.style.display = 'none';
+    details6.style.display = 'none';
+});
 
-            }
-            else {
-                detils1.style.display = 'block';
-                detils2.style.display = 'none'
-                detils3.style.display = 'none'
-                detils4.style.display = 'none'
-                detils5.style.display = 'none'
-                detils6.style.display = 'none'
-            }
+Option5.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'none';
+    details3.style.display = 'none';
+    details4.style.display = 'none';
+    details5.style.display = 'block';
+    details6.style.display = 'none';
+});
 
-        };
+Option6.addEventListener("click", function() {
+    details1.style.display = 'none';
+    details2.style.display = 'none';
+    details3.style.display = 'none';
+    details4.style.display = 'none';
+    details5.style.display = 'none';
+    details6.style.display = 'block';
+});
 
-
-        function option2() {
-
-            const option2content = document.getElementById('optiont2');
-            const selectedOption = option2content;
-            console.log(selectedOption)
-            event.preventDefault()
-            if (selectedOption) {
-
-            }
-            else {
-                detils1.style.display = 'none';
-                detils2.style.display = 'block';
-
-                detils3.style.display = 'none'
-                detils4.style.display = 'none'
-                detils3.style.display = 'none'
-                detils6.style.display = 'none'
-            }
-
-        };
-
-
-        function option3() {
-
-            const option3content = document.getElementById('optiont3');
-            const selectedOption = option3content;
-
-            event.preventDefault()
-            if (selectedOption) {
-
-            }
-            else {
-                detils1.style.display = 'none';
-
-                detils2.style.display = 'none'
-                detils3.style.display = 'block'
-                detils4.style.display = 'none'
-                detils5.style.display = 'none'
-                detils6.style.display = 'none'
-            }
-
-        };
-
-
-        function option4() {
-
-            const option4content = document.getElementById('optiont4');
-            const selectedOption = option4content;
-            console.log(selectedOption)
-            event.preventDefault()
-            if (selectedOption) {
-
-            }
-            else {
-                detils1.style.display = 'none';
-
-                detils2.style.display = 'none'
-                detils3.style.display = 'none'
-                detils4.style.display = 'block';
-                detils5.style.display = 'none'
-                detils6.style.display = 'none'
-            }
-
-        };
-
-        function option5() {
-            const option5content = document.getElementById('optiont5');
-            const selectedOption = option5content;
-            console.log(selectedOption)
-            event.preventDefault()
-            if (selectedOption) {
-
-            }
-            else {
-                detils1.style.display = 'none';
-                detils3.style.display = 'none';
-                detils2.style.display = 'none'
-                detils4.style.display = 'none'
-                detils5.style.display = 'block'
-                detils6.style.display = 'none'
-            }
-
-        };
-        function option6() {
-            const option6content = document.getElementById('optiont6');
-            const selectedOption = option6content;
-            console.log(selectedOption)
-            event.preventDefault()
-            if (selectedOption) {
-
-            }
-            else {
-                detils1.style.display = 'none';
-                detils3.style.display = 'none';
-                detils2.style.display = 'none'
-                detils4.style.display = 'none'
-                detils5.style.display = 'none'
-                detils6.style.display = 'block'
-            }
-
-        };
         const artist_profile = JSON.parse(localStorage.getItem("card_data"));
         const user_pp = localStorage.getItem("artist_profile")
 
@@ -847,8 +782,6 @@
         // })
 
         // -----------------------------------
-
-
 
 
 
@@ -977,8 +910,7 @@ console.log(active_user)
     const uploading_img = JSON.parse(localStorage.getItem("upload_details"))
 
     console.log(uploading_img)
-        for (let post of uploading_img.filter(user => user.uploader_emial
- == active_user)) {
+        for (let post of uploading_img.filter(user => user.uploader_emial == active_user)) {
 
           
           let cont=document.getElementById("content")
