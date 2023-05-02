@@ -228,17 +228,29 @@ margin-top: 20px;
 }
 
 .div{
-    height:600px;
+    height:700px;
     width:100%;
+    /* display: flex; */
+    /* border:2px solid black; */
+    margin-top: 240px;
     display: flex;
-    border:2px solid black;
-    
+}
+.login_side{
+  width: 50%;
+  /* border:2px solid black; */
+}
+.register-side{
+  width: 47%;
+  /* border:2px solid black; */
 }
 .art-register a{
   text-decoration: none;
   color:#dd315c;
 }
-
+.heading{
+  color:#dd315c;
+  text-align: center;
+}
 
 
 .footer {
@@ -324,4 +336,145 @@ margin-top: 20px;
     text-decoration: none;
     color: white;
   }
+
+  .div-form{
+    height:700px;
+    width:90%;
+  /* border:2px solid black; */
+  margin-left: 80px;
+  margin-top: 150px;
+  display: flex;
+  box-shadow: 0 0 10px rgba(34, 10, 19, 0.1);
+  border-radius: 20px;
+}
+#cardform{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+    width:60%;
+    /* border:2px solid black; */
+    margin-left: 60px;
+   font-family: 'Poppins', sans-serif;
+   margin-top: 30px;
+}
+.head{
+    color:#52243d;
+ margin-top: 30px;
+ margin-left: 50px;
+} 
+
+form{
+ 
+  /* border: 2px solid black; */
+  height: 96%;
+}
+  .form{
+    height: 70%;
+    width:60%;
+    /* border: 2px solid black; */
+
+    box-shadow: 0 0 10px rgba(34, 10, 19, 0.1);
+    border-radius: 20px;
+    margin: 20px auto;
+    margin-top: 80px;
+  }
+  .label{
+    margin-left: 50px;
+  margin-top: 20px;
+  color:#dd315c
+  }
+  input{
+    margin-left: 50px;
+    
+  }
+  h2{
   
+    margin-top: 30px;
+    text-align: center;
+  }
+  .Remember{
+    margin-left: 10px;
+  }
+  #user,#pass{
+    height: 45px;
+    width:340px;
+    border-radius: 15px;
+   text-align: center;
+   border: none;
+
+   background-color: rgb(255, 240, 251);
+  }
+
+
+  #user:hover,#pass:hover{
+  
+border: 4px solid rgb(250, 215, 221);
+transition: 0.2s;
+opacity: 5;
+background-color:white;
+
+  }
+  .forgetpass{
+    margin-left: 30px;
+    margin-top: 10px;
+  }
+  #button_artist{
+    margin-left: 140px;
+   height: 40px;
+   width:150px;
+   border-radius: 20px;
+   border:1px solid #dd315c;
+   color:white;
+background-color:#dd315c;
+box-shadow: 0px 15px 20px rgba(218, 66, 107, 0.4);
+  }
+  #button_artist:hover{
+
+    background-color: white;
+    color:#dd315c;
+  }
+  .right{
+    height: 90%;
+    /* border: 2px solid black; */
+    background-image: url("../assets/images/makeup-cosmetic-beauty-products-pink-background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   border-radius: 20px;
+  
+  }
+  .title{
+  margin-left: 65px;
+  margin-top: 40px;
+ 
+  }
+  h1{
+    color: #dd315c;
+    margin-left: 65px;
+  margin-top: 40px;
+  }
+  .points{
+    color:#dd315c;
+    margin-left: 60px;
+    margin-top: 40px;
+  }
+  .btnn{
+    height:40px;
+    width:190px;
+    margin-left: 60px;
+    margin-top: 90px;
+    border-radius: 20px;
+    border:1px solid #dd315c;
+    color:#dd315c;
+ background-color: white;
+ box-shadow: 0px 15px 20px rgba(218, 66, 107, 0.4);
+  }
+  .btnn:hover{
+    color:white;
+    background-color:#dd315c;
+  }
+.options{
+  font-size: 18px;
+  color:#dd315c;
+}

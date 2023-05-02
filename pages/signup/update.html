@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <link rel="stylesheet" href="update.css">
 <body>
-    
+ 
+
 
 <!-- 
 <form id="cardform">
@@ -41,19 +43,19 @@
 </div>
 <form id="cardform">
 
-<input type="text" class="input-info" placeholder="MakeName" id="makename" >
-<input type="text" class="input-info" placeholder="Username" id="artistname">
-<input type="email" class="input-info" placeholder="email" id="email-artist" >
-<input type="password" class="input-info" placeholder="Password"  id="password-artist" >
-<input type="password" class="input-info" placeholder="confirm-password" id="confirmpass-artist" >
-<input type="text" class="input-info" placeholder="years-of experince" id="expernice-artist">
+<input type="text" class="input-info" placeholder="MakeName" id="makename" required pattern="[A-Za-z]+" title="Please enter only letters">
+<input type="text" class="input-info" placeholder="Username" id="artistname" required pattern="[A-Za-z]+" title="Please enter only letters" >
+<input type="email" class="input-info" placeholder="email" id="email-artist"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" >
+<input type="password" class="input-info" placeholder="Password"  id="password-artist" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+<input type="password" class="input-info" placeholder="confirm-password" id="confirmpass-artist" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+<input type="text" class="input-info" placeholder="years-of experince" id="expernice-artist" required pattern="[0-9]+" title="Please enter only numbers">
 
-<input type="text" class="input-info" placeholder="Locality" id="locality" >
-<input type="text" class="input-info" placeholder="address" id="address-artist">
-<input type="text" class="input-info" placeholder="contact-number" id="number-artist">
-<input type="url" placeholder=" image link" id="link_url" class="input-info" >
+<input type="text" class="input-info" placeholder="Locality" id="locality"required  >
+<input type="text" class="input-info" placeholder="address" id="address-artist" required  pattern="[A-Za-z0-9 ]+" title="Please enter only letters and numbers">
+<input type="text" class="input-info" placeholder="contact-number" id="number-artist" >
+<input type="url" placeholder=" image link" id="link_url" class="input-info"required  pattern="https?://.+" title="Include http://">
 
-<input type="text" class="input-info" placeholder="Starting-price" id="rs">
+<input type="text" class="input-info" placeholder="Starting-price" id="rs" required  >
 <!-- <div class="gender">
     <label>Gender:</label>
     <label >Male</label>
@@ -62,7 +64,7 @@
     <input type="radio">
 </div> -->
 <br><br>
-<a href="../Login/login.html" class="link"><button type="submit"placeholder="Register" class="btn-register">Register</button></a>
+<a href=".././ArtistFeature.html" class="link"><button type="submit"placeholder="Register" class="btn-register">Register</button></a>
 <button type="button" id="delete">Delete</button>
 
 </form>
@@ -129,7 +131,7 @@ document.getElementById("cardform").addEventListener('submit', e => {
                         card_data.push(data_card);
                         localStorage.setItem("card_data", JSON.stringify(card_data));
                         alert("Registered successfully");
-                        
+                       window.location.href="../ArtistFeature.html"
                        
 
                     }

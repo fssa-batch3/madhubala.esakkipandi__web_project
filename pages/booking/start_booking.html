@@ -16,29 +16,13 @@
         <img src="../../assets/images/Screenshot__63_-removebg-preview.png" alt="logo">
         <ul class="main">
             <li class="dropdown"><a href="/index.html">Home <i class="fas fa-caret-down"></i></a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li>
-                            <a href="#feature">Features</a>
-                        </li>
-                        <li>
-                            <a href="../review/review.html">Reviews</a>
-                        </li>
-                    </ul>
-                </div>
+             
             </li>
-            <li><a href="#">For artist</a>
-                <div class="dropdown-content">
-                    <ul>
-                        <li>
-                            <a href="../upload/upload.html">Upload </a>
-                        </li>
-                </div>
-            </li>
+    
             <li><a href="../booking/start_booking.html">Book here</a></li>
-            <li><a href="../Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
-            <li><a href="../profile.html"> <img src="../../assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li>
-
+            <li id="login-btn"><a href="../Login/login.html"><i class="fa-solid fa-user"></i>login</a></li>
+            <!-- <li id="profile-btn" style="display:none;"><a href="../profile_of_user.html"><img src="../../assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li> -->
+    
         </ul>
     </div>
     <!-- nav bar ends -->
@@ -47,15 +31,11 @@
 
     <div class="upper-form">
         <div class="formm">
-            <h1 >BOOK A MAKEUP </h1>
+            <h1>Make your Booking amazing</h1>
+            <h3 class="quotes">Looking for the perfect makeup look for your house function? Our expert makeup artists will create a custom look just for you. Book now and let us help you shine!</h3>
       
-        <form>
-            <input type="text" placeholder="YOUR NAME" class="form-control"   >
-            <input type="email" placeholder="EMAIL ID" class="form-control"  >
-            <input type="tel" placeholder="MOBILE NUMBER"  class="form-control" id="exampleFormControlInput1">
-            <input type="date" placeholder="DATE " class="form-control">
              <button ><a href="../booking/book.html" class="booking_now">BOOK NOW </a> </button>
-        </form>
+     
 
         </div>
     </div>
@@ -83,7 +63,7 @@
         </div>
            
         <div class="content-box">
-            <img src="  ../../assets/images/makeup (1).png" class="icon">
+            <img src="../../assets/images/Making up.png" class="icon">
             <h3>
                 Personalised Makeup
 
@@ -265,14 +245,54 @@ bridal hairstyle</p>
     </div>
 
 </div>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
 
-</script>
+
 <script>
+// const profileBtn = document.getElementById("profile-btn");
+//     const loginBtn = document.getElementById("login-btn");
+    
+//     const userEmail = localStorage.getItem("profile");
+//     if (userEmail) {
+//         profileBtn.style.display = "block";
+//         loginBtn.style.display = "none";
+//     } else {
+//         profileBtn.style.display = "none";
+//         loginBtn.style.display = "block";
+//     }
+
+
+document.querySelector('.booking_now').addEventListener('click', function(e) {
+  e.preventDefault();
+  var isLoggedIn = checkLoggedIn(); 
+  var isRegistered = checkRegistered(); 
+  if (isLoggedIn && isRegistered) {
+    window.location.href = '../booking/book.html'; 
+  } else {
+    window.location.href = '../login/login.html'; 
+  }
+});
+
+
+function checkLoggedIn() {
+  const userEmail = localStorage.getItem("profile");
+  return userEmail !== null; 
+}
+
+function checkRegistered() {
+  const userEmail = localStorage.getItem("profile");
+  const data = JSON.parse(localStorage.getItem("data"));
+  if (data !== null) {
+    for (let i = 0; i < data.length; i++) {
+      if (data[i]["user_email"] == userEmail) {
+        return true; 
+      }
+    }
+  }
+  return false; 
+}
 
 
 
-  AOS.init();
 
 </script>
 </body>

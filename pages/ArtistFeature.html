@@ -36,6 +36,55 @@
       <IMG SRC="../assets/images/makeup-4843865.jpg" class="makeupitems">
       </div>
     </div>
+    <div class="div">
+
+
+
+<div class="login_side">
+   <h2>If you have already registered Login here</h2>
+<div class="form">
+    <form>
+        <br><br>
+        <label for="user" class="label">Email:</label><br><br>
+        <input id="user" type="email" placeholder="Enter your email" required><br><br>
+        <label for="pass" class="label"> Password:</label><br><br>
+        <input id="pass" type="password" placeholder="Enter your name" required> 
+        <br> <br>   <br>
+        <input type="checkbox" required><label class="Remember" for="check">Remember me</label>
+        <br> <br><br>
+        <!-- <a href="#" class="forgetpass">Forget password?</a><br>
+        <br><br><br>
+
+    <input type="submit"  id="button_artist" type="submit" onclick="artistlogin()"> -->
+    <button type="submit"id="button_artist" type="submit" onclick="artistlogin()" >Log-In</button>
+    </form>
+</div>
+
+</div>
+
+<div class="register-side">
+
+
+     <div class="right">
+    <br>
+        <h1>Create Your account </h1>
+        <h3 class="title">If you did'nt register yet</h3>
+
+         <li  class="points">Accept our all rules</li>
+
+         <li  class="points">Be a respensive artist</li>
+
+         <a href="././signup/update.html"><button  class="btnn">click here to regsiter</button></a>
+    </div>
+
+</div>
+
+
+</div>
+
+
+      
+
     <div class="ideas">
 
         <div class="points-of-ideas">
@@ -65,24 +114,20 @@
                      <i class="fa-solid fa-face-smile" ></i>
                      <p>Be reliable, communicate clearly and respond promptly to client queries and feedback</p>
                  </div>
+                
         </div>
-        <button class="glow-on-hover" type="button"><a href="././upload/upload2.html">Upload Your Works</a></button>
+        <!-- <button class="glow-on-hover" type="button"><a href="././upload/upload2.html">Upload Your Works</a></button> -->
     </div>
-   <div id="register">
+
+<div id="register">
     <i class="fa-solid fa-quote-left" id="top-quoat"></i>
        <p class="register-text"><span class="variatn-color">D</span>on't wait for someone else to discover your talent.<br> <span class="variatn-color">T</span>ake control of your career and register as an artist today</p>
        <i class="fa-solid fa-quote-left fa-rotate-180"  id="bot-quoat"></i>
 
-       <a href="../pages/signup/update.html">    <button class="art-register" type="button">Register as a artist</button></a>
+       <!-- <a href="../pages/signup/update.html">    <button class="art-register" type="button">Register as a artist</button></a> -->
 
    </div>
-<div class="div">
- 
-    
-      
-
-</div>
-<div class="footer">
+<!-- <div class="footer">
   <div class="footer-box">
       <div class="footer-content">
           <h1 class="footer-head">GLOSSY BLENDS</h1>
@@ -142,7 +187,149 @@
   </div>
 
 </div>
-   
+    -->
+    <!-- <script>document.getElementById("cardform").addEventListener('submit', e => {
+
+        e.preventDefault();
+         
+        const email_of_artist=document.getElementById("email-artist").value
+        const url=document.getElementById("link_url").value
+        const name=document.getElementById("artistname").value
+         const local=document.getElementById("locality").value
+         const ruppee=document.getElementById("rs").value
+         const makename=document.getElementById("makename").value
+         const address_artist=document.getElementById("address-artist").value
+         const  password_artist=document.getElementById("password-artist").value
+         const confirmpasswrod=document.getElementById("confirmpass-artist").value
+         const experince_of_artst=document.getElementById("expernice-artist").value
+        const contact_artist=document.getElementById("number-artist").value
     
+    
+    
+         const data_records=JSON.parse(localStorage.getItem("card_data"))
+    
+                if ((name.trim() != "") && (email_of_artist.trim() != "")&&(password_artist.trim() != "") && (confirmpasswrod.trim() != "")
+                &&(url.trim()!="")&&(local.trim()!="")
+                &&(ruppee.trim()!="")&&(makename.trim()!="")&&(experince_of_artst.trim()!="")&&(contact_artist.trim()!="")&&(address_artist.trim()!="")){ 
+                    let card_data = JSON.parse(localStorage.getItem("card_data")) ? JSON.parse(localStorage.getItem("card_data")) : [];
+    
+                    // console.log(card_data)
+                    let data_card= {
+                        "address":address_artist,
+                        "name": name,
+                        "user_email": email_of_artist,
+                        // "name_user": username,
+                        "artist_password": password_artist,
+                        "confirm_pass": confirmpasswrod,
+                        "ruppi":ruppee,
+                        "localty":local,
+                        "makeupname":makename,
+                        "contact":contact_artist,
+                        "experince_of_artist":experince_of_artst,
+                       "image_url":url
+                    }
+                    // console.log(data_card)
+                    let success = true;
+                    if (data_records != null) {
+                        for (let i = 0; i < data_records.length; i++) {
+                            if (data_records[i]["user_email"]==email_of_artist) {
+                                success = false;
+                                break;
+    
+                            }
+    
+                        }
+                    }
+                    if (success) {
+                        if (password_artist == confirmpasswrod) {
+                            card_data.push(data_card);
+                            localStorage.setItem("card_data", JSON.stringify(card_data));
+                            alert("Registered successfully");
+                            
+                           
+    
+                        }
+                        else {
+                            alert("password mismatch")
+                        }
+                    }
+                    else {
+                        alert("Already You have registerd");
+                    }
+                }
+                else {
+                    alert("Fill all the required data")
+                }
+            });
+    
+    
+    document.getElementById("delete").addEventListener("click",event=>{
+                    event.preventDefault();
+                
+     let card=JSON.parse(localStorage.getItem("card_data"))
+                
+                for(let i=0;i<card.length;i++){
+    
+                    if(document.getElementById("artistname").value==card[i]["name"]){
+                        card.splice(i,1)
+                        localStorage.setItem("card_data",JSON.stringify(card))
+                    }
+                }
+                
+                })
+                           
+    
+    </script> -->
+    
+    <script> 
+        function artistlogin(e) {
+
+ let artist_data=JSON.parse(localStorage.getItem("card_data"))
+const usermail = document.getElementById("user").value
+const userpass = document.getElementById("pass").value
+
+let result;
+let artist_email;
+artist_data.find(  // parameterized function 'a'
+    e => {
+        if(e["user_email"] == usermail && e["artist_password"] == userpass) { //data=[{0},{1}] //a=data[0],a=data[1]
+
+            artist_email = e["user_email"];
+            return result = 1;
+        }
+        else {
+
+            return result = 0;
+        }
+    }
+
+);
+
+if (result == 1) {
+    alert("logged in")
+    
+    localStorage.setItem("artist_profile",artist_email)
+    
+   window.location.href='././artit.html'
+}
+else {
+    alert("none")
+}
+}
+
+// function showPasswordWhenChecked() {
+// let showPassword = document.getElementById("pass");
+
+// if (showPassword.type === "pass") {
+//     showPassword.type = "text";
+// } else {
+//     showPassword.type = "pass";
+    
+// }
+
+// }
+
+
+</script>
 </body>
 </html>

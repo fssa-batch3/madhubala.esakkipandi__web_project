@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  margin: 0%;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  background-color: white;
+}
+
+.menu-bar {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  background-color: white;
+  position: fixed;
+  /* box-shadow: rgba(248, 85, 180, 0.2) 0px 7px 29px 0px; */
+  z-index: 10;
+}
+
+.main {
+  margin-top: 20px;
+  margin-right: 60px;
+}
+.dropdown {
+  position: relative;
+}
+.menu-bar .main {
+  display: flex;
+  list-style: none;
+}
+.menu-bar ul li {
+  padding: 10px 30px;
+  list-style: none;
+}
+.menu-bar ul li a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.menu-bar ul li a:hover {
+  color: #d9235c;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.menu-bar ul li:hover .dropdown-content {
+  display: block;
+  position: absolute;
+  width: 130px;
+}
+.menu-bar ul li:hover .dropdown-content ul li {
+  height: 50px;
+  width: 100px;
+}
+.dropdown-content a {
+  color: #d70f64;
+  padding: 4px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown a:hover .dropdown-content {
+  display: block;
+}
+.wat {
+  color: #d9235c;
+  font-weight: bolder;
+  text-shadow: aliceblue;
+  font-size: 40px;
+}
+span {
+  color: white;
+  font-size: 40px;
+}
+.menu-bar ul li::after {
+  content: "";
+  display: block;
+  background-color: #d70f64;
+  height: 2px;
+  width: 0%;
+  margin: auto;
+  transition: 0.5s;
+}
+.menu-bar ul li:hover::after {
+  width: 90%;
+}
+.content_div {
+  height: 1800px;
+  width: 100%;
+  display: flex;
+
+  position: relative;
+  top: 90px;
+}
+.sidebar {
+  height: 100%;
+  width: 30%;
+  /* border: 2px solid black; */
+  background-color: #f5f6f7;
+  position: fixed;
+}
+.sidehead {
+  height: 50px;
+  width: 100%;
+}
+.sidehead h4 {
+  padding: 15px;
+  color: #d70f64;
+  font-weight: bolder;
+}
+.container {
+  width: 100%;
+  height: 85%;
+  display: flex;
+ flex-wrap: wrap;
+  /* border: 2px solid black; */
+  padding-top: 60px;
+}
+
+div label input {
+  margin-right: 100px;
+  font-size: 10px;
+}
+
+.checking {
+  margin: 4px;
+  background: linear-gradient(80deg, #d2216e 0%, #dda7dd 100%);
+
+  border-radius: 4px;
+  font-size: 10px;
+  /* border: 1px solid #fff; */
+  overflow: hidden;
+  float: left;
+  height: 50px;
+  width: 190px;
+  margin-left: 10px;
+}
+
+.checking label {
+  float: left;
+  line-height: 3em;
+  width: 8em;
+  height: 3em;
+}
+
+.checking label span {
+  text-align: center;
+  padding: 3px 3px 3px 3px;
+  display: block;
+  font-size: 14px;
+  height: 60px;
+  width: 190px;
+}
+
+.checking label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+/* selects all of the text within the input element and changes the color of the text */
+.checking label input + span {
+  color: #fff;
+}
+
+/* This will declare how a selected input will look giving generic properties */
+.checking input:checked + span {
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+}
+
+.Nude input:checked + span {
+  background-color: #ed8fa8;
+}
+.Hd input:checked + span {
+  background-color: #ed8fa8;
+}
+.Matte input:checked + span {
+  background-color: #ed8fa8;
+}
+.Dewy input:checked + span {
+  background-color: #ed8fa8;
+}
+.Airbrush input:checked + span {
+  background-color: #ed8fa8;
+}
+.Editorial input:checked + span {
+  background-color: #ed8fa8;
+}
+.celebirity input:checked + span {
+  background-color: #ed8fa8;
+}
+.shymmery input:checked + span {
+  background-color: #ed8fa8;
+}
+.Permanent input:checked + span {
+  background-color: #ed8fa8;
+}
+.Natural input:checked + span {
+  background-color: #ed8fa8;
+}
+.fa-sharp {
+  color: black;
+  font-size: 16px;
+}
+.plus {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  top: 5px;
+}
+.left_bar {
+  height: auto;
+  width: 70%;
+  /* border:2px solid black; */
+
+  margin-left: 30%;
+}
+
+.head {
+  height: 150px;
+  width: 100%;
+  /* border:2px solid black; */
+}
+.head h2 {
+  padding-left: 90px;
+  padding-top: 50px;
+  color: #b20fd7;
+  font-size: 28px;
+  text-transform: capitalize;
+}
+.offerlist_providing {
+  height: auto;
+  width: 100%;
+  /* border:2px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.offers {
+  border-radius: 10px;
+  height: 500px;
+  width: 100%;
+  /* border:2px solid black; */
+  margin-left: 60px;
+
+  color: #fff;
+  display: inline-block;
+  max-width: 320px;
+  min-width: 240px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+ 
+}
+.offers * {
+  box-sizing: border-box;
+  transition: all 0.45s ease;
+}
+.tet {
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid black; */
+  color: white;
+  position: absolute;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.3);
+  padding-top: 230px;
+}
+.one,.two,.three,.four,.five,.six,.seven,.eight,.nine{
+display: flex;
+  margin-top: 30px;
+  height: 500px;width:100%;
+  /* border:2px solid black; */
+}
+
+#input_1,#input_2,#input_3,#input_4,#input_5,#input_6,#input_7,#input_8,#input_9{
+  height: 40px;
+  width:350px;
+margin-top: 50px;
+margin-left: 70px;
+
+border-radius: 10px;
+border-radius: 10px;
+}
+input{
+  background-color: rgb(250, 228, 237);
+border: none;
+text-align: center;
+font-family: "Poppins", sans-serif;
+}
+
+input:hover{
+border: 4px solid rgb(250, 215, 221);
+transition: 0.2s;
+opacity: 5;
+background-color:white;
+}
+button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color:white;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  background-color: #e6397e;
+  box-shadow: 0px 15px 20px rgba(218, 66, 107, 0.4);
+  outline: none;
+  margin-left: 600px;
+  margin-top: 180px;
+  margin-bottom: 200px;
+  }
+
+button:hover {
+
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+
+
+.offers::before,
+.offers::after {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 0px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 0px solid rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+  transform: scaleY(2);
+}
+.offers img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+.top,
+.bottom {
+  height: 50%;
+  width: 100%;
+  /* border:2px solid black; */
+}
+.option_1 {
+  height: 100%;
+  width: 100%;
+}
+
+.offers figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1em;
+  opacity: 0;
+  z-index: 2;
+  transition-delay: 0.1s;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.offers:hover::before,
+.offers:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.offers:hover > img {
+  opacity: 0.7;
+}
+
+.offers:hover figcaption {
+  opacity: 1;
+}
+#cost_1,
+#cost_2,
+#cost_3,
+#cost_4,
+#cost_5,
+#cost_6,
+#cost_7,
+#cost_8,
+#cost_9 {
+  height: 35px;
+  width: 140px;
+  text-align: center;
+  color: #d9235c;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+#btn_1,
+#btn_2,
+#btn_3,
+#btn_4,
+#btn_5,
+#btn_6,
+#btn_7,
+#btn_8,
+#btn_9 {
+  height: 35px;
+  width: 140px;
+  text-align: center;
+
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+/* .offer_input{
+
+  height: auto;
+  width: 100%;
+  border:2px solid black;
+
+display: flex;
+
+}
+.form_input{
+  height: 100%;
+  width: 40%;
+  border:2px solid black;
+
+} */
+.choosed{
+  height:400px;
+  width:100%;
+  border:2px solid black
+
+}

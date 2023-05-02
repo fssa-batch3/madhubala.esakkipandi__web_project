@@ -31,7 +31,7 @@ body {
   width: 80%;
   margin: 8%;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
   text-align: center;
 }
 .Personal-details {
@@ -41,7 +41,7 @@ body {
   margin: 8%;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 .Notification-record {
   border: 1px solid gray;
@@ -51,13 +51,14 @@ body {
   border-radius: 15px;
   text-align: center;
   /* transition: .03s; */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
 }
 .Notification-record:hover,
 .Remainder:hover,
 .Personal-details:hover,
 .Appoinment-records:hover,
-.Schedules-record:hover {
+.Schedules-record:hover,
+.Yourworks:hover,.LOGOUT:hover {
   background: linear-gradient(
     90deg,
     rgba(179, 3, 122, 1) 0%,
@@ -74,9 +75,17 @@ body {
   margin: 8%;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
+.LOGOUT{
+  border: 1px solid gray;
+  height: 115px;
+  width: 80%;
+  margin: 8%;
+  border-radius: 15px;
+  text-align: center;
 
+}
 .Appoinment-records {
   border: 1px solid gray;
   height: 115px;
@@ -84,7 +93,7 @@ body {
   margin: 8%;
   border-radius: 15px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 .main-content,
 .main-content-user {
@@ -223,6 +232,7 @@ body {
   width: 120px;
   border-radius: 50%;
   border: none;
+  margin-left: 30px;
 }
 #name {
   text-align: center;
@@ -261,24 +271,37 @@ body {
 .information-appoinment {
   height: 80px;
   display: flex;
-
+justify-content: space-around;
   /* border: 2px solid black; */
 }
 .date {
   /* border: 2px solid black; */
-  width: 10%;
+  width: 15%;
   height: 90px;
   text-align: center;
 }
-.name-of-make {
-  /* border: 2px solid black; */
-  width: 60%;
+.time{
+  width: 15%;
+  height: 90px;
+  text-align: center;
+    /* border: 2px solid black; */
+}
+.location_appoinment{
+  width: 25%;
   height: 90px;
 }
-.update-appoinment {
+.name-of-make {
   /* border: 2px solid black; */
   width: 20%;
   height: 90px;
+}
+
+.selected_artist_name{
+  width:70%;
+  /* border: 2px solid black; */
+  height: 90px;
+  color:#d70f64;
+  font-weight: bold;
 }
 .cost {
   /* border: 2px solid black; */
@@ -801,4 +824,13 @@ margin-top: 20px;
   flex-wrap: wrap;
   height: 100%;
   width:100%;
+}
+.Yourworks {
+  border: 1px solid gray;
+  height: 115px;
+  width: 80%;
+  margin: 8%;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }

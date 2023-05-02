@@ -12,7 +12,7 @@
 
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <script src="script.js" defer></script>
+  <!-- <script src="script.js" defer></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -70,9 +70,9 @@
           <div class="pic-profile">
             <img src="../assets/images/IMG20200903161128.jpg" class="profile" >
           </div>
-          <h3 id="newname">E.Madhubala</h3>
+          <h3 id="name">E.Madhubala</h3>
           <input class="permenant-details_user" type="email" id="newemail" placeholder="Email">
-          <input class="permenant-details_user"id="number" type="number" placeholder="Contact">
+          <input class="permenant-details_user"id="number_user" type="number" placeholder="Contact">
           <input class="permenant-details_user" type="text" placeholder="Details">
           <button class="permenant-details_user" id="update">update</button>
           <button class="permenant-details" ><a href="../index.html">Home</a></button>
@@ -100,88 +100,32 @@
               <h3 class="head">Appoinments List</h3>
               <hr />
             </div>
-            <div class="information-appoinment">
-              <div class="name-of-make">
-                <p>
-                  Your booking appoinment with sharmila artist is in pending
-                </p>
-              </div>
-              <div class="update-appoinment">
-                <button>pending</button>
-              </div>
-            </div>
-            <hr />
-
             <!-- <div class="information-appoinment">
 
-            <div class="date">
+              <div class="date">
 
 
-               <h4>Feb 21</h4>
-           </div>
-           <div class="name-of-make">
-              
-
-               <p>Wedding makeup</p>
-           </div>
-           <div class="update-appoinment">
-
-               <button>Accept</button>
-
-           </div>
-           <div class="cost">
-                <p>Rs.12,000</p>
-           </div>
-
-       </div> 
-       <hr> -->
-            <!-- <div class="information-appoinment">
-
-        <div class="date">
+                  <h4>Feb 21</h4>
+              </div>
+              <div class="time">
+                  <p> 12.pm</p>
+              </div>
+              <div class="selected_artist_name">
 
 
-           <h4>Feb 21</h4>
-       </div>
-       <div class="name-of-make">
-          
+                  <p>Wedding makeup</p>
+              </div>
+              <div class="location_appoinment">
+                  <p>Chennai</p>
+              </div>
+              <div class="cost">
+                  <p>Rs.12,000</p>
+              </div>
 
-           <p>Wedding makeup</p>
-       </div>
-       <div class="update-appoinment">
+          </div>
+          <hr> -->
 
-           <button>Accept</button>
-
-       </div>
-       <div class="cost">
-            <p>Rs.12,000</p>
-       </div>
-
-   </div> 
-   <hr>
-   <div class="information-appoinment">
-
-    <div class="date">
-
-
-       <h4>Feb 21</h4>
-   </div>
-   <div class="name-of-make">
-      
-
-       <p>Wedding makeup</p>
-   </div>
-   <div class="update-appoinment">
-
-       <button>Accept</button>
-
-   </div>
-   <div class="cost">
-        <p>Rs.12,000</p>
-   </div>
-
-</div> 
-<hr> -->
-
+ 
             <!-- -------------- -->
           </div>
         </div>
@@ -360,79 +304,79 @@ Option5.addEventListener("click", function() {
 // });
 
 
-    let dta_of_user = JSON.parse(localStorage.getItem("data"));
-    let booking_data = JSON.parse(
-      localStorage.getItem("records_booking_clients")
-    );
-    let active_user = localStorage.getItem("profile");
+//     let dta_of_user = JSON.parse(localStorage.getItem("data"));
+//     let booking_data = JSON.parse(
+//       localStorage.getItem("records_booking_clients")
+//     );
+//     let active_user = localStorage.getItem("profile");
 
-    console.log(booking_data);
+//     console.log(booking_data);
 
-    booking_data.filter((element) => {
-      if (element.customer_email == active_user) {
-        if (element.status == false) {
-          show_div(element);
-        }
-      }
-    });
+//     booking_data.filter((element) => {
+//       if (element.customer_email == active_user) {
+//         if (element.status == false) {
+//           show_div(element);
+//         }
+//       }
+//     });
 
-    function show_div(item) {
-      let id = document.getElementById("appoinments");
-      id.innerHTML += `
-    <div class="information-appoinment" >         
-<div class="name-of-make">
-    <p>Your booking appoinment with ${item.selected_artist_for_booking} artist is in pending</p>
-</div>
-<div class="update-appoinment">
-    <button>pending</button>
-</div>
-</div> 
-<hr>
-    `;
-    }
+//     function show_div(item) {
+//       let id = document.getElementById("appoinments");
+//       id.innerHTML += `
+//     <div class="information-appoinment" >         
+// <div class="name-of-make">
+//     <p>Your booking appoinment with ${item.selected_artist_for_booking} artist is in pending</p>
+// </div>
+// <div class="update-appoinment">
+//     <button>pending</button>
+// </div>
+// </div> 
+// <hr>
+//     `;
+//     }
 
-    let user = localStorage.getItem("profile");
+//     let user = localStorage.getItem("profile");
 
-    // find the ID of the confirmed booking with status=true
+//     // find the ID of the confirmed booking with status=true
 
-    const data_record = JSON.parse(
-      localStorage.getItem("records_booking_clients")
-    );
+//     const data_record = JSON.parse(
+//       localStorage.getItem("records_booking_clients")
+//     );
 
-    let confirmed_booking_id;
-    data_record.filter((booking) => {
-      if (booking.status === true) {
-        confirmed_booking_id = booking.id;
+//     let confirmed_booking_id;
+//     data_record.filter((booking) => {
+//       if (booking.status === true) {
+//         confirmed_booking_id = booking.id;
     
-        console.log(booking);
-      }
+//         console.log(booking);
+//       }
 
-      let find;
-      data_record.find((booking) => {
-        if (booking.id === confirmed_booking_id) {
-          const customer_email = booking.customer_email;
+//       let find;
+//       data_record.find((booking) => {
+//         if (booking.id === confirmed_booking_id) {
+//           const customer_email = booking.customer_email;
 
-          if (customer_email === user) {
-            list_request(booking);
-          }
-        }
-      });
-    });
+//           if (customer_email === user) {
+//             list_request(booking);
+//           }
+//         }
+//       });
+//     });
 
-    function list_request(booking) {
-      const container = document.getElementById("notification");
-      container.innerHTML += ` <div class="notifibox">
+//     function list_request(booking) {
+//       const container = document.getElementById("notification");
+//       container.innerHTML += ` <div class="notifibox">
 
-<div class="decoration-line">
+// <div class="decoration-line">
 
-</div>
-<div class="img">
-<i class="fa-solid fa-exclamation"></i>
-</div>
+// </div>
+// <div class="img">
+// <i class="fa-solid fa-exclamation"></i>
+// </div>
 
-<h4 class="Booking-alert">${booking.selected_artist_for_booking} accepted your boooking ${booking.event_date}and id${booking.id}</h4>
-</div>`;
-    }
+// <h4 class="Booking-alert">${booking.selected_artist_for_booking} accepted your boooking ${booking.event_date}and id${booking.id}</h4>
+// </div>`;
+//     }
 
 
 
@@ -481,9 +425,15 @@ Option5.addEventListener("click", function() {
 
   }
 
+
+
+  
+
   let user_profile_data = JSON.parse(localStorage.getItem("data"));
            let  user_pp= localStorage.getItem("profile");
            let res;
+
+           console.log(user_pp)
            user_profile_data.find(  // parameterized function 'a'
             e =>{
                     
@@ -494,18 +444,38 @@ Option5.addEventListener("click", function() {
             )
 console.log(res)
             
-     document.getElementById("newname").value =res["user_name"];
+   
+    // document.getElementById("newname").value =res["user_name"];
+    // document.getElementById("newemail").value = res["user_email"];
+    // document.getElementById("password").value=res["user_password"]
 
-
+    document.getElementById("newname").value =res["user_name"];
     document.getElementById("newemail").value = res["user_email"];
     document.getElementById("password").value=res["user_password"]
 
-    document.getElementById("bio").value=res["user_bio"]??""
-    document.getElementById("number").value=res["user_number"]??""
-    document.getElementById("city").value=res["user_city"]??""
-    document.getElementById("address").value=res["user_address"]??""
-document.getElementById("social_media").value=res["ac_social"]??""
-   
+
+    if (res["user_bio"]) {
+            document.getElementById("bio").value =res["user_bio"];
+        }
+        if (res["user_number"]) {
+            document.getElementById("number").value = res["user_number"];
+        }
+
+        if (res["user_city"]) {
+            document.getElementById("city").value =res["user_city"];
+        }
+        if (res["user_address"]) {
+            document.getElementsByName("address").value =res["user_address"];
+        }
+        if (res["ac_social"]) {
+            document.getElementsByName("social_media").value =res["ac_social"];
+        }
+        const  name_of_user= document.getElementById("name")
+
+        name_of_user.textContent=res["user_name"]
+
+        document.getElementById("number_user").value=res["user_number"]
+        
 // -------------------------
 
 
@@ -513,18 +483,36 @@ document.getElementById("social_media").value=res["ac_social"]??""
                 e.preventDefault();
             res["user_name"]= document.getElementById("newname").value
             res["user_password"]=document.getElementById("password").value
-            res["user_bio"]= document.getElementById("bio").value
-            res["user_number"]= document.getElementById("number").value
-            res["user_city"]= document.getElementById("city").value
-            res["user_address"]= document.getElementById("address").value
-            res["ac_social"]=document.getElementById("social_media").value
- localStorage.setItem("data",JSON.stringify(user_profile_data));
- console.log(res);
+           
+            
+
+
+            if (document.getElementById("bio").value !== "") {
+              res["user_bio"] = document.getElementById("bio").value;
+            }
+            if (document.getElementById("number").value !== "") {
+              res["user_number"] = document.getElementById("number").value;
+            }
+            if (document.getElementById("city").value !== "") {
+              res["user_city"] = document.getElementById("city").value;
+            }
+
+            if (document.getElementById("address").value !== "") {
+              res["user_address"]= document.getElementById("address").value;
+            }
+            if (document.getElementById("social_media").value !== "") {
+              res["ac_social"]= document.getElementById("social_media").value;
+            }
+
+
+            localStorage.setItem("data",JSON.stringify(user_profile_data));
+            console.log(res);
+
             })
 
 
 
-
+      
 
   // let data_of_wishlist = JSON.parse(localStorage.getItem("wishlist_dta"))||[]; 
   // let removewish = document.querySelectorAll(".fa-circle-xmark");
@@ -536,6 +524,57 @@ document.getElementById("social_media").value=res["ac_social"]??""
 //     location.reload()
 //   })
 // })
+
+
+
+
+
+let details = JSON.parse(localStorage.getItem("records_booking_clients"));
+let data = JSON.parse(localStorage.getItem("data"));
+let user_email = localStorage.getItem("profile");
+
+let e;
+data.find(function (obj) {
+  if (user_email === obj.user_email) {
+  
+    return e=obj;
+
+  }
+});
+
+
+
+
+
+
+
+let bookingRecordsDiv = document.getElementById("appoinments");
+
+e.booking_record.forEach(function (record) {
+  
+  let recordDiv = document.createElement("div");
+  recordDiv.classList.add("information-appoinment");
+
+  
+  recordDiv.innerHTML = `
+    <div class="date">
+      <h4>${record.event_date}</h4>
+    </div>
+    <div class="time">
+      <p>${record.time}</p>
+    </div>
+    <div class="selected_artist_name">
+      <p>Your booking with ${record.selected_artist_for_booking} is succeslly booked with total cost of ${record.totla_cost}</p>
+    </div>
+  
+   
+  `;
+
+  bookingRecordsDiv.appendChild(recordDiv);
+
+  bookingRecordsDiv.appendChild(document.createElement("hr"));
+});
+
 
 
 

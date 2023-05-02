@@ -16,17 +16,14 @@
     <div class="hole-content">
         <!-- nav bar -->
         <div class="menu-bar">
-            <img src="../../assets/images/Screenshot__63_-removebg-preview.png " alt="logo">
+            <img src="../../assets/images/Screenshot__63_-removebg-preview.png" alt="logo">
             <ul class="main">
-                <li class="dropdown"><a href="index.html">Home <i class="fas fa-caret-down"></i></a>
-
-                <li><a href="../upload/upload.html">For artist</a>
-                </li>
+                <li class="dropdown"><a href="index.html">Home <i class="fas fa-caret-down"></i></a></li>
+                <!-- <li><a href="../upload/upload.html">For artist</a></li> -->
                 <li><a href="../booking/start_booking.html">Book here</a></li>
+                <!-- <li><a href="wishlist.html">Wishlist</a></li> -->
                 <li><a href="../Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
-                <li><a href="../profile_of_user.html"> <img src="../../assets/images/IMG20200903161128.jpg"
-                            class="my-profile-img"></a></li>
-
+                <li><a href="../profile_of_user.html"> <img src="../../assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li>
             </ul>
         </div>
         <!-- nav bar ends -->
@@ -174,7 +171,7 @@
 
                 <div class="main-content">
                     <div class="head">
-                        <p class="count">24 Results were shown as per your search critirea</p>
+                        <p class="count">7 Items are showing here</p>
                         <i class="fa-solid fa-magnifying-glass" id="glass"></i><input type="search" id="search"
                             placeholder="search artist...">
                         <img src="../../assets/images/GridColoured.ade2802b.svg" id="grid" alt="grid">
@@ -897,6 +894,10 @@
           ex.style.display = "none"
         }       
       })
+      let count = document.querySelectorAll(".one[style='display: block;']").length;
+  let countText = `${count} items are showing here`;
+  document.querySelector(".count").textContent = countText;
+//   document.querySelector(".count").style.display = "block";
     })
          
     </script>
@@ -911,19 +912,36 @@
     selectedValue = event.target.value;
     console.log(selectedValue);
     selvalue= selectedValue
-    //    return selvalue
+let count=0
     let dic = document.querySelectorAll(".one");
     dic.forEach(ex => {
         let child = ex.children[3].children[1].textContent.toLocaleLowerCase();
         console.log(child);
         if (child===selvalue) {
           ex.style.display = "block"
+          count++
         }
         else {
           ex.style.display = "none" 
         }
       })
+      let countText = `${count} items are showing here`;
+  document.querySelector(".count").textContent = countText;
     });
+
+
+    const isLoggedIn = localStorage.getItem("profile") !== null;
+
+const loginLink = document.querySelector('a[href="../Login/login.html"]');
+const profileLink = document.querySelector('a[href="../profile_of_user.html"]');
+
+if (isLoggedIn) {
+    loginLink.style.display = "none";
+    profileLink.style.display = "block";
+} else {
+    loginLink.style.display = "block";
+    profileLink.style.display = "none";
+}
     </script>
 </body>
 
