@@ -363,7 +363,7 @@
       const addres_client = document.getElementById("address-customer").value
       const date_event_client = document.getElementById("date-choosen-customer").value
       const time_client = document.getElementById("Time-choosen-customer").value
-
+const address=document.getElementById("address-customer").value
 
       const emailofcus = localStorage.getItem("profile")
       console.log(emailofcus)
@@ -381,6 +381,7 @@
           "selected_event": value,
           "se": option,
           "totla_cost": totla,
+          "location":address,
           "id": records_booking_clients.length,
           "selected_artist_for_booking": name /*store the object of form filled by user with selected artist name*/
         }
