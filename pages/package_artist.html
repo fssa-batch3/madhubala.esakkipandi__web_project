@@ -414,6 +414,7 @@
                 const category = checkbox.closest('.checking').classList[1];
 
                 console.log(category)
+                
                 // Get the current state of the array from local storage
                 let array = JSON.parse(localStorage.getItem('checkboxes')) || [];
 
@@ -480,7 +481,7 @@
             let existing_record_index = user_records.findIndex(record => record.email === active_user);
 
             if (existing_record_index !== -1) {
-                // Update the existing record instead of creating a new one
+                
                 user_records[existing_record_index]["sare_drapping+Advance Makeup per person"] = First_option;
                 user_records[existing_record_index]["Pro Makeup+Basic hair style Per person"] = second_option;
                 user_records[existing_record_index]["Jewelery+HD Makeup per person"] = Three_option;
@@ -492,7 +493,7 @@
                 user_records[existing_record_index]["Makeup+mehandi"] = nine_option;
                 user_records[existing_record_index]["artist_name"] = nameOfartist;
             } else if (First_option.trim() !== '' && second_option.trim() !== '' && Three_option.trim() !== '' && Four_option.trim() !== '' && Five_option.trim() !== '' && six_option.trim() !== '' && seven_option.trim() !== '' && eight_option.trim() !== '' && nine_option.trim() !== '') {
-                // Create a new record if no existing record is found
+                
                 let user_data = {
                     "sare_drapping+Advance Makeup per person": First_option,
                     "Pro Makeup+Basic hair style Per person": second_option,
