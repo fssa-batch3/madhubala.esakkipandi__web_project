@@ -388,6 +388,10 @@
 
             </div>
 
+
+
+
+           
         </div>
 
     </div>
@@ -414,7 +418,7 @@
                 const category = checkbox.closest('.checking').classList[1];
 
                 console.log(category)
-                
+
                 // Get the current state of the array from local storage
                 let array = JSON.parse(localStorage.getItem('checkboxes')) || [];
 
@@ -440,16 +444,11 @@
                 localStorage.setItem('checkboxes', JSON.stringify(array));
                 let user = dataofartist.find(obj => obj.user_email === active_user);
 
-
                 user.services = array.filter(element => element.useremail === active_user);
                 localStorage.setItem("card_data", JSON.stringify(dataofartist));
 
-
             });
         });
-
-
-
 
 
         let re;
@@ -530,6 +529,7 @@
         function listing(e) {
             let info = document.querySelector(".choosed");
             info.innerHTML += `
+            
                <p>${e.category}</p>
             
                  `

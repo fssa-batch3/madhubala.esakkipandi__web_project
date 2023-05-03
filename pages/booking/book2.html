@@ -782,7 +782,7 @@
 
         // details's of artistname of current page
 
-        let localityofartist = result.locality
+        let localityofartist = result.localty
         const container = document.getElementById("about")
 
         container.innerHTML += `
@@ -808,11 +808,11 @@
         let dataofartist = JSON.parse(localStorage.getItem("data"));
         let artist_obj = dataofartist.find(obj => obj.user_email === active_user);
         let productTitle = name
-        console.log(result["artist_name"])
+        // console.log(result["artist_name"])
 
-        let productImage = result["image"]["source"];
-        let productPrice = result["Price"];
-        let localityof_artist=result["locality"]
+        let productImage = result["image_url"];
+        let productPrice = result["ruppi"];
+        let localityof_artist=result["localty"]
         let object_name = artist_obj["user_name"];
 
         let wishlist_data = document.getElementById("wishlist");

@@ -40,7 +40,8 @@
       </li> -->
       <li><a href="./pages/booking/start_booking.html">Book here</a></li>
       <!-- <li><a href="./pages/Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li> -->
-      <li><a href="../../pages/profile_of_user.html"> <img src="../../assets/images/IMG20200903161128.jpg" class="my-profile-img"></a>
+      <li><a href="../../pages/profile_of_user.html"> <img src="../../assets/images/IMG20200903161128.jpg"
+            class="my-profile-img"></a>
       </li>
 
     </ul>
@@ -283,10 +284,10 @@
             <input type="date" placeholder="Date" id="date-choosen-customer">
 
           </div>
-          <div class="time inputs">
+          <div class="time inputs" >
 
             <i class="fa-solid fa-clock"></i>
-            <input type="time" placeholder="Time" id="Time-choosen-customer">
+            <input type="time" placeholder="hrs:mins" id="Time-choosen-customer">
 
           </div>
 
@@ -363,7 +364,10 @@
       const addres_client = document.getElementById("address-customer").value
       const date_event_client = document.getElementById("date-choosen-customer").value
       const time_client = document.getElementById("Time-choosen-customer").value
-const address=document.getElementById("address-customer").value
+      const address = document.getElementById("address-customer").value
+
+
+
 
       const emailofcus = localStorage.getItem("profile")
       console.log(emailofcus)
@@ -381,7 +385,7 @@ const address=document.getElementById("address-customer").value
           "selected_event": value,
           "se": option,
           "totla_cost": totla,
-          "location":address,
+          "location": address,
           "id": records_booking_clients.length,
           "selected_artist_for_booking": name /*store the object of form filled by user with selected artist name*/
         }
@@ -390,31 +394,42 @@ const address=document.getElementById("address-customer").value
 
 
 
-
-
         localStorage.setItem("records_booking_clients", JSON.stringify(records_booking_clients));
-
 
 
         // Add booking info to artist's data
         let artist = dataofartist.find((obj) => obj.name === name);
-        artist.booking_records= records_booking_clients.filter(element => element.selected_artist_for_booking === artist.name);
+        artist.booking_records = records_booking_clients.filter(element => element.selected_artist_for_booking === artist.name);
 
         // Add booking info to customer's data
         let customer = data_of_cus.find((obj) => obj.user_email === emailofcus);
-        customer.booking_record= records_booking_clients.filter(element => element.customer_email === emailofcus);
+        customer.booking_record = records_booking_clients.filter(element => element.customer_email === emailofcus);
 
 
         localStorage.setItem("card_data", JSON.stringify(dataofartist));
         localStorage.setItem("data", JSON.stringify(data_of_cus));
 
-    
+
 
         const successMessage = `Booking successful! Have a great day with ${object_booking_records.selected_artist_for_booking}`;
         const popupContainer = document.getElementById('popup-container');
         const popupMessage = document.getElementById('popup-message');
         popupMessage.textContent = successMessage;
         popupContainer.style.display = 'block';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -513,7 +528,7 @@ const address=document.getElementById("address-customer").value
       let total = 0;
 
       const packageKeys = Object.keys(package)
-        .filter(key => package[key] !== "" && package[key] !== undefined)
+        .filter(key => package[key] !=="" && package[key] !== undefined)
         .slice(0, -3);
 
       for (const key of packageKeys) {
@@ -619,6 +634,18 @@ const address=document.getElementById("address-customer").value
       popupContainer.style.display = 'none';
       window.location.href = "../../pages/booking/book4.html"
     });
+
+    const date_input = document.getElementById("date-choosen-customer");
+    const time_input = document.getElementById("Time-choosen-customer");
+
+    // Set the minimum date to today's date
+    const min_date = new Date().toISOString().split("T")[0];
+    date_input.setAttribute("min", min_date);
+
+    // Set the minimum time to the current time
+    const now = new Date();
+    const min_time = now.toISOString().split("T")[1].slice(0, 5);
+    time_input.setAttribute("min", min_time);
 
 
 

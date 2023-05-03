@@ -776,13 +776,38 @@ artist.booking_records.forEach(function (record) {
   let recordDiv = document.createElement("div");
   recordDiv.classList.add("information-appoinment");
 
+
+
+
+ 
+
+  let timeSplit = (record.time).split(':'),
+  
+   hours = timeSplit[0];
+  minutes = timeSplit[1];
+  if (hours > 12) {
+    meridian = 'PM';
+    hours -= 12;
+  } else if (hours < 12) {
+    meridian = 'AM';
+    if (hours == 0) {
+      hours = 12;
+    }
+  } else {
+    meridian = 'PM';
+  }
+//   alert(hours + ':' + minutes + ' ' + meridian);
+let correct_time=hours + ':' + minutes + ' ' + meridian
+console.log(correct_time)
+
+// hours >= 12 ? "PM":"AM"; hours = ((hours + 11) % 12 + 1) + suffix; 
   // Set the content of the div with the booking record information
   recordDiv.innerHTML = `
     <div class="date">
       <h4>${record.event_date}</h4>
     </div>
     <div class="time">
-      <p>${record.time}</p>
+      <p>${correct_time}</p>
     </div>
     <div class="name-of-make">
       <p>${record.customer_name}</p>
