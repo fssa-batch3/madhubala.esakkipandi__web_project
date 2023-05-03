@@ -471,18 +471,19 @@ form {
 }
 #vendors_review {
   text-align: center;
-  height: 50px;
-  width: 53%;
-  margin-left: 25%;
-  margin-top: 2%;
-}
-#experience {
-  text-align: center;
   height: 300px;
   width: 53%;
   margin-left: 25%;
   margin-top: 2%;
 }
+/* #experience {
+  text-align: center;
+  height: 300px;
+  width: 53%;
+  margin-left: 25%;
+  margin-top: 2%;
+  display: none;
+} */
 .review_box {
   /* border: 2px solid black; */
   height: 800px;

@@ -422,7 +422,6 @@ Option5.addEventListener("click", function() {
  </div>
            
  `
-
   }
 
 
@@ -435,15 +434,16 @@ Option5.addEventListener("click", function() {
 
            console.log(user_pp)
            user_profile_data.find(  // parameterized function 'a'
-            e =>{
-                    
+            e =>{   
                 if(e["user_email"]==user_pp){
                      return res=e
                 }
             }
             )
 console.log(res)
-            
+       
+
+
    
     // document.getElementById("newname").value =res["user_name"];
     // document.getElementById("newemail").value = res["user_email"];
@@ -556,12 +556,33 @@ e.booking_record.forEach(function (record) {
   recordDiv.classList.add("information-appoinment");
 
   
+  
+
+  let timeSplit = (record.time).split(':'),
+  
+   hours = timeSplit[0];
+  minutes = timeSplit[1];
+  if (hours > 12) {
+    meridian = 'PM';
+    hours -= 12;
+  } else if (hours < 12) {
+    meridian = 'AM';
+    if (hours == 0) {
+      hours = 12;
+    }
+  } else {
+    meridian = 'PM';
+
+  }
+  
+let correct_time=hours + ':' + minutes + ' ' + meridian
+console.log(correct_time)
   recordDiv.innerHTML = `
     <div class="date">
       <h4>${record.event_date}</h4>
     </div>
     <div class="time">
-      <p>${record.time}</p>
+      <p>${correct_time}</p>
     </div>
     <div class="selected_artist_name">
       <p>Your booking with ${record.selected_artist_for_booking} is succeslly booked with total cost of ${record.totla_cost}</p>
