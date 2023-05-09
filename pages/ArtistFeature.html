@@ -39,11 +39,10 @@
     <div class="div">
 
 
-
 <div class="login_side">
    <h2>If you have already registered Login here</h2>
 <div class="form">
-    <form>
+    <form id="login_form">
         <br><br>
         <label for="user" class="label">Email:</label><br><br>
         <input id="user" type="email" placeholder="Enter your email" required><br><br>
@@ -56,7 +55,7 @@
         <br><br><br>
 
     <input type="submit"  id="button_artist" type="submit" onclick="artistlogin()"> -->
-    <button type="submit"id="button_artist" type="submit" onclick="artistlogin()" >Log-In</button>
+    <button type="submit"id="button_artist" type="submit">Log-In</button>
     </form>
 </div>
 
@@ -79,7 +78,7 @@
 
 </div>
 
-
+<a href=></a>
 </div>
 
 
@@ -282,52 +281,52 @@
     </script> -->
     
     <script> 
-        function artistlogin(e) {
 
- let artist_data=JSON.parse(localStorage.getItem("card_data"))
+    let get_form = document.getElementById("login_form");
+
+    get_form.addEventListener("submit", function(e){
+
+        e.preventDefault();
+
+let artist_data=JSON.parse(localStorage.getItem("card_data"))
 const usermail = document.getElementById("user").value
 const userpass = document.getElementById("pass").value
 
 let result;
 let artist_email;
 artist_data.find(  // parameterized function 'a'
-    e => {
-        if(e["user_email"] == usermail && e["artist_password"] == userpass) { //data=[{0},{1}] //a=data[0],a=data[1]
+   e => {
+       if(e["user_email"] == usermail && e["artist_password"] == userpass) { //data=[{0},{1}] //a=data[0],a=data[1]
 
-            artist_email = e["user_email"];
-            return result = 1;
-        }
-        else {
+           artist_email = e["user_email"];
+           return result = 1;
+       }
+       else {
 
-            return result = 0;
-        }
-    }
+           return result = 0;
+       }
+   }
 
 );
 
-if (result == 1) {
-    
-    
-    localStorage.setItem("artist_profile",artist_email)
-    alert("login success")
-   window.location.href='././artit.html'
+if (result === 1) {
+  
+   
+   localStorage.setItem("artist_profile",artist_email)
+   alert("logged in")
+   window.location.href="../pages/artit.html";
+   // window.location.href = "../index.html"
 }
+  
+
 else {
-    alert("none")
+   alert("none")
 }
-}
 
-// function showPasswordWhenChecked() {
-// let showPassword = document.getElementById("pass");
+        
+})
 
-// if (showPassword.type === "pass") {
-//     showPassword.type = "text";
-// } else {
-//     showPassword.type = "pass";
-    
-// }
 
-// }
 
 
 </script>

@@ -381,34 +381,156 @@
             <div class="choosed">
                 <h3>These are the offers which are provided by you</h3>
 
+            </div>
+            <div class="own_packages">
+
+                <h2 class="optional_packages">If you have any jewelery and custumes pack</h2>
+
+                <div class="custume_plans">
+
+                    <div class="jwelery">
+                        <h3 class="title_package">
+                            Jewelery
+                        </h3>
+
+                        <p>Add Image</p>
 
 
 
 
+                        <form id="Jewelery">
+                            <div class="images_section">
+                                <input type="url" class="add_image images" required>
 
+                                <button class="button_add1 btn_diff">Add</button>
+
+                                <input type="url" class="add_image1 images">
+
+                                <button class="button_add2 btn_diff">Add</button>
+
+                                <input type="url" class="add_image2 images">
+
+                                <button class="button_add3 btn_diff">Add</button>
+
+                                <input type="url" class="add_image3 images">
+                            </div>
+
+
+
+                            <div class="buttons">
+                                <input type="text" class="btn_description description_jwels" placeholder="Description"
+                                    required>
+                                <button type="submit" class="submit_btnn_add_jwelery btn_diff">submit</button>
+                        </form>
+                        <!-- <button  class="button_add btn_diff">Add</button> -->
+                    </div>
+
+                </div>
+                <hr>
+                <div class="custumes">
+
+                    <h3 class="title_package">
+                        Custumes
+                    </h3>
+
+                    <p>Add Image</p>
+                    <form id="cutumes">
+                        <div class="images_section">
+
+                            <input type="url" class="add_image_cutumes images" required>
+
+                            <button class="button_add_custumes1 btn_diff">Add</button>
+
+                            <input type="url" class="add_image_cutumes1 images">
+
+                            <button class="button_add_custumes2 btn_diff">Add</button>
+
+                            <input type="url" class="add_image_cutumes2 images">
+
+                            <button class="button_add_custumes3 btn_diff">Add</button>
+
+                            <input type="url" class="add_image_cutumes3 images">
+                        </div>
+
+                        <div class="buttons">
+                            <input type="text" class="btn_description description_custumes" placeholder="Description">
+                            <button type="submit" class="submit_btnn_add_custumes btn_diff">submit</button>
+
+                            <!-- <button  class="button_add btn_diff">Add</button> -->
+                    </form>
+                </div>
             </div>
 
 
-
-
-           
         </div>
+    </div>
+    </div>
+
 
     </div>
 
     <script>
 
 
+        const button1 = document.querySelector(".button_add1");
+        const button2 = document.querySelector(".button_add2");
+        const button3 = document.querySelector(".button_add3");
+        const cont_1 = document.querySelectorAll(".add_image1")[0];
+        const cont_2 = document.querySelectorAll(".add_image2")[0];
+        const cont_3 = document.querySelectorAll(".add_image3")[0];
+
+        button1.addEventListener("click", function () {
+            cont_1.style.display = "block";
+            button1.style.display = "none";
+        });
+
+        button2.addEventListener("click", function () {
+            cont_2.style.display = "block";
+            button2.style.display = "none";
+        });
+
+        button3.addEventListener("click", function () {
+            cont_3.style.display = "block";
+            button3.style.display = "none";
+        });
+
+
+
+        const buttons1 = document.querySelector(".button_add_custumes1");
+        const buttons2 = document.querySelector(".button_add_custumes2");
+        const buttons3 = document.querySelector(".button_add_custumes3");
+        const content_1 = document.querySelectorAll(".add_image_cutumes1")[0];
+        const content_2 = document.querySelectorAll(".add_image_cutumes2")[0];
+        const content_3 = document.querySelectorAll(".add_image_cutumes3")[0];
+
+        buttons1.addEventListener("click", function () {
+            content_1.style.display = "block";
+            buttons1.style.display = "none";
+        });
+
+        buttons2.addEventListener("click", function () {
+            content_2.style.display = "block";
+            buttons2.style.display = "none";
+        });
+
+        buttons3.addEventListener("click", function () {
+            content_3.style.display = "block";
+            buttons3.style.display = "none";
+        });
+
+
+
+
+
+
+
         localStorage.removeItem('checkboxes');
         let active_user = localStorage.getItem("artist_profile")
-
         let dataofartist = JSON.parse(localStorage.getItem("card_data"))
-
-
         console.log(active_user)
-
         // Get all the checkboxes
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
 
         // Add an event listener to each checkbox
         checkboxes.forEach((checkbox) => {
@@ -439,15 +561,21 @@
                     );
                 }
 
+
+
                 localStorage.removeItem('checkboxes');
                 // Save the updated array to local storage
                 localStorage.setItem('checkboxes', JSON.stringify(array));
                 let user = dataofartist.find(obj => obj.user_email === active_user);
 
                 user.services = array.filter(element => element.useremail === active_user);
+
                 localStorage.setItem("card_data", JSON.stringify(dataofartist));
 
+
             });
+
+
         });
 
 
@@ -479,7 +607,7 @@
             let existing_record_index = user_records.findIndex(record => record.email === active_user);
 
             if (existing_record_index !== -1) {
-                
+
                 user_records[existing_record_index]["sare_drapping+Advance Makeup per person"] = First_option;
                 user_records[existing_record_index]["Pro Makeup+Basic hair style Per person"] = second_option;
                 user_records[existing_record_index]["Jewelery+HD Makeup per person"] = Three_option;
@@ -491,7 +619,7 @@
                 user_records[existing_record_index]["Makeup+mehandi"] = nine_option;
                 user_records[existing_record_index]["artist_name"] = nameOfartist;
             } else if (First_option.trim() !== '' && second_option.trim() !== '' && Three_option.trim() !== '' && Four_option.trim() !== '' && Five_option.trim() !== '' && six_option.trim() !== '' && seven_option.trim() !== '' && eight_option.trim() !== '' && nine_option.trim() !== '') {
-                
+
                 let user_data = {
                     "sare_drapping+Advance Makeup per person": First_option,
                     "Pro Makeup+Basic hair style Per person": second_option,
@@ -523,16 +651,96 @@
 
         let user = dataofartist.find(obj => obj.user_email === active_user);
         user.services.filter(function (obj) {
+
             listing(obj)
+
         });
         function listing(e) {
+
             let info = document.querySelector(".choosed");
+
             info.innerHTML += `
             
                <p>${e.category}</p>
             
-                 `
+              
+               `
+
         }
+
+
+
+
+
+        const btn_of_jewelry = document.querySelector("#Jewelery");
+
+        btn_of_jewelry.addEventListener('submit', function (e) {
+
+            const active_user = localStorage.getItem("artist_profile");
+            const dataofartist = JSON.parse(localStorage.getItem("card_data"));
+            const user_adding_pack = JSON.parse(localStorage.getItem("jewels")) || [];
+
+
+            const description_of_jewelry = document.querySelector(".description_jwels").value;
+            const img_of_jewelry = document.querySelector(".add_image").value;
+            const img_of_jewelry1 = document.querySelector(".add_image1").value;
+            const img_of_jewelry2 = document.querySelector(".add_image2").value;
+            const img_of_jewelry3 = document.querySelector(".add_image3").value;
+
+            const user_pack = {
+                "Image_1": img_of_jewelry,
+                "Image_2": img_of_jewelry1,
+                "Image_3": img_of_jewelry2,
+                "Image_4": img_of_jewelry3,
+                "description": description_of_jewelry,
+                "artist_name":active_user
+            };
+
+            user_adding_pack.push(user_pack);
+            localStorage.setItem("jewels", JSON.stringify(user_adding_pack));
+
+            const users = dataofartist.find(obj => obj.user_email === active_user);
+            users.own_pack = user_adding_pack.filter(element => element.artist_name === active_user);
+            localStorage.setItem("card_data", JSON.stringify(dataofartist));
+        });
+
+
+
+        const btn_of_custume = document.querySelector("#cutumes");
+
+        btn_of_custume.addEventListener('submit', function (e) {
+
+            const active_user = localStorage.getItem("artist_profile");
+            const dataofartist = JSON.parse(localStorage.getItem("card_data"));
+            const user_adding_pack = JSON.parse(localStorage.getItem("custume")) || [];
+
+
+            const description_custumes = document.querySelector(".description_custumes").value;
+            const img_of_custume = document.querySelector(".add_image_cutumes").value;
+            const img_of_custume1 = document.querySelector(".add_image_cutumes1").value;
+            const img_of_custume2 = document.querySelector(".add_image_cutumes2").value;
+            const img_of_custume3 = document.querySelector(".add_image_cutumes3").value;
+
+            const user_pack = {
+                "Image_1": img_of_jewelry,
+                "Image_2": img_of_jewelry1,
+                "Image_3": img_of_jewelry2,
+                "Image_4": img_of_jewelry3,
+                "description": description_custumes,
+                "artist_name":active_user
+            };
+
+            user_adding_pack.push(user_pack);
+            localStorage.setItem("custume", JSON.stringify(user_adding_pack));
+
+            const users = dataofartist.find(obj => obj.user_email === active_user);
+ users.custume_plans = user_adding_pack.filter(element => element.artist_name === active_user);
+localStorage.setItem("card_data", JSON.stringify(dataofartist));
+        });
+
+
+
+
 
     </script>
 

@@ -462,7 +462,7 @@ a {
 .heading {
   height: 60px;
   width: 100%;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 form {
@@ -646,32 +646,32 @@ span {
   height: 430px;
   background-color: white;
 }
-.package_image{
+/* .package_image{
   height:100%;
 width: 90%;
 margin-top: 10px;
 margin-left: 10px;
 border-radius: 10px;
-}
-.pic{
+} */
+/* .pic{
   height: 70%;
   /* border: 2px solid black; */
-  width:100%
-}
-.descriptipn{
+  /* width:100%
+} */
+/* .descriptipn{
 width: 100%;
-height: 200px;
+height: 200px; */
 /* border: 2px solid black; */
 
-text-align: center;
-margin-top: 10px;
-}
+/* text-align: center;
+margin-top: 10px; */
+/* }
 .price{
  height: 30%;
   width:20%;
-  /* border: 2px solid black; */
+  border: 2px solid black; */
 
-}
+/* } */
 .header{
 height: 10%;
 /* border: 2px solid black; */
@@ -721,14 +721,146 @@ padding-top: 70px;
   margin-left: 50px;
   padding-top: 20px;
 }
-.package_plans{
+/* .package_plans{
   text-align: center;
   margin-top: 30px;
   color:#d70f64
-}
-.name_makeup{
+} */
+/* .name_makeup{
   margin-top: 20px;
   margin-bottom: 10px;
   color:blueviolet;
   font-weight: bolder;
+} */
+
+.cart_items{
+  height:3000px;
+  width:100%;
+  /* border:2px solid black; */
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.types_head{
+  height:550px;
+  width: 90%;
+  /* border:2px solid black; */
+  display: flex;
+  justify-content: space-around;
+  margin-left: 80px;
+}
+
+.typesOf_cart{
+  height:700px;
+  width: 100%;
+  /* border:2px solid black; */
+
+
+
+
+}
+.types{
+  height:90%;
+  width:23%;
+  /* border:2px solid black; */
+ margin-top: 50px;
+ box-shadow: 0 0 3px rgba(0,0,0,.161);
+ 
+}
+.makeuptypes_img{
+  height:300px;
+  width:270px;
+ margin-left: 15px;
+ margin-top: 10px;
+}
+.cost_makeup{
+  font-size: 18px;
+  font-weight: bold;
+  color:rgb(29, 28, 28);
+  text-align: center;
+}
+.titlte_makeup{
+
+  font-size: 18px;
+  font-weight: bold;
+  color:#d70f64;
+  text-align: center;
+}
+.add_book_list{
+  width: 190px;
+  margin-top: 20px;
+  margin-left: 55px;
+ 
+}
+.container{
+  width:40%;
+  height: 400px;
+  /* border:2px solid black; */
+ margin-top: 30px;
+ margin-left: 470px;
+padding-top: 40px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+border-radius: 20px;
+
+}
+.Info_of_header{
+  height: 200px;
+  text-align: center;
+  width: 100%;
+}
+.note{
+  color: black;
+  font-size: 14px;
+  font-weight: bolder;
+ }
+ .notes
+ {
+   font-size: 12px;
+ }
+ 
+.icons{
+  height: 80px;
+  width:40%;
+  /* border:2px solid black; */
+margin-left: 200px;
+margin-top: 30px;
+display: flex;
+}
+.Info_of_header h4{
+  padding-top: 20px;
+  color:#D70F64
+}
+.Info_of_header p{
+  padding-top: 10px;
+  color:black;
+
+}
+.icons_booking{
+  height: 40px ;
+  width:40px;
+}
+h5{
+  color:#980fd7
+}
+.choose_cutomer{
+  height:350px;
+  width:90%;
+  /* border: 2px solid black; */
+ margin-left: 25px;
+ margin-top: 50px;
+}
+
+#name{
+  height:50px;
+  width:250px;
+  margin-left: 170px;
+ border-radius: 10px;
+ text-align: center;
+}
+.makeup,.hair{
+  height: 90px;
+  width:100px;
+
+
 }

@@ -144,9 +144,10 @@ button {
   transition: all 0.3s ease 0s;
   cursor: pointer;
   background-color:white;
-  box-shadow: 0px 15px 20px rgba(227, 221, 223, 0.4);
   outline: none;
+
   margin-left: 290px;
+  margin-top: 80px;
   
   }
 
@@ -430,27 +431,21 @@ width:48%;
   color: white;
   margin-top: 3px;
 }
-.quotes{
-  height: 200px;
-  width:70%;
-  /* border: 2px solid black; */
-margin-top: 10px;
-color:white;
-text-align: left;
-margin-left: 160px;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-margin-top: 80px;
-line-height: 30px;
-}
+
 .formm{
-  height:300px;
-  width:800px;
+  height:500px;
+  width:700px;
   /* border: 2px solid black; */
-  margin-left: 43%;
-  margin-top: 200px;
+  margin-left: 48%;
+  margin-top: 150px;
 }
-.formm h1{
-  font-size: 40px;
-  color:black;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.date{
+  height:50px;
+  width:540px;
+ text-transform: uppercase;
+ text-align: center;
+ font-family: Raleway,sans-serif;
+ margin-top: 30px;
+ margin-left: 70px;
 }
+

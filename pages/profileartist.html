@@ -453,13 +453,40 @@
 
     <script>
         var ctx = document.getElementById('myChart').getContext('2d');
+
+
+     
+        const artist_profiles = JSON.parse(localStorage.getItem("card_data"));
+const user_data = localStorage.getItem("artist_profile");
+
+let user_obj = artist_profiles.find(e => e["user_email"] == user_data);
+
+let today = new Date();
+let passed_appts = 0;
+let upcoming_appts = 0;
+let total_appts = user_obj["booking_records"].length;
+
+user_obj["booking_records"].forEach(rec => {
+    let appt_date = new Date(rec["event_date"]);
+    if (appt_date < today) {
+        passed_appts++;
+    } else {
+        upcoming_appts++;
+    }
+});
+
+ [passed_appts, upcoming_appts, total_appts];
+
+
+
+
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Completed', 'Rejected', 'Total bookings'],
+                labels: ['Completed', 'upcomming', 'Total bookings'],
                 datasets: [{
-                    label: '12 of Votes',
-                    data: [12, 19, 3],
+                    label: 'appoinments',
+                    data:[passed_appts, upcoming_appts, total_appts],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.8)',
                         'rgba(54, 162, 235, 0.8)',
@@ -501,13 +528,14 @@
 
 
         var ctx = document.getElementById('myChart2').getContext('2d');
+       
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow'],
+                labels: ['Completed', 'upcomming', 'Total bookings'],
                 datasets: [{
-                    label: '12 of Votes',
-                    data: [12, 19, 3],
+                    label: 'appoinments',
+                    data:[passed_appts, upcoming_appts, total_appts],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.8)',
                         'rgba(54, 162, 235, 0.8)',
@@ -522,24 +550,26 @@
                     ],
                     borderWidth: 1
                 }]
-
             },
             options: {
                 scales: {
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            display: false  // Hide the y-axis count
+                            // Hide the y-axis count
+                            display: false
                         },
                         gridLines: {
                             display: false  // Hide the y-axis grid lines as well
                         }
                     }],
                     xAxes: [{
-                        display: false,
                         ticks: {
                             autoSkip: false  // Prevent the x-axis labels from being truncated
-                        }
+                        },
+
+                        display: false
+
                     }]
                 }
             },
@@ -548,15 +578,16 @@
 
 
         var ctx = document.getElementById('myChart3').getContext('2d');
+       
         var myChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Red', 'Blue', 'Yellow'],
+                labels: ['Completed', 'upcomming', 'Total bookings'],
                 datasets: [{
-                    label: '12 of Votes',
-                    data: [12, 19, 3],
+                    label: 'appoinments',
+                    data:[passed_appts, upcoming_appts, total_appts],
                     backgroundColor: [
-                        'rgba(289, 99, 132, 0.8)',
+                        'rgba(255, 99, 132, 0.8)',
                         'rgba(54, 162, 235, 0.8)',
                         'rgba(255, 206, 86, 0.8)',
 
@@ -575,22 +606,23 @@
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            display: false  // Hide the y-axis count
+                            // Hide the y-axis count
+                            display: false
                         },
                         gridLines: {
                             display: false  // Hide the y-axis grid lines as well
                         }
                     }],
                     xAxes: [{
-                        display: false,
                         ticks: {
                             autoSkip: false  // Prevent the x-axis labels from being truncated
-                        }
+                        },
+
+                        display: false
+
                     }]
-                },
-
-            }
-
+                }
+            },
         });
 
 
@@ -678,6 +710,8 @@
             }
 
         )
+
+
 
         document.getElementById("nameofartist").value = result["name"];
         document.getElementById("passwordofartist").value = result["artist_password"];
@@ -777,10 +811,6 @@ artist.booking_records.forEach(function (record) {
   recordDiv.classList.add("information-appoinment");
 
 
-
-
- 
-
   let timeSplit = (record.time).split(':'),
   
    hours = timeSplit[0];
@@ -828,141 +858,6 @@ console.log(correct_time)
   bookingRecordsDiv.appendChild(document.createElement("hr"));
 });
 
-
-
-//         let details = JSON.parse(localStorage.getItem("records_booking_clients"));
-//         let card_data = JSON.parse(localStorage.getItem("card_data"));
-//         let artist_email = localStorage.getItem("artist_profile");
-
-
-
-//         let get_artist_name;
-//         card_data.find(function (obj) {
-//             if (artist_email === obj.user_email) {
-//                 get_artist_name = obj.name;
-//                 return get_artist_name;
-//             }
-//         });
-
-
-//         let artist = card_data.find((obj) => obj.name === get_artist_name);
-
-//         let bookingRecordsDiv = document.getElementById("appoinments");
-
-//         artist.booking_records.fo(function (record) {
-
-
-//             bookingRecordsDiv.innerHTML+=        
-// `  <div class="information-appoinment">
-
-// <div class="date">
-
-
-//     <h4>Feb 21</h4>
-// </div>
-// <div class="time">
-//     <p> 12.pm</p>
-// </div>
-// <div class="name-of-make">
-
-
-//     <p>Wedding makeup</p>
-// </div>
-// <div class="location_appoinment">
-//     <p>Chennai</p>
-// </div>
-// <div class="cost">
-//     <p>Rs.12,000</p>
-// </div>
-
-// </div>
-// <hr>
-// `
-
-
-//         })
-
-
-
-
-
-        // console.log(request_check);
-        // if (request_check) {
-        //     details.filter(function (obj) {
-        //         if (obj.selected_artist_for_booking === get_artist_name) 
-        //         { 
-
-        //             let index = details.findIndex(obj => obj.selected_artist_for_booking ===get_artist_name );
-
-        //             console.log(obj)
-        //             // localStorage.setItem("card_data",stringify(obj))
-        //             list_request(obj)
-
-        //             // approve_booking(obj)
-
-
-        //         }
-        //     });
-        // }
-
-
-
-
-        //   let details_index = JSON.parse(localStorage.getItem("records_booking_clients"));
-        //         function list_request(item) {
-
-
-
-
-        //             const container = document.getElementById("notification")
-        //             if(item.status!=true){
-        //             container.innerHTML +=
-
-        //                 ` <div class="notifibox">
-
-        // <div class="decoration-line">
-
-        // </div>
-        // <div class="img">
-        //     <i class="fa-solid fa-exclamation"></i>
-        // </div>
-
-        // <h4 class="Booking-alert">${item.customer_email}  book you on ${item.event_date}</h4>
-
-        // <button onclick="approve_btn(${item.id})">Approve</button>
-
-        // <button onclick="not_approved_btn(${item.id})">Skip</button>
-        // </div>`
-        //             }
-        //         }
-
-
-
-        //         let record_bookign = JSON.parse(localStorage.getItem("records_booking_clients"));
-        //         function approve_btn(id_match) {
-
-        //             record_bookign.find(function (obj) {
-        //     if (obj.id==id_match ) {
-        //       obj.status = true;
-        //       localStorage.setItem("records_booking_clients", JSON.stringify(record_bookign));
-        //     }
-        //   })
-        // }
-
-
-
-
-
-
-        // function not_approved_btn(id_match) {
-
-        //     record_bookign.find(function (obj) {
-        //   if (obj.id==id_match) {
-        //     obj.status = false;
-        //     localStorage.setItem("records_booking_clients", JSON.stringify(record_bookign));
-        //   }
-        // })
-        // }
 
 
 

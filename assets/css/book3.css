@@ -98,28 +98,12 @@ span {
   width:30px;
   border-radius: 50%
 }
-.main-content {
-  height: 700px;
-  width: 100%;
-  position: relative;
-  top: 5px;
-  background-color: white;
-  /* border:2px solid black; */
-  display: flex;
-  justify-content: space-around;
-}
 
-.container{
-  width:40%;
-  height: 95%;
-  /* border:2px solid black; */
- margin-top: 30px;
-padding-top: 40px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-border-radius: 20px;
-overflow-y: scroll;
-}
+
+
 input[type="radio"] {
+
+
   /* ...existing styles */
   display: grid;
   place-content: center;
@@ -134,23 +118,12 @@ input[type="radio"]::before {
   border-radius: 50%;
   margin-left: 20px;
 }
-.name{
-  width:170px;
-color: #D70F64;
-text-align: center;
-margin-top: 90px;
-}
+
 .types{
   text-align: center;
   color: #D70F64;
 }
-.makeup,.hair{
-  height: 90px;
-  width:100px;
- margin-left: 20px;
 
-
-}
 .Makeup{
   height: 130px;
   width:150px;
@@ -174,7 +147,7 @@ box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
 }
 .event{
   height:92%;
-  width:50%;
+  width:45%;
   /* border:2px solid black; */
 margin-top: 70px;
 }
@@ -217,14 +190,14 @@ margin-top: 70px;
 .booking_details{
   /* border:2px solid black; */
 width: 40%;
-height: 100%;
+height: 85%;
 box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
-
+margin-left: 140px;
 }
 .info{
 height:95%;
 margin-top: 2.5%;
-width:90%;
+width:95%;
 /* border:2px solid black; */
 margin-left: 5%;
 display: flex;
@@ -235,11 +208,7 @@ display: flex;
   /* border:2px solid black; */
 
 }
-.Info_of_header{
-  height: 200px;
-  text-align: center;
-  width: 100%;
-}
+
 .increment_decrement{
   height: auto;
   /* border:2px solid black; */
@@ -249,29 +218,7 @@ border-radius: 10px;
 
 
 }
-.icons{
-  height: 80px;
-  width:40%;
-  /* border:2px solid black; */
-margin-left: 230px;
-margin-top: 30px;
-display: flex;
-}
-.Info_of_header h4{
-  padding-top: 20px;
-  color:#D70F64
-}
-.Info_of_header p{
-  padding-top: 10px;
-  color:grey
-}
-.icons_booking{
-  height: 40px ;
-  width:40px;
-}
-h5{
-  color:#980fd7
-}
+
 .name_num,.date_time{
 height:60px;
 width:98%;
@@ -329,7 +276,7 @@ height: 40px;
 }
 h4{
   text-align: center;
-  margin-top: 80px;
+
 }
 .selected_option label{
   margin-left: 15px;
@@ -504,4 +451,135 @@ margin-left: 5px;
   outline: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   background-color: #fff;
+}
+
+.cart_adding{
+  background-color: white;
+  /* border: 2px solid black; */
+ margin-top: 50px;
+height: 1500px;
+justify-content: space-around;
+display: flex;
+}
+.choose_cutomer{
+  height:350px;
+  width:90%;
+  /* border: 2px solid black; */
+ margin-left: 25px;
+ margin-top: 50px;
+}
+
+.addedlist{
+  height:90%;
+  width:47%;
+  /* border:2px solid black; */
+  margin-top: 3%;
+  
+}
+.savinglist{
+  height:90%;
+  width:42%;
+  /* border:2px solid black; */
+  margin-top: 3%;
+
+}
+.head{
+  height:80px;
+  width:100%;
+  /* border:2px solid black; */
+
+}
+.listing{
+  height: 80%;
+  width:100%;
+  /* border:2px solid black; */
+
+display:flex;
+
+flex-direction: column;
+
+}
+.list_1{
+  height:120px;
+  width:90%;
+ margin-left: 30px;
+  /* border:2px solid black; */
+ display:flex;
+ margin-top: 50px;
+ box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
+
+}
+.pic_book_list{
+  height:100%;
+  width:200px;
+  /* border:2px solid black; */
+
+}
+.details_cost{
+  height:100%;
+  width:80%;
+  /* border:2px solid black; */
+}
+.selected_list_img{
+  height: 80%;
+  width:80%;
+
+ margin-left: 15px;
+ margin-top: 15px;
+ border-radius: 10px;
+}
+.details_cost h3{
+
+  color:#D70F64;
+  margin-left: 100px;
+  margin-top: 20px;
+
+
+}
+.details_cost p{
+  margin-left: 100px;
+  margin-top: 20px;
+
+}
+.totalbooking{
+  height:90%;
+ width:90%;
+ margin-left: 15%;
+ /* border:2px solid black; */
+ margin-top: 50px;
+   box-shadow: 0 0 3px rgba(0,0,0,.161);
+
+ overflow-y: scroll;
+}
+.customer_1{
+  height: 330px;
+  width:100%;
+  /* border:2px solid black; */
+   margin-top: 50px;
+}
+.customer_1 h3{
+  text-align: center;
+  
+}
+.names_total_cost{
+  height: 65%;
+  width:100%;
+  /* border:2px solid black; */
+ margin-top: 30px;
+
+}
+.one{
+  margin-top:10px;
+  height:20%;
+  width:100%;
+  /* border:2px solid black; */
+  /* box-shadow: 0 0 3px rgba(0,0,0,.161); */
+
+ display: flex; 
+ justify-content: space-around;
+}
+.single_cust_total_cost{
+  text-align: center;
+  margin-top: 7px;
+  color:#D70F64
 }

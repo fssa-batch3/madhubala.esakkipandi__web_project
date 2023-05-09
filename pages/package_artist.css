@@ -8,7 +8,7 @@ body {
   margin: 0%;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  background-color: white;
+  background-color: #f7f9fa;
 }
 
 .menu-bar {
@@ -304,7 +304,7 @@ transition: 0.2s;
 opacity: 5;
 background-color:white;
 }
-button {
+button,.btn_diff {
   width: 140px;
   height: 45px;
   font-family: 'Roboto', sans-serif;
@@ -451,7 +451,160 @@ display: flex;
 } */
 .choosed{
   height:400px;
-  width:98%;
-  border:2px solid black
+  width:90%;
+  box-shadow: 0 0 3px rgba(0,0,0,.161);
+margin-left: 60px;
+}
+.own_packages{
 
+  /* border:2px solid black; */
+  height:1300px;
+  width:100%;
+}
+.custume_plans{
+  height: 90%;
+  width: 90%;
+ background-color: #fff;
+  /* border:2px solid black; */
+  margin-left: 50px;
+  border-radius: 20px;
+  box-shadow: 0 0 3px rgba(0,0,0,.161);
+}
+.jwelery{
+  height: 50%;
+  /* border:2px solid black; */
+}
+.custumes{
+  height: 50%;
+  /* border:2px solid black; */
+
+}
+
+/* .add_image{
+  height:200px;
+  width:200px;
+  border:2px solid black;
+
+} */
+
+.images_section{
+  width: 100%;
+  height:300px ;
+  /* border:2px solid black; */
+display: flex;
+justify-content: space-evenly;
+margin-top: 50px;
+}
+
+.images{
+  height:200px;
+  width:200px;
+  margin-top: 25px;
+  /* border:2px solid black; */
+  background-image: url("../assets/images/drag-and-drop-image-photo-picture-icon-with-hand-vector-31064695-removebg-preview.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0,0,0,.161);
+  border: none;
+  border-radius: 20px;
+}
+.add_image1{
+  display: none;
+}
+.add_image2{
+  display: none;
+}
+
+.add_image3{
+  display: none;
+}
+
+.add_image{
+  display: block;
+}
+
+
+
+.add_image_cutumes1{
+  display: none;
+}
+.add_image_cutumes2{
+  display: none;
+}
+
+.add_image_cutumes3{
+  display: none;
+}
+
+.add_image_cutumes{
+  display: block;
+}
+.button_add1,.button_add2,.button_add3,.button_add_custumes1,.button_add_custumes2,.button_add_custumes3{
+  height: 40px;
+  width:160px;
+display: block;
+  margin-top: 50px;
+margin-left: 0px;
+}
+
+
+
+
+.submit_btnn_add_jwelery{
+
+  height: 40px;
+  width:160px;
+ 
+  margin-top: 15px;
+margin-left: 0px;
+
+}
+
+.submit_btnn_add_custumes{
+
+  height: 40px;
+  width:160px;
+ 
+  margin-top: 15px;
+margin-left: 0px;
+
+}
+
+
+
+
+.btn_description{
+  height: 40px;
+  width:300px;
+  margin-top: 21px;
+margin-left: 0px;
+border-radius: 10px;
+}
+.buttons{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.title_package{
+  color: #d2216e;
+  padding: 20px 20px 20px 20px;
+  font-size: 24px;
+}
+.jwelery p{
+  color: black;
+  padding-left: 30px;
+}
+.custumes p{
+  color: black;
+  padding-left: 30px;
+}
+.optional_packages{
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family:Poppins,sans-serif;
+  color: #454545;
 }
