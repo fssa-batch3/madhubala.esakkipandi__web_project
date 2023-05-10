@@ -280,9 +280,9 @@
 
 
 
-<div class="cart_items">
-<div class="hairstyle typesOf_cart">
-    <div class="heading">
+ <div class="cart_items" id="data">
+ <!-- <div class="hairstyle typesOf_cart">
+     <div class="heading">
         <h2>Types of hair style</h2>
     </div>
     <div class="types_head cart">
@@ -316,17 +316,16 @@
     </div>
 </div>
 
-    
 
 
 
 
-</div>
+ </div>
 <div class="makeup_types typesOf_cart">
     <div class="heading">
         <h2>Types of Makeup</h2>
     </div>
-    <div class="types_head cart">
+   <div class="types_head cart">
         
     <div class="type_1 types">
         <img src="../../assets/images/cont2-img.webp" class="makeuptypes_img">
@@ -356,14 +355,14 @@
         <p class="cost_makeup">Cost ₹ 12000</p>
         <button class="add_book_list">Add to booking list</button>
     </div>
-  </div>
+  </div> 
 </div>
 
 <div class="saree_drapping typesOf_cart">
     <div class="heading">
         <h2>Types of saree drapping</h2>
-    </div>
-    <div class="types_head cart">
+    </div> 
+     <div class="types_head cart">
     <div class="type_1 types">
         <img src="../../assets/images/cont2-img.webp" class="makeuptypes_img">
 
@@ -398,8 +397,7 @@
 <div class="mehandi typesOf_cart">
     <div class="heading">
         <h2>Types of  mehandi</h2>
-    </div>
-    
+    </div> 
 
     <div class="types_head cart">
     <div class="type_1 types">
@@ -431,14 +429,14 @@
         <button class="add_book_list">Add to booking list</button>
     </div>
   
-</div>
+</div> 
+
+ <button class="save">Save</button>
+
+</div>  -->
 
 
-
-</div>
-
-
-</div>
+ </div> 
 
 
 
@@ -1088,82 +1086,57 @@
 
 
 
+        const services = JSON.parse(localStorage.getItem('list_of_services')) || [];
 
+services.forEach(service => {
+  const { category, name, cost, image } = service;
 
+  // Create the HTML elements
+  const div = document.createElement('div');
+  div.classList.add(`${category.toLowerCase()}`, 'typesOf_cart');
 
+  const heading = document.createElement('div');
+  heading.classList.add('heading');
 
-        // let dataartist = JSON.parse(localStorage.getItem("card_data"))
-        // let artist = dataartist.find(obj => obj.name === name);
-        // if (artist.packages && artist.packages.length > 0) {
-        //     artist.packages.forEach(function (package) {
-        //         showingpackage(package);
-        //     });
-        // }
+  const h2 = document.createElement('h2');
+  h2.textContent = `Types of ${category}`;
 
+  const types_head = document.createElement('div');
+  types_head.classList.add('types_head', 'cart');
 
+  const type_1 = document.createElement('div');
+  type_1.classList.add('type_1', 'types');
 
-    //     let selectedOptions = [];
-    //     let selectedTotalCost = 0;
+  const img = document.createElement('img');
+  img.src = image;
+  img.classList.add(`${category.toLowerCase()}types_img`);
 
-    //     function showingpackage(package) {
-    //         let show = document.querySelector(".details");
-    //         let total = 0;
+  const title = document.createElement('p');
+  title.classList.add('titlte_makeup');
+  title.textContent = name;
 
-    //         const packageKeys = Object.keys(package)
-    //             .filter(key => package[key] !== "" && package[key] !== undefined)
-    //             .slice(0, -3);
+  const cost_elem = document.createElement('p');
+  cost_elem.classList.add('cost_makeup');
+  cost_elem.textContent = cost;
 
-    //         for (let i = 0; i < Math.min(4, packageKeys.length); i++) {
-    //             const key = packageKeys[i];
-    //             let html = `
-    //         <div class="one_option">
-    //             <div class="pic">
-    //                 <img src="../../assets/images/Colourful Eye Makeup Look with Extravagant Lashes.jpeg"
-    //                     class="package_image">
-    //             </div>
-    //             <div class="descriptipn">
-    //                 <p class="name_makeup">${key}</p>
-    //                 <p class="cost">Cost ${package[key]}</p>
-    //             </div>
-    //         </div>
-    //     `;
-    //             show.innerHTML += html;
-    //         }
+  const add_button = document.createElement('button');
+  add_button.classList.add('add_book_list');
+  add_button.textContent = 'Add to booking list';
 
-    //         let morePackagesHtml = `
-    // <a href="../../pages/booking/book3.html?book_name=${name}" class="navigation">
-    //     <button class="button totalbtn">See More packages</button>
-    // </a>
-    // `;
-    //         document.querySelector(".anchor").innerHTML += morePackagesHtml;
-    //     }
+  // Append the elements to the container
+  div.appendChild(heading);
+  heading.appendChild(h2);
+  div.appendChild(types_head);
+  types_head.appendChild(type_1);
+  type_1.appendChild(img);
+  type_1.appendChild(title);
+  type_1.appendChild(cost_elem);
+  type_1.appendChild(add_button);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  // Add the container to the page
+  const container = document.getElementById(`${category.toLowerCase()}_container`);
+  container.appendChild(div);
+});
 
     </script>
 

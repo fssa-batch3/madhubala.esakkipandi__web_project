@@ -751,7 +751,7 @@ padding-top: 70px;
   margin-left: 80px;
 }
 
-.typesOf_cart{
+.hairstyle,.makeup_types,.saree_drapping,.mehandi{
   height:700px;
   width: 100%;
   /* border:2px solid black; */
@@ -863,4 +863,8 @@ h5{
   width:100px;
 
 
+}
+.save{
+  margin-left: 650px;
+  margin-top: 60px;
 }
