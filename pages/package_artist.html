@@ -70,7 +70,7 @@
 
         <h3 class="category">choose the category</h3>
 
-        <input type="radio" placeholder="Hair style" name="category" value="hairstyle">
+        <input type="radio" placeholder="Hair style" name="category" value="Hairstyle">
         <label>Hair style</label>
 
         <input type="radio" class="saree" placeholder="saree drapping" name="category" value="sareedrapping">
@@ -125,7 +125,22 @@ addBtn.addEventListener('click', function() {
   container.classList.toggle('blur');
 });
 
-let  listingForm=document.getElementById("listing")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let listingForm = document.getElementById("listing");
 listingForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -139,9 +154,10 @@ listingForm.addEventListener("submit", (event) => {
     }
   }
 
-  const name = document.getElementById("name_of_cetegory").value.trim();
-  const cost = document.getElementById("number_for_cetegory").value.trim();
-  const image = document.getElementById("url_of_cetegory").value.trim();
+  let active_user=localStorage.getItem("artist_profile")
+  const name = document.getElementById("name_of_cetegory").value
+  const cost = document.getElementById("number_for_cetegory").value
+  const image = document.getElementById("url_of_cetegory").value
 
   if (!name || !cost || !image) {
     alert("Please fill out all required fields.");
@@ -159,51 +175,19 @@ listingForm.addEventListener("submit", (event) => {
     "category_id": listing_items.length,
   };
 
+  console.log(object.category)
   listing_items.push(object);
 
-  localStorage.setItem('list_of_services', JSON.stringify(listing_items));
+  localStorage.setItem("list_of_services", JSON.stringify(listing_items));
 
-  let dataOfArtist = JSON.parse(localStorage.getItem("card_data"))
-  let user = dataOfArtist.find(obj => obj.user_email === localStorage.getItem("artist_profile"));
+  let dataOfArtist = JSON.parse(localStorage.getItem("card_data"));
+  let user = dataOfArtist.find((obj) => obj.user_email === localStorage.getItem("artist_profile"));
 
-  if (user) {
-    user.services = {
-      hairstyleServices: [],
-      sareedrappingServices: [],
-      makeupServices: [],
-      mehandiServices: []
-    };
+  user.services_provding = listing_items.filter((element) => element.artist_email === active_user);
 
-    for (let item of listing_items) {
-      if (item.artist_email === localStorage.getItem("artist_profile")) {
-        let servicesArrayName = item.category.toLowerCase() + "Services";
-        if (servicesArrayName in user.services) {
-          user.services[servicesArrayName].push(item);
-        }
-      }
-    }
-
-    localStorage.setItem("card_data", JSON.stringify(dataOfArtist));
-  }
+  
+  localStorage.setItem("card_data", JSON.stringify(dataOfArtist));
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -357,6 +341,68 @@ listingForm.addEventListener("submit", (event) => {
 
 
 
+
+// let  listingForm=document.getElementById("listing")
+// listingForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+
+//   const radioButtons = document.getElementsByName("category");
+//   let selectedValue = "";
+
+//   for (let i = 0; i < radioButtons.length; i++) {
+//     if (radioButtons[i].checked) {
+//       selectedValue = radioButtons[i].value;
+//       break;
+//     }
+//   }
+
+//   const name = document.getElementById("name_of_cetegory").value.trim();
+//   const cost = document.getElementById("number_for_cetegory").value.trim();
+//   const image = document.getElementById("url_of_cetegory").value.trim();
+
+//   if (!name || !cost || !image) {
+//     alert("Please fill out all required fields.");
+//     return;
+//   }
+
+//   let listing_items = JSON.parse(localStorage.getItem("list_of_services")) || [];
+
+//   let object = {
+//     "category": selectedValue,
+//     "name": name,
+//     "cost": cost,
+//     "image": image,
+//     "artist_email": localStorage.getItem("artist_profile"),
+//     "category_id": listing_items.length,
+//   };
+
+//   listing_items.push(object);
+
+//   localStorage.setItem('list_of_services', JSON.stringify(listing_items));
+
+//   let dataOfArtist = JSON.parse(localStorage.getItem("card_data"))
+//   let user = dataOfArtist.find(obj => obj.user_email === localStorage.getItem("artist_profile"));
+
+//   if (user) {
+//     user.services = {
+//       hairstyleServices: [],
+//       sareedrappingServices: [],
+//       makeupServices: [],
+//       mehandiServices: []
+//     };
+
+//     for (let item of listing_items) {
+//       if (item.artist_email === localStorage.getItem("artist_profile")) {
+//         let servicesArrayName = item.category.toLowerCase() + "Services";
+//         if (servicesArrayName in user.services) {
+//           user.services[servicesArrayName].push(item);
+//         }
+//       }
+//     }
+
+//     localStorage.setItem("card_data", JSON.stringify(dataOfArtist));
+//   }
+// });
 
 
 

@@ -153,7 +153,7 @@
 </div>
 
 <div class="listing">
-<div class="list_1">
+<!-- <div class="list_1">
 <div class="pic_book_list">
 
 <img src="../../assets/images/cont-8-img.webp " class="selected_list_img">
@@ -260,13 +260,16 @@
             </div>
             
             
-            </div>
+            </div> -->
       
      
 </div>
 
 
+<div class="proceedtopay">
 
+<button type="submit" class="proceed">Proceed to pay</button>
+</div>
 </div>
 
 
@@ -306,127 +309,12 @@
 </div>
 
 
-
 </div>
 <hr>
 <h3 class="single_cust_total_cost">TOTAL COST: ₹ 800000</h3>
 
 </div>
-<hr>
-<div class="customer_1">
-  
-  <h3>Customer 1</h3>
-  <div class="names_total_cost">
 
-<div class="one">
-
-
-  <p>Airbrush makeup </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>6 peated saree drapping </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>Portrait Mehndi </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>Hair with afro puff</p>
-  <p>Cost: ₹ 20000</p>
-</div>
-
-
-
-</div>
-<hr>
-<h3 class="single_cust_total_cost">TOTAL COST: ₹ 800000</h3>
-
-</div>
-<hr>
-<div class="customer_1">
-  
-  <h3>Customer 1</h3>
-  <div class="names_total_cost">
-
-<div class="one">
-
-
-  <p>Airbrush makeup </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>6 peated saree drapping </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>Portrait Mehndi </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>Hair with afro puff</p>
-  <p>Cost: ₹ 20000</p>
-</div>
-
-
-
-</div>
-<hr>
-<h3 class="single_cust_total_cost">TOTAL COST: ₹ 800000</h3>
-
-</div>
-<hr>
-<div class="customer_1">
-  
-  <h3>Customer 1</h3>
-  <div class="names_total_cost">
-
-<div class="one">
-
-
-  <p>Airbrush makeup </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>6 peated saree drapping </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>Portrait Mehndi </p>
-  <p>Cost: ₹ 20000</p>
-</div>
-<div class="one">
-
-
-  <p>Hair with afro puff</p>
-  <p>Cost: ₹ 20000</p>
-</div>
-
-
-
-</div>
-<hr>
-<h3 class="single_cust_total_cost">TOTAL COST: ₹ 800000</h3>
-
-</div>
-    
   </div>
 
 
@@ -440,7 +328,7 @@
 </div>
 
 
-  <div class="preferences">
+  <!-- <div class="preferences">
     <div class="info">
 
       
@@ -483,7 +371,7 @@
           </div>
         </div>
 
-    </div>
+    </div> -->
 
 
       <!-- <div class="choice">
@@ -506,6 +394,7 @@
           </div>
 
         </div>
+        
 
         <div class="increment_decrement">
           <h3>Rate card</h3>
@@ -542,7 +431,7 @@
           </div>
         </div>
       </div> -->
-      <div class="booking_details">
+      <!-- <div class="booking_details">
 
         <h3>Book Your Booking now!!</h3>
 
@@ -605,6 +494,10 @@
   </div>
 
 
+
+ -->
+
+
   <div id="popup-container">
     <div id="popup-message">
       <h3>Your booking successfully completed</h3>
@@ -612,13 +505,13 @@
     <button id="close-button">Close</button>
   </div>
 
-  </div>
+  <!-- </div> -->
 
 
   <script>
     let url = window.location.search;  //?name=Bridal MAkeup by sharmila
     let urls = new URLSearchParams(url)
-    let name = urls.get("book_name");
+    let name = urls.get("artist_name");
 
     console.log(name)
 
@@ -639,139 +532,207 @@
 
 
 
-    let form_filled = document.getElementById("booking-form")
-    form_filled.addEventListener('submit', e => {
-      e.preventDefault();
+    // let form_filled = document.getElementById("booking-form")
+    // form_filled.addEventListener('submit', e => {
+    //   e.preventDefault();
 
-      let data_of_cus = JSON.parse(localStorage.getItem("data"));
-      let dataofartist = JSON.parse(localStorage.getItem("card_data"));/*registered information of artist with their name an so on*/
-      let active_user = localStorage.getItem("profile").value /* active login of artist email*/
+    //   let data_of_cus = JSON.parse(localStorage.getItem("data"));
+    //   let dataofartist = JSON.parse(localStorage.getItem("card_data"));/*registered information of artist with their name an so on*/
+    //   let active_user = localStorage.getItem("profile").value /* active login of artist email*/
 
-      const value = selectedValue
-      const option = selectedOptions
-      const totla = selectedTotalCost
-      // getting the information form the user*/
-
-
-
-      const name_client = document.getElementById("Name-of-customer").value
-
-      const contact_client = document.getElementById("contact-of-customer").value
-      const addres_client = document.getElementById("address-customer").value
-      const date_event_client = document.getElementById("date-choosen-customer").value
-      const time_client = document.getElementById("Time-choosen-customer").value
-      const address = document.getElementById("address-customer").value
-
-      const emailofcus = localStorage.getItem("profile")
-
-      let isBooked = dataofartist.some(artist => {
-        return artist.name === name && artist.booking_records.some(record => {
-          return record.event_date === date_event_client && record.time === time_client;
-        });
-      });
-
-      if (isBooked) {
-
-
-        const failedmessage = ` This  date and time  is already booked for ${name}
-            You can procedue your booking with some other person .Thank you!`
-        const popupContainer = document.getElementById('popup-container');
-        const popupMessage = document.getElementById('popup-message');
-        popupMessage.textContent = failedmessage;
-        popupContainer.style.display = 'block';
-
-
-        const closeButton = document.getElementById('close-button');
-        closeButton.addEventListener('click', function () {
-          const popupContainer = document.getElementById('popup-container');
-          popupContainer.style.display = 'none';
-          window.location.href = "../../pages/booking/book.html"
-        });
+    //   const value = selectedValue
+    //   const option = selectedOptions
+    //   const totla = selectedTotalCost
+    //   // getting the information form the user*/
 
 
 
+    //   const name_client = document.getElementById("Name-of-customer").value
 
-      } else {
+    //   const contact_client = document.getElementById("contact-of-customer").value
+    //   const addres_client = document.getElementById("address-customer").value
+    //   // const date_event_client = document.getElementById("date-choosen-customer").value
+    //   const time_client = document.getElementById("Time-choosen-customer").value
+    //   const address = document.getElementById("address-customer").value
+
+    //   const emailofcus = localStorage.getItem("profile")
+
+    //   let isBooked = dataofartist.some(artist => {
+    //     return artist.name === name && artist.booking_records.some(record => {
+    //       return record.time === time_client;
+    //     });
+    //   });
+
+    //   if (isBooked) {
+
+
+    //     const failedmessage = ` This  date and time  is already booked for ${name}
+    //         You can procedue your booking with some other person  or you can choose some other timing you need .Thank you!`
+    //     const popupContainer = document.getElementById('popup-container');
+    //     const popupMessage = document.getElementById('popup-message');
+    //     popupMessage.textContent = failedmessage;
+    //     popupContainer.style.display = 'block';
+
+
+    //     const closeButton = document.getElementById('close-button');
+    //     closeButton.addEventListener('click', function () {
+    //       const popupContainer = document.getElementById('popup-container');
+    //       popupContainer.style.display = 'none';
+         
+    //     });
+
+
+
+
+    //   } else {
       
 
-        console.log(emailofcus)
-        const booking_info = JSON.parse(localStorage.getItem("records_booking_clients"))
-        if ((name_client.trim() != "") && (time_client.trim() != "") && (contact_client.trim() != "") && (addres_client.trim() != "") && (date_event_client.trim() != "") && value) {
-          let records_booking_clients = JSON.parse(localStorage.getItem("records_booking_clients")) ? JSON.parse(localStorage.getItem("records_booking_clients")) : []
-          let object_booking_records = {
-            "customer_name": name_client,
-            "customer_email": emailofcus,
-            "customer_contact": contact_client,
-            "customer_address": addres_client,
-            "event_date": date_event_client,
-            "time": time_client,
-            "status": false,
-            "selected_event": value,
-            "se": option,
-            "totla_cost": totla,
-            "location": address,
-            "id": records_booking_clients.length,
-            "selected_artist_for_booking": name /*store the object of form filled by user with selected artist name*/
-          }
-          records_booking_clients.push(object_booking_records);
-          // console.log(records_booking_clients)
-          localStorage.setItem("records_booking_clients", JSON.stringify(records_booking_clients));
-          // Add booking info to artist's data
-          let artist = dataofartist.find((obj) => obj.name === name);
-          artist.booking_records = records_booking_clients.filter(element => element.selected_artist_for_booking === artist.name);
+    //     console.log(emailofcus)
+    //     const booking_info = JSON.parse(localStorage.getItem("records_booking_clients"))
+    //     if ((name_client.trim() != "") && (time_client.trim() != "") && (contact_client.trim() != "") && (addres_client.trim() != "") && (date_event_client.trim() != "") && value) {
+    //       let records_booking_clients = JSON.parse(localStorage.getItem("records_booking_clients")) ? JSON.parse(localStorage.getItem("records_booking_clients")) : []
+    //       let object_booking_records = {
+    //         "customer_name": name_client,
+    //         "customer_email": emailofcus,
+    //         "customer_contact": contact_client,
+    //         "customer_address": addres_client,
+    //         // "event_date": date_event_client,
+    //         "time": time_client,
+    //         "status": false,
+    //         "selected_event": value,
+    //         "se": option,
+    //         "totla_cost": totla,
+    //         "location": address,
+    //         "id": records_booking_clients.length,
+    //         "selected_artist_for_booking": name /*store the object of form filled by user with selected artist name*/
+    //       }
+    //       records_booking_clients.push(object_booking_records);
+    //       // console.log(records_booking_clients)
+    //       localStorage.setItem("records_booking_clients", JSON.stringify(records_booking_clients));
+    //       // Add booking info to artist's data
+    //       let artist = dataofartist.find((obj) => obj.name === name);
+    //       artist.booking_records = records_booking_clients.filter(element => element.selected_artist_for_booking === artist.name);
        
-          let customer = data_of_cus.find((obj) => obj.user_email === emailofcus);
-          customer.booking_record = records_booking_clients.filter(element => element.customer_email === emailofcus);
-          localStorage.setItem("card_data", JSON.stringify(dataofartist));
-          localStorage.setItem("data", JSON.stringify(data_of_cus));
+    //       let customer = data_of_cus.find((obj) => obj.user_email === emailofcus);
+    //       customer.booking_record = records_booking_clients.filter(element => element.customer_email === emailofcus);
+    //       localStorage.setItem("card_data", JSON.stringify(dataofartist));
+    //       localStorage.setItem("data", JSON.stringify(data_of_cus));
 
-          const successMessage = `Booking successful! Have a great day with ${object_booking_records.selected_artist_for_booking}`;
-          const popupContainer = document.getElementById('popup-container');
-          const popupMessage = document.getElementById('popup-message');
-          popupMessage.textContent = successMessage;
-          popupContainer.style.display = 'block';
+    //       const successMessage = `Booking successful! Have a great day with ${object_booking_records.selected_artist_for_booking}`;
+    //       const popupContainer = document.getElementById('popup-container');
+    //       const popupMessage = document.getElementById('popup-message');
+    //       popupMessage.textContent = successMessage;
+    //       popupContainer.style.display = 'block';
 
 
-        }
-        else {
-          alert("Fill the required data")
+    //     }
+    //     else {
+    //       alert("Fill the required data")
 
-        }
-      }
-    })
+    //     }
+    //   }
+    // })
 
 
 
 
 
 
+    
 
+let saving_data = JSON.parse(localStorage.getItem("saving_detail"));
 
+if (saving_data) {
+  let current_user = localStorage.getItem("profile");
+  saving_data.forEach(element => {
+    if (element.user == current_user&&element.name==name) {
+      showing_list(element);
+    
+    }
+  });
+}
 
+function showing_list(e) {
+  let showing_booking_list = document.querySelector(".listing");
+  showing_booking_list.innerHTML += `<div class="list_1">
+    <div class="pic_book_list">
+      <img src="${e.item_img}" class="selected_list_img">
+    </div>
+    <div class="details_cost">
+      <h3>${e.item_name}</h3>
+      <p>cost+${e.item_cost}</p>
+      <h6>${e.item_id}</h6>
+    </div>
+  </div>`;
+}
 
+let current_user = localStorage.getItem("profile");
+let user_savings = saving_data.filter(item => item.user === current_user);
 
+let total_booking_div = document.querySelector(".totalbooking");
+total_booking_div.innerHTML = "";
 
+let selected_values = [...new Set(user_savings.map(item => item.selected_value))];
+let total_booking_cost = 0;
 
+selected_values.forEach((selected_value, index) => {
+  let customer_div = document.createElement("div");
+  customer_div.className = `customer_${index + 1}`;
 
+  let customer_title = document.createElement("h3");
+  customer_title.textContent = `Customer ${index + 1}`;
+  customer_div.appendChild(customer_title);
 
+  let names_total_cost_div = document.createElement("div");
+  names_total_cost_div.className = "names_total_cost";
 
+  let total_cost = 0;
 
+  user_savings.forEach(item => {
+    if (item.selected_value === selected_value) {
+      let item_div = document.createElement("div");
+      item_div.className = "one";
 
+      let item_name = document.createElement("p");
+      item_name.textContent = item.item_name;
+      item_div.appendChild(item_name);
 
+      let item_cost = document.createElement("p");
+      item_cost.textContent = `Cost: ₹ ${item.item_cost}`;
+      item_div.appendChild(item_cost);
 
+      names_total_cost_div.appendChild(item_div);
 
+      total_cost += parseInt(item.item_cost);
+    }
+  });
 
+  customer_div.appendChild(names_total_cost_div);
 
+  let total_cost_title = document.createElement("h3");
+  total_cost_title.className = "single_cust_total_cost";
+  total_cost_title.textContent = `TOTAL COST: ₹ ${total_cost}`;
+  customer_div.appendChild(total_cost_title);
 
+  total_booking_div.appendChild(customer_div);
 
+  total_booking_cost += total_cost; // increment the booking total cost with each customer's total cost
+});
 
+let booking_total_cost = document.createElement("h3");
+booking_total_cost.className = "booking_total_cost";
+booking_total_cost.textContent = `Booking Total Cost: ₹ ${total_booking_cost}`;
+total_booking_div.appendChild(booking_total_cost);
 
+console.log(total_booking_cost)
 
 
 
 
+// let total_cost_in_form=document.getElementById("total-amount")
 
 
+// total_cost_in_form.innerText=total_booking_cost
 
 
 
@@ -780,156 +741,67 @@
 
 
 
+const bookNowButton = document.querySelector(".proceed");
 
+bookNowButton.addEventListener("click", function() {
+  // Get the active user from localStorage
+  const activeuser = localStorage.getItem("profile");
 
+  const bookingList = document.querySelectorAll(".list_1");
+  const bookingDetails = Array.from(bookingList).map((listItem, index) => {
+    const itemImg = listItem.querySelector(".selected_list_img").getAttribute("src");
+    const itemName = listItem.querySelector(".details_cost h3").textContent;
+    const itemCost = listItem.querySelector(".details_cost p").textContent.replace("cost+", "");
+    const itemId = listItem.querySelector(".details_cost h6").textContent
 
 
+    const itemCustomerNumber = selected_values[index];
+    
+    return {img: itemImg, name: itemName, cost: itemCost, customerNumber: itemCustomerNumber,itemId:itemId};
+  });
 
+  const bookingTotalCost = document.querySelector(".booking_total_cost").textContent.replace("Booking Total Cost: ₹ ", "");
 
+  // Generate a unique booking ID
+  const bookingId = Date.now();
 
+  const newBooking = {
+    bookingId: bookingId,
+    bookingDetails: bookingDetails,
+    bookingTotalCost: bookingTotalCost,
+    activeuser: activeuser // Include the active user in the new booking object
+  };
 
+  let bookingData = JSON.parse(localStorage.getItem("bookingDatas")) || [];
 
+  const existingBookingIndex = bookingData.findIndex(booking => booking.bookingId === newBooking.bookingId);
+  if (existingBookingIndex === -1) {
+    bookingData.push(newBooking);
+  } else {
+    // If an existing booking with the same ID is found, update the booking details and total cost
+    bookingData[existingBookingIndex].bookingDetails = newBooking.bookingDetails;
+    bookingData[existingBookingIndex].bookingTotalCost = newBooking.bookingTotalCost;
+  }
 
+// Get the active user from localStorage
+const current_user = localStorage.getItem("profile");
 
+// Filter the saving_data array to remove items that were added to the booking by the current user
+const filtered_saving_data = saving_data.filter(item => !(item.user === current_user && item.name === name));
 
+// Save the updated saving_data array back to localStorage
+localStorage.setItem("saving_detail", JSON.stringify(filtered_saving_data));
 
 
 
+ 
 
 
+  // Redirect to the next page
+  window.location.href = "./finalbooking.html?bookingid=" + bookingId + "&param2=" + name;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  localStorage.setItem("bookingDatas", JSON.stringify(bookingData));
+});
 
 
 
@@ -1177,6 +1049,25 @@
   
 // `
 //     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   </script>

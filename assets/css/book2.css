@@ -734,7 +734,7 @@ padding-top: 70px;
 } */
 
 .cart_items{
-  height:3000px;
+  height:auto;
   width:100%;
   /* border:2px solid black; */
   display:flex;
@@ -743,7 +743,7 @@ padding-top: 70px;
 }
 
 .types_head{
-  height:550px;
+  height:auto;
   width: 90%;
   /* border:2px solid black; */
   display: flex;
@@ -752,16 +752,17 @@ padding-top: 70px;
 }
 
 .hairstyle,.makeup_types,.saree_drapping,.mehandi{
-  height:700px;
+  height:auto;
   width: 100%;
   /* border:2px solid black; */
-
+  display: flex;
+  justify-content: space-around;
 
 
 
 }
 .types{
-  height:90%;
+  height:470px;
   width:23%;
   /* border:2px solid black; */
  margin-top: 50px;
