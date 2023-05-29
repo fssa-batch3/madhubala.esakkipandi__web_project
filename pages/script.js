@@ -3,47 +3,174 @@ const currentDate = document.querySelector(".current-date");
 const prevIcon = document.querySelector("#prev");
 const nextIcon = document.querySelector("#next");
 
-let date = new Date();
-let currYear = date.getFullYear();
-let currMonth = date.getMonth();
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+let currYear = new Date().getFullYear();
+let currMonth = new Date().getMonth();
+const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 function renderCalendar() {
+  const date = new Date();
   const firstDayOfMonth = new Date(currYear, currMonth, 1).getDay();
   const lastDateOfMonth = new Date(currYear, currMonth + 1, 0).getDate();
   const lastDayOfMonth = new Date(currYear, currMonth, lastDateOfMonth).getDay();
   const lastDateOfLastMonth = new Date(currYear, currMonth, 0).getDate();
-  let liTag = "";
+  const liTag = [];
 
   for (let i = firstDayOfMonth; i > 0; i--) {
-    liTag += `<li class="inactive">${lastDateOfLastMonth - i + 1}</li>`;
+    liTag.push(`<li class="inactive">${lastDateOfLastMonth - i + 1}</li>`);
   }
 
-  let selectedArtist=localStorage.getItem("artist_profile")
   for (let i = 1; i <= lastDateOfMonth; i++) {
-    const isToday = i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear();
-    const isBooked = isDateBookedForArtist(i, currMonth, currYear, selectedArtist);
-    liTag += `<li class="${isToday ? "active" : ""} ${isBooked ? "booked" : ""}" ${isBooked ? "style='background-color: #ccc;'" : ""}>${i}</li>`;
+    const isToday =
+      i === date.getDate() &&
+      currMonth === date.getMonth() &&
+      currYear === date.getFullYear();
+    const isBooked = isDateBookedForArtist(i, currMonth, currYear, localStorage.getItem("artist_profile"));
+    const isSelected = isDateSelected(i, currMonth, currYear, localStorage.getItem("artist_profile"));
+
+    liTag.push(
+      `<li class="${isToday ? "active" : ""} ${isBooked ? "booked" : ""} ${isSelected ? "selected" : ""}" ${
+        isBooked ? 'style="background-color: #ccc;"' : ""
+      }>${i}</li>`
+    );
   }
 
   for (let i = lastDayOfMonth; i < 6; i++) {
-    liTag += `<li class="inactive">${i - lastDayOfMonth + 1}</li>`;
+    liTag.push(`<li class="inactive">${i - lastDayOfMonth + 1}</li>`);
   }
 
-  currentDate.innerText = `${months[currMonth]} ${currYear}`;
-  daysTag.innerHTML = liTag;
-}
+  daysTag.innerHTML = liTag.join("");
 
+  const formattedDate = `${months[currMonth]} ${currYear}`;
+  currentDate.textContent = formattedDate;
+
+  const dateCells = document.querySelectorAll(".days li");
+  dateCells.forEach((cell) => {
+    const day = parseInt(cell.innerText);
+    const isBooked = cell.classList.contains("booked");
+    const isSelected = cell.classList.contains("selected");
+
+    if (isSelected) {
+      cell.style.backgroundColor = "violet";
+    }
+
+    cell.addEventListener("click", () => {
+      if (!cell.classList.contains("inactive") && cell.innerText !== "") {
+        const popup = document.querySelector(".popup");
+        if (popup) {
+          popup.style.display = "block";
+        
+
+    
+
+
+          const popupForm = popup.querySelector(".popup-form");
+          popupForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const eventNameInput = popup.querySelector("#popup-event-name");
+            const timeInput = popup.querySelector("#popup-time");
+
+            const eventName = eventNameInput.value;
+            const time = timeInput.value;
+
+            const newEvent = {
+              day,
+              month: currMonth+1,
+              year: currYear,
+              eventName,
+              time,
+            };
+
+            let cardData = JSON.parse(localStorage.getItem("card_data")) || [];
+
+            const selectedArtist = localStorage.getItem("artist_profile");
+
+            let res = cardData.find((e) => e.user_email === selectedArtist);
+            if (res) {
+              res.events = res.events || [];
+              res.events.push(newEvent);
+              localStorage.setItem("card_data", JSON.stringify(cardData));
+            }
+
+            popup.style.display = "none";
+            cell.classList.add("selected");
+            cell.style.backgroundColor = "violet";
+
+            if (res) {
+              let selectedDates = res.selected_dates;
+              let existingDate = selectedDates.find(
+                (dateObj) =>
+                  dateObj.day === day &&
+                  dateObj.month === currMonth+1 &&
+                  dateObj.year === currYear
+              );
+              if (!existingDate) {
+                let newDateObj = {
+                  day,
+                  month: currMonth+1,
+                  year: currYear,
+                  artist: selectedArtist,
+                };
+                selectedDates.push(newDateObj);
+                res.selected_dates = selectedDates;
+                localStorage.setItem("card_data", JSON.stringify(cardData));
+              }
+            }
+            renderCalendar();
+          });
+        }
+        cell.style.backgroundColor = "#d70f64";
+        cell.style.color="white"
+      }
+    });
+  });
+}
 
 function isDateBookedForArtist(day, month, year, artistName) {
   const records = JSON.parse(localStorage.getItem("records_booking_clients"));
   if (!records) {
     return false;
   }
-  const filteredRecords = records.filter(record => {
+  const filteredRecords = records.filter((record) => {
     const recordDate = new Date(record.event_date);
-    return recordDate.getDate() === day && recordDate.getMonth() === month && recordDate.getFullYear() === year && record.selected_artist_for_booking === artistName;
+    return (
+      recordDate.getDate() === day &&
+      recordDate.getMonth() === month+1 &&
+      recordDate.getFullYear() === year &&
+      record.selected_artist_for_booking === artistName
+    );
   });
   return filteredRecords.length > 0;
+}
+
+function isDateSelected(day, month, year, artistName) {
+  const cardData = JSON.parse(localStorage.getItem("card_data")) || [];
+  const artistData = cardData.find((data) => data.user_email === artistName);
+  if (!artistData || !artistData.selected_dates) {
+    return false;
+  }
+  const selectedDates = artistData.selected_dates;
+  const selectedDate = selectedDates.find((dateObj) => {
+    return (
+      dateObj.day === day &&
+      dateObj.month === month+1 &&
+      dateObj.year === year
+    );
+  });
+  return selectedDate !== undefined;
 }
 
 renderCalendar();
@@ -51,11 +178,8 @@ renderCalendar();
 prevIcon.addEventListener("click", () => {
   currMonth--;
   if (currMonth < 0) {
-    date = new Date(currYear, 0, new Date().getDate());
-    currYear = date.getFullYear();
-    currMonth = date.getMonth();
-  } else {
-    date = new Date();
+    currYear--;
+    currMonth = 11;
   }
   renderCalendar();
 });
@@ -63,33 +187,8 @@ prevIcon.addEventListener("click", () => {
 nextIcon.addEventListener("click", () => {
   currMonth++;
   if (currMonth > 11) {
-    date = new Date(currYear, 11, new Date().getDate());
-    currYear = date.getFullYear();
-    currMonth = date.getMonth();
-  } else {
-    date = new Date();
+    currYear++;
+    currMonth = 0;
   }
   renderCalendar();
 });
-
-
-// const notifier = require('node-notifier');
-
-// // get the current date and time
-// const now = new Date();
-
-// // set the appointment date and time (replace with the actual appointment date and time)
-// const appointmentDate = new Date('2023-05-05T14:00:00');
-
-// // calculate the time difference between now and the appointment date in milliseconds
-// const timeDiff = appointmentDate.getTime() - now.getTime();
-
-// // set a timeout to show a reminder message to the user when it's time for the appointment
-// setTimeout(function() {
-//   notifier.notify({
-//     title: 'Appointment Reminder',
-//     message: 'Your appointment is in 1 hour!',
-//     sound: true, // play a notification sound
-//     wait: true, // wait for the user to dismiss the notification
-//   });
-// }, timeDiff - (60 * 60 * 1000)); // subtract 1 hour from the time difference to show the message 1 hour before the appointment

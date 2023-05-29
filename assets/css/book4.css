@@ -1,137 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-*{
-    margin: 0px;
-    width:0px;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
 }
-body{
+body {
   background:white;
-
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
+
+
 .content{
-  height: 810px;
-  width:800px;
-  border: 1px grey solid;
-  margin-left: 350px;    
-  margin-top: 35px;
-  text-align: center;
-  background-color:  #F2F4F1;
-}
-.content h1{
-  width:800px;
-  
-}
-.inner-cont{
- height: 650px;
- width:800px;
-}
-.card{
-  height:60px;
-  width:60px;
-margin-top: 15px;
-margin-left: 20px;
-}
-.card2{
-  height:80px;
-  width:80px;
-}
-
-.div1{
-  height:100px;
-  width:800px;
- 
-  display: flex;
-  border: 1px grey solid;
-}
-.left{
-  width:20%;
- height: 100px;
-}
-.right{
-  width:80%;
-  height: 100px;
-}
-.align{
+  height:870px;
   width:100%;
-  height: 50px;
-  text-align: start;
-}
-.div2{
-  height: 250px;
-  width:800px;
-  border: 1px grey solid;
-}
-.top{
-height:80px;
-width:800px;
-display: flex;
-}
-.right1{
-  height: 35px;
-  width:80%;
-}
-.align1{
-  width:80%;
-  height: 30px;
-  text-align: start;
-}
-.bottom{
+  /* border:2px solid black; */
   display: flex;
-  width:100%;
-  height: 120px;
   justify-content: space-around;
 }
-.div3{
+.payment_method{
+  width:50%;
+  margin-top: 50px;
+  padding: 30px 30px 30px 30px;
+   height:83%;
+
+}
+.booking_list{
+  border-radius: 20px;
+ background-color: #f4f4f4;
+  width:30%;
+  /* border:2px solid black; */
+height:83%;
+overflow-y: scroll;
+   margin-top: 50px;
+   padding: 30px 30px 30px 30px;
+}
+.options{
+  display:flex;
+  width:50%;
+  margin-left: 20px;
+  justify-content: space-between;
+  height:80px;
+  /* border:2px solid black; */
+  margin-top: 50px;
+
+ 
+}
+.images{
   height:100px;
-  width:800px;
-  border: 1px grey solid;
+  width:38%;
+  justify-content: space-between;
   display: flex;
+ margin-left: 20px;
 }
-.bot{
-  width:120px;
-  height: 90px;
-  border: 1px grey solid;
-  margin-top: 15px;
-  border-radius: 10px;
-}
-.bot2{
+.Image_payement{
   height:50px;
+  width: 80px;
+}
+.cvv{
   display: flex;
-  width:100%;
+  width:90%;
+  height: 120px;
+  /* border:2px solid black; */
+  margin-top: 50px;
+  margin-left: 20px;
 }
-.pay{
-  margin-left: 50px;
-  margin-top: 5px;
+.expiry,.cvv_number{
+  width: 50%;
+  /* border:2px solid black; */
+
 }
-.pay1{
-  margin-left: 220px;
-  margin-top: 5px;
+.cvv label{
+  color:rgb(113, 110, 110);
+
+
 }
-.pay2{
-  margin-left:210px; 
-  margin-top: 5px;
+input{
+  border-width: 0px 0px 1.1px 0px;
+  width:190px;
+  margin-top: 20px;
+  height:40px;
+ 
 }
-.pay3{
-  margin-left: 200px;
-  margin-top: 5px;
-}
-.next{
-height: 50px;
-width:300px;
-margin-top: 50px;
-margin-left: 630px;
-}
-button{
-  height: 40px;
+.pay_btn{
+  height:40px;
   width:130px;
-  border-color: #d9235c;
- border-radius: 5px;
- color:#d9235c;
- font-weight: bolder;
- margin-top: -10px;
-}
-button:hover{
-  background-color: #d9235c;
+  margin-top: 50px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color:#D70F64;
   color:white;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+.heading_options{
   font-weight: bolder;
+  margin-bottom: 50px;
+  margin-left: 20px;
+}
+.credit_card{
+  margin-left: 20px;
+}
+.savinglist h1{
+
+  text-align: center;
+  color:#D70F64;
+
+}
+.customer_Customer{
+  color:#D70F64;
+
+   margin-top: 20px;
+}
+.one p{
+  color:#15030a;
+  margin-top: 20px;
+}
+.single_cust_total_cost
+{
+  color:#D70F64;
+  margin-top: 20px;
+}
+.horizontal_line{
+  margin-top: 20px;
+}
+.over_all_total_amount{
+  margin-top: 20px;
 }

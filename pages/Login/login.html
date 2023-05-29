@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../../assets/css/login.css">
     <title>Document</title>
 </head>
@@ -59,7 +59,8 @@
                         <label class="Show_Password_Text">Show Password</label> -->
                         <div class="foot">
                             <div class="checkbox-remember">
-                                <input type="checkbox" required><label for="check">Remember me</label>
+                                <input type="checkbox" required>
+<label for="check">Remember me</label>
                             </div>
 
                             <a href="#">Forget password?</a>
@@ -70,10 +71,11 @@
                             <!-- <submit  id="button_user"type="button">User</submit>
                             <submit  id="button_artist"type="button">Artist</submit> -->
                              
-                        <submit  id="button_user" type="button"  onclick="login()">User-Login</submit>
-                        <submit  id="button_artist" type="button" onclick="artistlogin()">Artist-Login</submit>
+                        <submit id="button_user" type="button" onclick="login()">Login</submit>
+                        <!-- <submit id="button_artist" type="button" onclick="artistlogin()">Artist-Login</submit> -->
 </div>
-                        <br><br>
+                        <br>
+<br>
 
                         <p class="sing">OR SIGN-UN WITH</p>
 
@@ -82,7 +84,9 @@
                             <i id="insta" class="fa-brands fa-facebook"></i>
                             <i id="insta" class="fa-brands fa-square-twitter"></i>
                         </div>
-                        <p class="do">Don't have an account?<a href="../signup/signup.html">sign-up</a></p>
+                        <p class="do">
+Don't have an account?<a href="../signup/signup.html"  class="sign_up">sign-up</a>
+</p>
                     </form>
 
                 </div>
@@ -146,10 +150,6 @@
             
         }
 
-
-
-
-
         // --------------------------------------------------------------------artist login 
        
         function artistlogin(e) {
@@ -178,6 +178,7 @@ artist_data.find(  // parameterized function 'a'
 if (result == 1) {
     alert("logged in")
 
+    
     localStorage.setItem("artist_profile",artist_email)
     window.location.href = "../profileartist.html"
     
@@ -198,9 +199,6 @@ if (showPassword.type === "pass") {
 }
 
 }
-
-
-
         
     </script>
 </body>

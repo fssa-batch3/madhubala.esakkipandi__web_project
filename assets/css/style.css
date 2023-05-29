@@ -10,28 +10,74 @@ body {
   font-size: 16px;
 }
 .title {
-  background-image: linear-gradient(rgba(11, 11, 11, 0.7), rgba(250, 50, 163, 0.7)), url("../images/1191102.jpg");
-  
+  background-image:url("../images/home\ page\ cover.webp");
   height: 900px;
   width: 100%;
-  background-size: cover;
-  background-position: center;
+  background-size:cover;
+  background-position:calc(-220px);
+background-repeat: no-repeat;
   
 }
-.title-information {
-  position: absolute;
-  bottom: 180px;
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
 
-  /* Black background with 0.5 opacity */
-   left:340px;
+.title_info{
+font-family:wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+height: 470px;
+width:580px;
+/* border:2px solid black; */
+position: relative;
+top:270px;
+left:130px;
+
+
+}
+.moto{
+ font-family: avenir-lt-w01_35-light1475496,sans-serif;
+ line-height: 1.5em;
+ font-size: 12px;
+ margin-top: 10px;
+ color:#F2F4F1;
+ letter-spacing: 0.1rem;
+}
+
+.title_info h1{
+  letter-spacing: 0.2rem;
+  font-size: 70px;
+  line-height: 1em;
+  color:#bd938c;
+}
+.second_h1 {
+  padding-top: 20px;
+}
+.number{
+  height: 180px;
+  width:100%;
+
+  margin-top: 50px;
+  display: flex;
+}
+.italic_num{
+  font-size: 50px;
+  font-family: wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+  font-style: italic;
   color:white;
-  width: 50%;
-  padding: 20px;
-  height: 300px;
   text-align: center;
+}
 
+.one_number,.two_number,.three_number{
+  width:32%;
+  height: 100%;
+  /* border: 2px solid black; */
+  
+}
+.number_description{
+  text-align: center;
+  font-family:wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+letter-spacing: 0.15em;
+font-size: 27px;
+line-height: 1em;
+letter-spacing: 0.15em;
+text-align: center;
+color:white;
 }
 /* .leftimg{
   position: absolute;
@@ -51,6 +97,7 @@ body {
   color: #D70F64;
   background-color: white;
   font-weight: bolder;
+  border:none
 }
 .title-information button:hover {
   color: white;
@@ -846,4 +893,10 @@ textarea{
 .footer-content:nth-child(3) a {
   text-decoration: none;
   color: white;
+}
+.back_link{
+  text-decoration: none;
+  color:#D70F64;
+  text-transform: uppercase;
+  text-align: center;
 }

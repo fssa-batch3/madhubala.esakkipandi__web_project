@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!-- 
 <!DOCTYPE html>
 
@@ -37,37 +38,35 @@
   </body>
 </html> -->
 <script>
+const wishlist_data=document.getElementById("wishlist");
 
-let wishlist_data=document.getElementById("wishlist");
-
-    let wish_data = JSON.parse(localStorage.getItem("wishlist_dta")) || [];
+    const wish_data = JSON.parse(localStorage.getItem("wishlist_dta")) || [];
     wishlist_data.addEventListener('click',()=>{
       
-let productImage = result["image"]["source"];
-let productPrice = result["Price"];
-let object_name = artist_obj["user_name"];
+const productImage = result.image.source;
+const productPrice = result.Price;
+const object_name = artist_obj.user_name;
       
       let product
-     let users= JSON.parse(localStorage.getItem("data"))
-      let active_user = localStorage.getItem("profile");
+     const users= JSON.parse(localStorage.getItem("data"))
+      const active_user = localStorage.getItem("profile");
 
       let ac_user;
 
-
      users.forEach(e=>{
-        if(active_user==e["user_email"]){
+        if(active_user==e.user_email){
           ac_user=e
         }
       }) 
-      let wish_data=ac_user["cart"] ||[]
+      const wish_data=ac_user.cart ||[]
       wish_data.forEach(e => {
-        if(user_name==e["user_name"]){
+        if(user_name==e.user_name){
      
           product=e
         }})
         wish_data.forEach((e,index)=>{
 
-            if(id_wishlist==e["id_wishlist"]){
+            if(id_wishlist==e.id_wishlist){
 
               wish_data[index]=product
 
@@ -87,9 +86,9 @@ let object_name = artist_obj["user_name"];
   };
   wish_data.push(data_of_cart)
     
-        ac_user["cart"]=wish_data
+        ac_user.cart=wish_data
         users.forEach(e=>{
-        if(active_user==e["email"]){
+        if(active_user==e.email){
           e=ac_user
         }
       })

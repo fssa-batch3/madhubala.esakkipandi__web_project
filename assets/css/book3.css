@@ -457,7 +457,8 @@ margin-left: 5px;
   background-color: white;
   /* border: 2px solid black; */
  margin-top: 50px;
-height: 1500px;
+height: auto;
+padding-bottom: 150px;
 justify-content: space-around;
 display: flex;
 }
@@ -477,7 +478,7 @@ display: flex;
   
 }
 .savinglist{
-  height:90%;
+  height:auto;
   width:42%;
   /* border:2px solid black; */
   margin-top: 3%;
@@ -490,7 +491,7 @@ display: flex;
 
 }
 .listing{
-  height: 80%;
+  height: 100%;
   width:100%;
   /* border:2px solid black; */
 
@@ -542,13 +543,13 @@ flex-direction: column;
 
 }
 .totalbooking{
-  height:90%;
+  height:auto;
  width:90%;
  margin-left: 15%;
  /* border:2px solid black; */
  margin-top: 50px;
    box-shadow: 0 0 3px rgba(0,0,0,.161);
-
+padding-bottom: 100px;
  overflow-y: scroll;
 }
 .customer_1,.customer_2,.customer_3,.customer_4,.customer_5,.customer_6{
@@ -580,6 +581,16 @@ flex-direction: column;
 }
 .single_cust_total_cost{
   text-align: center;
-  margin-top: 7px;
+  margin-top: 40px;
   color:#D70F64
+}
+.id{
+  display: none;
+}
+.booking_total_cost{
+
+margin-top: 20px;
+text-align: center;
+
+
 }

@@ -111,12 +111,12 @@ body {
 }
 
 .content-2-profile {
-  height: 360px;
+  height: 400px;
   width: 48%;
   /* border: 2px solid black; */
   padding: 15px;
-  box-shadow: rgba(13, 9, 11, 0.2) 0px 7px 29px 0px;
-  background-color: white;
+  /* box-shadow: rgba(13, 9, 11, 0.2) 0px 7px 29px 0px; */
+  /* background-color: ; */
   margin-top: 30px;
 }
 
@@ -137,12 +137,13 @@ body {
 }
 .line {
   display: flex;
-  height: 50px;
+  height:35px;
   width: 80%;
   justify-content: space-between;
   margin-top: 20px;
   background-color: white;
   border-radius: 5px;
+  padding: 10px;
 }
 
 h1 {
@@ -225,9 +226,11 @@ hr {
 .photo {
   height: auto;
   /* border:2px solid black; */
-  width: 80%;
-  margin-left: 150px;
+  width: 85%;
+  margin-left: 80px;
   background-color: white;
+  padding: 30px 30px 30px 30px;
+
 }
 
 .heading {
@@ -253,13 +256,19 @@ a {
 } */
 .pic-content {
   width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  justify-content: space-around;
+ padding-bottom: 100px;
+ 
+ 
+height: calc(100% - var(--gallery-bottom-padding));
   margin-top: 50px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-gap: var(--spacing); */
+}
+.pic-content p{
+
+  text-align: center;
+
 }
 .box {
   height: 1000px;
@@ -294,13 +303,20 @@ a {
 }
 
 .center h2 {
-  margin-top: 15px;
+  margin-top: 10px;
+  font: var(--font_8);
+    color: rgb(var(--color_15));
+    font-size: 20px;
+    font-family: avenir-lt-w01_35-light1475496,sans-serif;
 }
 
+
+
 .pic-one {
-  width: 27%;
-  height: 340px;
-  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+  margin-top: 40px;
+  margin-left: 25px;
   transition: 1s;
   box-shadow: rgb(255 255 255 / 10%) 0px 1px 1px 0px inset,
     rgb(50 50 93 / 25%) 0px 50px 100px -20px,
@@ -426,9 +442,10 @@ a {
 }
 
 .center {
-  height: 180px;
+  height: 110px;
   width: 80%;
   margin-left: 160px;
+  margin-top: 90px;
 }
 
 .starting-price a {
@@ -704,8 +721,8 @@ button:hover {
 .buttontopbtn{
   height: 40px;
   width:160px;
-  margin-top:20px
-  
+  margin-top:20px;
+  margin-left: 200px;
 }
 .totalbtn{
   height: 45px;
@@ -760,6 +777,10 @@ padding-top: 70px;
 
 
 
+}
+.cart_head{
+  text-align: center;
+  margin-top: 100px;
 }
 .types{
   height:470px;
@@ -866,6 +887,35 @@ h5{
 
 }
 .save{
-  margin-left: 650px;
+  margin-left: 700px;
   margin-top: 60px;
+}
+.works{
+  text-align: center;
+  padding-top: 50px;
+  font-family:wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+letter-spacing: 0.15em;
+font-size: 40px;
+padding-bottom: 90px;
+line-height: 1em;
+}
+.service_lisitng_none{
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.photos,.vedios{
+  text-transform: uppercase;
+  font-family: avenir-lt-w01_35-light1475496,sans-serif;
+  font-weight: lighter;
+}
+.name_of_artist
+
+{
+  font-family: avenir-lt-w01_35-light1475496,sans-serif;
+    letter-spacing: 0.13em;
+  font-size: 40px;
+padding-bottom: 30px;
+font-weight: lighter;
+color:#D70F64
 }

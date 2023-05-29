@@ -24,21 +24,40 @@
         <div class="right">
             <h1>signup</h1>
             <form id="form">
-                <br><br><br>
-                <label><input type="text" placeholder="Full Name..." id="name"  required pattern="[A-Za-z]+" title="Please enter only letters"></label><br>
-                <label><input type="email" placeholder="Email..." id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="Please enter a valid email address"></label><br>
-                <label><input type="password" placeholder="Password..." id="password"  title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></label><br>
-                <label><input type="password" placeholder=" Repeat Password..." id="repeat" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required></label>
+                <br>
+<br>
+<br>
+                <label>
+<input type="text" placeholder="Full Name..." id="name" required pattern="[A-Za-z]+" title="Please enter only letters">
+</label>
+<br>
+                <label>
+<input type="email" placeholder="Email..." id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required title="Please enter a valid email address">
+</label>
+<br>
+                <label>
+<input type="password" placeholder="Password..." id="password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+</label>
+<br>
+                <label>
+<input type="password" placeholder=" Repeat Password..." id="repeat" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+</label>
                 <br>
                 <br>
                 <div class="terms_and_conditions">
-                    <input type="checkbox" value="checkbox" id="box"><label for="box">I am agree with <strong>Termsof user</strong></label>
+                    <input type="checkbox" value="checkbox" id="box">
+<label for="box">
+I am agree with <strong>Termsof user</strong>
+</label>
                 </div>
-                <br><br>
+                <br>
+<br>
                 <div class="btn">
                     <!-- <button><a href="../../index.html">sign-up</a></button> -->
-                    <button type="submit" >sign-up</button>
-                    <p><a href="../Login/login.html">signin →</a></p>
+                    <button type="submit">sign-up</button>
+                    <p>
+<a href="../Login/login.html" class="link">signin →</a>
+</p>
                 </div>
             </form>
         </div>
@@ -56,23 +75,24 @@
             // const username = document.getElementById("username").value
             const password = document.getElementById("password").value
             const repeat = document.getElementById("repeat").value
-
-            
+            const booking_records = [];
             const user_records = JSON.parse(localStorage.getItem("data"));
             if ((name.trim() != "") && (email.trim() != "") && (password.trim() != "") && (repeat.trim() != "")) {
-                let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")):[];
+                const data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")):[];
 
-                let user_data = {
-                    "user_name": name,
-                    "user_email": email,
-                    // "name_user": username,
-                    "user_password": password,
-                    "repeat_pass": repeat
-                }
+                const user_data = {
+            "user_name": name,
+            "user_email": email,
+            // "name_user": username,
+            "user_password": password,
+            "repeat_pass": repeat,
+            "booking_records":booking_records
+
+        }
                 let success = true;
                 if (user_records != null) {
                     for (let i = 0; i < user_records.length; i++) {
-                        if (user_records[i]["user_email"]==email) {
+                        if (user_records[i].user_email==email) {
                             success = false;
                             break;
                         }
@@ -98,8 +118,6 @@
                 alert("fill this data")
             }
         });
-
-
     </script>
 </body>
 

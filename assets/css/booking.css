@@ -1,5 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -169,6 +172,9 @@ button:hover {
     font-size: 25px;
     margin-top: 20px;
     padding-top: 20px;
+    font-family:wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+    letter-spacing: 0.15em;
+    line-height: 1em;
   }
   .icon{
     height: 80px;
@@ -289,6 +295,8 @@ width:48%;
   color:#D70F64;
   font-size: 37px;
   margin-top: 110px;
+  font-family: 'Dancing Script', cursive;
+
 }
  .evnt{
   width: 100%;
@@ -447,5 +455,17 @@ width:48%;
  font-family: Raleway,sans-serif;
  margin-top: 30px;
  margin-left: 70px;
+ border-radius: 10px;
+ border: none;
+ padding: 2px 2px 2px 2px;
+ color:#D70F64;
+ font-family: 'Poppins', sans-serif;
+ font-weight: bolder;
 }
-
+.head_start_booking{
+  color:white;
+  font-size: 22px;
+  margin-left: 130px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}

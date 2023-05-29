@@ -9,7 +9,7 @@
     , initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../../assets/css/upload2.css">
     
     <title>Document</title>
@@ -17,11 +17,11 @@
 </head>
 
 <body>
-    
-
 
     <!-- header drag files section starts -->
-    <a href="../ArtistFeature.html"><i id="arrow" class="fa-solid fa-arrow-left-long"></i></a>
+    <a href="../ArtistFeature.html">
+<i id="arrow" class="fa-solid fa-arrow-left-long"></i>
+</a>
     <div class="uploading-form">
         <h1>POST YOUR WORKS</h1>
         <div class="border">
@@ -29,8 +29,9 @@
                 <h2>Drag and Drop files</h2>
 
                 <p class="or">or</p>
-                <p> <a href="#">Browse files</a></p>
-                
+                <p>
+ <a href="#">Browse files</a>
+</p>
               
                 <i id="drag" class="fa-solid fa-cloud-arrow-up"></i> 
             </div>
@@ -40,18 +41,20 @@
                     INCLUDE SOME DETAILS
                 </h3>
 
-
                 <!-- --------------- -->
                 <form id="upload_form">
                 <label for="text" id="tit"> Add a title</label>
-                <br><br>
+                <br>
+<br>
 
                 <input id="title" type="text" placeholder="Add a caption">
                 
                 <br>
-                <br><br>
+                <br>
+<br>
                 <label for="text" id="tit"> Add a caption</label>
-                <br><br>
+                <br>
+<br>
                 <input id="textarea" type="textarea" placeholder="Add a description">
             </div>
             <!-- description content ends -->
@@ -61,7 +64,8 @@
                     CONFIRM YOUR LOCATION
                 </h3>
                 <label for="state">state</label>
-                <br><br>
+                <br>
+<br>
                 <select>
                     <option id="state" required>Tamilnadu</option>
                     <option id="state" required>karnataka</option>
@@ -104,15 +108,11 @@
             <button type="submit">Upload</button>
         </form>
 
-
                 <!-- --------------- -->
         </div>
     </div>
     <script>
-
-
-
-let dataofartist=JSON.parse(localStorage.getItem("card_data")) 
+const dataofartist=JSON.parse(localStorage.getItem("card_data")) 
 document.getElementById("upload_form").addEventListener('submit', e => {
  
 e.preventDefault();
@@ -126,39 +126,27 @@ e.preventDefault();
 
     const active_user=localStorage.getItem("artist_profile")
 
-    let upload_details= JSON.parse(localStorage.getItem("upload_details")) ? JSON.parse(localStorage.getItem("upload_details")) : [];
-    let upload_detail = {}
+    const upload_details= JSON.parse(localStorage.getItem("upload_details")) ? JSON.parse(localStorage.getItem("upload_details")) : [];
+    const upload_detail = {}
 
-    upload_detail["title"]= title;
-    upload_detail ["textarea"]= textarea;
-    upload_detail["uploadname"]=user_upload_name;
-    upload_detail["imgurl"]=img_url;
+    upload_detail.title= title;
+    upload_detail .textarea= textarea;
+    upload_detail.uploadname=user_upload_name;
+    upload_detail.imgurl=img_url;
     // upload_detail["mobilenumber"]= tel,
-    upload_detail["uploader_emial"]=active_user
-    upload_detail["id"]=length
+    upload_detail.uploader_emial=active_user
+    upload_detail.id=length
     upload_details.push(upload_detail);
             localStorage.setItem("upload_details", JSON.stringify(upload_details));
-       
 
-
-            let user = dataofartist.find(obj => obj.user_email === active_user);
-
+            const user = dataofartist.find(obj => obj.user_email === active_user);
             
   user.upload = upload_details.filter(element => element.uploader_emial === active_user);
   localStorage.setItem("card_data", JSON.stringify(dataofartist));
 
 })
-
-
-
-
-
     </script>
 
-
-
-
 </body>
-
 
 </html>

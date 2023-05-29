@@ -62,17 +62,34 @@ label input {
     justify-content: space-around;
     margin-left: 13px;
 }
-button {
+
+button{
+    width: 120px;
     height: 40px;
-    width: 170px;
-    padding: 5px;
-    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  margin-top: 0px;
+    color:white;
+    background-color:#D70F64;
     border: none;
-    background-image: radial-gradient(farthest-corner at 30px 40px,
-    #D70F64 40%,
-            black 60%);
-    font-size: 20px;
-}
+    border-radius: 45px;
+   /* padding: 15px; */
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    font-weight: bolder;
+
+    outline: none;
+    }
+  
+  button:hover {
+  background-color: #ce3767;
+    color:white;
+    transform: translateY(-7px);
+    box-shadow: 0px 1px 0px 2px white;
+
+  }
 button a {
     color: white;
 }
@@ -97,3 +114,6 @@ form{
     outline: none;
     border-radius: 5px;
 } */
+.link{
+    color:black;
+}

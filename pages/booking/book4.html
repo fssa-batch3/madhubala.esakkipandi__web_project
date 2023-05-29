@@ -1,104 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
   <link rel="stylesheet" href="../../assets/css/book4.css">
+  <title>Document</title>
 </head>
-
 <body>
-  <!-- main content starts -->
-  <div class="content">
-    <h1>PAYMENT METHOD</h1>
-    <div class="inner-cont">
-      <div class="div1">
-        <div class="left">
-          <img class="card" src="../../assets/images/icons8-magnetic-card-64.png" alt="card">
-        </div>
-        <div class="right">
-          <p>Card</p>
-          <br>
-          <p class="align">Visa ,Mastercard,Rupay and Mastero</p>
-        </div>
-      </div>
-      <div class="div2">
-        <div class="top">
-          <div class="left">
-            <img class="card" src="../../assets/images/icons8-bhim-48.png" alt="bhim-icon">
-          </div>
-          <div class="right1">
-            <p>UPI</p>
-            <br>
-            <p class="align1">pay with installed or use other apps</p>
-          </div>
-        </div>
-        <div class="bottom">
-          <img src="../../assets/images/unnamed.png" class="bot" alt="gpay">
-          <img src="../../assets/images/phonepe.webp" class="bot" alt="phonpe">
-          <img src="../../assets/images/download  paytm.png" class="bot" alt="paytm">
-          <img src="../../assets/images/bhim.png" class="bot" alt="bhim">
-        </div>
-        <div class="bot2">
-          <p class="pay">Googlepay</p>
-          <p class="pay1">Phonepe</p>
-          <p class="pay2">Paytm</p>
-          <p class="pay3">Others</p>
-        </div>
-      </div>
-      <div class="div3">
-        <div class="left">
-          <img src="../../assets/images/icons8-credit-card-60.png" class="card2" alt="credit-card">
-        </div>
-        <div class="right">
-          <p>
-            NetBanking
-          </p>
-          <p class="align">All Indian Banks</p>
-        </div>
-      </div>
-      <div class="div3">
-        <div class="left">
-          <img src="../../assets/images/icons8-wallet-80.png" class="card2" alt="wallet-icon">
-        </div>
-        <div class="right">
-          <p>
-            Wallet
-          </p>
-          <p class="align">Wakik and more</p>
-        </div>
-      </div>
-      <div class="div3">
-        <div class="left">
-          <img src="../../assets/images/icons8-credit-card-contactless-80.png" class="card2" alt="credit-card">
-        </div>
-        <div class="right">
-          <p>
-            EMI
-          </p>
-          <p class="align">Debit/Credit cards,Early salary and more</p>
-        </div>
-      </div>
-      <div class="div3">
-        <div class="left">
-          <img src="../../assets/images/icons8-payment-48.png" class="card2" alt="payment">
-        </div>
-        <div class="right">
-          <p>
-            Pay later
-          </p>
-          <p class="align">e-pay later</p>
-        </div>
-      </div>
+  
+
+
+
+<div class="content">
+
+ <div class="payment_method">
+<h2>Select payment method</h2>
+
+
+<div class="options">
+
+  <p>Credit card</p>
+  <p>Paypal</p>
+  <p>Qr</p>
+  <p>others</p>
+</div>
+
+
+<p class="heading_options">Pay using credit cards</p>
+
+
+<div class="images">
+  <img src="../../assets/images/payement/visa.png" class="Image_payement">
+  <img src="../../assets/images/payement/Mastercard_logo.0.jpg" class="Image_payement">
+  <img src="../../assets/images/payement/stripe.png" class="Image_payement">
+
+</div>
+<p class="credit_card">Credit cards</p>
+<br>
+
+
+<div class="cvv">
+  <div class="expiry">
+    
+  <label>Experition date</lable>
+    <br>
+<input type="number" id="expery_num">
+</div>
+<div class="cvv_number" >
+  <label>cvv</label>
+  <br>
+  <input type="number" id="cvv_num">
+</div>
+ 
+</div>
+
+ </div>
+
+<div class="booking_list">
+
+
+
+
+
+
+
+
+
+
+<!-- 
+  <div class="savinglist">
+
+    <h1>Total booking</h1>
+    <div class="totalbooking">
+  
+  <div class="customer_1">
+     
+    <h3>Customer 1</h3>
+    <div class="names_total_cost">
+  
+  <div class="one">
+  
+    <p>Airbrush makeup </p>
+    <p>Cost: ₹ 20000</p>
+  </div>
+  <div class="one">
+  
+    <p>6 peated saree drapping </p>
+    <p>Cost: ₹ 20000</p>
+  </div>
+  <div class="one">
+  
+    <p>Portrait Mehndi </p>
+    <p>Cost: ₹ 20000</p>
+  </div>
+  <div class="one">
+  
+    <p>Hair with afro puff</p>
+    <p>Cost: ₹ 20000</p>
+  </div>
+  
+  </div>
+  <hr>
+  <h3 class="single_cust_total_cost">TOTAL COST: ₹ 800000</h3>
+  
+  </div>
+  
     </div>
+  
+  </div> -->
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+
+
+
+
+
+
+const urlParams = new URLSearchParams(window.location.search);
+const booking_id = urlParams.get("booking_id");
+const artist_name = urlParams.get("artistemail");
+const user_email = urlParams.get("user_email");
+
+
+console.log(booking_id);
+console.log(artist_name);
+console.log(user_email);
+
+
+
+let data_artist=JSON.parse(localStorage.getItem("card_data"))
+
+let data_active_user=JSON.parse(localStorage.getItem("data"))
+console.log(data_artist)
+console.log(data_active_user)
+
+
+
+let res
+data_artist.find(e=>{
+  if(e.name==artist_name){
+ return res=e;
+  }
+
+})
+
+
+
+let user
+data_active_user.find(e=>{
+  if(e.user_email==user_email){
+    return user=e
+  }
+
+
+})
+
+
+
+
+
+
+
+
+
+user.booking_records.find(e=>{
+  if(e.id==booking_id){
+
+
+
+
+    showing_addedlist(e)
+    console.log(e)
+    
+
+  }
+})
+
+
+function showing_addedlist(element) {
+  let div = document.querySelector(".booking_list");
+  div.innerHTML +=
+    `<div class="savinglist">
+      <h1>Total booking</h1>
+      <div class="totalbooking">`;
+
+  const customerData = {}; 
+  let overallTotalCost = 0; 
+
+  res.booking_records.find((element) => {
+    if (element.id == booking_id) {
+      element.details_Of_booking_Info.forEach((option) => {
+        const customerNumber = option.customerNumber;
+
+        if (!customerData.hasOwnProperty(customerNumber)) {
+          // Create a new entry for the customer if it doesn't exist
+          customerData[customerNumber] = {
+            items: [],
+            totalCost: 0
+          };
+        }
+
+        const itemData = {
+          name: option.name,
+          cost: option.cost
+        };
+
+        customerData[customerNumber].items.push(itemData);
+        customerData[customerNumber].totalCost += parseInt(option.cost.replace("cost : Rs ", ""));
+
+        overallTotalCost += parseInt(option.cost.replace("cost : Rs ", ""));
+      });
+    }
+  });
+
+  // Loop through customer data and display the booking list
+  for (const customerNumber in customerData) {
+    const customer = customerData[customerNumber];
+
+
+
+  div.innerHTML +=
+      `<div class="customer_${customerNumber}">
+        <h3>${customerNumber}</h3>
+        <div class="names_total_cost">`;
+
+
+
+    customer.items.forEach((item) => {
+      div.innerHTML +=
+        `<div class="one">
+          <p>${item.name}</p>
+          <p>Cost: ₹ ${item.cost}</p>
+        </div>`
+    });
+
+
+
+    div.innerHTML += `</div>
+      <h3 class="single_cust_total_cost">TOTAL COST: ₹ ${customer.totalCost}</h3>
+      <hr class="horizontal_line">
+    </div>`;
+  }
+
+  div.innerHTML +=
+    `<h3 class="over_all_total_amount">Total amount: ₹ ${overallTotalCost}</h3>
   </div>
-  <!-- main content ends -->
-  <!-- Submit section starts -->
-  <div class="next">
-    <a href="../../pages/booking/book5.html"><button>SUBMIT</button></a>
-  </div>
-  <!-- submit section ends -->
+</div>`;
+
+div.innerHTML+=`
+<button  class="pay_btn"onclick="payment_confirmed('${booking_id}')">Pay</button>
+
+
+
+`
+
+
+
+
+
+
+}
+function payment_confirmed(id){
+
+
+
+  res.booking_records.find(e=>{
+if(e.id==booking_id){
+
+  e.confirmation=true;
+
+  localStorage.setItem("card_data",JSON.stringify(data_artist))
+
+}
+    
+user.booking_records.find(e=>{
+  if(e.id==booking_id){
+    e.confirmation=true;
+    localStorage.setItem("data",JSON.stringify(data_active_user))
+    
+  }
+
+
+
+})
+
+
+
+
+window.location.href="../booking/book5.html"
+
+
+
+
+
+
+
+
+  })
+}
+
+
+
+
+
+// function sendemial(email_cus, mes) {
+//       Email.send({
+//         Host: "smtp.elasticemail.com",
+//         Username: "emadhubala1@gmail.com",
+//         Password: "5888FAB177209DF44C3A157057CF48050EE3",
+//         To: email_cus,
+//         From: "emadhubala1@gmail.com",
+//         Subject: "About your booking statement",
+//         Body: mes
+//       })
+//         .then(message => {
+//           alert(message);
+//           window.location.href = "../../pages/profileartist.html";
+//         });
+//     }
+
+
+
+</script>
+
+
+
+
 </body>
 </html>

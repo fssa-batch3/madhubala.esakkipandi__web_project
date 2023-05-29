@@ -180,11 +180,11 @@ margin-top: 70px;
   height: 20px;
 }
 .preferences{
-  height:1100px;
+  height:auto;
   margin-top: 100px;
   /* border:2px solid black; */
   width: 100%;
-
+padding-bottom: 50px;
 
 }
 .booking_details{
@@ -193,10 +193,11 @@ width: 40%;
 height: 85%;
 box-shadow: 0 0 8px 0 rgb(0 0 0 / 12%);
 margin-left: 140px;
+padding: 50px 50px 50px 50px;
 }
 .info{
-height:95%;
-margin-top: 2.5%;
+height:auto;
+margin-top: 2%;
 width:95%;
 /* border:2px solid black; */
 margin-left: 5%;

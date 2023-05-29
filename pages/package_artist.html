@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./package_artist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
 
 <div class="container" id="container">
-
 
     <div class="menu-bar">
         <img src="../../assets/images/Screenshot__63_-removebg-preview.png" alt="logo">
@@ -20,12 +22,15 @@
             <!-- <li class="dropdown"><a href="#">Home <i class="fas fa-caret-down"></i></a> -->
 
             <!-- </li> -->
-            <li><a href="./profileartist.html">PROFILE</a>
+            <li>
+<a href="./profileartist.html">PROFILE</a>
 
             </li>
-            <li><a href="../pages/signup/package.html">YOUR PACKAGE PLANS</a></li>
+            <li>
+<a href="../pages/signup/package.html">YOUR PACKAGE PLANS</a>
+</li>
             </li>
-            <li>UPLOAD YOUR WORKS</li>
+            <li><a href="/artist_upload.html">Upload works</a>
             <li>LOGOUT</li>
             </li>
 
@@ -42,35 +47,56 @@
                     occupying the spaces of a website, an advertising product or an editorial production whose final
                     text is not yet ready.
                 </p>
-                <button class="add_btn" id="btn_add">Add your services</button>
+                <button class="add_btn" id="btn_add">Add services</button>
+                <!-- <button class="edit" id="edit_btn">Edit service</button> -->
 
             </div>
             <div class="img">
                 <img src="../assets/images/6551297.jpg" class="images_title">
             </div>
 
-
         </div>
         <div class="steps">
 
-            <h1>Here the steps to add your services</h1>
-            <li>click the Add button</li>
-            <li>Fill the name feild</li>
-            <li>select the category</li>
-            <li>And your sample image </li>
-            <li>Finally submit the felid</li>
+            <h1 class="head_steps">Here the steps to add your services</h1>
+            <br>
+            <div class="Whole_steps">
+
+          
+            <div class="step_desing">
+                <p class="step_para">click the Add button</p>
+            </div>
+           <div class="step_desing">
+            <p class="step_para">Fill the name feild</p>
+           </div>
+         <div class="step_desing">
+            <p class="step_para">select the category</p>
+         </div>
+         <div class="step_desing">
+            <p class="step_para">And your sample image </p>
+         </div>
+         <div class="step_desing">
+            <p class="step_para">Finally submit the felid</p>
+
+         </div>
+
+        </div>
         </div>
 
     </div>
 </div>
+
 <div class="form" id="fomr_service">
 
-
     <form id="listing">
+
+
+        <i class="fa-regular fa-circle-xmark"></i>
 
         <h3 class="category">choose the category</h3>
 
         <input type="radio" placeholder="Hair style" name="category" value="Hairstyle">
+
         <label>Hair style</label>
 
         <input type="radio" class="saree" placeholder="saree drapping" name="category" value="sareedrapping">
@@ -82,15 +108,16 @@
         <label>Makeup </label>
 
         <input type="radio" class="Mehandi" placeholder="Mehandi" name="category" value="Mehandi">
+
         <label>Mehandi</label>
+
         <br>
 
         <input type="radio" name="name" value="others" name="category">
         <label>others</label>
-
   
         <label></label>
-        <input type="text" >
+        <input type="text">
         <br>
 
         <label class="name"> Name of category:</label>
@@ -103,44 +130,68 @@
         <input type="url" class="url_of_cetegory category_name" id="url_of_cetegory">
         <br>
 
+
+
+  
         <button type="submit" class="submit_btn">Submit</button>
+       
+
 
     </form>
 
+</div>
+
+
+<div class="artist_pack">
+    
+    <h1>
+
+        Here your available services
+    </h1>
+<div class="package_div" id="pack">
+
+
 
 </div>
+</div>
+<div class="edit_delete">
+
+    <h4>Edit your service image and cost</h4>
+<form id="edit_delete_form">
+
+<p class="show_name" >Nayanthara Hairstyle</p>
+
+<lable>Cost</lable>
+    <input type="number" class="cost_edit">
+    <br>
+    <br>
+    <lable>Image</lable>
+    <input type="url" class="image_edit">
+    <br>
+
+    <button type="submit" id="edit_button">Edit</button>
+    <br>
+<button type="button" id="Delete_button">Delete</button>
+
+</form>
+
+</div>
+
+
+
+
+
     <script>
-
-
-
-
-
 const addBtn = document.getElementById('btn_add');
 const formService = document.getElementById('fomr_service');
 const container = document.getElementById('container');
 
-
-addBtn.addEventListener('click', function() {
-  formService.style.display =  'block';
+addBtn.addEventListener('click', () => {
+  formService.style.display = 'block';
   container.classList.toggle('blur');
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let listingForm = document.getElementById("listing");
+const listingForm = document.getElementById("listing");
 listingForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -154,266 +205,160 @@ listingForm.addEventListener("submit", (event) => {
     }
   }
 
-  let active_user=localStorage.getItem("artist_profile")
-  const name = document.getElementById("name_of_cetegory").value
-  const cost = document.getElementById("number_for_cetegory").value
-  const image = document.getElementById("url_of_cetegory").value
+  const active_user = localStorage.getItem("artist_profile");
+  const name = document.getElementById("name_of_cetegory").value;
+  const cost = document.getElementById("number_for_cetegory").value;
+  const image = document.getElementById("url_of_cetegory").value;
 
   if (!name || !cost || !image) {
     alert("Please fill out all required fields.");
     return;
   }
 
-  let listing_items = JSON.parse(localStorage.getItem("list_of_services")) || [];
+  const dataOfArtist = JSON.parse(localStorage.getItem("card_data"));
+  const user = dataOfArtist.find((obj) => obj.user_email === active_user);
 
-  let object = {
-    "category": selectedValue,
-    "name": name,
-    "cost": cost,
-    "image": image,
-    "artist_email": localStorage.getItem("artist_profile"),
-    "category_id": listing_items.length,
+  if (!user) {
+    console.log("User not found.");
+    return;
+  }
+
+  const listing_items = user.services_provding || [];
+
+  const object = {
+    category: selectedValue,
+    name,
+    cost,
+    image,
+    artist_email: active_user,
+    category_id: listing_items.length,
   };
 
-  console.log(object.category)
   listing_items.push(object);
 
-  localStorage.setItem("list_of_services", JSON.stringify(listing_items));
+  user.services_provding = listing_items;
 
-  let dataOfArtist = JSON.parse(localStorage.getItem("card_data"));
-  let user = dataOfArtist.find((obj) => obj.user_email === localStorage.getItem("artist_profile"));
-
-  user.services_provding = listing_items.filter((element) => element.artist_email === active_user);
-
-  
   localStorage.setItem("card_data", JSON.stringify(dataOfArtist));
+  alert("service added")
+  location.reload()
 });
 
 
+        
+let close_button=document.querySelector(".fa-circle-xmark");
 
+close_button.addEventListener('click',e=>{
+    location.reload()
+})
+const data_artist = JSON.parse(localStorage.getItem("card_data"));
+const active_user = localStorage.getItem("artist_profile");
 
+const artist_object = data_artist.find((obj) => obj.user_email === active_user);
 
+artist_object.services_provding.forEach(element => {
+    listing_services(element);
+});
 
-        // let active_user = localStorage.getItem("artist_profile")
-        // let dataofartist = JSON.parse(localStorage.getItem("card_data"))
-        // console.log(active_user)
-        // // Get all the checkboxes
-        // const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+function listing_services(e) {
+  let div = document.getElementById("pack");
 
+  // Check if the e object and its properties are defined
+  if (e && e.category_id && e.image && e.name && e.cost) {
+    div.innerHTML += `
+      <div class="card" onclick="card_service(${e.category_id})">
+        <img src="${e.image}" class="pic">
+        <p class="name_service">${e.name}</p>
+        <p class="cost_service">cost: Rs:${e.cost}</p>
+      </div>
+    `;
+  }
+}
 
-        // // Add an event listener to each checkbox
-        // checkboxes.forEach((checkbox) => {
-        //     checkbox.addEventListener('click', () => {
-        //         // Get the value and the category of the clicked checkbox
-        //         const value = checkbox.value;
-        //         const category = checkbox.closest('.checking').classList[1];
 
-        //         console.log(category)
 
-        //         // Get the current state of the array from local storage
-        //         let array = JSON.parse(localStorage.getItem('checkboxes')) || [];
+listing_services()
 
-        //         // Check if the clicked checkbox is already in the array
-        //         const index = array.findIndex((item) => item.category === category);
 
-        //         // If the checkbox is not in the array, add it
+function card_service(category_id) {
+  const data_artist = JSON.parse(localStorage.getItem("card_data"));
+  const active_user = localStorage.getItem("artist_profile");
 
-        //         if (index === -1) {
-        //             array.push(
+  const artist_object = data_artist.find((obj) => obj.user_email === active_user);
 
-        //                 {
-        //                     category,
-        //                     values: [value],
+  let res;
+  artist_object.services_provding.find((e) => {
+    if (e.category_id == category_id) {
+      return (res = e);
+    }
+  });
 
-        //                     useremail: active_user
-        //                 }
-        //             );
-        //         }
 
 
 
-        //         localStorage.removeItem('checkboxes');
-        //         // Save the updated array to local storage
-        //         localStorage.setItem('checkboxes', JSON.stringify(array));
-        //         let user = dataofartist.find(obj => obj.user_email === active_user);
 
-        //         user.services = array.filter(element => element.useremail === active_user);
 
-        //         localStorage.setItem("card_data", JSON.stringify(dataofartist));
 
 
-        //     });
 
+  let edit_delete = document.querySelector(".edit_delete");
+  let div_hide = document.querySelector(".artist_pack");
 
-        // });
+  edit_delete.style.display = 'block';
+  div_hide.classList.toggle('blur');
 
+  let showNameElement = document.querySelector(".show_name");
+  let costEditElement = document.querySelector(".cost_edit");
+  let imageEditElement = document.querySelector(".image_edit");
 
-        // let re;
-        // dataofartist.find(function (e) {
-        //     if (e["user_email"] == active_user) {
-        //         return re = e
-        //     }
-        // }
-        // )
+  let storedData = res;
+  if (storedData) {
+    showNameElement.innerHTML = storedData.name;
+    costEditElement.value = storedData.cost;
+    imageEditElement.value = storedData.image;
+  }
 
 
+  let deleteButton = document.getElementById("Delete_button");
+  deleteButton.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent form submission
 
-        // const Packages = document.getElementById("filling_package");
-        // Packages.addEventListener('submit', e => {
-        //     e.preventDefault();
-        //     const First_option = document.getElementById("input_1").value
-        //     const second_option = document.getElementById("input_2").value
-        //     const nameOfartist = re.name
-        //     const Three_option = document.getElementById("input_3").value
-        //     const Four_option = document.getElementById("input_4").value
-        //     const Five_option = document.getElementById("input_5").value
-        //     const six_option = document.getElementById("input_6").value
-        //     const seven_option = document.getElementById("input_7").value
-        //     const eight_option = document.getElementById("input_8").value
-        //     const nine_option = document.getElementById("input_9").value
+    // Remove the object from local storage
+    if (storedData) {
+      const dataIndex = artist_object.services_provding.indexOf(storedData);
+      if (dataIndex > -1) {
+        artist_object.services_provding.splice(dataIndex, 1);
+        localStorage.setItem("card_data", JSON.stringify(data_artist));
+      }
 
-        //     const user_records = JSON.parse(localStorage.getItem("Packages")) || []
-        //     let existing_record_index = user_records.findIndex(record => record.email === active_user);
+    }
 
-        //     if (existing_record_index !== -1) {
+    // Optionally, display a success message or perform any additional actions
+    alert("Data deleted successfully!");
+    location.reload()
+  });
 
-        //         user_records[existing_record_index]["sare_drapping+Advance Makeup per person"] = First_option;
-        //         user_records[existing_record_index]["Pro Makeup+Basic hair style Per person"] = second_option;
-        //         user_records[existing_record_index]["Jewelery+HD Makeup per person"] = Three_option;
-        //         user_records[existing_record_index]["Pro Makeup+custumes Per Person"] = Four_option;
-        //         user_records[existing_record_index]["Bride+BrideMade 2 Person"] = Five_option;
-        //         user_records[existing_record_index]["Hd Makeup+Hair style per person"] = six_option;
-        //         user_records[existing_record_index]["Heavy Makeup+jwelers+custumes"] = seven_option;
-        //         user_records[existing_record_index]["Hair style+light touchup"] = eight_option;
-        //         user_records[existing_record_index]["Makeup+mehandi"] = nine_option;
-        //         user_records[existing_record_index]["artist_name"] = nameOfartist;
-        //     } else if (First_option.trim() !== '' && second_option.trim() !== '' && Three_option.trim() !== '' && Four_option.trim() !== '' && Five_option.trim() !== '' && six_option.trim() !== '' && seven_option.trim() !== '' && eight_option.trim() !== '' && nine_option.trim() !== '') {
+let editButton = document.getElementById("edit_button");
+  editButton.addEventListener("click", function(event) {
+    event.preventDefault(); 
 
-        //         let user_data = {
-        //             "sare_drapping+Advance Makeup per person": First_option,
-        //             "Pro Makeup+Basic hair style Per person": second_option,
-        //             "Jewelery+HD Makeup per person": Three_option,
-        //             "Pro Makeup+custumes Per Person": Four_option,
-        //             "Bride+BrideMade 2 Person": Five_option,
-        //             "Hd Makeup+Hair style per person": six_option,
-        //             "Heavy Makeup+jwelers+custumes": seven_option,
-        //             "Hair style+light touchup": eight_option,
-        //             "Makeup+mehandi": nine_option,
-        //             "artist_name": nameOfartist,
-        //             "id": length,
-        //             "email": active_user,
-        //         }
-        //         user_records.push(user_data);
-        //     } else {
-        //         alert("if you dont accept any plan just type 0 ")
-        //     }
+   
+    let updatedCost = costEditElement.value;
+    let updatedImage = imageEditElement.value;
 
-        //     localStorage.setItem("Packages", JSON.stringify(user_records));
-        //     let user = dataofartist.find(obj => obj.user_email === active_user);
-        //     user.packages = user_records.filter(element => element.email === active_user);
-        //     localStorage.setItem("card_data", JSON.stringify(dataofartist));
-        // })
+    if (storedData) {
+      storedData.cost = updatedCost;
+      storedData.image = updatedImage;
 
+      localStorage.setItem("card_data", JSON.stringify(data_artist));
 
+      alert("Data updated successfully!");
+      location.reload()
+    }
+    })
+}
 
 
-
-        // let user = dataofartist.find(obj => obj.user_email === active_user);
-        // user.services.filter(function (obj) {
-
-        //     listing(obj)
-
-        // });
-        // function listing(e) {
-
-        //     let info = document.querySelector(".choosed");
-
-        //     info.innerHTML += `
-            
-        //        <p>${e.category}</p>
-            
-              
-        //        `
-
-        // }
-
-
-
-
-
-
-// let  listingForm=document.getElementById("listing")
-// listingForm.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   const radioButtons = document.getElementsByName("category");
-//   let selectedValue = "";
-
-//   for (let i = 0; i < radioButtons.length; i++) {
-//     if (radioButtons[i].checked) {
-//       selectedValue = radioButtons[i].value;
-//       break;
-//     }
-//   }
-
-//   const name = document.getElementById("name_of_cetegory").value.trim();
-//   const cost = document.getElementById("number_for_cetegory").value.trim();
-//   const image = document.getElementById("url_of_cetegory").value.trim();
-
-//   if (!name || !cost || !image) {
-//     alert("Please fill out all required fields.");
-//     return;
-//   }
-
-//   let listing_items = JSON.parse(localStorage.getItem("list_of_services")) || [];
-
-//   let object = {
-//     "category": selectedValue,
-//     "name": name,
-//     "cost": cost,
-//     "image": image,
-//     "artist_email": localStorage.getItem("artist_profile"),
-//     "category_id": listing_items.length,
-//   };
-
-//   listing_items.push(object);
-
-//   localStorage.setItem('list_of_services', JSON.stringify(listing_items));
-
-//   let dataOfArtist = JSON.parse(localStorage.getItem("card_data"))
-//   let user = dataOfArtist.find(obj => obj.user_email === localStorage.getItem("artist_profile"));
-
-//   if (user) {
-//     user.services = {
-//       hairstyleServices: [],
-//       sareedrappingServices: [],
-//       makeupServices: [],
-//       mehandiServices: []
-//     };
-
-//     for (let item of listing_items) {
-//       if (item.artist_email === localStorage.getItem("artist_profile")) {
-//         let servicesArrayName = item.category.toLowerCase() + "Services";
-//         if (servicesArrayName in user.services) {
-//           user.services[servicesArrayName].push(item);
-//         }
-//       }
-//     }
-
-//     localStorage.setItem("card_data", JSON.stringify(dataOfArtist));
-//   }
-// });
-
-
-
-
-
-
-
-
-
-    </script>
-
+ </script>
 
 </body>
 

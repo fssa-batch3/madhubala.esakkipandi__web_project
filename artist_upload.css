@@ -101,10 +101,10 @@ body {
     position: absolute;
     TOP:90PX;
     display: flex;
-    
+    /* z-index: 1; */
   }
   .right{
-width: 55%;
+width: 47%;
 height:100%;
 /* border:2px solid black; */
 
@@ -116,9 +116,10 @@ height:100%;
   }
   .left img{
     height: 70%;
-    width:70%;
+    width:100%;
 padding: 50px;
 margin-top: 70px;
+z-index:1
   }
   .wrap {
     height: 100%;
@@ -162,7 +163,13 @@ margin-top: 70px;
 }
 .cont_right h1{
     margin-top: 70px;
-    font-style:calc();
+    font-family:wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+    letter-spacing: 0.15em;
+    font-size: 40px;
+
+    line-height: 1em;
+
+    
 }
 .shape2 { 
     height:60px;
@@ -210,6 +217,7 @@ border: #f5bed4 3px solid;
     width:100%;
     /* border: 2px solid black; */
  position: absolute;
+ /* z-index: 1; */
  top:590px;
 }
 .steps{
@@ -235,22 +243,25 @@ font-weight: bolder;
     display: flex;
 
 }
-.form_cont{
-    width: 50%;
+#upload_form{
+    width: 30%;
     /* border: 2px solid black; */
+background-color: white;
+    position: relative;
+    top:200px;
+    left:500px;
+    height: 500px;
+    display: none;
+    z-index:10;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    /* display: flex;
+    flex-direction:column; */
+    padding-top: 70px;
 
 }
-form{
-    height: 90%;
-   width: 60%;
-    /* border: 2px solid black; */
-    display: flex;
-    flex-direction:column;
-    margin-left:20%;
-    margin-top: 5%;
-        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-border-radius: 20px;
-}
+
+
 .pic_form
 {
     width: 50%;
@@ -266,11 +277,13 @@ input{
     height: 40px;
     width:360px;
    border: none;
+   margin-top: 35px;
     border-radius: 10px;
   background-color: aliceblue;
   text-align: center;
   font-family: 'Poppins', sans-serif;
   margin-left: 45px;
+  margin-bottom: 10px;
 }
 input:hover{
 border: 4px solid rgb(250, 215, 221);
@@ -280,9 +293,13 @@ background-color:white;
 }
 label{
     padding-left: 60px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 .btn{
     margin-left: 150px;
     margin-top: 50px;
+}
+.blur {
+  filter: blur(15px);
+  z-index: 3;
 }
