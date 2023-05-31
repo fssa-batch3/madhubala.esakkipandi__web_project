@@ -182,6 +182,7 @@
 
 
     <script>
+
 const addBtn = document.getElementById('btn_add');
 const formService = document.getElementById('fomr_service');
 const container = document.getElementById('container');
@@ -250,33 +251,30 @@ let close_button=document.querySelector(".fa-circle-xmark");
 close_button.addEventListener('click',e=>{
     location.reload()
 })
+
+
+
 const data_artist = JSON.parse(localStorage.getItem("card_data"))
 const active_user = localStorage.getItem("artist_profile");
 
 const artist_object = data_artist.find((obj) => obj.user_email === active_user);
 
-artist_object.services_provding.forEach(element => {
-    listing_services(element);
-});
-
-function listing_services(e) {
+console.log(artist_object);
+console.log(artist_object.services_provding);
+artist_object.services_provding.forEach(e => {
   let div = document.getElementById("pack");
 
-  // Check if the e object and its properties are defined
-  if (e && e.category_id && e.image && e.name && e.cost) {
-    div.innerHTML += `
+  
+  div.innerHTML += `
       <div class="card" onclick="card_service(${e.category_id})">
         <img src="${e.image}" class="pic">
         <p class="name_service">${e.name}</p>
         <p class="cost_service">cost: Rs:${e.cost}</p>
       </div>
-    `;
-  }
-}
+    `
+});
 
 
-
-listing_services()
 
 
 function card_service(category_id) {
