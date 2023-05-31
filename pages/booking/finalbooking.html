@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../booking/final_booking.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+  <div class="preferences">
+    <div class="info">
+
+      <div class="event">
+
+        <h3 class="types">Select the event</h3>
+        <form id="booking-form">
+          <div class="events_options">
+
+            <div class="bridal user_choice">
+              <input type="radio" name="group" value="Bridal" class="input">
+              <label>Bridal</label>
+
+            </div>
+            <div class="baby_shower user_choice">
+
+              <input type="radio" name="group" value="Babyshower" class="input">
+              <label>Baby shower</label>
+            </div>
+
+            <div class="engagement user_choice">
+              <input type="radio" name="group" value="Engagement" class="input">
+              <label>Engegement</label>
+            </div>
+
+            <div class="puberty user_choice">
+              <input type="radio" name="group" value="Puberty" class="input">
+              <label>Puberty</label>
+            </div>
+
+            <div class="birthday user_choice">
+              <input type="radio" name="group" value="Birthday" class="input">
+              <label>Birthday party</label>
+            </div>
+            <div class="photoshoots user_choice">
+              <input type="radio" name="group" value="Photoshoot" class="input">
+              <label>Photoshoots</label>
+            </div>
+          </div>
+
+      </div>
+      
+
+      <div class="booking_details">
+
+        <h3>Book Your Booking now!!</h3>
+
+        <div class="name_num  inputs">
+          <div class="cus_name">
+
+            <i class="fa-sharp fa-solid fa-user"></i>
+
+            <input type="text" placeholder="Name" id="Name-of-customer">
+          </div>
+          <div class="cus_num">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <input type="number" placeholder="Mobile number" id="contact-of-customer">
+          </div>
+
+        </div>
+
+        <div class="cus_address inputs">
+
+          <i class="fa-solid fa-location-dot"></i>
+          <input type="text" placeholder="Address" id="address-customer">
+
+        </div>
+        <div class="door_num inputs">
+          <i class="fa-solid fa-door-open"></i>
+          <input type="text" placeholder="Door Number">
+        </div>
+        <div class="date_time inputs">
+
+          <div class="pincode inputs">
+            <i class="fa-solid fa-hashtag"></i>
+            <input type="number" placeholder="pincode"  maxlength="6">
+      
+          </div>
+          <div class="time inputs">
+
+            <i class="fa-solid fa-clock"></i>
+            <input type="time" placeholder="hrs:mins" id="Time-choosen-customer">
+
+          </div>
+          
+     
+        </div>
+        <div class="selected_option inputs">
+          <i class="fa-solid fa-indian-rupee-sign " id="rupee"></i>
+          <label>Selected option</label>
+          <input type="text" id="options">
+        </div>
+        <h4>
+          Total Amount : <i class="fa-solid fa-indian-rupee-sign"></i>
+          <span id="total-amount"></span>
+        </h4>
+        <button type="submit">Book now</button>
+
+      </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="popup-container">
+    <div id="popup-message">
+      <h3>Your booking successfully completed</h3>
+    </div>
+    <button id="close-button">Close</button>
+  </div>
+
+  </div>
+  <script>
+    const search_url = window.location.search;  //?name=Bridal MAkeup by sharmila
+    const getid = new URLSearchParams(search_url)
+    const id = getid.get("bookingid");
+
+    console.log(id)
+    const url = window.location.search;  //?name=Bridal MAkeup by sharmila
+    const urls = new URLSearchParams(url)
+    const name = urls.get("param2");
+
+    const date=urls.get("date")
+    console.log(date)
+    const radioButtons = document.getElementsByName("group");
+    let selectedValue
+    for (let i = 0; i < radioButtons.length; i++) {
+      radioButtons[i].addEventListener("click", function () {
+        if (this.checked) {
+          selectedValue = this.value;
+
+        }
+      });
+    }
+
+    //     const bookinkdata=JSON.parse(localStorage.getItem("bookingDatas"))
+    //     console.log(bookinkdata)
+
+
+
+    // let res
+    //     bookinkdata.find(e=>{
+    //   if(id==e.bookingId){
+
+    // res=e
+    //   }
+
+    //     })
+    const bookingInfo = JSON.parse(localStorage.getItem("bookingDatas")).find(booking => booking.bookingId === parseInt(id));
+    console.log(bookingInfo);
+
+    const form_filled = document.getElementById("booking-form");
+    form_filled.addEventListener('submit', e => {
+      e.preventDefault();
+
+      const data_of_cus = JSON.parse(localStorage.getItem("data"));
+      const dataofartist = JSON.parse(localStorage.getItem("card_data"));
+      // const active_user = localStorage.getItem("profile");
+      const date_event_client = date
+      const name_client = document.getElementById("Name-of-customer").value;
+      const contact_client = document.getElementById("contact-of-customer").value;
+      const addres_client = document.getElementById("address-customer").value;
+      const time_client = document.getElementById("Time-choosen-customer").value;
+      const address = document.getElementById("address-customer").value;
+      const emailofcus = localStorage.getItem("profile");
+
+      if (!name_client || !time_client || !contact_client || !addres_client || !address) {
+        alert("Please fill all the required data.");
+        return;
+      }
+
+      let isBooked = dataofartist.find(artist => {
+        return artist.name === name_client && artist.booking_records && artist.booking_records.some(record => {
+          return record.time === time_client;
+        });
+      });
+
+      if (isBooked) {
+        const failedmessage = `This date and time is already booked. You can proceed with booking someone else or choose another time. Thank you!`;
+        const popupContainer = document.getElementById('popup-container');
+        const popupMessage = document.getElementById('popup-message');
+        popupMessage.textContent = failedmessage;
+        popupContainer.style.display = 'block';
+
+        const closeButton = document.getElementById('close-button');
+        closeButton.addEventListener('click', function () {
+          popupContainer.style.display = 'none';
+        });
+      } else {
+        const totalcost = bookingInfo.bookingTotalCost;
+        const details = bookingInfo.bookingDetails;
+
+        const artist = dataofartist.find(obj => obj.name === name);
+        if (!artist) {
+          console.log("Artist not found.");
+          return;
+        }
+
+
+
+
+     
+        const customer = data_of_cus.find(obj => obj.user_email === emailofcus);
+        console.log(customer)
+        const object_booking_records = {
+          "customer_name": name_client,
+          "customer_email": emailofcus,
+          "customer_contact": contact_client,
+          "customer_address": addres_client,
+          "event_date": date_event_client,
+          "time": time_client,
+          "status": false,
+          "selected_event": selectedValue,
+
+          "details_Of_booking_Info": details,
+          "totalcost": totalcost,
+          "location": address,
+          "id": customer.booking_records.length > 0 ? customer.booking_records[customer.booking_records.length - 1].id + 1 : 1,
+          "selected_artist_for_booking": name,
+          "confirmation": false
+        };
+
+        console.log(object_booking_records.id)
+        artist.booking_records.push(object_booking_records);
+
+        const artistEmail = artist.user_email;
+        const artistName = artist.name;
+        // const profileUrl = `https://example.com/profile?name=${encodeURIComponent(artistName)}`;
+        const message = `Dear ${name}, \n\nYou have a new booking from ${name_client} on ${time_client}. Please log in to your account to view the details of this booking. You can view <a href="../../pages/ArtistFeature.html">${artistName}'s</a> profile. \n\nThank you!`;
+        sendemail(artistEmail, message);
+
+
+        if (!customer) {
+          console.log("Customer not found.");
+          return;
+        }
+
+
+        customer.booking_records.push(object_booking_records);
+        localStorage.setItem("data", JSON.stringify(data_of_cus));
+        localStorage.setItem("card_data", JSON.stringify(dataofartist));
+
+        const successMessage = `Your booking request  sended successful! to ${object_booking_records.selected_artist_for_booking}`;
+        const popupContainer = document.getElementById('popup-container');
+        const popupMessage = document.getElementById('popup-message');
+        popupMessage.textContent = successMessage;
+        popupContainer.style.display = 'block';
+
+      }
+    });
+
+
+    let total_amount = document.getElementById("total-amount")
+
+    total_amount.innerHTML += `${bookingInfo.bookingTotalCost}`
+
+
+    let options = document.getElementById("options");
+    let bookingDetails = bookingInfo.bookingDetails;
+    let names = "";
+    for (let i = 0; i < bookingDetails.length; i++) {
+      names += bookingDetails[i].name + ", ";
+    }
+    options.value = names.slice(0, -2);
+
+
+
+    const closeButton = document.getElementById('close-button');
+    closeButton.addEventListener('click', () => {
+      const popupContainer = document.getElementById('popup-container');
+      popupContainer.style.display = 'none';
+      window.location.href = "../profile_of_user.html"
+
+    });
+
+
+
+  </script>
+
+
+
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script>
+
+    function sendemail(artist_email, mes) {
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "emadhubala1@gmail.com",
+        Password: "5888FAB177209DF44C3A157057CF48050EE3",
+        To: artist_email,
+        From: "emadhubala1@gmail.com",
+        Subject: "About your booking statement",
+        Body: mes
+      })
+        .then(message => {
+          alert(message);
+          window.location.href = "../profile_of_user.html";
+        });
+    }
+
+
+
+  </script>
+
+
+
+</body>
+
+</html>

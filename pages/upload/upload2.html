@@ -2,45 +2,59 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../../assets/css/upload2.css">
+    
     <title>Document</title>
+
 </head>
 
 <body>
-    
 
     <!-- header drag files section starts -->
-    <a href="../upload/upload.html"><i id="arrow" class="fa-solid fa-arrow-left-long"></i></a>
+    <a href="../ArtistFeature.html">
+<i id="arrow" class="fa-solid fa-arrow-left-long"></i>
+</a>
     <div class="uploading-form">
         <h1>POST YOUR WORKS</h1>
         <div class="border">
             <div class="drag">
                 <h2>Drag and Drop files</h2>
-                <p>or</p>
-                <!-- <p> <a href="#">Browse files</a></p> -->
-                
-                <input type="file" id="input_image" accept="image/png,image/jpg">
-                <i id="drag" class="fa-solid fa-cloud-arrow-up"></i>
+
+                <p class="or">or</p>
+                <p>
+ <a href="#">Browse files</a>
+</p>
+              
+                <i id="drag" class="fa-solid fa-cloud-arrow-up"></i> 
             </div>
             <!-- decription content starts -->
             <div class="description">
                 <h3>
                     INCLUDE SOME DETAILS
                 </h3>
+
+                <!-- --------------- -->
+                <form id="upload_form">
                 <label for="text" id="tit"> Add a title</label>
-                <br><br>
-                <input id="title" type="text" placeholder="Add a caption">
                 <br>
-                <br><br>
+<br>
+
+                <input id="title" type="text" placeholder="Add a caption">
+                
+                <br>
+                <br>
+<br>
                 <label for="text" id="tit"> Add a caption</label>
-                <br><br>
+                <br>
+<br>
                 <input id="textarea" type="textarea" placeholder="Add a description">
             </div>
             <!-- description content ends -->
@@ -50,7 +64,8 @@
                     CONFIRM YOUR LOCATION
                 </h3>
                 <label for="state">state</label>
-                <br><br>
+                <br>
+<br>
                 <select>
                     <option id="state" required>Tamilnadu</option>
                     <option id="state" required>karnataka</option>
@@ -69,7 +84,9 @@
                 </select>
             </div>
             <!-- filtering location content ends -->
+
             <hr>
+
             <!-- uploading section starts -->
             <div class="detail">
                 <h3>Review your detail</h3>
@@ -83,36 +100,53 @@
                         <input type="text" id="name">
                     </div>
                 </div>
-                <h3>Let's verify your account</h3>
-                <p>We will send you confirmation code by sms on the next step</p>
-                <label for="mobilenumber">Mobile number:</label>
-                <input type="tel" id="num" placeholder="91">
-                <input type="tel" pattern="1234567890" required>
+            
+                <label for="img-url" id="url">Image URL</label>
+                <input type="url" id="imgurl">
             </div>
-            <!-- uploading section ends -->
-            <button>Upload</button>
+          
+            <button type="submit">Upload</button>
+        </form>
+
+                <!-- --------------- -->
         </div>
     </div>
     <script>
-        const input_image=document.getElementById("input_image");
-        var upload_image="";
-        input_image.addEventListener("change",function(){
-            
-            const reader= new FileReader();
-            removeEventListener("load",()=>{
-                uploaded_image=reader.result;
-                document.getElementById(".details").style.backgroundImage= url(uploaded_image);
-            });
+const dataofartist=JSON.parse(localStorage.getItem("card_data")) 
+document.getElementById("upload_form").addEventListener('submit', e => {
+ 
+e.preventDefault();
 
-            reader.readAsDataURL(this.files[0]);
-        }
-        )
+    const title=document.getElementById("title").value
+    const textarea=document.getElementById("textarea").value
+    const user_upload_name=document.getElementById("name").value
+    // const tel=document.getElementById("num").value
+    const img_url=document.getElementById("imgurl").value
+    const uploaddetail=JSON.parse(localStorage.getItem("upload_details"));
+
+    const active_user=localStorage.getItem("artist_profile")
+
+    const upload_details= JSON.parse(localStorage.getItem("upload_details")) ? JSON.parse(localStorage.getItem("upload_details")) : [];
+    const upload_detail = {}
+
+    upload_detail.title= title;
+    upload_detail .textarea= textarea;
+    upload_detail.uploadname=user_upload_name;
+    upload_detail.imgurl=img_url;
+    // upload_detail["mobilenumber"]= tel,
+    upload_detail.uploader_emial=active_user
+    upload_detail.id=length
+    upload_details.push(upload_detail);
+            localStorage.setItem("upload_details", JSON.stringify(upload_details));
+
+            const user = dataofartist.find(obj => obj.user_email === active_user);
+            
+  user.upload = upload_details.filter(element => element.uploader_emial === active_user);
+  localStorage.setItem("card_data", JSON.stringify(dataofartist));
+
+})
     </script>
 
-
-
-
 </body>
-
 
 </html>

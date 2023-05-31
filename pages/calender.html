@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- 
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Calendar JavaScript | CodingNepal</title>
+    <link rel="stylesheet" href="calender.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <p class="current-date"></p>
+        <div class="icons">
+          <span id="prev" class="material-symbols-rounded">chevron_left</span>
+          <span id="next" class="material-symbols-rounded">chevron_right</span>
+        </div>
+      </header>
+      <div class="calendar">
+        <ul class="weeks">
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+        </ul>
+        <ul class="days"></ul>
+      </div>
+    </div>
+    
+  </body>
+</html> -->
+<script>
+const wishlist_data=document.getElementById("wishlist");
+
+    const wish_data = JSON.parse(localStorage.getItem("wishlist_dta")) || [];
+    wishlist_data.addEventListener('click',()=>{
+      
+const productImage = result.image.source;
+const productPrice = result.Price;
+const object_name = artist_obj.user_name;
+      
+      let product
+     const users= JSON.parse(localStorage.getItem("data"))
+      const active_user = localStorage.getItem("profile");
+
+      let ac_user;
+
+     users.forEach(e=>{
+        if(active_user==e.user_email){
+          ac_user=e
+        }
+      }) 
+      const wish_data=ac_user.cart ||[]
+      wish_data.forEach(e => {
+        if(user_name==e.user_name){
+     
+          product=e
+        }})
+        wish_data.forEach((e,index)=>{
+
+            if(id_wishlist==e.id_wishlist){
+
+              wish_data[index]=product
+
+            }
+          })
+      
+  const wishlistItem = {
+  
+    "email_user_wishlist": active_user,
+    "user_name": object_name,
+    "id_wishlist": wish_data.length,
+    "title": productTitle,
+    "image": productImage,
+    "price": productPrice,
+    "status":false
+
+  };
+  wish_data.push(data_of_cart)
+    
+        ac_user.cart=wish_data
+        users.forEach(e=>{
+        if(active_user==e.email){
+          e=ac_user
+        }
+      })
+      localStorage.setItem("data",JSON.stringify(users));
+   
+    })
+  </script>

@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../../assets/css/book3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -14,88 +17,482 @@
   <div class="menu-bar">
     <img src="../../assets/images/Screenshot__63_-removebg-preview.png" alt="logo">
     <ul class="main">
-      <li class="dropdown"><a href="#">Home <i class="fas fa-caret-down"></i></a>
-        <div class="dropdown-content">
+      <li class="dropdown">
+<a href="../../index.html">
+Home <i class="fas fa-caret-down"></i>
+</a>
+        <!-- <div class="dropdown-content">
           <ul>
             <li>
               <a href="#feature">Features</a>
             </li>
 
             <li>
-              <a href="./pages/review/review.html">Reviews</a>
+              <a href="../../pages/review/review.html">Reviews</a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </li>
-      <li><a href="#">For artist</a>
+      <!-- <li><a href="#">For artist</a>
         <div class="dropdown-content">
           <ul>
             <li>
               <a href="./pages/upload/upload.html">Upload </a>
             </li>
         </div>
+      </li> -->
+      <li>
+<a href="./pages/booking/start_booking.html">Book here</a>
+</li>
+      <!-- <li><a href="./pages/Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li> -->
+      <li>
+<a href="../../pages/profile_of_user.html">
+ <img src="../../assets/images/IMG20200903161128.jpg"
+            class="my-profile-img"></a>
       </li>
-      <li><a href="./pages/booking/start_booking.html">Book here</a></li>
-      <li><a href="./pages/Login/login.html"> <i class="fa-solid fa-user"></i>login</a></li>
-      <li><a href="./pages/profile.html"> <img src="./assets/images/IMG20200903161128.jpg" class="my-profile-img"></a></li>
 
     </ul>
   </div>
   <!-- nav bar ends -->
   <!-- confirm booking content starts -->
-  <div class="main-content">
-    <div class="cont-1">
-      <h1 class="confirm">
-        BOOK YOUR FAVORITE DAY
+  
+    <!-- <form id="booking-form">
 
-      </h1>
-    </div>
-    <div class="cont-2">
-      <form>
         <label for="name">Name:</label>
-        <input type=" text" placeholder="Enter your name">
+        <input type=" text" id="Name-of-coustomer" placeholder="Enter your name">
         <br><br>
         <label for="mail">Enter your email:</label>
-        <input type="text" placeholder="Enter your email">
+        <input type="text" id="email-of-coustomer" placeholder="Enter your email">
         <br><br>
         <label for="number">Enter your phone-number:</label>
-        <input type="number" placeholder="91..">
+        <input type="number" id="contact-of-coustomer" placeholder="91..">
         <br><br>
         <label for="addres">Enter your address</label>
-        <input type="text">
+        <input type="text" id="address-coustomer">
         <br><br>
         <label for="date">Choose your date:</label>
-        <input type="date">
+        <input type="date" id="date-choosen-coustomer">
         <br><br>
         <label for="function"> Choose your function:</label>
         <br><br>
-        <input type="checkbox" id="checkbox">
-        <label for="function" id="function">
+        <input type="checkbox" class="checkbox" id="bridal">
+        <label for="function" class="function">
           Bridal
         </label>
         <br><br>
-        <input type="checkbox" id="checkbox">
-        <label for="function" id="function">
+        <input type="checkbox" class="checkbox" id="Birthday">
+        <label for="function" class="function">
           Birthday
         </label>
         <br>
         <br>
-        <input type="checkbox" id="checkbox">
-        <label for="function" id="function">
+        <input type="checkbox" class="checkbox" id="Marriage">
+        <label for="function" class="function">
           Marriage
         </label>
         <br><br>
-        <input type="checkbox" id="checkbox">
-        <label for="function" id="function">
+        <input type="checkbox" class="checkbox" id="others">
+        <label for="function" class="function">
           others
         </label>
         <br>
         <br>
-        <button><a href="../../pages/booking/book4.html">Confirm booking</a></button>
-      </form>
+        <button type="submit">confirm_booking</button>
+      </form> -->
+
+<!-- 
+    <div class="event">
+
+      <h3 class="types">Select the event</h3>
+      <form id="booking-form">
+        <div class="events_options">
+
+          <div class="bridal user_choice">
+            <input type="radio" name="group" value="Bridal" class="input">
+            <label>Bridal</label>
+
+          </div>
+          <div class="baby_shower user_choice">
+
+            <input type="radio" name="group" value="Babyshower" class="input">
+            <label>Baby shower</label>
+          </div>
+
+          <div class="engagement user_choice">
+            <input type="radio" name="group" value="Engagement" class="input">
+            <label>Engegement</label>
+          </div>
+
+          <div class="puberty user_choice">
+            <input type="radio" name="group" value="Puberty" class="input">
+            <label>Puberty</label>
+          </div>
+
+          <div class="birthday user_choice">
+            <input type="radio" name="group" value="Birthday" class="input">
+            <label>Birthday party</label>
+          </div>
+          <div class="photoshoots user_choice">
+            <input type="radio" name="group" value="Photoshoot" class="input">
+            <label>Photoshoots</label>
+          </div>
+        </div>
+
     </div>
+ -->
+  
+<div class="cart_adding">
+
+<div class="addedlist">
+
+<div class="head">
+ <h3> Your booking list</h3>
+</div>
+
+<div class="listing">
+<!-- <div class="list_1">
+<div class="pic_book_list">
+
+<img src="../../assets/images/cont-8-img.webp " class="selected_list_img">
+
+</div>
+<div class="details_cost">
+<h3>Air brush makeup</h3>
+<p>Cost ₹4000</p>
+
+</div>
+
+</div>
+
+<div class="list_1">
+  <div class="pic_book_list">
+  
+  <img src="../../assets/images/cont-8-img.webp " class="selected_list_img">
+  
   </div>
-  <!-- confirm booking content ends -->
+  <div class="details_cost">
+  <h3>Air brush makeup</h3>
+  <p>Cost ₹4000</p>
+  
+  </div>
+  
+  </div>
+  <div class="list_1">
+    <div class="pic_book_list">
+    
+    <img src="../../assets/images/cont-8-img.webp " class="selected_list_img">
+    
+    </div>
+    <div class="details_cost">
+    <h3>Air brush makeup</h3>
+    <p>Cost ₹4000</p>
+    
+    </div>
+    
+    </div>
+
+    <div class="list_1">
+      <div class="pic_book_list">
+      
+      <img src="../../assets/images/cont-8-img.webp " class="selected_list_img">
+      
+      </div>
+      <div class="details_cost">
+      <h3>Air brush makeup</h3>
+      <p>Cost ₹4000</p>
+      
+      </div>
+      
+      </div>
+
+      <div class="list_1">
+        <div class="pic_book_list">
+        
+        <img src="../../assets/images/cont-8-img.webp " class="selected_list_img">
+        
+        </div>
+        <div class="details_cost">
+        <h3>Air brush makeup</h3>
+        <p>Cost ₹4000</p>
+        
+        </div>
+        
+        </div>
+        <div class="list_1">
+          <div class="pic_book_list">
+          
+          <img src="../../assets/images/cont-8-img.webp " class="selected_list_img">
+          
+          </div>
+          <div class="details_cost">
+          <h3>Air brush makeup</h3>
+          <p>Cost ₹4000</p>
+          
+          </div>
+          
+          </div>
+          <div class="list_1">
+            <div class="pic_book_list">
+            
+            <img src="../../assets/images/cont-8-img.webp " class="selected_list_img">
+            
+            </div>
+            <div class="details_cost">
+            <h3>Air brush makeup</h3>
+            <p>Cost ₹4000</p>
+            
+            </div>
+            
+            </div> -->
+     
+</div>
+
+<div class="proceedtopay">
+
+<button type="submit" class="proceed">Proceed to pay</button>
+</div>
+</div>
+
+<div class="savinglist">
+
+  <h1>Total booking</h1>
+  <div class="totalbooking">
+
+<div class="customer_1">
+   
+  <h3>Customer 1</h3>
+  <div class="names_total_cost">
+
+<div class="one">
+
+  <p>Airbrush makeup </p>
+  <p>Cost: ₹ 20000</p>
+</div>
+<div class="one">
+
+  <p>6 peated saree drapping </p>
+  <p>Cost: ₹ 20000</p>
+</div>
+<div class="one">
+
+  <p>Portrait Mehndi </p>
+  <p>Cost: ₹ 20000</p>
+</div>
+<div class="one">
+
+  <p>Hair with afro puff</p>
+  <p>Cost: ₹ 20000</p>
+</div>
+
+</div>
+<hr>
+<h3 class="single_cust_total_cost">TOTAL COST: ₹ 800000</h3>
+
+</div>
+
+  </div>
+
+</div>
+
+</div>
+
+  
+
+  <div id="popup-container">
+    <div id="popup-message">
+      <h3>Your booking successfully completed</h3>
+    </div>
+    <button id="close-button">Close</button>
+  </div>
+
+  <!-- </div> -->
+
+  <script>
+    const url = window.location.search;  //?name=Bridal MAkeup by sharmila
+    const urls = new URLSearchParams(url)
+    const name = urls.get("artist_name");
+
+const date=urls.get("date")
+console.log(date)
+    console.log(name)
+
+    const radioButtons = document.getElementsByName("group");
+    let selectedValue
+    for (let i = 0; i < radioButtons.length; i++) {
+      radioButtons[i].addEventListener("click", function () {
+        if (this.checked) {
+          selectedValue = this.value;
+
+        }
+      });
+    }
+
+
+const saving_data = JSON.parse(localStorage.getItem("saving_detail"));
+
+if (saving_data) {
+  const current_user = localStorage.getItem("profile");
+  saving_data.forEach(element => {
+    if (element.user == current_user&&element.name==name) {
+      showing_list(element);
+    
+    }
+  });
+}
+
+function showing_list(e) {
+  const showing_booking_list = document.querySelector(".listing");
+  showing_booking_list.innerHTML += `<div class="list_1">
+    <div class="pic_book_list">
+      <img src="${e.item_img}" class="selected_list_img">
+    </div>
+    <div class="details_cost">
+      <h3>${e.item_name}</h3>
+      <p>cost : Rs ${e.item_cost}</p>
+      <h6 class="id">${e.item_id}</h6>
+    </div>
+  </div>`;
+}
+
+const current_user = localStorage.getItem("profile");
+const user_savings = saving_data.filter(item => item.user === current_user);
+
+const total_booking_div = document.querySelector(".totalbooking");
+total_booking_div.innerHTML = "";
+
+const selected_values = [...new Set(user_savings.map(item => item.selected_value))];
+let total_booking_cost = 0;
+
+
+selected_values.forEach((selected_value, index) => {
+  const customer_div = document.createElement("div");
+  customer_div.className = `customer_${index + 1}`;
+
+  const customer_title = document.createElement("h3");
+  customer_title.textContent = `Customer ${index + 1}`;
+  customer_div.appendChild(customer_title);
+
+  const names_total_cost_div = document.createElement("div");
+  names_total_cost_div.className = "names_total_cost";
+
+  let total_cost = 0;
+
+  user_savings.forEach(item => {
+    if (item.selected_value === selected_value) {
+      
+      const item_div = document.createElement("div");
+      item_div.className = "one";
+
+      const item_name = document.createElement("p");
+      item_name.textContent = item.item_name;
+      item_div.appendChild(item_name);
+
+      const item_cost = document.createElement("p");
+      item_cost.textContent = `Cost: ₹ ${item.item_cost}`;
+      item_div.appendChild(item_cost);
+
+      names_total_cost_div.appendChild(item_div);
+
+      total_cost += parseInt(item.item_cost);
+    }
+  });
+
+  customer_div.appendChild(names_total_cost_div);
+
+  const total_cost_title = document.createElement("h3");
+  total_cost_title.className = "single_cust_total_cost";
+  total_cost_title.textContent = `TOTAL COST: ₹ ${total_cost}`;
+  customer_div.appendChild(total_cost_title);
+
+  total_booking_div.appendChild(customer_div);
+
+  total_booking_cost += total_cost; // increment the booking total cost with each customer's total cost
+});
+
+const booking_total_cost = document.createElement("h3");
+booking_total_cost.className = "booking_total_cost";
+booking_total_cost.textContent = `Booking Total Cost: ₹ ${total_booking_cost}`;
+total_booking_div.appendChild(booking_total_cost);
+
+console.log(total_booking_cost)
+
+// let total_cost_in_form=document.getElementById("total-amount")
+
+// total_cost_in_form.innerText=total_booking_cost
+
+const bookNowButton = document.querySelector(".proceed");
+bookNowButton.addEventListener("click", () => {
+  // Get the active user from localStorage
+  const activeuser = localStorage.getItem("profile");
+
+// ...
+
+const bookingList = document.querySelectorAll(".list_1");
+const bookingDetails = Array.from(bookingList).map((listItem, index) => {
+  const itemImg = listItem.querySelector(".selected_list_img").getAttribute("src");
+  const itemName = listItem.querySelector(".details_cost h3").textContent;
+  const itemCost = listItem.querySelector(".details_cost p").textContent.replace("cost+", "");
+  const itemId = listItem.querySelector(".details_cost h6").textContent;
+
+  const itemCustomerNumber = selected_values[index % selected_values.length];
+
+  return { img: itemImg, name: itemName, cost: itemCost, customerNumber: itemCustomerNumber, itemId };
+});
+
+// ...
+
+
+
+  const bookingTotalCost = document.querySelector(".booking_total_cost").textContent.replace("Booking Total Cost: ₹ ", "");
+
+  if (bookingDetails.length === 0 || bookingTotalCost === "0") {
+    // Show an error message instead of redirecting
+    alert("Please select some items before proceeding.");
+    return;
+  }
+
+
+  // Generate a unique booking ID
+  const bookingId = Date.now();
+
+  const newBooking = {
+    bookingId,
+    bookingDetails,
+    bookingTotalCost,
+    activeuser // Include the active user in the new booking object
+  };
+
+  const bookingData = JSON.parse(localStorage.getItem("bookingDatas")) || [];
+
+  const existingBookingIndex = bookingData.findIndex(booking => booking.bookingId === newBooking.bookingId);
+  if (existingBookingIndex === -1) {
+    bookingData.push(newBooking);
+  } else {
+    // If an existing booking with the same ID is found, update the booking details and total cost
+    bookingData[existingBookingIndex].bookingDetails = newBooking.bookingDetails;
+    bookingData[existingBookingIndex].bookingTotalCost = newBooking.bookingTotalCost;
+  }
+
+  // Get the active user from localStorage
+  const current_user = localStorage.getItem("profile");
+
+  // Filter the saving_data array to remove items that were added to the booking by the current user
+  const filtered_saving_data = saving_data.filter(item => !(item.user === current_user && item.name === name));
+
+  // Save the updated saving_data array back to localStorage
+  localStorage.setItem("saving_detail", JSON.stringify(filtered_saving_data));
+
+  // Redirect to the next page
+  window.location.href = `./finalbooking.html?bookingid=${bookingId}&param2=${name}&date=${date}`;
+
+  localStorage.setItem("bookingDatas", JSON.stringify(bookingData));
+});
+
+
+
+
+  </script>
 </body>
 
 </html>
+<!-- confirm booking content ends 

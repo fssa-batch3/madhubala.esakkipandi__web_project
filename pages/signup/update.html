@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
+<link rel="stylesheet" href="update.css">
 <body>
-    
 
-
+<!-- 
 <form id="cardform">
-
 
 <input type="url" placeholder=" image link" id="link_url"><br><br>
 
@@ -25,92 +25,166 @@
 
 <button type="submit" >create</button>
 
+<button type="button" id="delete">delet</button>
+</form> -->
+
+<div class="div-form">
+<div class="side-bar">
+<h1 class="head">
+    Register and keep your<br> work protective
+
+</h1>
+<img src="../../assets/images/register-artist.svg">
+</div>
+<form id="cardform">
+
+<!-- <input type="text" class="input-info" placeholder="MakeName" id="makename" required pattern="[A-Za-z]+" title="Please enter only letters"> -->
+<input type="text" class="input-info" placeholder="Username" id="artistname" required pattern="[A-Za-z]+" title="Please enter only letters">
+<input type="email" class="input-info" placeholder="email" id="email-artist"required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address">
+<input type="password" class="input-info" placeholder="Password" id="password-artist" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+<input type="password" class="input-info" placeholder="confirm-password" id="confirmpass-artist" required title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+<input type="text" class="input-info" placeholder="years-of experince" id="expernice-artist" required pattern="[0-9]+" title="Please enter only numbers">
+
+<!-- <input type="text" class="input-info" placeholder="Locality" id="locality"required> -->
+<input type="text" class="input-info" placeholder="address" id="address-artist" required pattern="[A-Za-z0-9 ]+" title="Please enter only letters and numbers">
+<input type="text" class="input-info" placeholder="contact-number" id="number-artist">
+<input type="url" placeholder=" image link" id="link_url" class="input-info"required pattern="https?://.+" title="Include http://">
+
+<!-- <input type="date" id="date" class="date"> -->
+<select id="locality" class="input-info">
+  <option value="" disabled selected>Choose a city</option>
+  <option value="chennai">Chennai</option>
+  <option value="Trichy">Trichy</option>
+  <option value="Tirunelveli">Tirunelveli</option>
+  <option value="namakal">Namakal</option>
+<option id="city" required>Theni</option>
+<option id="city" required>Madurai</option>
+<option id="city" required>Ramanathapuram </option>
+<option id="city" required>Virudhunagar </option>
+<option id="city" required>
+    Dindugal </option>
+<option id="city" required>Chengalpattu </option>
+<option id="city" required>Salem</option>
+<option id="city" required>Kdalur</option>
+<option id="city" required>Nagapatinam</option>
+</select>
+<input type="text" class="input-info" placeholder="Starting-price" id="rs" required>
+<!-- <div class="gender">
+    <label>Gender:</label>
+    <label >Male</label>
+    <input type="radio">
+    <label>Female</label>
+    <input type="radio">
+</div> -->
+<br>
+<br>
+<a href=".././ArtistFeature.html" class="link">
+<button type="submit"placeholder="Register" class="btn-register">Register</button>
+</a>
+<button type="button" id="delete">Delete</button>
+
 </form>
+
+</div>
 
 <script>
 
 
 document.getElementById("cardform").addEventListener('submit', e => {
+  e.preventDefault();
+ 
+  const email_of_artist = document.getElementById("email-artist").value;
+  const url = document.getElementById("link_url").value;
+  const name = document.getElementById("artistname").value;
+  const local = document.getElementById("locality").value;
+  const ruppee = document.getElementById("rs").value;
+  const address_artist = document.getElementById("address-artist").value;
+  const password_artist = document.getElementById("password-artist").value;
+  const confirmpasswrod = document.getElementById("confirmpass-artist").value;
+  const experince_of_artst = document.getElementById("expernice-artist").value;
+  const contact_artist = document.getElementById("number-artist").value;
 
-    e.preventDefault();
+  const data_records = JSON.parse(localStorage.getItem("card_data"));
 
-    const url=document.getElementById("link_url").value
-    const name=document.getElementById("artistname").value
-     const local=document.getElementById("locality").value
-     const ruppee=document.getElementById("rs").value
-     const makename=document.getElementById("makename").value
+  
 
-     const data_records=JSON.parse(localStorage.getItem("card_data"))
+  if (
+    name !== "" &&
+    email_of_artist.trim() !== "" &&
+    password_artist.trim() !== "" &&
+    confirmpasswrod.trim() !== "" &&
+    url.trim() !== "" &&
+    local.trim() !== "" &&
+    ruppee.trim() !== "" &&
+    experince_of_artst.trim() !== "" &&
+    contact_artist.trim() !== "" &&
+    address_artist.trim() !== ""
+  ) {
+    const card_data = JSON.parse(localStorage.getItem("card_data")) || [];
+    const booking_records = [];
+    const selected_dates = [];
+    const serivice=[]
 
-        let card_data= JSON.parse(localStorage.getItem("card_data")) ? JSON.parse(localStorage.getItem("card_data")) : [];
+    const data_card = {
+      address: address_artist,
+      name,
+      user_email: email_of_artist,
+      artist_password: password_artist,
+      confirm_pass: confirmpasswrod,
+      ruppi: ruppee,
+      localty: local,
+      contact: contact_artist,
+      experince_of_artist: experince_of_artst,
+      image_url: url,
+      booking_records: booking_records,
+      selected_dates: selected_dates ,
+      services_provding:serivice
+      // Add the selected_dates array to the data_card object
+    };
 
-        let data_card = {}
-        
-        data_card ["image_url"]= url;
-        data_card  ["name"]= name;
-        data_card  ["ruppi"]=ruppee;
-        data_card  ["localty"]= local;
-        data_card  ["makeupname"]= makename
+    let success = true;
+    if (data_records != null) {
+      for (let i = 0; i < data_records.length; i++) {
+        if (data_records[i].user_email == email_of_artist) {
+          success = false;
+          break;
+        }
+      }
+    }
 
-                card_data.push(data_card);
-                localStorage.setItem("card_data", JSON.stringify(card_data));
-})
+    if (success) {
+      if (password_artist == confirmpasswrod) {
+        card_data.push(data_card);
+        localStorage.setItem("card_data", JSON.stringify(card_data));
+        alert("Registered successfully");
+        window.location.href = "../ArtistFeature.html";
+      } else {
+        alert("Password mismatch");
+      }
+    } else {
+      alert("Already You have registered");
+    }
+  } else {
+    alert("Fill in all the required data");
+  }
+});
 
 
+document.getElementById("delete").addEventListener("click",event=>{
+                event.preventDefault();
+            
+ const card=JSON.parse(localStorage.getItem("card_data"))
+            
+            for(let i=0;i<card.length;i++){
 
-
+                if(document.getElementById("artistname").value==card[i].name){
+                    card.splice(i,1)
+                    localStorage.setItem("card_data",JSON.stringify(card))
+                }
+            }
+            
+            })
 </script>
 
 </body>
 </html>
-
-<!-- const register_form = document.getElementById("form");
-register_form.addEventListener('submit', e => {
-    e.preventDefault();
-    const name = document.getElementById("name").value
-    const email = document.getElementById("email").value
-
-    // const username = document.getElementById("username").value
-    const password = document.getElementById("password").value
-    const repeat = document.getElementById("repeat").value
-
-    
-    const user_records = JSON.parse(localStorage.getItem("data"));
-    if ((name != "") && (email != "") && (password != "") && (repeat != "")) {
-        let data = JSON.parse(localStorage.getItem("data")) ? JSON.parse(localStorage.getItem("data")) : [];
-
-        let user_data = {
-            "user_name": name,
-            "user_email": email,
-            // "name_user": username,
-            "user_password": password,
-            "repeat_pass": repeat
-        }
-        let success = true;
-        if (user_records != null) {
-            for (let i = 0; i < user_records.length; i++) {
-                if (user_records[i]["user_email"]==email) {
-                    success = false;
-                    break;
-                }
-            }
-        }
-        if (success) {
-            if (password == repeat) {
-                data.push(user_data);
-                localStorage.setItem("data", JSON.stringify(data));
-                alert("Account create successfully");
-                window.location.href = "../Login/login.html"
-            }
-            else {
-                alert("password mismatch")
-            }
-        }
-        else {
-            alert("Already Have a account");
-        }
-    }
-    else {
-        alert("fill this data")
-    }
-}); -->

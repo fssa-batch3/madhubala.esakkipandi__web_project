@@ -5,7 +5,8 @@
 
 
 body{
-    background-image: url("../images/1fdghjkl;\'.png");
+    /* background-image: url("../images/1fdghjkl;\'.png"); */
+   
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -189,17 +190,25 @@ span {
    
 
 }
-.type{
-    height: 47px;
-    width:390px;
-    margin-top: 38px;
+.col-md-6{
+  margin-top: 170px;
+  height:70px ;
+
+  
+}
+.form-control{
+    height: 30px;
+    
+
+    width: 50px;
+    /* margin-top: 38px;
     background-color: white;
    border: 0px;
-    text-align: center;
+    text-align: center; */
     /* background:transparent; */
-    border:none;
+    /* border:none;
     border-radius: 10px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
 }
 
 /* #newname,#newemail{
@@ -280,3 +289,27 @@ background-color: white;    /* border: 2px solid black; */
   cursor: pointer;
   filter: drop-shadow(6px 8px 8px rgba(225, 44, 89, 0.3));
  }
+ .buttons{
+      /* border: 2px solid black; */
+      height: 70px;
+      width:380px;
+      display: flex;
+      justify-content: space-between;
+ }
+ #btnn,#update,#delete{
+ height: 40px;
+ width:120px;
+ border-radius: 5px;
+ margin-top: 25px;
+ border: 1px solid #D70F64;
+ color:#D70F64;
+ background-color: white;
+ cursor: pointer;
+ 
+
+ }
+ #btnn:hover,#update:hover,#delete:hover{
+  color:white;
+ background-color: #D70F64;
+ cursor: pointer;
+}

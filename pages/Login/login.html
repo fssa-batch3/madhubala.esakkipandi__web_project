@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../../assets/css/login.css">
     <title>Document</title>
 </head>
@@ -35,6 +35,10 @@
             <div class="right">
                 <div class="lay">
                     <h3 class="vio">LOG-IN</h3>
+<!-- <div class="options_of_user">
+               <submit  id="button_user"type="button">User</submit>
+               <submit  id="button_artist"type="button">Artist</submit> -->
+                <!-- </div> -->
                     <!-- <form action="../../index.html"> -->
                     <form>
 
@@ -42,27 +46,36 @@
                             <p>Email:</p>
                         </label>
 
-                        <input id="user" type="email" placeholder="enter your email" required>
+                        <input id="user" type="email" placeholder="Enter your email" required>
 
                         <label for="pass">
                             <p> Password:</p>
                         </label>
 
-                        <input id="pass" type="password" placeholder="enter your name" required>
+                        <input id="pass" type="password" placeholder="Enter your name" required>
 
-                        <input type="checkbox" name="checkpassword" onclick="showPasswordWhenChecked()"
+                        <!-- <input type="checkbox" name="checkpassword" onclick="showPasswordWhenChecked()"
                             id="showPassword" />
-                        <p class="Show_Password_Text">Show Password</p>
+                        <label class="Show_Password_Text">Show Password</label> -->
                         <div class="foot">
-                            <div class="boo">
-                                <input type="checkbox" required><label for="check">Remember me</label>
+                            <div class="checkbox-remember">
+                                <input type="checkbox" required>
+<label for="check">Remember me</label>
                             </div>
 
                             <a href="#">Forget password?</a>
 
                         </div>
-                        <button onclick="login()">Log-In</button>
-                        <br><br>
+                        <!-- <button onclick="login()">Log-In</button> -->
+                        <div class="options_of_user">
+                            <!-- <submit  id="button_user"type="button">User</submit>
+                            <submit  id="button_artist"type="button">Artist</submit> -->
+                             
+                        <submit id="button_user" type="button" onclick="login()">Login</submit>
+                        <!-- <submit id="button_artist" type="button" onclick="artistlogin()">Artist-Login</submit> -->
+</div>
+                        <br>
+<br>
 
                         <p class="sing">OR SIGN-UN WITH</p>
 
@@ -71,7 +84,9 @@
                             <i id="insta" class="fa-brands fa-facebook"></i>
                             <i id="insta" class="fa-brands fa-square-twitter"></i>
                         </div>
-                        <p class="do">Don't have an account?<a href="../signup/signup.html">sign-up</a></p>
+                        <p class="do">
+Don't have an account?<a href="../signup/signup.html"  class="sign_up">sign-up</a>
+</p>
                     </form>
 
                 </div>
@@ -83,19 +98,20 @@
 
     <script>
 
-        function login(e) {
+        function login() {
 
             const usermail = document.getElementById("user").value
             const userpass = document.getElementById("pass").value
-
-            let login = {
-
-                "email": usermail,
-                "userofpassword": userpass
-
-            }
-
             let data = JSON.parse(localStorage.getItem("data"));
+
+            console.log(data)
+            // let login = {
+
+            //     "email": usermail,
+            //     "userofpassword": userpass
+
+            // }
+
             let res;
             data.find(  // parameterized function 'a'
                 element => {
@@ -114,8 +130,9 @@
 
             if (res == 1) {
                 alert("logged in")
-                localStorage.setItem("profile", JSON.stringify(login))
-                window.location.href = "../profile.html"
+                let mail_of_user=usermail
+                localStorage.setItem("profile",mail_of_user )
+                window.location.href = "../profile_of_user.html"
             }
             else {
                 alert("none")
@@ -132,6 +149,56 @@
             }
             
         }
+
+        // --------------------------------------------------------------------artist login 
+       
+        function artistlogin(e) {
+
+ let artist_data=JSON.parse(localStorage.getItem("card_data"))
+const usermail = document.getElementById("user").value
+const userpass = document.getElementById("pass").value
+
+let result;
+let artist_email;
+artist_data.find(  // parameterized function 'a'
+    e => {
+        if(e["user_email"] == usermail && e["artist_password"] == userpass) { //data=[{0},{1}] //a=data[0],a=data[1]
+
+            artist_email = e["user_email"];
+            return result = 1;
+        }
+        else {
+
+            return result = 0;
+        }
+    }
+
+);
+
+if (result == 1) {
+    alert("logged in")
+
+    
+    localStorage.setItem("artist_profile",artist_email)
+    window.location.href = "../profileartist.html"
+    
+}
+else {
+    alert("none")
+}
+}
+
+function showPasswordWhenChecked() {
+let showPassword = document.getElementById("pass");
+
+if (showPassword.type === "pass") {
+    showPassword.type = "text";
+} else {
+    showPassword.type = "pass";
+    
+}
+
+}
         
     </script>
 </body>

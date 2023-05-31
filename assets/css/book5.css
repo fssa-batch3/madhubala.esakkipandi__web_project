@@ -9,9 +9,12 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .contant{
-    height:400px;
+    height:450px;
     width:700px;
-    border:2px solid black;
+    /* border:2px solid black; */
+    box-shadow: rgb(255 255 255 / 10%) 0px 1px 1px 0px inset,
+    rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+    rgb(0 0 0 / 30%) 0px 30px 60px -30px;
 margin-top: 250px;
 margin-left: 400px;
 border-radius: 20px;
@@ -19,10 +22,17 @@ border-radius: 20px;
 h1,h2{
     color: rgb(228, 13, 114);
     text-align: center;
+    margin-top: 10px;
 }
 .gif{
     margin-left: 230px;
 }
 h2{
     margin-top: 30px;
+}
+ a{
+    text-decoration: none;
+    padding-left: 320px;
+    margin-top: 30px;
+    color: rgb(228, 13, 114);
 }

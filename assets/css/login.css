@@ -53,16 +53,21 @@ h3 {
     border-radius: 10px;
    
 }
+#showPassword{
+    margin-left: 35px;
+    margin-top: 20px;
+    
+}
 .vio {
     margin-left: 130px;
     height: 40px;
     margin-top: 40px;
 }
 form {
-    height: 450px;
+    height: 500px;
     width: 350px;
     margin-left: 30px;
-    margin-top: 50px;
+    /* margin-top: px; */
 }
 #user,#pass {
     height: 50px;
@@ -71,6 +76,9 @@ form {
     margin-left: 30px;
     text-align: center;
     border: none;
+}
+.Show_Password_Text{
+    color:white;
 }
 label p {
     margin-left: 35px;
@@ -113,10 +121,59 @@ p {
 a {
     margin-left: 5px;
 }
-.boo{
+.checkbox-remember{
     margin-left: 20px;
+    color:white;
+    
 }
 .keep {
     color: black;
     margin-top: 30px;
+}
+input:focus
+{
+    border: 1px solid #d4295f;
+    box-shadow: 0px 1px 0px 2px #d0204f;
+    outline-offset: 0px;
+    outline: none;
+}
+.options_of_user{
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#button_user {
+    width: 120px;
+    height: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+  margin-top: 20px;
+    color:#ce3767;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+   padding: 15px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+font-weight: bolder;
+
+    outline: none;
+    }
+  
+  #button_user:hover {
+  background-color: #ce3767;
+    color:white;
+    transform: translateY(-7px);
+    box-shadow: 0px 1px 0px 2px white;
+
+  }
+  .sign_up{
+    color:black;
+
 }

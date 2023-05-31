@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../../assets/css/review.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -17,14 +17,24 @@
     <div class="menu-bar">
         <img src="../../assets/images/Screenshot__63_-removebg-preview.png" alt="logo">
         <ul class="main">
-            <li class="dropdown"><a href="../../index.html">Home <i class="fas fa-caret-down"></i></a>
+            <li class="dropdown">
+<a href="../../index.html">
+Home <i class="fas fa-caret-down"></i>
+</a>
                
             </li>
-            <li><a href="../upload/upload.html">For artist</a>
+            <li>
+<a href="../upload/upload.html">For artist</a>
                
             </li>
-            <li><a href="../booking/start_booking.html">Book here</a></li>
-            <li><a href="../Login/login.html"> <i class="fa-solid fa-user"  id="menubar-user"></i>login</a></li>
+            <li>
+<a href="../booking/start_booking.html">Book here</a>
+</li>
+            <li>
+<a href="../Login/login.html">
+ <i class="fa-solid fa-user" id="menubar-user"></i>login
+</a>
+</li>
         </ul>
     </div>
 <!-- Nav bar ends -->
@@ -34,7 +44,9 @@
  <!-- reviewing header starts -->
         <div class="revi">
             <div class="top-box-content">
-                <h1 class="head"><span>GLOSSY</span> BLENDS</h1>
+                <h1 class="head">
+<span>GLOSSY</span> BLENDS
+</h1>
                 <h1>
                     Our coustmer what they say?
                 </h1>
@@ -59,12 +71,14 @@
                     <img src="../../assets/images/73x73.png" alt="review ">
                     <a href="#scroll">Write a review</a>
                 </div>
-                <form onsubmit=reviewList(event)>
+                <form id="reviewform">
                 <div class="blank-box">
-                    <input type="text" placeholder="name" id="user_name" >
-                    <input type="textarea" id="user_revi" placeholder="write your review">
+                    <input type="text" placeholder=" Write Your Name" id="user_name">
                     <br>
-                    <input type="submit" id="btn" onclick(placeholder="submit">
+                    <br>
+                    <input type="textarea" id="user_revi" placeholder="Write your review">
+                    <br>
+                    <input type="submit" id="btn" placeholder="submit">
                 </form>
                 </div>
             </div>
@@ -96,7 +110,8 @@
                 <div class="text">
 
                     <P>It is very usefull when I am in urgent situation to book an artist </p>
-                    <p> <strong>
+                    <p>
+ <strong>
                             Date of experience:</strong> 04 December 2022</p>
                 </div>
                 <hr>
@@ -126,7 +141,8 @@
                     <p>This website is just awesome and very useful,because of this website I got more customers and
                         this helps me to continue my passion. </p>
 
-                    <p> <strong>
+                    <p>
+ <strong>
                             Date of experience:</strong> 04 December 2022</p>
                 </div>
                 <hr>
@@ -154,7 +170,8 @@
                 </div>
                 <div class="text">
                     <P> Fantastic website to book an artist easily </p>
-                    <p> <strong>
+                    <p>
+ <strong>
                             Date of experience:</strong> 04 December 2022</p>
                 </div>
                 <hr>
@@ -182,7 +199,8 @@
                 <div class="text">
 
                     <p> I like this website for queries they help me to solve the problem</p>
-                    <p> <strong>
+                    <p>
+ <strong>
                             Date of experience:</strong> 04 December 2022</p>
                 </div>
                 <hr>
@@ -194,7 +212,6 @@
                     </div>
                     <div class="name">
                         <h5> Priya Darshini</h5>
-
 
                     </div>
                 </div>
@@ -211,7 +228,8 @@
                 <div class="text">
 
                     <P>Lots of coustemer were got by this wesite only</p>
-                    <p> <strong>
+                    <p>
+ <strong>
                             Date of experience:</strong> 04 December 2022</p>
                     <i class="fa-thin fa-thumbs-up"></i>
                 </div>
@@ -222,49 +240,46 @@
     </div>
     <!-- reviewing content ends -->
     <script>
-let reviews = [];
+const reviewarr=[]
+document.getElementById("reviewform").addEventListener("submit",e=>
 
-function onsubmit() {
-  const reviewListing = JSON.parse(localStorage.getItem("Customer_Reviews"));
-  if (reviewListing != null) {
-    reviews = reviewListing;
-  }
-}
+{
+    const userName = document.getElementById("user_name").value
+            const customerReview = document.getElementById("user_revi").value
+            if(userName!=""&&customerReview!=""){
 
-function reviewList(event) {
-  event.preventDefault();
-  
-  let userName = document.getElementById("user_name").value;
-  let customerReview = document.getElementById("user_revi").value;
+          const reviews = JSON.parse(localStorage.getItem("reviews")) ? JSON.parse(localStorage.getItem("reviews")) : reviewarr;
 
-  if(customerReview.trim() == "" ){
-    alert("Review Cannot Have Only Spaces!")
-    return null;
+  const user_review={
+
+   "name":userName,
+   customerReview
+
   }
 
-  const reviewAddingdetails = {
-    "userName": userName,
-    "customerReview": customerReview,
-  };
+  reviews.push(user_review)
+  localStorage.setItem("reviews", JSON.stringify(reviews));
 
-  reviews.push(reviewAddingdetails);
-  localStorage.setItem("Customer_Reviews", JSON.stringify(reviews));
+            }
 
 }
+)
 
+let reviewofuser=JSON.parse(localStorage.getItem("reviews"))
 
- let customerReviews = JSON.parse(localStorage.getItem("Customer_Reviews"));
-for(let i of customerReviews){
-    let nameOfUser = i.userName;
-    let customersReview = i.customerReview;
-    reviews += 
+for(const i of reviewofuser){
+
+    const nameOfUsers = i.name;
+    const customersReview = i.customerReview;
+        
+    reviewofuser+=
     `<div class="reviewed-box">
                 <div class="content-inside">
                     <div class="top-review-text">
                         <i class="fa-solid fa-user"></i>
                     </div>
                     <div class="name">
-                        <h3>${nameOfUser}</h3>
+                        <h3>${nameOfUsers}</h3>
                     </div>
                 </div>
                 <hr>
@@ -286,27 +301,85 @@ for(let i of customerReviews){
                 </div>
                 <hr>
                 </div>`
-}
-let div = document.getElementById("review-content");
- div.innerHTML += reviews;
-console.log(reviews);
 
+            }
 
+const div = document.getElementById("review-content");
+ div.innerHTML += reviewofuser;
+ 
+console.log(reviewofuser);
 
+// let reviews = [];
 
+// function onsubmit() {
+//   const reviewListing = JSON.parse(localStorage.getItem("Customer_Reviews"));
+//   if (reviewListing != null) {
+//     reviews = reviewListing;
+//   }
+// }
 
+// function reviewList(event) {
+//   event.preventDefault();
+  
+//   let userName = document.getElementById("user_name").value;
+//   let customerReview = document.getElementById("user_revi").value;
 
+//   if(customerReview.trim() == "" ){
+//     alert("Review Cannot Have Only Spaces!")
+//     return null;
+//   }
 
+//   const reviewAddingdetails = {
+//     "userName": userName,
+//     "customerReview": customerReview,
+//   };
 
+//   reviews.push(reviewAddingdetails)
+//   localStorage.setItem("Customer_Reviews", JSON.stringify(reviews));
 
+// }
 
+//  let customerReviews = JSON.parse(localStorage.getItem("Customer_Reviews"));
+// for(let i of customerReviews){
 
+//     let nameOfUser = i.userName;
+//     let customersReview = i.customerReview;
 
+//  reviews += 
+//     `<div class="reviewed-box">
+//                 <div class="content-inside">
+//                     <div class="top-review-text">
+//                         <i class="fa-solid fa-user"></i>
+//                     </div>
+//                     <div class="name">
+//                         <h3>${nameOfUser}</h3>
+//                     </div>
+//                 </div>
+//                 <hr>
+//                 <div class="star-icon">
+//                     <div class="star-2">
+//                         <i id="star" class="fa-solid fa-star"></i>
+//                         <i id="star" class="fa-solid fa-star"></i>
+//                         <i id="star" class="fa-solid fa-star"></i>
+//                         <i id="star" class="fa-solid fa-star"></i>
+//                         <i id="star" class="fa-solid fa-star"></i>
+//                     </div>
+//                     <p> 20 day ago</p>
+//                 </div>
+//                 <div class="text">
 
+//                     <p> ${customersReview}</p>
+//                     <p> <strong>
+//                             Date of experience:</strong> 04 December 2022</p>
+//                 </div>
+//                 <hr>
+//                 </div>`
+
+// }
+// let div = document.getElementById("review-content");
+//  div.innerHTML += reviews;
+ 
+// console.log(reviews);
     </script>
   </body>
 </html>
-
-
-
-

@@ -33,11 +33,15 @@ h1 {
     font-size: 100px;
     color: white;
     background-color: black;
+    margin-left: 5px;
 }
 a {
     color: #d9235c;
-
     text-decoration: none;
+    margin-right: 60px;
+}
+.or{
+    margin-right: 70px;
 }
 button {
     height: 40px;
@@ -71,6 +75,11 @@ button {
     margin-top: 10px;
     margin-left: 50px;
     text-align: center;
+}
+#imgurl{
+margin-left: 50px;
+height: 20px;
+width:250px
 }
 .description {
     border: #9e9d9d 1px solid;
@@ -125,8 +134,14 @@ label {
     opacity: 2;
 }
 #num {
-    width: 20px;
-    margin-left: 10px;
+    margin-left: 50px;
+    height: 20px;
+    width:30px
+}
+#tel-num{
+   
+    height: 20px;
+    width:250px
 }
 p {
     margin-left: 55px;

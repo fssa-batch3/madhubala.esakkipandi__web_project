@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  margin: 0%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
+
+.package{
+  height:1300px;
+  width:100%;
+   margin-top: 10px;
+ 
+  /* border:2px solid black; */
+
+}
+.right{
+  width:50%;
+  height: 100%;
+
+}
+.left{
+  width: 50%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image:  linear-gradient(rgba(205, 32, 110, 0.7), rgba(46, 7, 20, 0.7)),url("../assets/images/e_12A0172.webp");
+
+}
+.whole_div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.navigation{
+  width:80%;
+  /* border:2px solid black; */
+height: 70px;
+margin-left: 80px;
+display: flex;
+justify-content: space-between;
+}
+
+.navigation a{
+  text-decoration: none;
+  color:white;
+  padding-top: 20px;
+  font-weight: bolder;
+}
+
+.profile{
+  height:800px;
+  width:100%;
+  /* border:2px solid black; */
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.content{
+  height:800px;
+  width:700px;
+  /* border: 2px solid black; */
+}
+.head_h3{
+  font-family:wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+  letter-spacing: 0.15em;
+  font-size: 35px;
+  line-height: 1em;
+  margin-left: 80px;
+  text-transform: uppercase;
+  color: rgb(220, 24, 99);
+}
+.top_head{
+  height:100px;
+  width:400px;
+  /* border:2px solid black; */
+  text-transform: uppercase;
+
+  margin-top: 200px;
+  margin-left: 80px;
+  font-size: 67px;
+font-family:wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+letter-spacing: 0.15em;
+line-height: 1em;
+}
+.second_title{
+  color:rgb(220, 24, 99);
+}
+.content p{
+  line-height: 1.6em;
+  font-size: 12px;
+  overflow-wrap: break-word;
+    pointer-events: none;
+    text-align: start;
+    margin-left: 80px;
+    margin-top: 8px;
+}
+
+
+.points{
+  width:500px;
+  color:rgb(241, 173, 202)
+
+}
+.number{
+  height:600px;
+  width:500px;
+  margin-left: 60px;
+
+
+
+
+
+  
+  /* border:2px solid black; */
+  margin-top: 120px;
+  /* padding-top: 20px; */
+}
+.number_points{
+  /* color:rgb(254, 218, 234); */
+  
+  font-size: 50px;
+  font-family: wfont_ce2f45_1449a2ac06f64b99b17671b64b0f72ed,wf_1449a2ac06f64b99b17671b64,orig_didot;
+  font-style: italic;
+  margin-top: 40px;
+  margin-left: 10px;
+}
+.head_points{
+
+color:rgb(220, 24, 99);
+
+}
+.features_content{
+
+display: flex;
+margin-top: 90px;
+  height:70%;
+  width:100%;
+  /* border:2px solid black; */
+
+}
+ hr{
+  margin-left: 50px;
+  height:330px
+ }
+.titltes{
+  /* color:black; */
+ 
+  margin-top: 60px;
+  font-weight:lighter;
+  text-transform: uppercase;
+  margin-left: 20px;
+  font-size: 24px;
+  color:rgb(253, 181, 206)
+}
