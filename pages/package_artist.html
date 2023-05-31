@@ -250,7 +250,7 @@ let close_button=document.querySelector(".fa-circle-xmark");
 close_button.addEventListener('click',e=>{
     location.reload()
 })
-const data_artist = JSON.parse(localStorage.getItem("card_data"));
+const data_artist = JSON.parse(localStorage.getItem("card_data"))
 const active_user = localStorage.getItem("artist_profile");
 
 const artist_object = data_artist.find((obj) => obj.user_email === active_user);
