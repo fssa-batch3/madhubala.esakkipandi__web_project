@@ -793,7 +793,7 @@ if (localStorage.getItem("data")) {
 } else {
   localStorage.setItem("data", JSON.stringify(data));
 }
-const card_data = [
+const card_data = 
   [
     [
       {
@@ -1554,6 +1554,7 @@ const card_data = [
         ],
       },
     ],
+    
     {
       address: "chennai",
       name: "steffy",
@@ -2481,8 +2482,8 @@ const card_data = [
         { day: 4, month: 5, year: 2023, eventName: "qfd M", time: "08:39" },
       ],
     },
-  ],
-];
+  ]
+
 
 if (localStorage.getItem("card_data")) {
   //   return;
@@ -2491,6 +2492,8 @@ if (localStorage.getItem("card_data")) {
 }
 
 if (localStorage.getItem("artistreviews")) {
+
+
   //   return;
 } else {
   localStorage.setItem(

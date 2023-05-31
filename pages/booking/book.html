@@ -131,13 +131,15 @@ Home <i class="fas fa-caret-down"></i>
 const urlParams = new URLSearchParams(window.location.search);
 const dateParam = urlParams.get("date"); 
 
-
 console.log(dateParam);
+
 const [year, month, day] = dateParam.split("-").map(Number);
 
 const place = urlParams.get("place");
 
-const records = JSON.parse(localStorage.getItem("card_data"));
+const records = JSON.parse(localStorage.getItem("card_data"))
+
+console.log(records)
 
 let filteredArtistsByPlace = records.filter((artist) => {
   return artist.localty === place;
@@ -147,6 +149,7 @@ filteredArtistsByPlace.forEach((artist) => {
   console.log(artist.selected_dates);
 });
 
+console.log(filteredArtistsByPlace,"ppp");
 
 let filteredArtistsByDate = filteredArtistsByPlace.filter((artist) => {
   const hasSelectedDates =
@@ -192,7 +195,7 @@ let filteredArtistsByDate = filteredArtistsByPlace.filter((artist) => {
 
 
 // console.log()
-console.log(filteredArtistsByDate.length)
+console.log(filteredArtistsByDate,"ii")
 document.querySelector(".count").textContent = `${filteredArtistsByDate.length} results were found `;
 
 if (filteredArtistsByDate.length === 0) {
